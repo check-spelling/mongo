@@ -1,0 +1,27 @@
+# Google Groups
+https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
+# GitHub SHAs
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#|\%23)[0-9a-fA-FgGrR]{2,}[uU]?[lL]{0,2}\b
+# uuid:
+[{"'][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}['"}]
+
+
+assert.commandWorked
+ASSERT_EQUALS\(.*
+\.insert\("[0-9a-f]{64}"
+\.insert\((?:\{a: |)(?:\{b: |)(?:\{hash: |)["\/][0-9a-f]+
+\.erase\("[0-9a-f]+"
+(?:Bin|Hex)Data\(0, "[0-9a-zA-Z]+"
+# ignore long runs of a single character:
+\b([A-Za-z])\1{3,}\b
+\b[0-9a-fA-F]{90}\b
+\b[0-9a-fA-F]{64}\b
+\b[0-9a-fA-F]{24}\b
+thumbprint=[0-9a-fA-F]{40}\b
+\$binary: '[0-9a-zA-Z]+'
+[vV]\d+
+[Dd]on\\\(aqt
+[Yy]ou\\\(aqre
+\\f[BPI]
