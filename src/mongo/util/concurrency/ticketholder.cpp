@@ -54,7 +54,7 @@ void failWithErrno(int err) {
 
 /*
  * Checks the return value from a Linux semaphore function call, and fails with the set errno if the
- * call was unsucessful.
+ * call was unsuccessful.
  */
 void check(int ret) {
     if (ret == 0)

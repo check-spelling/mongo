@@ -644,7 +644,7 @@ protected:
     /**
      * Attempt to signal the index build to commit and advance the index build to the kPrepareCommit
      * state.
-     * Returns true if successful and false if the attempt was unnecessful and the caller should
+     * Returns true if successful and false if the attempt was unsuccessful and the caller should
      * retry.
      */
     bool _tryCommit(OperationContext* opCtx, std::shared_ptr<ReplIndexBuildState> replState);
