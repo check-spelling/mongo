@@ -229,7 +229,7 @@ public:
 
     using LookupFn = typename ReadThroughCacheLookup<LookupResult, Key, ValueHandle, Time>::Fn;
 
-    // Exposed publicly so it can be unit-tested indepedently of the usages in this class. Must not
+    // Exposed publicly so it can be unit-tested independently of the usages in this class. Must not
     // be used independently.
     class InProgressLookup;
 
