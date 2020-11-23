@@ -73,7 +73,7 @@ protected:
      * call, returning a future which can be obtained to get the specified routing information.
      *
      * The notion of 'unforced' in the function name implies that a refresh will only happen if
-     * the epoch has been changed, or if a future targetted shard has been maked as stale.
+     * the epoch has been changed, or if a future targetted shard has been marked as stale.
      *
      * NOTE: The returned value is always set. The reason to use optional is a deficiency of
      * std::future with the MSVC STL library, which requires the templated type to be default
