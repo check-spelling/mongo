@@ -378,7 +378,7 @@ TEST_F(BatchWriteExecTest, SingleUpdateTargetsShardWithLet) {
         response.setStatus(Status::OK());
         response.setNModified(1);
 
-        // Check that let params and runtimeConstants are propigated to shards.
+        // Check that let params and runtimeConstants are propagated to shards.
         const auto opMsgRequest(OpMsgRequest::fromDBAndBody(request.dbname, request.cmdObj));
         const auto actualBatchedUpdate(BatchedCommandRequest::parseUpdate(opMsgRequest));
         ASSERT_BSONOBJ_EQ(let, actualBatchedUpdate.getLet().value_or(BSONObj()));
@@ -459,7 +459,7 @@ TEST_F(BatchWriteExecTest, SingleDeleteTargetsShardWithLet) {
         BatchedCommandResponse response;
         response.setStatus(Status::OK());
 
-        // Check that let params are propigated to shards.
+        // Check that let params are propagated to shards.
         const auto opMsgRequest(OpMsgRequest::fromDBAndBody(request.dbname, request.cmdObj));
         const auto actualBatchedUpdate(BatchedCommandRequest::parseDelete(opMsgRequest));
         ASSERT_BSONOBJ_EQ(let, actualBatchedUpdate.getLet().value_or(BSONObj()));

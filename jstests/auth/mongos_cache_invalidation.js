@@ -61,7 +61,7 @@ assert(db3.auth('spencer', 'pwd'));
 /**
  * At this point we have 3 handles to the "test" database, each of which are on connections to
  * different mongoses.  "db1", "db2", and "db3" are all auth'd as spencer@test and will be used
- * to verify that user and role data changes get propaged to their mongoses.
+ * to verify that user and role data changes get propagated to their mongoses.
  * "db2" is connected to a mongos with a 5 second user cache invalidation interval,
  * while "db3" is connected to a mongos with a 10 minute cache invalidation interval.
  */
