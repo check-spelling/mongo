@@ -1901,7 +1901,7 @@ public:
     }
 };
 
-class BuilderPartialItearte {
+class BuilderPartialIterate {
 public:
     void run() {
         {
@@ -2077,7 +2077,7 @@ public:
         add<InvalidIDFind>();
         add<ElementSetTest>();
         add<EmbeddedNumbers>();
-        add<BuilderPartialItearte>();
+        add<BuilderPartialIterate>();
         add<BSONForEachTest>();
         add<CompareOps>();
         add<NestedBuilderOversize>();
