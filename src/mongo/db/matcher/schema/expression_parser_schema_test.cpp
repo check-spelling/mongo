@@ -443,7 +443,7 @@ TEST(MatchExpressionParserSchemaTest, CondFailsToParseIfNotExactlyThreeArguments
               MatchExpressionParser::parse(queryFourArguments, expCtx).getStatus());
 }
 
-TEST(MatchExpressionParserSchemaTest, CondParsesThreeMatchExpresssions) {
+TEST(MatchExpressionParserSchemaTest, CondParsesThreeMatchExpressions) {
     auto query = fromjson(
         "{$_internalSchemaCond: [{climate: 'rainy'}, {clothing: 'jacket'}, {clothing: 'shirt'}]}");
     boost::intrusive_ptr<ExpressionContextForTest> expCtx(new ExpressionContextForTest());
