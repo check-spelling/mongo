@@ -312,7 +312,7 @@ void ResourceConsumption::merge(OperationContext* opCtx,
     invariant(!dbName.empty());
 
     // All metrics over the duration of this operation will be attributed to the current state, even
-    // if it ran accross state transitions.
+    // if it ran across state transitions.
     // The RSTL is normally required to check the replication state, but callers may not always be
     // holding it. Since we need to attribute this metric to some replication state, and an
     // inconsistent state is not impactful for the purposes of metrics collection, perform a
