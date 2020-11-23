@@ -399,14 +399,14 @@ struct PCQOptions {
 };
 
 /**
- * A bounded, blocking, interruptible, thread safe, cost parametrizable, X-producer, X-consumer
+ * A bounded, blocking, interruptible, thread safe, cost parameterizable, X-producer, X-consumer
  * queue.
  *
  * Properties:
  *   bounded - the queue can be limited in the number of items it can hold
  *   blocking - when the queue is full, or has no entries, callers block
  *   thread safe - the queue can be accessed safely from multiple threads at the same time
- *   cost parametrizable - the cost of items in the queue need not be equal. I.e. your items could
+ *   cost parameterizable - the cost of items in the queue need not be equal. I.e. your items could
  *                          be discrete byte buffers and the queue depth measured in bytes, so that
  *                          the queue could hold one large buffer, or many smaller ones
  *   X-producer - 1 or many threads may push work into the queue.  For multi-producer, producers
