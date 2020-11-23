@@ -194,7 +194,7 @@ public:
     static double calcUnhashToBoxError(const Parameters& params);
 
     /**
-     * Return converter parameterss which can be used to
+     * Return converter parameters which can be used to
      * construct an copy of this converter.
      */
     const Parameters& getParams() const {
