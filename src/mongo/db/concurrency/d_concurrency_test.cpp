@@ -825,7 +825,7 @@ TEST_F(DConcurrencyTestFixture, GlobalLockWaitIsInterruptibleMMAP) {
     // to acquire a conflicting lock.
     Lock::GlobalLock GlobalLock(opCtx1, MODE_X);
 
-    // This thread attemps to acquire a conflicting lock, which will block until the first
+    // This thread attempts to acquire a conflicting lock, which will block until the first
     // unlocks.
     auto result = runTaskAndKill(opCtx2, [&]() {
         // Killing the lock wait should throw an exception.

@@ -86,7 +86,7 @@ public:
 
 private:
     /**
-     * Attemps to execute the specified command on the primary. Returns the command response upon
+     * Attempts to execute the specified command on the primary. Returns the command response upon
      * success or a non-OK status upon a failed command response, a writeConcernError, or any
      * writeErrors.
      */
