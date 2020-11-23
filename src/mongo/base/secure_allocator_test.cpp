@@ -87,13 +87,13 @@ TEST(SecureAllocator, NonDefaultConstructibleWorks) {
 }
 
 TEST(SecureAllocator, allocatorCanBeDisabled) {
-    static size_t pegInvokationCountLast;
-    static size_t pegInvokationCount;
-    pegInvokationCountLast = 0;
-    pegInvokationCount = 0;
+    static size_t pegInvocationCountLast;
+    static size_t pegInvocationCount;
+    pegInvocationCountLast = 0;
+    pegInvocationCount = 0;
     struct UnsecureAllocatorTrait {
         static bool peg() {
-            pegInvokationCount++;
+            pegInvocationCount++;
 
             return false;
         }
@@ -102,23 +102,23 @@ TEST(SecureAllocator, allocatorCanBeDisabled) {
 
     {
         std::vector<UnsecureAllocatorDomain::SecureHandle<char>> more_e_chars(4096, 'e');
-        ASSERT_GT(pegInvokationCount, pegInvokationCountLast);
-        pegInvokationCountLast = pegInvokationCount;
+        ASSERT_GT(pegInvocationCount, pegInvocationCountLast);
+        pegInvocationCountLast = pegInvocationCount;
 
         UnsecureAllocatorDomain::SecureString str;
-        ASSERT_GT(pegInvokationCount, pegInvokationCountLast);
-        pegInvokationCountLast = pegInvokationCount;
+        ASSERT_GT(pegInvocationCount, pegInvocationCountLast);
+        pegInvocationCountLast = pegInvocationCount;
 
         str->resize(2000, 'x');
-        ASSERT_GT(pegInvokationCount, pegInvokationCountLast);
-        pegInvokationCountLast = pegInvokationCount;
+        ASSERT_GT(pegInvocationCount, pegInvocationCountLast);
+        pegInvocationCountLast = pegInvocationCount;
 
         ASSERT_EQUALS(0, str->compare(*UnsecureAllocatorDomain::SecureString(2000, 'x')));
-        ASSERT_GT(pegInvokationCount, pegInvokationCountLast);
-        pegInvokationCountLast = pegInvokationCount;
+        ASSERT_GT(pegInvocationCount, pegInvocationCountLast);
+        pegInvocationCountLast = pegInvocationCount;
     }
 
-    ASSERT_GT(pegInvokationCount, pegInvokationCountLast);
+    ASSERT_GT(pegInvocationCount, pegInvocationCountLast);
 }
 
 }  // namespace mongo

@@ -76,7 +76,7 @@ def _add_scanner(builder):
 def _add_action(builder):
     actions = builder.action
 
-    # The first inbocation of TAPI is to make the tbd file that the
+    # The first invocation of TAPI is to make the tbd file that the
     # linker will actually use when linking. This must contain the
     # dylib UUID or the link will fail. The second creates a version
     # that does not contain the UUID. We use that as the ABI file. If
