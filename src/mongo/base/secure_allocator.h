@@ -78,7 +78,7 @@ inline void deallocateWrapper(void* ptr, std::size_t bytes, bool secure) {
  * are quite expensive, so one should endeavor to use containers which make
  * few, contiguous allocations where possible.
  *
- * Note that this allocator is written without reling on default
+ * Note that this allocator is written without relying on default
  * semantics injected via allocator_traits, and so defines all
  * optional allocator members, and does not rely on allocator_traits
  * to default them in. See http://stackoverflow.com/a/33267132 for a
