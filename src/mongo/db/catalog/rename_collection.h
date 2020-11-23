@@ -90,7 +90,7 @@ Status renameCollectionForRollback(OperationContext* opCtx,
                                    const UUID& uuid);
 /**
  * Runs renameCollection() with preliminary validation checks to ensure source
- * and target namespaces are elligible for rename.
+ * and target namespaces are eligible for rename.
  */
 void validateAndRunRenameCollection(OperationContext* opCtx,
                                     const NamespaceString& source,

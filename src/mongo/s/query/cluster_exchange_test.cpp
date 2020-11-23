@@ -162,7 +162,7 @@ TEST_F(ClusterExchangeTest, LimitFollowedByMergeStageIsNotEligibleForExchange) {
     future.default_timed_get();
 }
 
-TEST_F(ClusterExchangeTest, GroupFollowedByMergeIsEligbleForExchange) {
+TEST_F(ClusterExchangeTest, GroupFollowedByMergeIsEligibleForExchange) {
     // Sharded by {_id: 1}, [MinKey, 0) on shard "0", [0, MaxKey) on shard "1".
     setupNShards(2);
     loadRoutingTableWithTwoChunksAndTwoShards(kTestTargetNss);
