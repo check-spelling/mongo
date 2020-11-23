@@ -25,9 +25,9 @@ var shardingTest = new ShardingTest(shardingTestConfig);
 var replSet1 = shardingTest.rs0;
 var replSet2 = shardingTest.rs1;
 
-var repset1DB = replSet1.getPrimary().getDB(testDBName);
+var replSet1DB = replSet1.getPrimary().getDB(testDBName);
 for (var i = 1; i <= numDocs; i++) {
-    repset1DB[testCollName].insert({x: i});
+    replSet1DB[testCollName].insert({x: i});
 }
 replSet1.awaitReplication();
 
