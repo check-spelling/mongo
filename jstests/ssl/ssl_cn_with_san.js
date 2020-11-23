@@ -31,7 +31,7 @@ assert(rawMongoProgramOutput().includes(' would have matched, but was overridden
        'Expected detail warning not seen');
 
 // On OpenSSL only, start without `tlsAllowInvalidHostnames`
-// Windowds/Mac will bail out too early to show this message.
+// Windows/Mac will bail out too early to show this message.
 if (determineSSLProvider() === 'openssl') {
     clearRawMongoProgramOutput();
     const mongo = runMongoProgram(

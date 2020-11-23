@@ -53,7 +53,7 @@ void NetworkInterfaceIntegrationFixture::createNet(
     options.minConnections = 0u;
 
 #ifdef _WIN32
-    // Connections won't queue on widnows, so attempting to open too many connections
+    // Connections won't queue on windows, so attempting to open too many connections
     // concurrently will result in refused connections and test failure.
     options.maxConnections = 16u;
 #else
