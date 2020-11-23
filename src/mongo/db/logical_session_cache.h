@@ -96,12 +96,12 @@ public:
     virtual size_t size() = 0;
 
     /**
-     * Ennumerate all LogicalSessionId keys currently in the cache.
+     * Enumerate all LogicalSessionId keys currently in the cache.
      */
     virtual std::vector<LogicalSessionId> listIds() const = 0;
 
     /**
-     * Ennumerate all LogicalSessionId keys in the cache for the given UserDigests.
+     * Enumerate all LogicalSessionId keys in the cache for the given UserDigests.
      */
     virtual std::vector<LogicalSessionId> listIds(
         const std::vector<SHA256Block>& userDigest) const = 0;

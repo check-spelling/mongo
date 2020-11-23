@@ -45,7 +45,7 @@ namespace auth {
 bool addPrivilegesForBuiltinRole(const RoleName& role, PrivilegeVector* privileges);
 
 /**
- * Ennumerate all builtin RoleNames for the given database.
+ * Enumerate all builtin RoleNames for the given database.
  */
 stdx::unordered_set<RoleName> getBuiltinRoleNamesForDB(StringData dbname);
 
