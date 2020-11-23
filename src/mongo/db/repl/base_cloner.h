@@ -69,7 +69,7 @@ public:
     Status run();
 
     /**
-     * Executes the run() method asychronously on the given taskExecutor when the event is
+     * Executes the run() method asynchronously on the given taskExecutor when the event is
      * signalled, returning the result as a Future.
      *
      * If the executor is valid, the Future is guaranteed to not be ready until the event is

@@ -1,4 +1,4 @@
-// Tests that the asychronous thread that aborts expired transactions will not get stuck behind a
+// Tests that the asynchronous thread that aborts expired transactions will not get stuck behind a
 // drop command blocked on two transactions. A drop cmd requires a database exclusive lock, which
 // will block behind transactions holding database intent locks. Aborting a transaction must not
 // require taking further locks that would queue up behind the drop cmd's database exclusive lock

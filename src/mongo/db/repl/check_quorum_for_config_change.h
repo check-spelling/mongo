@@ -122,7 +122,7 @@ private:
  * to initiate a replica set with configuration "rsConfig".
  *
  * "myIndex" is the index of this node's member configuration in "rsConfig".
- * "executor" is the event loop in which to schedule network/aysnchronous processing.
+ * "executor" is the event loop in which to schedule network/asynchronous processing.
  * "term" is the term of this node.
  *
  * For purposes of initiate, a quorum is only met if all of the following conditions
@@ -142,7 +142,7 @@ Status checkQuorumForInitiate(executor::TaskExecutor* executor,
  * to replace the current replica set configuration with "rsConfig".
  *
  * "myIndex" is the index of this node's member configuration in "rsConfig".
- * "executor" is the event loop in which to schedule network/aysnchronous processing.
+ * "executor" is the event loop in which to schedule network/asynchronous processing.
  * "term" is the term of this node.
  *
  * For purposes of reconfig, a quorum is only met if all of the following conditions
