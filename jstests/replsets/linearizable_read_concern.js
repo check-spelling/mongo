@@ -91,7 +91,7 @@ assert.eq(mergeResult.code, ErrorCodes.InvalidOptions);
 
 primary = replTest.getPrimary();
 
-jsTestLog("Starting linearizablility testing");
+jsTestLog("Starting linearizability testing");
 
 const cursorId = assert
                      .commandWorked(primary.getDB("test").runCommand(
