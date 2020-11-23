@@ -108,7 +108,7 @@ bool isNewBatchRequiredOrdered(const std::vector<TargetedWrite*>& writes,
 
 /**
  * Helper to determine whether a shard is already targeted with a different shardVersion, which
- * necessitates a new batch. This happens when a batch write incldues a multi target write and
+ * necessitates a new batch. This happens when a batch write includes a multi target write and
  * a single target write.
  */
 bool isNewBatchRequiredUnordered(const std::vector<TargetedWrite*>& writes,
