@@ -2114,7 +2114,7 @@ void filterKeyFromKeyString(uint8_t ctype, BufReader* reader, bool inverted, Ver
 Decimal128 adjustDecimalExponent(TypeBits::Reader* typeBits, Decimal128 num) {
     // The last 6 bits of the exponent are stored in the type bits. First figure out if the exponent
     // of 'num' is too high or too low. Even for a non-zero number with only a single significant
-    // digit, there are only 34 possiblities while exponents with the given low 6 bits are spaced
+    // digit, there are only 34 possibilities while exponents with the given low 6 bits are spaced
     // (1 << 6) == 64 apart. This is not quite enough to figure out whether to shift the exponent up
     // or down when the difference is for example 32 in either direction. However, if the high part
     // of the coefficient is zero, the coefficient can only be scaled down by up to 1E19 (increasing

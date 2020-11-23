@@ -1024,7 +1024,7 @@ TEST_F(QueryPlannerTest, EnumerateNestedOr2) {
         "{fetch: {filter: {e: 1}, node: {ixscan: {pattern: {f: 1}}}}}"
         "]}}}}");
 
-    // Two possibilties from outside the $or.
+    // Two possibilities from outside the $or.
     assertSolutionExists("{fetch: {node: {ixscan: {pattern: {a: 1}}}}}");
     assertSolutionExists("{fetch: {node: {ixscan: {pattern: {b: 1}}}}}");
 }
