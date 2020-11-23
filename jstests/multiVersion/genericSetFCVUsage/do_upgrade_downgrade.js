@@ -291,7 +291,7 @@ let replicaSetTest = function(nodeOptions, downgradeVersion) {
     jsTest.log("Starting a " + downgradeVersion + " binVersion ReplSetTest to test downgrade");
     rst.startSet({restart: true, binVersion: downgradeVersion});
 
-    // Check that the featureCompatiblityVersion is set to downgradeFCV and all
+    // Check that the featureCompatibilityVersion is set to downgradeFCV and all
     // collections still have UUIDs.
     let downgradedPrimaryAdminDB = rst.getPrimary().getDB("admin");
     let downgradedSecondaries = rst.getSecondaries();
