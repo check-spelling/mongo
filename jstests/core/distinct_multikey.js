@@ -57,7 +57,7 @@ explain = coll.explain("queryPlanner").distinct("a", {a: {$gte: 2}});
 assert(planHasStage(db, explain.queryPlanner.winningPlan, "PROJECTION_COVERED"));
 assert(planHasStage(db, explain.queryPlanner.winningPlan, "DISTINCT_SCAN"));
 
-// Test a distinct which can use a multikey index, where the field being distinct'ed is not
+// Test a distinct which can use a multikey index, where the field being distincted is not
 // multikey.
 coll.drop();
 assert.commandWorked(coll.createIndex({a: 1, b: 1}));
