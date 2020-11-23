@@ -37,7 +37,7 @@ function testWriteConcernError(rs) {
         });
 
         // $merge writeConcern errors are handled differently from normal writeConcern
-        // errors. Rather than returing ok:1 and a WriteConcernError, the entire operation
+        // errors. Rather than returning ok:1 and a WriteConcernError, the entire operation
         // fails.
         assert.commandFailedWithCode(res,
                                      whenNotMatchedMode == "fail"

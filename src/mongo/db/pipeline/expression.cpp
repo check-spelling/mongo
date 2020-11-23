@@ -6394,7 +6394,7 @@ Value ExpressionRegexFindAll::evaluate(const Document& root, Variables* variable
         if (matchStr.empty()) {
             // This would only happen if the regex matched an empty string. In this case, even if
             // the character at startByteIndex matches the regex, we cannot return it since we are
-            // already returing an empty string starting at this index. So we move on to the next
+            // already returning an empty string starting at this index. So we move on to the next
             // byte index.
             executionState.startBytePos +=
                 str::getCodePointLength(input[executionState.startBytePos]);
