@@ -1,5 +1,5 @@
 /**
- * Test to verify the behaviour of 'distinct' and aggreate with '$group' operations in the presence
+ * Test to verify the behaviour of 'distinct' and aggregate with '$group' operations in the presence
  * of compound hashed indexes. In this test we also verify that the query planner uses
  * 'DISTINCT_SCAN' when it is appropriate.
  *

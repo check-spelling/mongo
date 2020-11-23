@@ -1,6 +1,6 @@
 /**
  * Tests $out stage of aggregate command concurrently with killOp. Ensures that all the temporary
- * collections created during aggreate command are deleted. If extending this workload, consider
+ * collections created during aggregate command are deleted. If extending this workload, consider
  * overriding the following:
  * - $config.states.aggregate: The function to execute the aggregation.
  * - $config.states.killOp: The function to find the aggregation and kill it. Consider reusing

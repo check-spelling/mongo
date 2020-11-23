@@ -100,7 +100,7 @@ runCommentParamTest({
     command: {aggregate: coll.getName(), pipeline: [], cursor: {batchSize: 1}},
 });
 
-// Verify the 'comment' field on the aggreage command is propagated to the subsequent getMore
+// Verify the 'comment' field on the aggregate command is propagated to the subsequent getMore
 // command.
 const comment = [{name: "agg_comment"}];
 const res = testDB.runCommand(

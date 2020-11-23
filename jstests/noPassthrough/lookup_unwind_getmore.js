@@ -16,7 +16,7 @@ assert.neq(null, conn, 'mongod was unable to start up with options: ' + tojson(o
 const testDB = conn.getDB('test');
 
 /**
- * Executes an aggregrate with 'options.pipeline' and confirms that 'options.numResults' were
+ * Executes an aggregate with 'options.pipeline' and confirms that 'options.numResults' were
  * returned.
  */
 function runTest(options) {
