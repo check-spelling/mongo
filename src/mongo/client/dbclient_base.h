@@ -285,7 +285,7 @@ public:
     bool runCommand(const std::string& dbname, BSONObj cmd, BSONObj& info, int options = 0);
 
     /*
-     * This wraps up the runCommand function avove, but returns the DBClient that actually ran
+     * This wraps up the runCommand function above, but returns the DBClient that actually ran
      * the command. When called against a replica set, this will return the specific
      * replica set member the command ran against.
      *
