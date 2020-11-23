@@ -778,7 +778,7 @@ public:
         const;
 
     /**
-     * Checks if the 'commitQuorum' can be satisifed by the current replica set config. Returns true
+     * Checks if the 'commitQuorum' can be satisfied by the current replica set config. Returns true
      * if it can be satisfied.
      */
     bool checkIfCommitQuorumCanBeSatisfied(const CommitQuorumOptions& commitQuorum) const;

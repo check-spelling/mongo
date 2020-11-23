@@ -306,7 +306,7 @@ public:
     /**
      * Allocates an aligned pointer of given size from the locked page we have a pointer to.
      *
-     * Returns null if the request can't be satisifed.
+     * Returns null if the request can't be satisfied.
      */
     void* allocate(std::size_t size, std::size_t alignOf) {
         if (std::align(alignOf, size, _ptr, _remaining)) {

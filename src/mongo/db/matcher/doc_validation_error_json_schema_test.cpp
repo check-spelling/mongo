@@ -3209,7 +3209,7 @@ TEST(JSONSchemaValidation, NestedPatternProperties) {
     doc_validation_error::verifyGeneratedError(query, document, expectedError);
 }
 
-TEST(JSONSchemaValidation, PatternPropertiesSomePatternsSatifised) {
+TEST(JSONSchemaValidation, PatternPropertiesSomePatternsSatisfied) {
     BSONObj query = fromjson(
         "{'$jsonSchema': {'patternProperties': {'^a': {'type': 'string'},'^S': {'type': "
         "'number'}}}}");
