@@ -423,7 +423,7 @@ there are roles stored in the User document specified by the LDAP system. The LD
 the
 [`AuthzManagerExternalStateLDAP`](https://github.com/10gen/mongo-enterprise-modules/blob/r4.4.0/src/ldap/authz_manager_external_state_ldap.h)
 to make external requests to the LDAP server. The `AuthzManagerExternalStateLDAP` wraps the
-`AuthzManagerExternalStateLocal` for the current process, initally attempting to route all
+`AuthzManagerExternalStateLocal` for the current process, initially attempting to route all
 Authorization requests to LDAP and falling back on Local Authorization. LDAP queries are generated
 from
 [`UserRequest`](https://github.com/10gen/mongo-enterprise-modules/blob/r4.4.0/src/ldap/authz_manager_external_state_ldap.cpp#L75-L113)
