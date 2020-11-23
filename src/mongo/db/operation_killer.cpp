@@ -76,7 +76,7 @@ void OperationKiller::killOperation(OperationId opId) {
     }
 
     if (!isGenerallyAuthorizedToKill() && !isAuthorizedToKill(target)) {
-        // The client is not authotized to kill this operation
+        // The client is not authorized to kill this operation
         return;
     }
 
