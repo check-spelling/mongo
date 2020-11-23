@@ -189,7 +189,7 @@ private:
      * Complete. Subsequent startup() attempts will return an IllegalOperation error.
      *
      * If _doStartup_inlock() succeeds, the component stays in Running (or ShuttingDown if
-     * shutdown() is called) until the component has finished its processing (transtion to
+     * shutdown() is called) until the component has finished its processing (transition to
      * Complete).
      *
      * It is the responsibility of the implementation to transition the component state to Complete
