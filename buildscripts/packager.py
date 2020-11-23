@@ -106,7 +106,7 @@ class Spec(object):
         return "-org" if int(self.ver.split(".")[1]) % 2 == 0 else "-org-unstable"
 
     def prelease(self):
-        """Return pre-release verison suffix."""
+        """Return pre-release version suffix."""
         # NOTE: This is only called for RPM packages, and only after
         # pversion() below has been called. If you want to change this format
         # and want DEB packages to match, make sure to update pversion()

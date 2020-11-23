@@ -135,7 +135,7 @@ def is_supported_distro(pkg_format):
 
 def is_supported_mac_version():
     v, _, _ = platform.mac_ver()
-    # Get Mac OSX Major.Minor verson as a float
+    # Get Mac OSX Major.Minor version as a float
     ver_float = float('.'.join(v.split('.')[:2]))
     return ver_float >= 10.10
 

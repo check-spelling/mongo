@@ -222,7 +222,7 @@ TEST_F(CatalogCacheTest, InvalidateSingleDbOnShardRemoval) {
 }
 
 TEST_F(CatalogCacheTest, OnStaleDatabaseVersionNoVersion) {
-    // onStaleDatabaseVesrsion must invalidate the database entry if invoked with no version
+    // onStaleDatabaseVersion must invalidate the database entry if invoked with no version
     const auto dbVersion = DatabaseVersion(UUID::gen(), 1);
     loadDatabases({DatabaseType(kNss.db().toString(), kShards[0], true, dbVersion)});
 
