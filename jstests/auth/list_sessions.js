@@ -55,7 +55,7 @@ function runListSessionsTest(mongod) {
     // Make sure pipelining other collections fail
     assertErrorCode(admin.system.collections, pipeline, ErrorCodes.InvalidNamespace);
 
-    // Ensure that changing users hides the session everwhere.
+    // Ensure that changing users hides the session everywhere.
     assert(admin.auth('user2', 'pass'));
     assert.eq(listSessions().toArray().length, 0);
 
