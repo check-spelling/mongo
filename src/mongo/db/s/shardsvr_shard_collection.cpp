@@ -422,7 +422,7 @@ void createCollectionOnShardsReceivingChunks(OperationContext* opCtx,
                                          requests);
 
         // If any shards fail to create the collection, fail the entire shardCollection command
-        // (potentially leaving incomplely created sharded collection)
+        // (potentially leaving incompletely created sharded collection)
         for (const auto& response : responses) {
             auto shardResponse =
                 uassertStatusOKWithContext(std::move(response.swResponse),
