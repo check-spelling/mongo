@@ -140,7 +140,7 @@ TEST(ConfigOutputOptionsTest, parseOutputOptions) {
                       "mydb", fromjson("{out: {inline: 'mycoll', nonAtomic: false}}")),
                   AssertionException);
 
-    // Unknown output specifer.
+    // Unknown output specifier.
     ASSERT_THROWS(map_reduce_common::parseOutputOptions(
                       "mydb", fromjson("{out: {no_such_out_type: 'mycoll'}}")),
                   AssertionException);
