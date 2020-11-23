@@ -688,9 +688,9 @@ public:
     }
 };
 
-class OplogScanWithGtTimstampPred : public ClientBase {
+class OplogScanWithGtTimestampPred : public ClientBase {
 public:
-    ~OplogScanWithGtTimstampPred() {
+    ~OplogScanWithGtTimestampPred() {
         _client.dropCollection(ns);
     }
     void run() {
@@ -712,7 +712,7 @@ public:
             BSONObj info;
             _client.runCommand("local",
                                BSON("emptycapped"
-                                    << "oplog.querytests.OplogScanWithGtTimstampPred"),
+                                    << "oplog.querytests.OplogScanWithGtTimestampPred"),
                                info);
         }
 
@@ -741,7 +741,7 @@ public:
     }
 
 private:
-    const char* ns = "local.oplog.querytests.OplogScanWithGtTimstampPred";
+    const char* ns = "local.oplog.querytests.OplogScanWithGtTimestampPred";
 };
 
 class OplogScanGtTsExplain : public ClientBase {
@@ -2023,7 +2023,7 @@ public:
         add<TailableInsertDelete>();
         add<TailCappedOnly>();
         add<TailableQueryOnId>();
-        add<OplogScanWithGtTimstampPred>();
+        add<OplogScanWithGtTimestampPred>();
         add<OplogScanGtTsExplain>();
         add<ArrayId>();
         add<UnderscoreNs>();

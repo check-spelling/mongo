@@ -937,7 +937,7 @@ DEATH_TEST_REGEX(KVEngineTestHarness,
  * | Begin                       |                            |
  * | Write A 1                   |                            |
  * | Timestamp: commit 1         |                            |
- * |                             | Last Stable Timetamp: 1    |
+ * |                             | Last Stable Timestamp: 1   |
  * | Begin                       |                            |
  * | Write B 2                   |                            |
  * | Timestamp: commit 3         |                            |
