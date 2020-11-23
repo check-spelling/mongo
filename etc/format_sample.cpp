@@ -59,7 +59,7 @@ public:
 private:
     int _aVariable;
     long _bVariable;
-    short _cVarianble = 49;
+    short _cVariable = 49;
     long _AReallyReallyLongVariableName;
     long _AnotherReallyReallyLongVariableNameToTriggerWrapping;
 };
