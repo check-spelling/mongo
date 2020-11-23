@@ -473,7 +473,7 @@ void forEachOrphanRange(OperationContext* opCtx, const NamespaceString& nss, Cal
         if (!range) {
             LOGV2_DEBUG(22030,
                         2,
-                        "Upgrade: Completed orphanged range enumeration; no orphaned ranges "
+                        "Upgrade: Completed orphaned range enumeration; no orphaned ranges "
                         "remain",
                         "namespace"_attr = nss.toString(),
                         "startingKey"_attr = redact(startingKey));
