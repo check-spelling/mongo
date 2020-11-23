@@ -22,7 +22,7 @@ function runBalancer(rounds) {
     st.stopBalancer();
 }
 
-// only fully quilified namespaces are allowed on the command
+// only fully qualified namespaces are allowed on the command
 assert.commandFailedWithCode(st.s0.adminCommand({balancerCollectionStatus: 'db'}),
                              ErrorCodes.InvalidNamespace);
 

@@ -143,7 +143,7 @@ struct CommandHelpers {
     /**
      * Utility that returns a ResourcePattern for the namespace returned from
      * BasicCommand::parseNs(dbname, cmdObj). This will be either an exact namespace resource
-     * pattern or a database resource pattern, depending on whether parseNs returns a fully qualifed
+     * pattern or a database resource pattern, depending on whether parseNs returns a fully qualified
      * collection name or just a database name.
      */
     static ResourcePattern resourcePatternForNamespace(const std::string& ns);

@@ -169,7 +169,7 @@ private:
 };
 
 /**
- * Helper to pattern-match the signatures for all combinations of const and l-value-qualifed member
+ * Helper to pattern-match the signatures for all combinations of const and l-value-qualified member
  * function pointers. We don't currently support r-value-qualified call operators.
  */
 template <typename>
