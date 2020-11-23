@@ -40,7 +40,7 @@
 namespace mongo {
 
 /**
- * Notfication callback, which stores the last notification result and signals a condition
+ * Notification callback, which stores the last notification result and signals a condition
  * variable, which can be waited on.
  */
 class CondVarLockGrantNotification : public LockGrantNotification {
