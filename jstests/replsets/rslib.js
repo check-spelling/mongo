@@ -116,7 +116,7 @@ occasionally = function(f, n) {
  * Attempt to re-establish and re-authenticate a Mongo connection if it was dropped, with
  * multiple retries.
  *
- * Returns upon successful re-connnection. If connection cannot be established after 200
+ * Returns upon successful re-connection. If connection cannot be established after 200
  * retries, throws an exception.
  *
  * @param conn - a Mongo connection object or DB object.

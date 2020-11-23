@@ -21,7 +21,7 @@ authutil.logout = function(conn, dbname) {
 /**
  * Authenticates all connections in "conns" using "authParams" on database "dbName".
  *
- * Raises an exception if any authentication fails, and tries to leave all connnections
+ * Raises an exception if any authentication fails, and tries to leave all connections
  * in "conns" in the logged-out-of-dbName state.
  */
 authutil.assertAuthenticate = function(conns, dbName, authParams) {

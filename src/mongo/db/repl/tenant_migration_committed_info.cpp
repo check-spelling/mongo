@@ -40,7 +40,7 @@ namespace {
 MONGO_INIT_REGISTER_ERROR_EXTRA_INFO(TenantMigrationCommittedInfo);
 
 constexpr StringData kTenantIdFieldName = "tenantId"_sd;
-constexpr StringData kRecipientConnetionStringFieldName = "recipientConnectionString"_sd;
+constexpr StringData kRecipientConnectionStringFieldName = "recipientConnectionString"_sd;
 
 }  // namespace
 
@@ -52,12 +52,12 @@ BSONObj TenantMigrationCommittedInfo::toBSON() const {
 
 void TenantMigrationCommittedInfo::serialize(BSONObjBuilder* bob) const {
     bob->append(kTenantIdFieldName, _tenantId);
-    bob->append(kRecipientConnetionStringFieldName, _recipientConnString);
+    bob->append(kRecipientConnectionStringFieldName, _recipientConnString);
 }
 
 std::shared_ptr<const ErrorExtraInfo> TenantMigrationCommittedInfo::parse(const BSONObj& obj) {
     return std::make_shared<TenantMigrationCommittedInfo>(
-        obj[kTenantIdFieldName].String(), obj[kRecipientConnetionStringFieldName].String());
+        obj[kTenantIdFieldName].String(), obj[kRecipientConnectionStringFieldName].String());
 }
 
 }  // namespace mongo
