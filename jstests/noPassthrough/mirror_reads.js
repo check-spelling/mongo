@@ -103,7 +103,7 @@ function verifyMirrorReads(rst, cmd) {
     assert.commandFailed(setParameter({rst: rst, value: "half"}));
     assert.commandFailed(setParameter({rst: rst, value: {samplingRate: -1.0}}));
     assert.commandFailed(setParameter({rst: rst, value: {samplingRate: 1.01}}));
-    assert.commandFailed(setParameter({rst: rst, value: {somplingRate: 1.0}}));
+    assert.commandFailed(setParameter({rst: rst, value: {samplingRate: 1.0}}));
 
     // Put in a datum
     {
