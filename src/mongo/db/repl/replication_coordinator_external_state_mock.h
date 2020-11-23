@@ -206,7 +206,7 @@ private:
     bool _canAcquireGlobalSharedLock;
     Status _storeLocalConfigDocumentStatus;
     Status _storeLocalLastVoteDocumentStatus;
-    // mutex and cond var for controlling stroeLocalLastVoteDocument()'s hanging
+    // mutex and cond var for controlling storeLocalLastVoteDocument()'s hanging
     Mutex _shouldHangLastVoteMutex =
         MONGO_MAKE_LATCH("ReplicationCoordinatorExternalStateMock::_shouldHangLastVoteMutex");
     stdx::condition_variable _shouldHangLastVoteCondVar;
