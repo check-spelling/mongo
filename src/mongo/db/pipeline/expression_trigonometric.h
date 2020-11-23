@@ -145,7 +145,7 @@ public:
     }
 
     /**
-     * evaluateNumericArg  evaluates the implented trig function on one numericArg.
+     * evaluateNumericArg  evaluates the implemented trig function on one numericArg.
      */
     Value evaluateNumericArg(const Value& numericArg) const {
         switch (numericArg.getType()) {
@@ -209,7 +209,7 @@ public:
         : ExpressionSingleNumericArg<TrigType>(expCtx, std::move(children)) {}
 
     /**
-     * evaluateNumericArg evaluates the implented trig function on one numericArg.
+     * evaluateNumericArg evaluates the implemented trig function on one numericArg.
      */
     Value evaluateNumericArg(const Value& numericArg) const override {
         switch (numericArg.getType()) {
