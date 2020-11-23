@@ -159,7 +159,7 @@ public:
 
     /**
      * Drop corresponding SingleServerPingMonitors if the server is not included in the
-     * newDescritpion.
+     * newDescription.
      */
     void onTopologyDescriptionChangedEvent(sdam::TopologyDescriptionPtr previousDescription,
                                            sdam::TopologyDescriptionPtr newDescription);
