@@ -52,7 +52,7 @@ result = benchRun({
     parallel: 5,
     ops: [{op: "insert", ns: "foo.bar", doc: {field: "value"}}]
 });
-jsTestLog({ThrottledRun: result, ThrottedRate: throttledRate});
+jsTestLog({ThrottledRun: result, ThrottledRate: throttledRate});
 let maxAllowedRate = 1.5 * throttledRate;
 let minAllowedRate = 0.5 * throttledRate;
 assert.gt(result["insert"], minAllowedRate);
