@@ -455,7 +455,7 @@ private:
  * This class is an RAII object to manage the state of the `OpObserver::Times` decoration on an
  * operation context. Upon destruction the list of times in the decoration on the operation context
  * is cleared. It is intended for use as a scope object in `OpObserverRegistry` to manage
- * re-entrancy.
+ * reentrancy.
  */
 class OpObserver::ReservedTimes {
     ReservedTimes(const ReservedTimes&) = delete;
