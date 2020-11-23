@@ -36,7 +36,7 @@ assert.commandWorked(secondary.adminCommand({
     maxTimeMS: kDefaultWaitForFailPointTimeout
 }));
 
-// Turn off the failpoint and immediately proceeed with collection counts checks.
+// Turn off the failpoint and immediately proceed with collection counts checks.
 jsTestLog("Trying checkCollectionCounts");
 assert.commandWorked(secondary.adminCommand(
     {configureFailPoint: "initialSyncHangBeforeCopyingDatabases", mode: "off"}));
