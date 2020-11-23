@@ -231,8 +231,8 @@ class TestHelperMethods(unittest.TestCase):
         self.assertEqual("sharding_auth_auditg", under_test.remove_gen_suffix(input_task_name))
 
     def test_doesnt_remove_non_gen_suffix(self):
-        input_task_name = "sharded_multi_stmt_txn_jscore_passthroug"
-        self.assertEqual("sharded_multi_stmt_txn_jscore_passthroug",
+        input_task_name = "sharded_multi_stmt_txn_jscore_passthrough"
+        self.assertEqual("sharded_multi_stmt_txn_jscore_passthrough",
                          under_test.remove_gen_suffix(input_task_name))
 
     def test_string_contains_any_of_args(self):
