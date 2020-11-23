@@ -1136,7 +1136,7 @@ public:
         //
         // 2) Check if the value in a given slot is an integral int64. This test is done by
         // computing a lossless conversion of the value in s1 to an int64. The exposed
-        // conversion function by the vm returns a value if there is no loss of precsision,
+        // conversion function by the vm returns a value if there is no loss of precision,
         // otherwise it returns Nothing. In both the valid or Nothing case, we can store the result
         // of the conversion in l2.0 of the inner let binding and test for existence. If the
         // existence check fails we know the conversion is lossy and we can fail the query.
