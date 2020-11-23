@@ -97,7 +97,7 @@ private:
  *   that is run. WT specifically installs a ServerStatusSection. The server status code asserts
  *   that a section is never added after a `serverStatus` command is run. Tests defined in
  *   `migration_manager_test` (part of the `db_s_config_server_test` unittest binary) call a
- *   serverStatus triggerring this assertion.
+ *   serverStatus triggering this assertion.
  */
 class ReshardingTest {
 public:
