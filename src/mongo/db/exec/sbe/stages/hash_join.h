@@ -73,7 +73,7 @@ private:
     // All defined values from the outer side (i.e. they come from the hash table).
     value::SlotAccessorMap _outOuterAccessors;
 
-    // Accessors of input codition values (keys) that are being inserted into the hash table.
+    // Accessors of input condition values (keys) that are being inserted into the hash table.
     std::vector<value::SlotAccessor*> _inOuterKeyAccessors;
 
     // Accessors of output keys.
@@ -85,7 +85,7 @@ private:
     // Accessors of output projections.
     std::vector<std::unique_ptr<HashProjectAccessor>> _outOuterProjectAccessors;
 
-    // Accessors of input codition values (keys) that are being inserted into the hash table.
+    // Accessors of input condition values (keys) that are being inserted into the hash table.
     std::vector<value::SlotAccessor*> _inInnerKeyAccessors;
 
     // Key used to probe inside the hash table.
