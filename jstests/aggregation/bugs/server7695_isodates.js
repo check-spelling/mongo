@@ -185,7 +185,7 @@ const SUNDAY = 7;
                        {format: '%G-W%V-%u', date: newYearsEve},
                        "" + (year) + "-W53-" + DateUtil.shiftWeekday(day, 1));
             } else if (day <= SATURDAY) {
-                // A leap year starting on Friday or Sarturday will always and with week 52
+                // A leap year starting on Friday or Saturday will always and with week 52
                 testOp('$isoWeek', newYearsEve, 52);
                 testOp('$isoWeekYear', newYearsEve, year);
                 testOp('$isoWeek', endOfSecondToLastWeekInYear, 51);
