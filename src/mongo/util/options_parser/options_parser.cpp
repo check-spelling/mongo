@@ -725,7 +725,7 @@ Status YAMLNodeToValue(const YAML::Node& YAMLNode,
 
         for (YAML::const_iterator it = YAMLNode.begin(); it != YAMLNode.end(); ++it) {
             auto elementKey = it->first.Scalar();
-            // Because the object returned by dereferencing the `YAMLNode` iterator is an emphemeral
+            // Because the object returned by dereferencing the `YAMLNode` iterator is an ephemeral
             // proxy value, the objects within it do not get lifetime extension when referred by
             // reference. By making `elementVal` hold a copy of the element, we avoid a bug, found
             // by ASAN, where `elementVal` will be an invalid reference immediately after its

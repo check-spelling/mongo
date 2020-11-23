@@ -6,7 +6,7 @@ from a client.
 
 When a client wants to interact with a server, they must first establish a 
 connection. The server listens on a single port for incoming client connections. 
-Once a client connection is received over an ephermeral port, a client session 
+Once a client connection is received over an ephemeral port, a client session 
 is created out of this connection and commands begin to be processed on a new 
 dedicated thread.
 
