@@ -235,7 +235,7 @@ private:
     // The '<' function for order preserving exchange.
     const std::unique_ptr<EExpression> _orderLess;
 
-    // This is verbose and heavyweight. Recondsider something lighter
+    // This is verbose and heavyweight. Reconsider something lighter
     // at minimum try to share a single mutex (i.e. _stateMutex) if safe
     mongo::Mutex _consumerOpenMutex;
     stdx::condition_variable _consumerOpenCond;
