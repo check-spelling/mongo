@@ -121,7 +121,7 @@ namespace mutablebson {
  *    Object element, and it is considered as the root of the document tree. It is possible
  *    for ElementReps to exist in the Document data structures, but not be in a child
  *    relationship to the root Element. Newly created Elements, for instance, are in this
- *    sort of 'detached' state until they are attched to another element. Only Element's
+ *    sort of 'detached' state until they are attached to another element. Only Element's
  *    that are children of the root element are traversed when calling top level
  *    serialization or comparision operations on Document.
  *
