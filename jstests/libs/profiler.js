@@ -60,7 +60,7 @@ function getProfilerProtocolStringForCommand(conn) {
         return "op_msg";
     if (/Query/.test(protocols))
         return "op_query";
-    doassert(`Unknown prototocol string ${protocols}`);
+    doassert(`Unknown protocol string ${protocols}`);
 }
 
 /**
