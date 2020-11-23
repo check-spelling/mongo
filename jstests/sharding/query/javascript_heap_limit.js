@@ -13,12 +13,12 @@ let mongosColl = mongosDB.coll;
 st.shardColl(mongosColl.getName(), {x: 1}, {x: 2}, {x: 2});
 assert.commandWorked(mongosColl.insert([{x: 0}, {x: 2}]));
 
-// The limits chosen in this test for "tooSmallHeapSizeMB", "sufficentHeapSizeMB" and "arraySize"
+// The limits chosen in this test for "tooSmallHeapSizeMB", "sufficientHeapSizeMB" and "arraySize"
 // reflect a setup where allocating a string of size "arraySize" with a "tooSmallHeapSizeMB"
 // JavaScript heap limit will trigger an OOM event, whereas allocating the same array with a
-// "sufficentHeapSizeMB" JavaScript heap limit will succeed.
+// "sufficientHeapSizeMB" JavaScript heap limit will succeed.
 const tooSmallHeapSizeMB = 10;
-const sufficentHeapSizeMB = 100;
+const sufficientHeapSizeMB = 100;
 
 function setHeapSizeLimitMB({db, queryLimit, globalLimit}) {
     assert.commandWorked(
@@ -97,14 +97,14 @@ const findWithWhere = {
  */
 function runCommonTests(db) {
     // All commands are expected to work with a sufficient JS heap size.
-    setHeapSizeLimitMB({db: db, queryLimit: sufficentHeapSizeMB, globalLimit: sufficentHeapSizeMB});
+    setHeapSizeLimitMB({db: db, queryLimit: sufficientHeapSizeMB, globalLimit: sufficientHeapSizeMB});
     assert.commandWorked(db.runCommand(aggregateWithJSFunction));
     assert.commandWorked(db.runCommand(aggregateWithInternalJsReduce));
     assert.commandWorked(db.runCommand(aggregateWithUserDefinedAccumulator));
 
     // The aggregate command is expected to fail when the aggregation specific heap size limit is
     // too low.
-    setHeapSizeLimitMB({db: db, queryLimit: tooSmallHeapSizeMB, globalLimit: sufficentHeapSizeMB});
+    setHeapSizeLimitMB({db: db, queryLimit: tooSmallHeapSizeMB, globalLimit: sufficientHeapSizeMB});
     assert.commandFailedWithCode(db.runCommand(aggregateWithJSFunction),
                                  ErrorCodes.JSInterpreterFailure);
     assert.commandFailedWithCode(db.runCommand(aggregateWithInternalJsReduce),
@@ -114,7 +114,7 @@ function runCommonTests(db) {
 
     // All commands are expected to fail when the global heap size limit is too low, regardless
     // of the aggregation limit.
-    setHeapSizeLimitMB({db: db, queryLimit: sufficentHeapSizeMB, globalLimit: tooSmallHeapSizeMB});
+    setHeapSizeLimitMB({db: db, queryLimit: sufficientHeapSizeMB, globalLimit: tooSmallHeapSizeMB});
     assert.commandFailedWithCode(db.runCommand(aggregateWithJSFunction),
                                  ErrorCodes.JSInterpreterFailure);
     assert.commandFailedWithCode(db.runCommand(aggregateWithInternalJsReduce),
@@ -129,7 +129,7 @@ function runCommonTests(db) {
  */
 function runShardTests(db) {
     // All commands are expected to work with a sufficient JS heap size.
-    setHeapSizeLimitMB({db: db, queryLimit: sufficentHeapSizeMB, globalLimit: sufficentHeapSizeMB});
+    setHeapSizeLimitMB({db: db, queryLimit: sufficientHeapSizeMB, globalLimit: sufficientHeapSizeMB});
     assert.commandWorked(db.runCommand(findWithJavaScriptFunction));
     // TODO SERVER-45454: Uncomment when $where is executed via  aggregation JavaScript expression.
     // assert.commandWorked(db.runCommand(findWithWhere));
@@ -137,20 +137,20 @@ function runShardTests(db) {
 
     // A find command with JavaScript agg expression is expected to fail when the query specific
     // heap size limit is too low.
-    setHeapSizeLimitMB({db: db, queryLimit: tooSmallHeapSizeMB, globalLimit: sufficentHeapSizeMB});
+    setHeapSizeLimitMB({db: db, queryLimit: tooSmallHeapSizeMB, globalLimit: sufficientHeapSizeMB});
     assert.commandFailedWithCode(db.runCommand(findWithJavaScriptFunction),
                                  ErrorCodes.JSInterpreterFailure);
 
     // The mapReduce command and $where are not limited by the query heap size limit and will
     // succeed even if it is set too low.
-    setHeapSizeLimitMB({db: db, queryLimit: tooSmallHeapSizeMB, globalLimit: sufficentHeapSizeMB});
+    setHeapSizeLimitMB({db: db, queryLimit: tooSmallHeapSizeMB, globalLimit: sufficientHeapSizeMB});
     assert.commandWorked(db.runCommand(mapReduce));
     // TODO SERVER-45454: Uncomment when $where is executed via  aggregation JavaScript expression.
     // assert.commandWorked(db.runCommand(findWithWhere));
 
     // All commands are expected to fail when the global heap size limit is too low, regardless
     // of the aggregation limit.
-    setHeapSizeLimitMB({db: db, queryLimit: sufficentHeapSizeMB, globalLimit: tooSmallHeapSizeMB});
+    setHeapSizeLimitMB({db: db, queryLimit: sufficientHeapSizeMB, globalLimit: tooSmallHeapSizeMB});
     assert.commandFailedWithCode(db.runCommand(findWithJavaScriptFunction),
                                  ErrorCodes.JSInterpreterFailure);
     // TODO SERVER-45454: Uncomment when $where is executed via  aggregation JavaScript expression.
