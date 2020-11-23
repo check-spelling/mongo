@@ -52,7 +52,7 @@ HostAndPort selectTarget(OperationContext* opCtx) {
         }
     }
 
-    uasserted(ErrorCodes::InternalError, "No viable replica set members to conenct to");
+    uasserted(ErrorCodes::InternalError, "No viable replica set members to connect to");
 }
 
 HostAndPort validateTarget(OperationContext* opCtx, StringData targetStr) {
