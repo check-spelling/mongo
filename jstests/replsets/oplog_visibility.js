@@ -56,7 +56,7 @@ for (let node of replTest.nodes) {
         jsTestLog({"Node": node.host, "StartTs": oplogStart});
 
         while (timestamps.length < 1000) {
-            // Query with $gte to validate continuinity. Do not add this first record to the
+            // Query with $gte to validate continuity. Do not add this first record to the
             // recorded timestamps. Its value was already added in the last cursor.
             let cursor = local.getCollection("oplog.rs")
                              .find({ts: {$gte: oplogStart}})
