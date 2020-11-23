@@ -10,7 +10,7 @@
  */
 
 /**
- * Settings for the converting implictily accessed collections to sharded collections.
+ * Settings for the converting implicitly accessed collections to sharded collections.
  */
 const ImplicitlyShardAccessCollSettings = (function() {
     let mode = 0;  // Default to hashed shard key.

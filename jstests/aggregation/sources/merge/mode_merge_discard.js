@@ -1,6 +1,6 @@
 // Tests the behaviour of the $merge stage with whenMatched=merge and whenNotMatched=discard.
 //
-// Cannot implicitly shard accessed collections because a collection can be implictly created and
+// Cannot implicitly shard accessed collections because a collection can be implicitly created and
 // exists when none is expected.
 (function() {
 "use strict";
