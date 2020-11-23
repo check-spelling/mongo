@@ -176,7 +176,7 @@ public:
     // Accept anything that Matcher's and Action's constructors allow.
     // Use defaultExpect() to specify shared behavior in test fixtures. This is best for
     // uninteresting calls common to a class of tests.
-    // For these reasons, you are not allowed to declare further default expecations after
+    // For these reasons, you are not allowed to declare further default expectations after
     // having already enqueued user expectations.
     template <typename MatcherType>
     DefaultExpectation& defaultExpect(MatcherType&& matcher, Action action) {
