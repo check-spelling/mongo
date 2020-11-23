@@ -61,7 +61,7 @@ Status validateAggregationPath(const std::vector<std::string>& pathComponents);
 
 /**
  * Performs the following checks on the variable prefix:
- * * Forbides emptiness.
+ * * Forbids emptiness.
  * * Requires the first character to be a lowercase character or non-ascii.
  * * Requires all subsequent characters to be an alphanumeric, underscores or non-ascii.
  * Performs the following checks on the path components if any:
