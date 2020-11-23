@@ -461,7 +461,7 @@ MONGO_EMBEDDED_API mongo_embedded_v1_lib* MONGO_API_CALL mongo_embedded_v1_lib_i
  * terminated. Dataloss is not a risk; however, some database repair routines may be executed at
  * next initialization if the library is not properly quiesced. It is permissible to create and
  * destroy `mongo_embedded_v1_status` objects after the library has been quiesced. The library may
- * be re-initialized with a potentially different configuration after it has been queisced.
+ * be re-initialized with a potentially different configuration after it has been quiesced.
  *
  * @pre All `mongo_embedded_v1_instance` objects associated with this library handle must be
  * destroyed.
