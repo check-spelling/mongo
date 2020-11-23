@@ -78,7 +78,7 @@ class ArgumentInfo(object):
 
 
 class MethodInfo(object):
-    """Class that encapslates information about a method and how to declare, define, and call it."""
+    """Class that encapsulates information about a method and how to declare, define, and call it."""
 
     def __init__(self, class_name, method_name, args, return_type=None, static=False, const=False,
                  explicit=False):

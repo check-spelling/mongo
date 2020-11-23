@@ -55,7 +55,7 @@
 namespace {
 enum RPCState { kWaitingForMessageLength, kWaitingForMessageContent, kHaveOutput };
 
-// A non-owning memory view with that encapulates reading or writing from that memory by keeping
+// A non-owning memory view with that encapsulates reading or writing from that memory by keeping
 // track of a current pointer that advances on the read or write.
 struct MemoryView {
     MemoryView() = default;
