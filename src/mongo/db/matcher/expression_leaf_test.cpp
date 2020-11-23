@@ -225,7 +225,7 @@ TEST(EqOp, ElemMatchKey) {
     ASSERT_EQUALS("2", details.elemMatchKey());
 }
 
-// SERVER-14886: when an array is being traversed explictly at the same time that a nested array
+// SERVER-14886: when an array is being traversed explicitly at the same time that a nested array
 // is being traversed implicitly, the elemMatch key should refer to the offset of the array
 // being implicitly traversed.
 TEST(EqOp, ElemMatchKeyWithImplicitAndExplicitTraversal) {

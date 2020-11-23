@@ -189,7 +189,7 @@ public:
         TxnResources(WithLock, OperationContext* opCtx, StashStyle stashStyle) noexcept;
         ~TxnResources();
 
-        // Rule of 5: because we have a class-defined destructor, we need to explictly specify
+        // Rule of 5: because we have a class-defined destructor, we need to explicitly specify
         // the move operator and move assignment operator.
         TxnResources(TxnResources&&) = default;
         TxnResources& operator=(TxnResources&&) = default;

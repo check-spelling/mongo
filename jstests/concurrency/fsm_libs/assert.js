@@ -79,7 +79,7 @@ var assertWithLevel = function(level) {
             // Assert against the value returned by the function
             arguments[0] = arguments[0]();
 
-            // If a function does not explictly return a value,
+            // If a function does not explicitly return a value,
             // then have it implicitly return true
             if (typeof arguments[0] === 'undefined') {
                 arguments[0] = true;

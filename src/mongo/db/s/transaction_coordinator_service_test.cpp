@@ -142,7 +142,7 @@ protected:
 
     /**
      * Goes through the steps to commit a transaction through the coordinator service  for a given
-     * lsid and txnNumber. Useful when not explictly testing the commit protocol.
+     * lsid and txnNumber. Useful when not explicitly testing the commit protocol.
      */
     void commitTransaction(TransactionCoordinatorService& coordinatorService,
                            const LogicalSessionId& lsid,
@@ -165,7 +165,7 @@ protected:
 
     /**
      * Goes through the steps to abort a transaction through the coordinator service for a given
-     * lsid and txnNumber. Useful when not explictly testing the abort protocol.
+     * lsid and txnNumber. Useful when not explicitly testing the abort protocol.
      */
     void abortTransaction(TransactionCoordinatorService& coordinatorService,
                           const LogicalSessionId& lsid,

@@ -20,7 +20,7 @@ mkdir(testPath4);
 
 // Startup 3 mongos:
 // 1. Normal MongoS with no log file to verify FTDC can be startup at runtime with a path.
-// 2. MongoS with explict diagnosticDataCollectionDirectoryPath setParameter at startup.
+// 2. MongoS with explicit diagnosticDataCollectionDirectoryPath setParameter at startup.
 // 3. MongoS with log file to verify automatic FTDC path computation works.
 let st = new ShardingTest({
     shards: 1,

@@ -126,7 +126,7 @@ Status FTDCFileWriter::writeArchiveFileBuffer(ConstDataRange buf) {
                 << _archiveFile.generic_string()};
     }
 
-    // Flush the stream explictly, this is preferred over "pubsetbuf(0,0)" which has implementation
+    // Flush the stream explicitly, this is preferred over "pubsetbuf(0,0)" which has implementation
     // defined behavior of "before any I/O has occurred".
     _archiveStream.flush();
 

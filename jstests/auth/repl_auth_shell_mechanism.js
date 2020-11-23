@@ -63,7 +63,7 @@ const uriString = 'mongodb://admin:password@' + rsHosts + '/admin?replicaSet=' +
 const uriShell = runMongoProgram('mongo', uriString, '--eval', ';');
 assert.eq(uriShell, 0, 'Failed to connect using URI');
 
-// Connect with shell using URI and explcit mechanism.
+// Connect with shell using URI and explicit mechanism.
 const uriShellMech =
     runMongoProgram('mongo', uriString + '&authMechanism=SCRAM-SHA-256', '--eval', ';');
 assert.eq(uriShellMech, 0, 'Failed to connect using URI');

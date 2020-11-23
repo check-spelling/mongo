@@ -445,7 +445,7 @@ TEST(Path, NestedArrayImplicitTraversal) {
     ASSERT(!cursor.more());
 }
 
-// SERVER-14886: when an array is being traversed explictly at the same time that a nested array
+// SERVER-14886: when an array is being traversed explicitly at the same time that a nested array
 // is being traversed implicitly, ElementIterator::Context::arrayOffset() should return the
 // current offset of the array being implicitly traversed.
 TEST(Path, ArrayOffsetWithImplicitAndExplicitTraversal) {
