@@ -399,7 +399,7 @@ class NoOptimizeNe : public NoOptimize {
     }
 };
 
-/** No optimization is performend without a constant. */
+/** No optimization is performed without a constant. */
 class NoOptimizeNoConstant : public NoOptimize {
     BSONObj spec() {
         return BSON("$ne" << BSON_ARRAY("$a"
@@ -407,14 +407,14 @@ class NoOptimizeNoConstant : public NoOptimize {
     }
 };
 
-/** No optimization is performend without an immediate field path. */
+/** No optimization is performed without an immediate field path. */
 class NoOptimizeWithoutFieldPath : public NoOptimize {
     BSONObj spec() {
         return BSON("$eq" << BSON_ARRAY(BSON("$and" << BSON_ARRAY("$a")) << 1));
     }
 };
 
-/** No optimization is performend without an immediate field path. */
+/** No optimization is performed without an immediate field path. */
 class NoOptimizeWithoutFieldPathReverse : public NoOptimize {
     BSONObj spec() {
         return BSON("$eq" << BSON_ARRAY(1 << BSON("$and" << BSON_ARRAY("$a"))));

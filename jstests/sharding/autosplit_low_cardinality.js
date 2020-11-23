@@ -41,7 +41,7 @@ insertBigDocsWithKey(10, 4);
 waitForOngoingChunkSplits(st);
 
 // At least one split should have been performed
-assert.gte(numChunks(), 2, "Number of chunks is less then 2, no split have been perfomed");
+assert.gte(numChunks(), 2, "Number of chunks is less then 2, no split have been performed");
 
 insertBigDocsWithKey(20, 4);
 waitForOngoingChunkSplits(st);
