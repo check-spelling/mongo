@@ -63,7 +63,7 @@ constexpr size_t kTenantApplierBatchSizeBytes = 16 * 1024 * 1024;
 constexpr size_t kTenantApplierBatchSizeOps = 500;
 const size_t kMinOplogEntriesPerThread = 16;
 
-// TODO(SERVER-50024):: This is also arbitary and should be a settable parameter.
+// TODO(SERVER-50024):: This is also arbitrary and should be a settable parameter.
 constexpr size_t kTenantApplierThreadCount = 5;
 
 TenantOplogApplier::TenantOplogApplier(const UUID& migrationUuid,

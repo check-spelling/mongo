@@ -52,7 +52,7 @@ class OperationContext;
 
 /* db request message format
 
-   unsigned opid;         // arbitary; will be echoed back
+   unsigned opid;         // arbitrary; will be echoed back
    byte operation;
    int options;
 

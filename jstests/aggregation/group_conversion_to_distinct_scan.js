@@ -639,7 +639,7 @@ assert.eq({str: 1, d: 1}, getAggPlanStage(explain, "DISTINCT_SCAN").keyPattern);
 // aware of the collation.
 //
 // Note that, when using a case-insensitive collation, "bAr" and "bar" will get grouped
-// together, and the decision as to which one will represent the group is arbitary. The
+// together, and the decision as to which one will represent the group is arbitrary. The
 // tie-breaking {d: 1} component of the sort forces a specific decision for this aggregation,
 // making this test more reliable.
 //
@@ -702,7 +702,7 @@ assert.eq(null, getAggPlanStage(explain, "IXSCAN"), explain);
 // matching collation.
 //
 // Note that, when using a case-insensitive collation, "bAr" and "bar" will get grouped
-// together, and the decision as to which one will represent the group is arbitary. The
+// together, and the decision as to which one will represent the group is arbitrary. The
 // tie-breaking {d: 1} component of the sort forces a specific decision for this aggregation,
 // making this test more reliable.
 //
