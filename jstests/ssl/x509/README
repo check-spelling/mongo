@@ -49,7 +49,7 @@ certs:
     pkcs12: true | map with keys below
     # Optional, make a pkcs12 copy of the certificate
         passphrase: 'secret'
-        # Optional, all PKCS#12 keys must be encrypted. Will use cert.passphase if not provided.
+        # Optional, all PKCS#12 keys must be encrypted. Will use cert.passphrase if not provided.
         name: 'name-of-cert.pfx'
         # Optional, name of PKCS#12 version of certificate. If not provided, the original cert will be overwritten with the PKCS#12 version
     extensions: # All extensions are optional.
