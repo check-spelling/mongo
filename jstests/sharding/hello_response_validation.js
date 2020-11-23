@@ -37,7 +37,7 @@ function checkResponseFields(commandString) {
         "passives",
         "arbiters",
         "primary",
-        "aribterOnly",
+        "arbiterOnly",
         "passive",
         "slaveDelay",
         "hidden",

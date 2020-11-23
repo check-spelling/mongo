@@ -24,7 +24,7 @@ assert.soon(function() {
     var res = conns[1].getDB("admin").runCommand({replSetGetStatus: 1});
     printjson(res);
     return res.myState === 7;
-}, "Aribiter failed to initialize.");
+}, "Arbiter failed to initialize.");
 
 var result = conns[1].getDB("admin").runCommand({hello: 1});
 assert(result.arbiterOnly);
