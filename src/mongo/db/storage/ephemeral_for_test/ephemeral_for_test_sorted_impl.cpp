@@ -74,7 +74,7 @@ private:
     const uint8_t* _buffer;
 };
 
-// Forward iterator for IndexDataEntry with contigous memory layout
+// Forward iterator for IndexDataEntry with contiguous memory layout
 class IndexDataEntryIterator : public boost::iterator_facade<IndexDataEntryIterator,
                                                              IndexDataEntry const,
                                                              boost::forward_traversal_tag> {

@@ -95,7 +95,7 @@ public:
      * numContiguousChunksPerShard should only be > 1 when we do not pre-split the range
      * into larger chunks and then split the resulting chunks on the destination shards as in
      * configSvrShardCollection, thus should be equal the number of final split points + 1 divided
-     * by the number of initial split points + 1. It serves to preserve the ordering/contigousness
+     * by the number of initial split points + 1. It serves to preserve the ordering/contiguousness
      * of chunks when split by shardSvrShardCollection so that its yields the exact same shard
      * assignments as configSvrShardCollection.
      */

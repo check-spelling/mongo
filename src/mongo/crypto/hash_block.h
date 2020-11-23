@@ -143,7 +143,7 @@ public:
     }
 
     /**
-     * Computes a hash of 'input' from multiple contigous buffers.
+     * Computes a hash of 'input' from multiple contiguous buffers.
      */
     static HashBlock computeHash(std::initializer_list<ConstDataRange> input) {
         HashBlock ret;
