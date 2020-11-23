@@ -334,7 +334,7 @@ public:
      *
      * Since all threads are open to receiving this signal, any of them can be selected to
      * receive it when it comes from outside. So we arrange for any thread that receives the
-     * undirected stack trace signal to re-issue it directy at the signal processing thread.
+     * undirected stack trace signal to re-issue it directly at the signal processing thread.
      *
      * The signal processing thread will have the signal blocked, and handle it
      * synchronously with sigwaitinfo, so this handler only applies to the other

@@ -707,7 +707,7 @@ class NinjaState:
             # files. Here we make sure that Ninja only ever sees one
             # target when using a depfile. It will still have a command
             # that will create all of the outputs but most targets don't
-            # depend direclty on DWO files and so this assumption is safe
+            # depend directly on DWO files and so this assumption is safe
             # to make.
             rule = self.rules.get(build["rule"])
 
