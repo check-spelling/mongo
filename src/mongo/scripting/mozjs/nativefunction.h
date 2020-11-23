@@ -40,7 +40,7 @@ namespace mozjs {
  * case that can tolerate automatic json <-> bson translation.
  *
  * The business end of the shim methods comes via ::call(). These types are
- * invokable as js functions, with a little bit of automatic translation for
+ * invocable as js functions, with a little bit of automatic translation for
  * arguments.
  *
  * This inherits from the global Function type.
