@@ -266,7 +266,7 @@ public:
      * Storage engines that implement this must also implement endBackup().
      *
      * For Storage engines that implement beginBackup the _inBackupMode variable is provided
-     * to avoid multiple instance enterting/leaving backup concurrently.
+     * to avoid multiple instance entering/leaving backup concurrently.
      *
      * If this function returns an OK status, MongoDB can call endBackup to signal the storage
      * engine that filesystem writes may continue. This function should return a non-OK status if

@@ -1106,7 +1106,7 @@ int64_t WiredTigerRecordStore::_cappedDeleteAsNeeded(OperationContext* opCtx,
     // If we have a RecordStore whose size we know accurately as of the stable timestamp, rather
     // than as of the top of the oplog, then we must actually perform capped deletions because they
     // have not previously been accounted for. The collection will be marked as needing size
-    // adjustment when enterring this function.
+    // adjustment when entering this function.
     //
     // One edge case to consider is where we need to delete a document that we insert as part of
     // replication recovery. If we don't mark the collection for size adjustment then we will not
