@@ -179,7 +179,7 @@ void ReplicationConsistencyMarkersImpl::clearInitialSyncFlag(OperationContext* o
 
     _updateMinValidDocument(opCtx, update);
 
-    // Make sure to clear the oplogTrucateAfterPoint in case it is stale. Otherwise, we risk the
+    // Make sure to clear the oplogTruncateAfterPoint in case it is stale. Otherwise, we risk the
     // possibility of deleting oplog entries that we want to keep. It is safe to clear this
     // here since we are consistent at the top of our oplog at this point.
     invariant(!isOplogTruncateAfterPointBeingUsedForPrimary(),
