@@ -53,7 +53,7 @@ const StringData kDefaultWhenNotMatchedMode =
     MergeWhenNotMatchedMode_serializer(MergeWhenNotMatchedModeEnum::kInsert);
 
 /**
- * For the purpsoses of this test, assume every collection is unsharded. Stages may ask this during
+ * For the purposes of this test, assume every collection is unsharded. Stages may ask this during
  * setup. For example, to compute its constraints, the $merge stage needs to know if the output
  * collection is sharded.
  */

@@ -326,7 +326,7 @@ public:
     void printStacks();
 
     /**
-     * We need signals for two purpposes in the stack tracing system.
+     * We need signals for two purposes in the stack tracing system.
      *
      * An external process sends a signal to initiate stack tracing.  When that's received,
      * we *also* need a signal to send to each thread to cause to dump its backtrace.
