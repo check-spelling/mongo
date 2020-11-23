@@ -72,7 +72,7 @@ assert.commandFailed(a.runCommand({
     versionEpoch: epoch
 }));
 
-// the only way that setSharVersion passes is if the shard agrees with the version
+// the only way that setShardVersion passes is if the shard agrees with the version
 // the shard takes its version from config directly
 // TODO bump timestamps in config
 // assert.eq( a.runCommand( { "setShardVersion" : "alleyinsider.foo" , configdb : s._configDB ,
