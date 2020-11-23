@@ -667,7 +667,7 @@ TEST_F(AddShardTest, AddStandaloneHostShardAsReplicaSet) {
 }
 
 // Provided replica set name does not match found replica set name.
-TEST_F(AddShardTest, ReplicaSetMistmatchedReplicaSetName) {
+TEST_F(AddShardTest, ReplicaSetMismatchedReplicaSetName) {
     std::unique_ptr<RemoteCommandTargeterMock> targeter(
         std::make_unique<RemoteCommandTargeterMock>());
     ConnectionString connString =
