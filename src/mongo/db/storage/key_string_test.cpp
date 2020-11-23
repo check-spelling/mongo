@@ -770,7 +770,7 @@ TEST_F(KeyStringBuilderTest, ReasonableSize) {
 TEST_F(KeyStringBuilderTest, DiscardIfNotReleased) {
     SharedBufferFragmentBuilder fragmentBuilder(1024);
     {
-        // Intentially not released, but the data should be discarded correctly.
+        // Intentionally not released, but the data should be discarded correctly.
         KeyString::PooledBuilder pooledBuilder(
             fragmentBuilder, KeyString::Version::kLatestVersion, BSONObj(), ALL_ASCENDING);
     }
