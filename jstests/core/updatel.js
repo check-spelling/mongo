@@ -12,7 +12,7 @@ t = db.jstests_updatel;
 t.drop();
 
 // The collection is empty, forcing an upsert.  In this case the query has no array position match
-// to substiture for the positional operator.  SERVER-4713
+// to substitute for the positional operator.  SERVER-4713
 res = t.update({}, {$set: {'a.$.b': 1}}, true);
 assert(res.hasWriteError(), "An error is reported.");
 assert.eq(0, t.count(), "No upsert occurred.");
@@ -21,7 +21,7 @@ assert.eq(0, t.count(), "No upsert occurred.");
 t.save({_id: 0});
 
 // Now, with an existing document, trigger an update rather than an upsert.  The query has no array
-// position match to substiture for the positional operator.  SERVER-6669
+// position match to substitute for the positional operator.  SERVER-6669
 res = t.update({}, {$set: {'a.$.b': 1}});
 assert(res.hasWriteError(), "An error is reported.");
 assert.eq([{_id: 0}], t.find().toArray(), "No update occurred.");
