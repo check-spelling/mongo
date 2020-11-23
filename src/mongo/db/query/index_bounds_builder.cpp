@@ -868,7 +868,7 @@ void IndexBoundsBuilder::_translatePredicate(const MatchExpression* expr,
 
         // Equalities are already sorted and deduped so unionize is unnecessary if no regexes
         // are present. Hashed indexes may also cause the bounds to be out-of-order.
-        // Arrays and nulls introduce multiple elements that neccesitate a sort and deduping.
+        // Arrays and nulls introduce multiple elements that necessitate a sort and deduping.
         if (!ime->getRegexes().empty() || index.type == IndexType::INDEX_HASHED ||
             arrayOrNullPresent)
             unionize(oilOut);
