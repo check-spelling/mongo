@@ -437,7 +437,7 @@ void parseInclusion(ParseContext* ctx,
 }
 
 /**
- * Treates the given element as an exclusion projection and updates the tree as necessary.
+ * Treats the given element as an exclusion projection and updates the tree as necessary.
  */
 void parseExclusion(ParseContext* ctx, BSONElement elem, ProjectionPathASTNode* parent) {
     invariant(!elem.trueValue());
