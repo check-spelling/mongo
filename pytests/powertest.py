@@ -1426,7 +1426,7 @@ def kill_mongod():
 
 
 def internal_crash(use_sudo=False, crash_option=None):
-    """Internally crash the host this excutes on."""
+    """Internally crash the host this executes on."""
 
     # Windows can use NotMyFault to immediately crash itself, if it's been installed.
     # See https://docs.microsoft.com/en-us/sysinternals/downloads/notmyfault
