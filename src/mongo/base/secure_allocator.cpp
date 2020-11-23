@@ -375,7 +375,7 @@ void* allocate(std::size_t bytes, std::size_t alignOf) {
 /**
  * Deallocates a secure allocation.
  *
- * We zero memory before derefing the associated allocation.
+ * We zero memory before releasing the associated allocation.
  */
 void deallocate(void* ptr, std::size_t bytes) {
     secureZeroMemory(ptr, bytes);
