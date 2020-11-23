@@ -1452,7 +1452,7 @@ void rollback_internal::syncFixUp(OperationContext* opCtx,
     // Drop any unfinished indexes. These are indexes where the startIndexBuild oplog entry was
     // rolled-back, but the unfinished index still exists in the catalog. Drop these before any
     // collection drops, because one of the preconditions of dropping a collection is that there are
-    // no unfinished indxes.
+    // no unfinished indexes.
     LOGV2(21694, "Rolling back unfinished startIndexBuild operations");
     for (auto index : fixUpInfo.unfinishedIndexesToDrop) {
         UUID uuid = index.first;

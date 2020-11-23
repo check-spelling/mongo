@@ -363,8 +363,8 @@ InitialSplitPolicy::ShardCollectionConfig AbstractTagsBasedSplitPolicy::createFi
 
     auto tagToShards = getTagsToShardIds();
 
-    auto nextShardIdForHole = [&, indx = 0L]() mutable {
-        return shardIds[indx++ % shardIds.size()];
+    auto nextShardIdForHole = [&, index = 0L]() mutable {
+        return shardIds[index++ % shardIds.size()];
     };
 
     ChunkVersion version(1, 0, OID::gen());
