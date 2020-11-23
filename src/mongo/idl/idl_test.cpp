@@ -394,7 +394,7 @@ TEST(IDLOneTypeTests, TestNamespaceString) {
     }
 }
 
-// Postive: Test any type
+// Positive: Test any type
 TEST(IDLOneTypeTests, TestAnyType) {
     IDLParserErrorContext ctxt("root");
 
@@ -424,7 +424,7 @@ TEST(IDLOneTypeTests, TestAnyType) {
     }
 }
 
-// Postive: Test object type
+// Positive: Test object type
 TEST(IDLOneTypeTests, TestObjectType) {
     IDLParserErrorContext ctxt("root");
 
@@ -1086,7 +1086,7 @@ TEST(IDLArrayTests, TestBadArrayFieldNames) {
     }
 }
 
-// Postitive: Test arrays with complex types
+// Positive: Test arrays with complex types
 TEST(IDLArrayTests, TestArraysOfComplexTypes) {
     IDLParserErrorContext ctxt("root");
 
@@ -1772,7 +1772,7 @@ TEST(IDLCommand, TestConcatenateWithDb) {
 TEST(IDLCommand, TestConcatenateWithDbSymbol) {
     IDLParserErrorContext ctxt("root");
 
-    // Postive - symbol???
+    // Positive - symbol???
     {
         auto testDoc =
             BSON("BasicConcatenateWithDbCommand" << BSONSymbol("coll1") << "field1" << 3 << "field2"
@@ -2436,7 +2436,7 @@ TEST(IDLDocSequence, TestWellKnownFieldsPassthrough) {
     }
 }
 
-// Postive: Extra Fields in non-strict parser
+// Positive: Extra Fields in non-strict parser
 TEST(IDLDocSequence, TestNonStrict) {
     IDLParserErrorContext ctxt("root");
 
@@ -2481,7 +2481,7 @@ TEST(IDLDocSequence, TestNonStrict) {
     }
 }
 
-// Postive: Test a Command known field does not propagate from passthrough to the final BSON if it
+// Positive: Test a Command known field does not propagate from passthrough to the final BSON if it
 // is included as a field in the command.
 TEST(IDLCommand, TestKnownFieldDuplicate) {
     IDLParserErrorContext ctxt("root");

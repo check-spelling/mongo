@@ -104,7 +104,7 @@ class TestImport(testcase.IDLTestcase):
 
     def test_import_positive(self):
         # type: () -> None
-        """Postive import tests."""
+        """Positive import tests."""
 
         import_dict = {
             "basetypes.idl":

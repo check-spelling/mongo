@@ -48,7 +48,7 @@ assert.commandWorked(
 assert.commandWorked(
     st.s.adminCommand({split: coll.getFullName(), middle: {a: 0, b: NumberLong(0), c: MinKey}}));
 
-// Postive hashed values of 'b' should go to 'shard1DB' and negative value should go to 'shard0DB'
+// Positive hashed values of 'b' should go to 'shard1DB' and negative value should go to 'shard0DB'
 assert.commandWorked(st.s.adminCommand({
     moveChunk: coll.getFullName(),
     bounds: [{a: 0, b: NumberLong(0), c: MinKey}, {a: MaxKey, b: MaxKey, c: MaxKey}],
@@ -56,7 +56,7 @@ assert.commandWorked(st.s.adminCommand({
 }));
 
 // Make sure that we have at least one valid document and one orphan document. The hashed value of 0
-// is postive and hence this document should belong to shard1.
+// is positive and hence this document should belong to shard1.
 let validDocs = [{a: 0, b: 0, c: "valid"}];
 assert.gt(convertShardKeyToHashed(validDocs[0]['b']), 0);
 
@@ -103,7 +103,7 @@ assert.commandWorked(st.s.getDB('config').adminCommand(
 assert.commandWorked(
     st.s.adminCommand({split: coll.getFullName(), middle: {a: 0, b: MinKey, c: MinKey}}));
 
-// Postive numbers of 'a' should go to 'shard1DB' and negative numbers should go to 'shard0DB'
+// Positive numbers of 'a' should go to 'shard1DB' and negative numbers should go to 'shard0DB'
 assert.commandWorked(st.s.adminCommand({
     moveChunk: coll.getFullName(),
     bounds: [{a: 0, b: MinKey, c: MinKey}, {a: MaxKey, b: MaxKey, c: MaxKey}],

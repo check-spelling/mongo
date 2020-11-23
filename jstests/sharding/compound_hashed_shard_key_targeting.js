@@ -62,7 +62,7 @@ assert.commandWorked(
     st.s.getDB('config').adminCommand({shardCollection: ns, key: {a: 1, b: "hashed", c: 1}}));
 assert.commandWorked(st.s.adminCommand({split: ns, middle: {a: 0, b: MinKey, c: MinKey}}));
 
-// Postive numbers of 'a' should go to 'shard1DB' and negative numbers should go to 'shard0DB'
+// Positive numbers of 'a' should go to 'shard1DB' and negative numbers should go to 'shard0DB'
 assert.commandWorked(st.s.adminCommand({
     moveChunk: ns,
     bounds: [{a: 0, b: MinKey, c: MinKey}, {a: MaxKey, b: MaxKey, c: MaxKey}],

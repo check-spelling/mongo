@@ -83,7 +83,7 @@ void FreeMonQueueTest::tearDown() {
     ServiceContextMongoDTest::tearDown();
 }
 
-// Postive: Can we enqueue and dequeue one item
+// Positive: Can we enqueue and dequeue one item
 TEST_F(FreeMonQueueTest, TestBasic) {
     FreeMonMessageQueue queue;
 

@@ -65,7 +65,7 @@ class TestParser(testcase.IDLTestcase):
 
     def test_global_positive(self):
         # type: () -> None
-        """Postive global tests."""
+        """Positive global tests."""
         # cpp_namespace alone
         self.assert_parse(textwrap.dedent("""
         global:

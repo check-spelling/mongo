@@ -78,7 +78,7 @@ class TestBinder(testcase.IDLTestcase):
 
     def test_global_positive(self):
         # type: () -> None
-        """Postive global tests."""
+        """Positive global tests."""
         spec = self.assert_bind(
             textwrap.dedent("""
         global:
@@ -1832,7 +1832,7 @@ class TestBinder(testcase.IDLTestcase):
 
     def test_config_option_positive(self):
         # type: () -> None
-        """Posative config option test cases."""
+        """Positive config option test cases."""
 
         # Every field.
         self.assert_bind(

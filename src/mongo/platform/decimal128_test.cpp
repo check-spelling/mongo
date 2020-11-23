@@ -1346,9 +1346,9 @@ TEST(Decimal128Test, TestDecimal128LessEqualCase3) {
 TEST(Decimal128Test, TestDecimal128GetLargestPositive) {
     Decimal128 d = Decimal128::kLargestPositive;
     uint64_t largestPositiveDecimalHigh64 = 6917508178773903296ull;
-    uint64_t largestPositveDecimalLow64 = 4003012203950112767ull;
+    uint64_t largestPositiveDecimalLow64 = 4003012203950112767ull;
     ASSERT_EQUALS(d.getValue().high64, largestPositiveDecimalHigh64);
-    ASSERT_EQUALS(d.getValue().low64, largestPositveDecimalLow64);
+    ASSERT_EQUALS(d.getValue().low64, largestPositiveDecimalLow64);
 }
 
 TEST(Decimal128Test, TestDecimal128GetSmallestPositive) {
