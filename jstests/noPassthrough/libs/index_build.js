@@ -334,7 +334,7 @@ const ResumableIndexBuildTest = class {
     }
 
     /**
-     * Runs createIndexFn in a parellel shell to create indexes, inserting the documents specified
+     * Runs createIndexFn in a parallel shell to create indexes, inserting the documents specified
      * by sideWrites into the side writes table.
      *
      * 'createIndexFn' should take three parameters: collection name, index specifications, and
