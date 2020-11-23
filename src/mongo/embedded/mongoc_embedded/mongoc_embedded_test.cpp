@@ -287,7 +287,7 @@ int main(int argc, char** argv) {
     // See comment by the same code block in mongo_embedded_test.cpp
     ret = mongo::runGlobalInitializers(std::vector<std::string>{});
     if (!ret.isOK()) {
-        std::cerr << "Global initilization failed";
+        std::cerr << "Global initialization failed";
         return EXIT_FAILURE;
     }
 

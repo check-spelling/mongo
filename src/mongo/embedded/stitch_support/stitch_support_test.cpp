@@ -637,7 +637,7 @@ int main(const int argc, const char* const* const argv) {
     // See comment by the same code block in mongo_embedded_test.cpp
     auto ret = mongo::runGlobalInitializers(std::vector<std::string>{argv, argv + argc});
     if (!ret.isOK()) {
-        std::cerr << "Global initilization failed";
+        std::cerr << "Global initialization failed";
         return EXIT_FAILURE;
     }
 

@@ -194,7 +194,7 @@ MONGO_INITIALIZER(RamLogCatalogV2)(InitializerContext*) {
     if (!_namedLock) {
         if (_named) {
             return Status(ErrorCodes::InternalError,
-                          "Inconsistent intiailization of RamLogCatalog.");
+                          "Inconsistent initialization of RamLogCatalog.");
         }
 
         _namedLock = new stdx::mutex();  // NOLINT

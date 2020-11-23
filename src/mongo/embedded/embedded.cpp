@@ -190,7 +190,7 @@ ServiceContext* initialize(const char* yaml_config) {
         embedded::EmbeddedOptionsConfig::instance().set(yaml_config);
 
     Status status = mongo::runGlobalInitializers(std::vector<std::string>{});
-    uassertStatusOKWithContext(status, "Global initilization failed");
+    uassertStatusOKWithContext(status, "Global initialization failed");
     auto giGuard = makeGuard([] { mongo::runGlobalDeinitializers().ignore(); });
     setGlobalServiceContext(ServiceContext::make());
 

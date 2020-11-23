@@ -134,11 +134,11 @@ private:
     std::unique_ptr<AuthzManagerExternalState> _externalState;
 
     // True if AuthSchema startup checks should be applied in this AuthorizationManager. Changes to
-    // its value are not synchronized, so it should only be set once, at initalization time.
+    // its value are not synchronized, so it should only be set once, at initialization time.
     bool _startupAuthSchemaValidation{true};
 
     // True if access control enforcement is enabled in this AuthorizationManager. Changes to its
-    // value are not synchronized, so it should only be set once, at initalization time.
+    // value are not synchronized, so it should only be set once, at initialization time.
     bool _authEnabled{false};
 
     // A cache of whether there are any users set up for the cluster.

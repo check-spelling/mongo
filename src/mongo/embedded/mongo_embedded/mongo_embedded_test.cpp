@@ -700,7 +700,7 @@ int main(const int argc, const char* const* const argv) {
     // deinit leaving the systems unittest needs initialized.
     ret = mongo::runGlobalInitializers(std::vector<std::string>{argv, argv + argc});
     if (!ret.isOK()) {
-        std::cerr << "Global initilization failed";
+        std::cerr << "Global initialization failed";
         return EXIT_FAILURE;
     }
 
