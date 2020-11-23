@@ -275,7 +275,7 @@ public:
      * If 'checkSessionAuth' is 'kCheckSession' or left unspecified, this function also checks if
      * the current session in the specified 'opCtx' has privilege to access the cursor specified by
      * 'id.' In this case, this function returns a 'mongo::Status' with information regarding the
-     * nature of the inaccessability when the cursor is not accessible. If 'kNoCheckSession' is
+     * nature of the inaccessibility when the cursor is not accessible. If 'kNoCheckSession' is
      * passed for 'checkSessionAuth,' this function does not check if the current session is
      * authorized to access the cursor with the given id.
      *
