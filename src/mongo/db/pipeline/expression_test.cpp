@@ -1033,12 +1033,12 @@ TEST(ExpressionIndexOfArray,
         Value(2),
         optimizedIndexOfArrayWithDuplicateValues->evaluate(Document{{"x", 2}}, &expCtx.variables));
     // Duplicate Values in a range.
-    auto expIndexInRangeWithhDuplicateValues = Expression::parseExpression(
+    auto expIndexInRangeWithDuplicateValues = Expression::parseExpression(
         &expCtx,
         // Search for 2 between 4 and 6.
         fromjson("{ $indexOfArray : [ [0, 1, 2, 2, 2, 2, 4, 5] , '$x', 4, 6] }"),
         expCtx.variablesParseState);
-    auto optimizedIndexInRangeWithDuplicateValues = expIndexInRangeWithhDuplicateValues->optimize();
+    auto optimizedIndexInRangeWithDuplicateValues = expIndexInRangeWithDuplicateValues->optimize();
     // Should evaluate to 4.
     ASSERT_VALUE_EQ(
         Value(4),

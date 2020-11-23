@@ -784,8 +784,8 @@ function runFindTestsWithHint(hint) {
             limit: 2,
             hint: hint
         },
-        {desc: "Point query siwth skip", expected: [], query: {a: 1}, skip: 2},
-        {desc: "Point query siwth skip and limit", expected: [], query: {a: 1}, skip: 1, limit: 1},
+        {desc: "Point query with skip", expected: [], query: {a: 1}, skip: 2},
+        {desc: "Point query with skip and limit", expected: [], query: {a: 1}, skip: 1, limit: 1},
         {desc: "Point query 2", expected: [documents[11], documents[12]], query: {z: 2}},
         {
             desc: "Query on dotted path",
