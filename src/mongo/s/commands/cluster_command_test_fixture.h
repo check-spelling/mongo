@@ -105,7 +105,7 @@ protected:
 
 private:
     /**
-     * Makes a new command object from the one given by apppending read concern
+     * Makes a new command object from the one given by appending read concern
      * snapshot and the appropriate transaction options. If includeAfterClusterTime
      * is true, also appends afterClusterTime to the read concern.
      */

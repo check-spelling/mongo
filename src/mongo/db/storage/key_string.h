@@ -450,7 +450,7 @@ enum class Discriminator {
 enum class BuildState {
     kEmpty,                  // Buffer is empty.
     kAppendingBSONElements,  // In the process of appending BSON Elements
-    kEndAdded,               // Finished appedning BSON Elements.
+    kEndAdded,               // Finished appending BSON Elements.
     kAppendedRecordID,       // Finished appending a RecordID.
     kAppendedTypeBits,       // Finished appending a TypeBits.
     kReleased                // Released the buffer and so the buffer is no longer valid.
