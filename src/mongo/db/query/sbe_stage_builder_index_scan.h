@@ -41,7 +41,7 @@ class PlanStageSlots;
 
 /**
  * This method generates an SBE plan stage tree implementing an index scan. It returns a tuple
- * containing: (1) a slot procued by the index scan that holds the record ID ('recordIdSlot');
+ * containing: (1) a slot procured by the index scan that holds the record ID ('recordIdSlot');
  * (2) a slot vector produced by the index scan which hold parts of the index key ('indexKeySlots');
  * and (3) the SBE plan stage tree. 'indexKeySlots' will only contain slots for the parts of the
  * index key specified by the 'indexKeysToInclude' bitset.
