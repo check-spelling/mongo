@@ -50,7 +50,7 @@ function cartesianProductPipeline(exponent) {
     assert.lt(resultSize, 16 * 1024 * 1024, result);
 }());
 
-(function failsWhenResultDocumentExeedsMaxBSONSize() {
+(function failsWhenResultDocumentExceedsMaxBSONSize() {
     // This pipeline uses $facet to create a document that is larger than the 16MB max document
     // size.
     const result = assert.throws(
