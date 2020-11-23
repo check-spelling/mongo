@@ -30,7 +30,7 @@ implementations of TLS:
 1. [OpenSSL](https://www.openssl.org/docs/) on _Linux_
     * OpenSSL is also available on MacOS and Windows, but we do not officially support those configurations anymore.
 2. [SChannel](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-ssl-schannel-ssp-overview) which is made
-by Microsoft and is avialable exclusively on _Windows_.
+by Microsoft and is available exclusively on _Windows_.
 3. [Secure Transport](https://developer.apple.com/documentation/security/secure_transport) which is made by Apple and is
 available exclusively on _MacOS_.
 

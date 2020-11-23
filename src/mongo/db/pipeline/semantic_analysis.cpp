@@ -111,7 +111,7 @@ StringMap<std::string> invertRenameMap(const StringMap<std::string>& originalMap
  * their names as they are directly before stage 'end.'
  *
  * This should only be used internally; callers who need to track path renames through an
- * aggregation pipeline should use one of the publically exposed options availible in the header.
+ * aggregation pipeline should use one of the publically exposed options available in the header.
  */
 template <class Iterator>
 boost::optional<StringMap<std::string>> multiStageRenamedPaths(

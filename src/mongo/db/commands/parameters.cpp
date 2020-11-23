@@ -338,7 +338,7 @@ public:
 
             if (foundParameter == parameterMap.end()) {
                 errmsg = str::stream() << "Parameter: " << parameterName << " that was "
-                                       << "avaliable during our first lookup in the registered "
+                                       << "available during our first lookup in the registered "
                                        << "parameters map is no longer available.";
                 return false;
             }
