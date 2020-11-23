@@ -141,7 +141,7 @@ void ReplicaSetChangeNotifier::onDroppedSet(const std::string& name) noexcept {
 
     stdx::unique_lock<Latch> lk(_mutex);
 
-    // If we never singaled the initial possible set, we should not on dropped set
+    // If we never signaled the initial possible set, we should not on dropped set
     auto it = _replicaSetStates.find(name);
     if (it == _replicaSetStates.end()) {
         return;
