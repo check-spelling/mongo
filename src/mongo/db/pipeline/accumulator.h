@@ -83,7 +83,7 @@ public:
 
     /**
      * Finish processing all the pending operations, and clean up memory. Some accumulators
-     * ($accumulator for example) might do a batch processing in order to improve performace. In
+     * ($accumulator for example) might do a batch processing in order to improve performance. In
      * those cases, the memory consumption could spike up. Calling this function can help flush
      * those batch.
      */
