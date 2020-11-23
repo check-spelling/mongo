@@ -73,7 +73,7 @@ public:
     void setUp() override {
         resetIsInternalClient(true);
 
-        net = makeNetworkInterface("ReplicaSetMonintorTest");
+        net = makeNetworkInterface("ReplicaSetMonitorTest");
 
         auto tp = std::make_unique<NetworkInterfaceThreadPool>(net.get());
         executor = std::make_shared<ThreadPoolTaskExecutor>(std::move(tp), net);

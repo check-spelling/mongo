@@ -130,7 +130,7 @@ public:
 
 private:
     class StreamableReplicaSetMonitorQueryProcessor;
-    using StreamableReplicaSetMontiorQueryProcessorPtr =
+    using StreamableReplicaSetMonitorQueryProcessorPtr =
         std::shared_ptr<StreamableReplicaSetMonitor::StreamableReplicaSetMonitorQueryProcessor>;
 
     struct HostQuery {
@@ -229,7 +229,7 @@ private:
 
     // This object will be registered as a TopologyListener if there are
     // any outstanding queries for this RSM instance.
-    StreamableReplicaSetMontiorQueryProcessorPtr _queryProcessor;
+    StreamableReplicaSetMonitorQueryProcessorPtr _queryProcessor;
 
     const MongoURI _uri;
 
