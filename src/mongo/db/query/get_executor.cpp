@@ -121,7 +121,7 @@ void filterAllowedIndexEntries(const AllowedIndicesFilter& allowedIndicesFilter,
 
     // Filter index entries
     // Check BSON objects in AllowedIndices::_indexKeyPatterns against IndexEntry::keyPattern.
-    // Removes IndexEntrys that do not match _indexKeyPatterns.
+    // Removes IndexEntries that do not match _indexKeyPatterns.
     std::vector<IndexEntry> temp;
     for (std::vector<IndexEntry>::const_iterator i = indexEntries->begin();
          i != indexEntries->end();
