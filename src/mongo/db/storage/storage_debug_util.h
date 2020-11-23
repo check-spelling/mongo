@@ -48,7 +48,7 @@ namespace StorageDebugUtil {
  * Takes key string and key pattern information and uses it to present human-readable information
  * about an index or collection entry.
  *
- * 'logPrefix' addes a logging prefix. Useful for differentiating callers.
+ * 'logPrefix' adds a logging prefix. Useful for differentiating callers.
  */
 void printKeyString(const RecordId& recordId,
                     const KeyString::Value& keyStringValue,
