@@ -1902,7 +1902,7 @@ class _CppSourceFileWriter(_CppFileWriterBase):
 
     def gen_op_msg_request_serializer_method(self, struct):
         # type: (ast.Struct) -> None
-        """Generate the serialzer method definition for OpMsgRequest."""
+        """Generate the serializer method definition for OpMsgRequest."""
         # pylint: disable=invalid-name
         if not isinstance(struct, ast.Command):
             return
