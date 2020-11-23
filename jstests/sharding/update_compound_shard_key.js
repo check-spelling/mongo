@@ -142,7 +142,7 @@ assertUpdateWorkedWithNoMatchingDoc({x: 100, y: 51, a: 5}, {x: 110, y: 55, z: 3,
 assertUpdateWorkedWithNoMatchingDoc({x: 4, y: 0}, {x: 110, y: 55, z: 3, a: 110}, false);
 assertUpdateWorkedWithNoMatchingDoc({_id: 1}, {x: 110, y: 55, z: 3, a: 110}, false);
 
-// When query matches a doc and updates sucessfully.
+// When query matches a doc and updates successfully.
 assertUpdateWorked({_id: 0, y: 3}, {z: 3, x: 4, y: 3, a: 2}, false, 0);
 assertUpdateWorked({_id: 0}, {z: 3, x: 4, y: 3, replStyle: 2}, false, 0);
 

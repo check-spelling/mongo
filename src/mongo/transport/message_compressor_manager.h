@@ -118,7 +118,7 @@ public:
      * it can decompress any message without negotiation.
      *
      * If the 'compressorId' parameter is non-null, it will be populated with the compressor
-     * used. If 'decompressMessage' returns succesfully, then that value can be fed back into
+     * used. If 'decompressMessage' returns successfully, then that value can be fed back into
      * compressMessage, ensuring that the same compressor is used on both sides of a conversation.
      */
     StatusWith<Message> decompressMessage(const Message& msg,

@@ -49,7 +49,7 @@ MONGO_FAIL_POINT_DEFINE(hangBeforeInsertOnUpdateShardKey);
 /**
  * Calls into the command execution stack to run the given command. Will blindly uassert on any
  * error returned by a command. If the original update was sent with {upsert: false}, returns
- * whether or not we deleted the original doc and inserted the new one sucessfully. If the original
+ * whether or not we deleted the original doc and inserted the new one successfully. If the original
  * update was sent with {upsert: true}, returns whether or not we inserted the new doc successfully.
  */
 bool executeOperationsAsPartOfShardKeyUpdate(OperationContext* opCtx,

@@ -139,7 +139,7 @@ function runTests(sourceColl, mongodConnection) {
     assert.commandWorked(targetColl.remove({_id: 1}));
     assert.commandWorked(targetColl.remove({_id: 2}));
 
-    // $merge should successfuly 'overwrite' the collection as it is 'empty' (not majority).
+    // $merge should successfully 'overwrite' the collection as it is 'empty' (not majority).
     res = targetReplaceDocsColl.aggregate(
         [
             {$match: {state: 'before'}},

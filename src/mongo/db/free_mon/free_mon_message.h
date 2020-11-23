@@ -57,7 +57,7 @@ enum class FreeMonMessageType {
     RegisterCommand,
 
     /**
-     * Internal: Generated when an async registration HTTP request completes succesfully.
+     * Internal: Generated when an async registration HTTP request completes successfully.
      */
     AsyncRegisterComplete,
 
@@ -82,7 +82,7 @@ enum class FreeMonMessageType {
     MetricsSend,
 
     /**
-     * Internal: Generated when an async metrics HTTP request completes succesfully.
+     * Internal: Generated when an async metrics HTTP request completes successfully.
      */
     AsyncMetricsComplete,
 

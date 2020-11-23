@@ -83,7 +83,7 @@ try {
 joinFirstIndexBuild();
 joinSecondIndexBuild();
 
-// Make sure the parallel shells sucessfully built the index. We should have the _id index and
+// Make sure the parallel shells successfully built the index. We should have the _id index and
 // the 'the_b_1_index' index just built in the parallel shells.
 assert.eq(testColl.getIndexes().length, 2);
 
@@ -135,7 +135,7 @@ joinSuccessfulIndexBuild();
 assert.commandWorked(
     testDB.adminCommand({configureFailPoint: 'failIndexBuildOnCommit', mode: 'off'}));
 
-// Make sure the parallel shells sucessfully built the index. We should now have the _id index,
+// Make sure the parallel shells successfully built the index. We should now have the _id index,
 // the 'the_b_1_index' index and the 'the_c_1_index' just built in the parallel shells.
 assert.eq(testColl.getIndexes().length, 3);
 })();

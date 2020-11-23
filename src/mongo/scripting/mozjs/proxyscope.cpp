@@ -53,7 +53,7 @@ MozJSProxyScope::MozJSProxyScope(MozJSScriptEngine* engine)
       _status(Status::OK()),
       _thread(implThread, this) {
     // Test the child on startup to make sure it's awake and that the
-    // implementation scope sucessfully constructed.
+    // implementation scope successfully constructed.
     try {
         run([] {});
     } catch (...) {

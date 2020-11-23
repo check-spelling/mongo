@@ -57,7 +57,7 @@ function CharybdefsControl(test_name) {
                          "--fuse_mount=" + mount_point,
                          "--backing_path=" + backing_path,
                          "--log_file=foo_fs.log");
-        print("Charybdefs sucessfully started.");
+        print("Charybdefs successfully started.");
     };
 
     // Get the current check generation

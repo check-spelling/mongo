@@ -232,7 +232,7 @@ TEST_F(FTDCControllerTest, TestStartStop) {
     c.stop();
 }
 
-// Test we can start the controller as disabled, the directory is empty, and then we can succesfully
+// Test we can start the controller as disabled, the directory is empty, and then we can successfully
 // enable it
 TEST_F(FTDCControllerTest, TestStartAsDisabled) {
     unittest::TempDir tempdir("metrics_testpath");

@@ -508,7 +508,7 @@ void downgradeShardConfigCollectionEntriesTo44(OperationContext* opCtx) {
 
     uassertStatusOK(getStatusFromWriteCommandResponse(commandResult->getCommandReply()));
 
-    LOGV2(5189101, "Succesfully downgraded config.cache.collections");
+    LOGV2(5189101, "Successfully downgraded config.cache.collections");
 }
 
 }  // namespace shardmetadatautil

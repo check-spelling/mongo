@@ -643,7 +643,7 @@ std::pair<ShardRegistryData, Timestamp> ShardRegistryData::createFromCatalogClie
                 1,
                 "Found {shardsNumber} shards listed on config server(s) with lastVisibleOpTime: "
                 "{lastVisibleOpTime}",
-                "Succesfully retrieved updated shard list from config server",
+                "Successfully retrieved updated shard list from config server",
                 "shardsNumber"_attr = shards.size(),
                 "lastVisibleOpTime"_attr = reloadOpTime);
 

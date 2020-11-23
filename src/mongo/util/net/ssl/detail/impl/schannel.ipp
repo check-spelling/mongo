@@ -545,7 +545,7 @@ ssl_want SSLHandshakeManager::doClientHandshake(asio::error_code& ec) {
 }
 
 /**
- * Read decrypted data if encrypted data was provided via writeData and succesfully decrypted.
+ * Read decrypted data if encrypted data was provided via writeData and successfully decrypted.
  */
 ssl_want SSLReadManager::readDecryptedData(void* data,
                                            std::size_t length,

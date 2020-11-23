@@ -44,7 +44,7 @@
 namespace mongo {
 namespace repl {
 
-// Failpoint which the tenant database cloner to hang after it has successully run listCollections
+// Failpoint which the tenant database cloner to hang after it has successfully run listCollections
 // and recorded the results and the operationTime.
 MONGO_FAIL_POINT_DEFINE(tenantDatabaseClonerHangAfterGettingOperationTime);
 

@@ -317,7 +317,7 @@ TEST(JSONSchemaArrayKeywordTest, FailsToParseIfAdditionalItemsIsAnInvalidSchema)
               ErrorCodes::FailedToParse);
 }
 
-TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSucessfullyAsBooleanAtTopLevel) {
+TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSuccessfullyAsBooleanAtTopLevel) {
     auto schema = fromjson("{items: [], additionalItems: true}");
     auto expr = JSONSchemaParser::parse(new ExpressionContextForTest(), schema);
     ASSERT_OK(expr.getStatus());
@@ -331,7 +331,7 @@ TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSucessfullyAsBooleanAt
     ASSERT_SERIALIZES_TO(optimizedExpr, fromjson("{}"));
 }
 
-TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSucessfullyAsObjectAtTopLevel) {
+TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSuccessfullyAsObjectAtTopLevel) {
     auto schema = fromjson("{items: [], additionalItems: {multipleOf: 7}}");
     auto expr = JSONSchemaParser::parse(new ExpressionContextForTest(), schema);
     ASSERT_OK(expr.getStatus());
@@ -339,7 +339,7 @@ TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSucessfullyAsObjectAtT
     ASSERT_SERIALIZES_TO(optimizedExpr, fromjson("{}"));
 }
 
-TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSucessfullyAsBooleanInNestedSchema) {
+TEST(JSONSchemaArrayKeywordTest, AdditionalItemsTranslatesSuccessfullyAsBooleanInNestedSchema) {
     auto schema = fromjson("{properties: {a: {items: [], additionalItems: true}}}");
     auto expr = JSONSchemaParser::parse(new ExpressionContextForTest(), schema);
     ASSERT_OK(expr.getStatus());

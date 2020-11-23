@@ -69,7 +69,7 @@ class ConfigExpandRestServer {
             return rawMongoProgramOutput().search("Mock Web Server Listening") !== -1;
         });
 
-        print("Mock HTTP Server sucessfully started.");
+        print("Mock HTTP Server successfully started.");
     }
 
     /**

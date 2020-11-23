@@ -217,7 +217,7 @@ enum class ssl_want {
  * Manages the SSL handshake and shutdown state machines.
  *
  * Handshakes are always the first set of events during SSL connection initiation.
- * Shutdown can occur anytime after the handshake has succesfully finished
+ * Shutdown can occur anytime after the handshake has successfully finished
  * as a result of a read event or explicit shutdown request from the engine.
  */
 class SSLHandshakeManager {
@@ -483,7 +483,7 @@ public:
           _pExtraEncryptedBuffer(pExtraBuffer) {}
 
     /**
-     * Read decrypted data if encrypted data was provided via writeData and succesfully decrypted.
+     * Read decrypted data if encrypted data was provided via writeData and successfully decrypted.
      */
     ssl_want readDecryptedData(void* data,
                                std::size_t length,

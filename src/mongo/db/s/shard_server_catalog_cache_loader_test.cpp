@@ -300,7 +300,7 @@ TEST_F(ShardServerCatalogCacheLoaderTest, PrimaryLoadFromShardedAndFindDiff) {
 
     auto collAndChunksRes = _shardLoader->getChunksSince(kNss, chunks.back().getVersion()).get();
 
-    // Check that the diff was returned successfull.
+    // Check that the diff was returned successfully.
     ASSERT_EQUALS(collAndChunksRes.epoch, updatedChunksDiff.front().getVersion().epoch());
     ASSERT_EQUALS(collAndChunksRes.changedChunks.size(), 4UL);
     for (unsigned int i = 0; i < collAndChunksRes.changedChunks.size(); ++i) {

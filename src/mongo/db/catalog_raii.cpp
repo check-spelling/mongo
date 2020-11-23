@@ -125,7 +125,7 @@ AutoGetCollection::AutoGetCollection(OperationContext* opCtx,
     _coll = catalog->lookupCollectionByNamespace(opCtx, _resolvedNss);
     invariant(!nsOrUUID.uuid() || _coll,
               str::stream() << "Collection for " << _resolvedNss.ns()
-                            << " disappeared after successufully resolving "
+                            << " disappeared after successfully resolving "
                             << nsOrUUID.toString());
 
     if (_coll) {
