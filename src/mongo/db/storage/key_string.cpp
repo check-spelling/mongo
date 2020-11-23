@@ -1658,7 +1658,7 @@ void toBsonValue(uint8_t ctype,
                     memcpy(&bin, &encoded, sizeof(bin));
                     if (originalType == TypeBits::kDouble) {
                         keyStringAssert(
-                            50824, "Decimal contuation mismatch.", dcm == kDCMEqualToDouble);
+                            50824, "Decimal continuation mismatch.", dcm == kDCMEqualToDouble);
                         *stream << (isNegative ? -bin : bin);
                         break;
                     }
