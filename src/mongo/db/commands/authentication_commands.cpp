@@ -207,7 +207,7 @@ private:
  * which optimistically invokes {getnonce: 1} upon connection
  * under the assumption that it will eventually be used as part
  * of "classic" authentication.
- * If the command dissapeared, then all of mongo-tools would
+ * If the command disappeared, then all of mongo-tools would
  * fail to connect, despite using SCRAM-SHA-1 or another valid
  * auth mechanism. Thus, we have to keep this command around for now.
  *
