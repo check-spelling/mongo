@@ -384,7 +384,7 @@ TEST_F(ShardServerCatalogCacheLoaderTest, PrimaryLoadFromShardedAndFindMixedChun
 
     vector<ChunkType> chunks = setUpChunkLoaderWithFiveChunks();
 
-    // Then refresh again and retrieve chunks from the config server that have mixed epoches, like
+    // Then refresh again and retrieve chunks from the config server that have mixed epochs, like
     // as if the chunks read yielded around a drop and recreate of the collection.
 
     CollectionType originalCollectionType = makeCollectionType(chunks.back().getVersion());

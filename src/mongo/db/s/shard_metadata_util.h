@@ -168,7 +168,7 @@ Status updateShardDatabasesEntry(OperationContext* opCtx,
 /**
  * Reads the shard server's chunks collection corresponding to 'nss' for chunks matching 'query',
  * returning at most 'limit' chunks in 'sort' order. 'epoch' populates the returned chunks' version
- * fields, because we do not yet have UUIDs to replace epoches nor UUIDs associated with namespaces.
+ * fields, because we do not yet have UUIDs to replace epochs nor UUIDs associated with namespaces.
  */
 StatusWith<std::vector<ChunkType>> readShardChunks(OperationContext* opCtx,
                                                    const NamespaceString& nss,
