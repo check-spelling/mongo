@@ -1143,7 +1143,7 @@ There are a number of ways that a node will run for election:
   set. Until this process (called primary catchup) completes, the new primary will not accept
   writes. If a secondary realizes that it is more up-to-date than the primary and the primary takes
   longer than `catchUpTakeoverDelayMillis` (default 30 seconds), it will run for election. This
-  behvarior is known as a **catchup takeover**. If primary catchup is taking too long, catchup
+  behavior is known as a **catchup takeover**. If primary catchup is taking too long, catchup
   takeover can help allow the replica set to accept writes sooner, since a more up-to-date node will
   not spend as much time (or any time) in catchup. See the "Transitioning to `PRIMARY`" section for
   further details on primary catchup.

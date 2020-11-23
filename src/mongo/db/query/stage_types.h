@@ -68,7 +68,7 @@ enum StageType {
     STAGE_DELETE,
 
     // If we're running a distinct, we only care about one value for each key.  The distinct
-    // scan stage is an ixscan with some key-skipping behvaior that only distinct uses.
+    // scan stage is an ixscan with some key-skipping behavior that only distinct uses.
     STAGE_DISTINCT_SCAN,
 
     STAGE_ENSURE_SORTED,
