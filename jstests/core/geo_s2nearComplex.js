@@ -106,7 +106,7 @@ function uniformPointsWithGaps(origin, count, minDist, maxDist, numberOfHoles, s
 }
 
 /*
- * Creates a random uniform field as above, expcepting for `numberOfClusters` clusters,
+ * Creates a random uniform field as above, excepting for `numberOfClusters` clusters,
  * which will consist of N points where `minClusterSize` <= N <= `maxClusterSize.
  * you may specify an optional `distRatio` parameter which will specify the area that the cluster
  * covers as a fraction of the full area that points are created on.  Defaults to 10.
