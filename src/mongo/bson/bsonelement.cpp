@@ -634,7 +634,7 @@ BSONElement BSONElement::operator[](StringData field) const {
 namespace {
 MONGO_COMPILER_NOINLINE void msgAssertedBadType [[noreturn]] (const char* data) {
     // We intentionally read memory that may be out of the allocated memory's boundary, so do not
-    // do this when the adress sanitizer is enabled. We do this in an attempt to log as much context
+    // do this when the address sanitizer is enabled. We do this in an attempt to log as much context
     // about the failure, even if that risks undefined behavior or a segmentation fault.
 #if !__has_feature(address_sanitizer)
     bool logMemory = true;

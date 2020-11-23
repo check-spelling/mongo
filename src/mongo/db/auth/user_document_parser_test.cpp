@@ -403,7 +403,7 @@ TEST_F(V2UserDocumentParsing, V2AuthenticationRestrictionsExtraction) {
              << "authenticationRestrictions" << emptyArray),
         user.get()));
 
-    // authenticationRestrictions must have at least one of "clientSource"/"serverAdddress" fields
+    // authenticationRestrictions must have at least one of "clientSource"/"serverAddress" fields
     ASSERT_NOT_OK(v2parser.initializeAuthenticationRestrictionsFromUserDocument(
         BSON("user"
              << "spencer"
