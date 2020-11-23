@@ -86,7 +86,7 @@ withPinnedCursor({
     assertEndCounts: true
 });
 
-// Test OP_GET_MORE (legacy reead mode) against a mongos.
+// Test OP_GET_MORE (legacy read mode) against a mongos.
 withPinnedCursor({
     conn: st.s,
     sessionId: null,
