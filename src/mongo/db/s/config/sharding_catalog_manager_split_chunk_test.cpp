@@ -285,7 +285,7 @@ TEST_F(SplitChunkTest, PreConditionFailErrors) {
     ASSERT_EQ(ErrorCodes::BadValue, splitStatus);
 }
 
-TEST_F(SplitChunkTest, NonExisingNamespaceErrors) {
+TEST_F(SplitChunkTest, NonExistingNamespaceErrors) {
     ChunkType chunk;
     chunk.setNS(kNamespace);
 

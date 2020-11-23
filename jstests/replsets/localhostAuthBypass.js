@@ -157,7 +157,7 @@ var runTest = function(useHostName) {
 
     assertCanRunCommands(mongo, true);
 
-    // Test localhost access on secondaries on exsiting connection
+    // Test localhost access on secondaries on existing connection
     mongoSecs.forEach(function(m) {
         assertCannotRunCommands(m, false);
         authenticate(m);

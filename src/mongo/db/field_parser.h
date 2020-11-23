@@ -235,7 +235,7 @@ public:
 
     /**
      * Extracts a mandatory 'field' from the object 'doc'. Writes the extracted contents to '*out'
-     * if successful or fills '*errMsg', if exising, otherwise. This variant relies on T having a
+     * if successful or fills '*errMsg', if existing, otherwise. This variant relies on T having a
      * parseBSON method.
      */
     template <typename T>
@@ -263,7 +263,7 @@ public:
 
     /**
      * Extracts a mandatory repetition of 'field', from the object 'doc'. Writes the extracted
-     * contents to '*out' if successful or fills '*errMsg', if exising, otherwise.  This variant
+     * contents to '*out' if successful or fills '*errMsg', if existing, otherwise.  This variant
      * relies on T having a parseBSON method.
      *
      * The vector owns the instances of T.
@@ -276,7 +276,7 @@ public:
 
     /**
      * Extracts a mandatory repetition of 'field', from the field 'elem'. Writes the extracted
-     * contents to '*out' if successful or fills '*errMsg', if exising, otherwise.  This variant
+     * contents to '*out' if successful or fills '*errMsg', if existing, otherwise.  This variant
      * relies on T having a parseBSON method.
      *
      * The vector owns the instances of T.

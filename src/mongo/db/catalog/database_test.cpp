@@ -465,7 +465,7 @@ TEST_F(
         }
 
         // makeUniqueCollectionNamespace() returns NamespaceExists because it will not be able to
-        // generate a namespace that will not collide with an existings collection.
+        // generate a namespace that will not collide with an existing collection.
         ASSERT_EQUALS(ErrorCodes::NamespaceExists,
                       db->makeUniqueCollectionNamespace(_opCtx.get(), model));
     });
