@@ -75,7 +75,7 @@ public:
     }
 
     /**
-     * Reset the retry interval, typically occurs after a succesfull message is sent.
+     * Reset the retry interval, typically occurs after a successful message is sent.
      */
     virtual void reset() = 0;
 

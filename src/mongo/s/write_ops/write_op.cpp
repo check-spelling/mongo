@@ -77,7 +77,7 @@ void WriteOp::targetWrites(OperationContext* opCtx,
     }
 
     for (auto&& endpoint : endpoints) {
-        // If the operation was already successfull on that shard, do not repeat it
+        // If the operation was already successful on that shard, do not repeat it
         if (_successfulShardSet.count(endpoint.shardName))
             continue;
 
