@@ -403,7 +403,7 @@ public:
     }
 
     /**
-     * Invalidates all cached entries and in progress lookups with keys that matches the preidcate.
+     * Invalidates all cached entries and in progress lookups with keys that matches the predicate.
      */
     template <typename Pred>
     void invalidateKeyIf(const Pred& predicate) {
@@ -416,7 +416,7 @@ public:
     }
 
     /**
-     * Invalidates all cached entries with stored values that matches the preidcate.
+     * Invalidates all cached entries with stored values that matches the predicate.
      */
     template <typename Pred>
     void invalidateCachedValueIf(const Pred& predicate) {

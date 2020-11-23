@@ -817,7 +817,7 @@ public:
                 std::move(expr), std::move(stage), _context->planNodeId, _context->slotIdGenerator);
         }();
 
-        // We're using 'kDoNotTraverseLeaf' traverse mode, so we're guaranteed that 'makePredcate'
+        // We're using 'kDoNotTraverseLeaf' traverse mode, so we're guaranteed that 'makePredicate'
         // will only be called once, so it's safe to capture and pass in the 'filterStage' subtree
         // here.
         auto makePredicate = [&, filterSlot = filterSlot, &filterStage = filterStage](
@@ -884,7 +884,7 @@ public:
                                                             _context->planNodeId,
                                                             _context->slotIdGenerator);
 
-        // We're using 'kDoNotTraverseLeaf' traverse mode, so we're guaranteed that 'makePredcate'
+        // We're using 'kDoNotTraverseLeaf' traverse mode, so we're guaranteed that 'makePredicate'
         // will only be called once, so it's safe to capture and pass in the 'filterStage' subtree
         // here.
         auto makePredicate = [&,
