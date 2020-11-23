@@ -266,7 +266,7 @@ public:
         return true;
     }
 
-} disinctCmd;
+} distinctCmd;
 
 }  // namespace
 }  // namespace mongo

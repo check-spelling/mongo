@@ -45,7 +45,7 @@ namespace mongo {
 namespace {
 
 constexpr uint32_t kMaxContainerSize = 1000000;
-// Two fixed seeds, what they are doesn't matter much, they should just generate distict ranges.
+// Two fixed seeds, what they are doesn't matter much, they should just generate distinct ranges.
 constexpr uint32_t kDefaultSeed = 34862;
 constexpr uint32_t kOtherSeed = 76453;
 
