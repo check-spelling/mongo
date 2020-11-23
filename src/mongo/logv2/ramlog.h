@@ -140,7 +140,7 @@ private:
 /**
  * Iterator over the lines of a RamLog.
  *
- * Also acts as a means of inspecting other properites of a ramlog consistently.
+ * Also acts as a means of inspecting other properties of a ramlog consistently.
  *
  * Instances of LineIterator hold the lock for the underlying RamLog for their whole lifetime,
  * and so should not be kept around.
