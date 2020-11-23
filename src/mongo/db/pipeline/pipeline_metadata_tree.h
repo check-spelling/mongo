@@ -73,7 +73,7 @@ struct Stage {
 
     /**
      * Specification of the move constructor intentionally inhibits compiler generation of a copy
-     * constructor. This is intentional since accidental copies could be deterimental for
+     * constructor. This is intentional since accidental copies could be detrimental for
      * performance. This constructor is correctly formed only if the contents type 'T' also has a
      * defined or defaulted move constructor. The correct definition of this constructor is
      * essential for invoking 'makeTree'.
