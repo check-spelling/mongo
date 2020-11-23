@@ -37,7 +37,7 @@
  * The 'redact' methods defined below should be used to redact possibly sensitive
  * information when operating the server in 'redact' mode.
  *
- * The performance impact of calling redact when not in 'redact' mode should be neglectible.
+ * The performance impact of calling redact when not in 'redact' mode should be neglectable.
  *
  * The 'redact' methods are designed to be used as part of our log streams
  * log(), LOG(), warning(), error(), severe() similar to the example below.
