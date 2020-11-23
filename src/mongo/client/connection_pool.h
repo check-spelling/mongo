@@ -185,7 +185,7 @@ private:
     void _cleanUpOlderThan_inlock(Date_t now, ConnectionList* hostConns);
 
     /**
-     * Destroys the connection associated with "iter" and removes "iter" fron connList.
+     * Destroys the connection associated with "iter" and removes "iter" from connList.
      */
     static void _destroyConnection_inlock(ConnectionList* connList, ConnectionList::iterator iter);
 
