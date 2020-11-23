@@ -38,7 +38,7 @@
 namespace mongo {
 
 /**
- * Compesses and uncompresses a block of buffer using zlib.
+ * Compresses and uncompresses a block of buffer using zlib.
  */
 class BlockCompressor {
     BlockCompressor(const BlockCompressor&) = delete;
