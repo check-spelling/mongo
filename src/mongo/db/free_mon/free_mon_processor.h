@@ -354,7 +354,7 @@ private:
      * If updateInMemory is true, update the state in memory with the state from disk. If false, do
      * not update the state in memory from disk but instead treat the state in memory as
      * authoritative. The is important for secondaries which may be in a different state for
-     * regsistration then there primary.
+     * registration then there primary.
      */
     void readState(OperationContext* opCtx, bool updateInMemory = true);
 

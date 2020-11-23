@@ -646,7 +646,7 @@ TEST(FreeMonProcessorTest, TestRegistrationResponseValidation) {
                        << "msg456"
                        << "reportingInterval" << 1LL))));
 
-    // Negative: large registartation id
+    // Negative: large registration id
     ASSERT_NOT_OK(FreeMonProcessor::validateRegistrationResponse(FreeMonRegistrationResponse::parse(
         IDLParserErrorContext("foo"),
         BSON("version" << 1LL << "haltMetricsUploading" << false << "id" << std::string(5000, 'a')
@@ -776,7 +776,7 @@ TEST(FreeMonProcessorTest, TestMetricsResponseValidation) {
                                                      << "msg456"
                                                      << "reportingInterval" << 1LL))));
 
-    // Negative: large registartation id
+    // Negative: large registration id
     ASSERT_NOT_OK(FreeMonProcessor::validateMetricsResponse(FreeMonMetricsResponse::parse(
         IDLParserErrorContext("foo"),
         BSON("version" << 1LL << "haltMetricsUploading" << false << "permanentlyDelete" << false
