@@ -86,7 +86,7 @@ FTDCCompressor::addSample(const BSONObj& sample, Date_t date) {
 
     // Add another sample
     for (std::size_t i = 0; i < _metrics.size(); ++i) {
-        // NOTE: This touches a lot of cache lines so that compression code can be more effcient.
+        // NOTE: This touches a lot of cache lines so that compression code can be more efficient.
         _deltas[getArrayOffset(_maxDeltas, _deltaCount, i)] = _metrics[i] - _prevmetrics[i];
     }
 
