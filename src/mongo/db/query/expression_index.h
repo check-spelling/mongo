@@ -55,7 +55,7 @@ public:
                                               const BSONObj& indexInfoObj,
                                               int maxCoveringCells);
 
-    static void GeoHashsToIntervalsWithParents(const std::vector<GeoHash>& unorderedCovering,
+    static void GeoHashesToIntervalsWithParents(const std::vector<GeoHash>& unorderedCovering,
                                                OrderedIntervalList* oilOut);
 
     static void cover2d(const R2Region& region,

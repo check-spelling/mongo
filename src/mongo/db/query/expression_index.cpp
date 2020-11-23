@@ -85,7 +85,7 @@ std::vector<GeoHash> ExpressionMapping::get2dCovering(const R2Region& region,
     return unorderedCovering;
 }
 
-void ExpressionMapping::GeoHashsToIntervalsWithParents(
+void ExpressionMapping::GeoHashesToIntervalsWithParents(
     const std::vector<GeoHash>& unorderedCovering, OrderedIntervalList* oilOut) {
     set<GeoHash> covering(unorderedCovering.begin(), unorderedCovering.end());
     for (set<GeoHash>::const_iterator it = covering.begin(); it != covering.end(); ++it) {
@@ -104,7 +104,7 @@ void ExpressionMapping::cover2d(const R2Region& region,
                                 int maxCoveringCells,
                                 OrderedIntervalList* oilOut) {
     std::vector<GeoHash> unorderedCovering = get2dCovering(region, indexInfoObj, maxCoveringCells);
-    GeoHashsToIntervalsWithParents(unorderedCovering, oilOut);
+    GeoHashesToIntervalsWithParents(unorderedCovering, oilOut);
 }
 
 std::vector<S2CellId> ExpressionMapping::get2dsphereCovering(const S2Region& region) {

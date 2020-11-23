@@ -637,7 +637,7 @@ std::unique_ptr<NearStage::CoveredInterval> GeoNear2DStage::nextInterval(
 
     OrderedIntervalList coveredIntervals;
     coveredIntervals.name = scanParams.bounds.fields[twoDFieldPosition].name;
-    ExpressionMapping::GeoHashsToIntervalsWithParents(unorderedCovering, &coveredIntervals);
+    ExpressionMapping::GeoHashesToIntervalsWithParents(unorderedCovering, &coveredIntervals);
 
     // Intersect the $near bounds we just generated into the bounds we have for anything else
     // in the scan (i.e. $within)
