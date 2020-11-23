@@ -194,7 +194,7 @@ void censorArgsVector(std::vector<std::string>* args) {
                 arg = switchName + "=<password>";
             }
         } else if ((switchName.size() > 2) && _isPasswordSwitch(switchName.substr(0, 2))) {
-            // e.g. "-ppassword"
+            // e.g. "-password"
             arg = switchName.substr(0, 2) + "<password>";
         }
     }
@@ -223,7 +223,7 @@ void censorArgvArray(int argc, char** argv) {
                 _redact(firstEqSign + 1);
             }
         } else if ((strlen(arg) > 2) && _isPasswordSwitch(std::string(arg, 2))) {
-            // e.g. "-ppassword"
+            // e.g. "-password"
             _redact(argv[i] + 2);
         }
 

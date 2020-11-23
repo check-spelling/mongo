@@ -54,10 +54,10 @@ TEST(ShellOptions, RedactPasswords) {
         // Sanity check that we don't overflow argv
         {{"-p"},      // NOLINT
          {"-p"_sd}},  // NOLINT
-        // Check for --passsword=foo
+        // Check for --password=foo
         {{"--password=foo"},      // NOLINT
          {"--password=xxx"_sd}},  // NOLINT
-        {{"-ppassword"},          // NOLINT
+        {{"-password"},          // NOLINT
          {"-pxxxxxxxx"}},         // NOLINT
         // Having --password at the end of the parameters list should do nothing since it means
         // prompt for password
