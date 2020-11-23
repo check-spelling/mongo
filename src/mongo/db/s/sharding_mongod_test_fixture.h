@@ -135,7 +135,7 @@ private:
     /**
      * Base class returns a TaskExecutorPool with a fixed TaskExecutor and a set of arbitrary
      * executors containing one TaskExecutor, each backed by a NetworkInterfaceMock/ThreadPoolMock
-     * subsytem.
+     * subsystem.
      */
     std::unique_ptr<executor::TaskExecutorPool> _makeTaskExecutorPool();
 

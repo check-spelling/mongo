@@ -53,7 +53,7 @@ ServiceContext::ConstructorActionRegisterer createAuthorizationManager(
 
 }  // namespace
 
-// This setting is unique in that it is read-only. The IDL subststem doesn't actually allow for
+// This setting is unique in that it is read-only. The IDL subsystem doesn't actually allow for
 // that, so we'll pretend it's startup-settable, then override it here.
 AuthzVersionParameter::AuthzVersionParameter(StringData name, ServerParameterType)
     : ServerParameter(ServerParameterSet::getGlobal(), name, false, false) {}
