@@ -1,4 +1,4 @@
-"""Unit tests for the evergreen_resomke_job_count script."""
+"""Unit tests for the evergreen_resmoke_job_count script."""
 
 import unittest
 
