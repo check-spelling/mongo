@@ -288,7 +288,7 @@ assert(testDB.auth(rwUser, password));
 checkReadOps(true);
 checkWriteOps(true);
 
-jsTestLog("Check drainging/removing a shard");
+jsTestLog("Check draining/removing a shard");
 assert(testDB.logout().ok);
 checkRemoveShard(false);
 assert(adminDB.auth(rwUser, password));
