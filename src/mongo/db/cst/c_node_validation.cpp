@@ -209,7 +209,7 @@ Status addPathsFromTreeToSet(const CNode::ObjectChildren& children,
             for (auto&& component :
                  stdx::visit([](auto&& fn) -> auto&& { return fn.components; }, *fieldname))
                 currentPath.emplace_back(component);
-        // Or add a translaiton of _id if we have a key for that.
+        // Or add a translation of _id if we have a key for that.
         else
             currentPath.emplace_back("_id"_sd);
 
