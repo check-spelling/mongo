@@ -81,7 +81,7 @@ class TestCase(unittest.TestCase, metaclass=registry.make_registry_metaclass(_TE
     def override_logger(self, new_logger):
         """Override this instance's logger with a new logger.
 
-        This method is used by the repport to set the test logger.
+        This method is used by the rapport to set the test logger.
         """
         assert not self._original_logger, "Logger already overridden"
         self._original_logger = self.logger
