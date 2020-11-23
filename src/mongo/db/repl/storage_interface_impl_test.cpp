@@ -549,7 +549,7 @@ TEST_F(StorageInterfaceImplTest, InsertMissingDocWorksOnExistingCollection) {
     ASSERT_TRUE(autoColl.getCollection());
 }
 
-TEST_F(StorageInterfaceImplTest, InsertMissingDocFailesIfCollectionIsMissing) {
+TEST_F(StorageInterfaceImplTest, InsertMissingDocFailsIfCollectionIsMissing) {
     auto opCtx = getOperationContext();
     StorageInterfaceImpl storage;
     auto nss = makeNamespace(_agent);
