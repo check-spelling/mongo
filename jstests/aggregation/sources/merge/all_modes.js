@@ -82,7 +82,7 @@ const target = db.all_modes_target;
     // shards, and shard documents by {_id: "hashed"}, we will end up with the document {_id: 3}
     // landed on shard0, and {_id: 1} and {_id: 2} on shard1 in the source collection. Note
     // that {_id: 3} has a duplicate key with the document in the target collection. For this
-    // particlar case, the entire pipeline is sent to each shard. Lets assume that shard0 has
+    // particular case, the entire pipeline is sent to each shard. Lets assume that shard0 has
     // processed its single document with {_id: 3} and raised a DuplicateKey error, whilst
     // shard1 hasn't performed any writes yet (or even hasn't started reading from the cursor).
     // The mongos, after receiving the DuplicateKey, will stop pulling data from the shards
