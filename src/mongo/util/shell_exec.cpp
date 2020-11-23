@@ -110,7 +110,7 @@ public:
         }
 
         uassert(ErrorCodes::OperationFailed,
-                str::stream() << "Failed retreiving exit code from subprocess: "
+                str::stream() << "Failed retrieving exit code from subprocess: "
                               << errnoWithDescription(),
                 GetExitCodeProcess(_process.hProcess, &_exitcode));
 
@@ -130,7 +130,7 @@ public:
         }
 
         uassert(ErrorCodes::OperationFailed,
-                str::stream() << "Failed retreiving status of subprocess: "
+                str::stream() << "Failed retrieving status of subprocess: "
                               << errnoWithDescription(),
                 GetExitCodeProcess(_process.hProcess, &_exitcode));
 

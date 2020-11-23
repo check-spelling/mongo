@@ -446,7 +446,7 @@ class Component:
 
         newer_releases = component["activityData"].get("newerReleases", 0)
 
-        LOGGER.info("Retrievinng version information for Comp %s - %s  Releases %s", name, cversion,
+        LOGGER.info("Retrieving version information for Comp %s - %s  Releases %s", name, cversion,
                     newer_releases)
         cver = VersionInfo(cversion)
         newest_release = None
