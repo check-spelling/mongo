@@ -1293,7 +1293,7 @@ public:
                 VariablesParseState vps = expCtx.variablesParseState;
                 ASSERT_THROWS(
                     [&] {
-                        // NOTE: parse and evaluatation failures are treated the
+                        // NOTE: parse and evaluation failures are treated the
                         // same
                         const intrusive_ptr<Expression> expr =
                             Expression::parseExpression(&expCtx, obj, vps);
@@ -2343,7 +2343,7 @@ public:
                 VariablesParseState vps = expCtx.variablesParseState;
                 ASSERT_THROWS(
                     [&] {
-                        // NOTE: parse and evaluatation failures are treated the
+                        // NOTE: parse and evaluation failures are treated the
                         // same
                         const intrusive_ptr<Expression> expr =
                             Expression::parseExpression(&expCtx, obj, vps);
