@@ -231,7 +231,7 @@ assert(db3.auth('spencer', 'pwd'));
     const newRes = assert.commandWorked(cfg1.runCommand({_getUserCacheGeneration: 1}));
     assert.eq(oldRes.cacheGeneration,
               newRes.cacheGeneration,
-              "User cache generation supriously incremented on config servers");
+              "User cache generation spuriously incremented on config servers");
 
     // Put connection to config server back into default state before shutdown
     cfg1.logout();
