@@ -38,7 +38,7 @@ assertWorked({query: {}, update: {$set: {value: "emptyQuery"}}, new: true}, "emp
 // Verify that command works when we supply a valid sort specification.
 assertWorked({sort: {_id: -1}, update: {$set: {value: "sort"}}, new: true}, "sort");
 
-// Verify that invaid 'sort' object fails.
+// Verify that invalid 'sort' object fails.
 assertFailedWithCode({sort: null, update: {value: 2}}, 31174);
 assertFailedWithCode({sort: 1, update: {value: 2}}, 31174);
 assertFailedWithCode({sort: "{_id: 1}", update: {value: 2}}, 31174);
@@ -51,7 +51,7 @@ assertWorked({sort: {}, update: {$set: {value: "emptySort"}}, new: true}, "empty
 // Verify that the 'fields' projection works.
 assertWorked({fields: {_id: 0}, update: {$set: {value: "project"}}, new: true}, "project");
 
-// Verify that invaid 'fields' object fails.
+// Verify that invalid 'fields' object fails.
 assertFailedWithCode({fields: null, update: {value: 2}}, 31175);
 assertFailedWithCode({fields: 1, update: {value: 2}}, 31175);
 assertFailedWithCode({fields: "{_id: 1}", update: {value: 2}}, 31175);
