@@ -393,7 +393,7 @@ TEST(MessageCompressorManager, RuntMessage) {
     badMessage.setOperation(dbCompressed);
     badMessage.setLen(MsgData::MsgDataHeaderSize + 8);
 
-    // This is a totally bogus compression header of just the orginal opcode + 0 byte uncompressed
+    // This is a totally bogus compression header of just the original opcode + 0 byte uncompressed
     // size
     DataRangeCursor cursor(badMessage.data(), badMessage.data() + badMessage.dataLen());
     cursor.writeAndAdvance<LittleEndian<int32_t>>(dbQuery);

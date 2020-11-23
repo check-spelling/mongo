@@ -40,7 +40,7 @@ try {
     assert.neq(result.value, null);
     assert.eq(result.value.b, 0);
 } finally {
-    // Restore the orginal sort memory limit.
+    // Restore the original sort memory limit.
     assert.commandWorked(db.adminCommand(
         {setParameter: 1, internalQueryMaxBlockingSortMemoryUsageBytes: oldSortLimit}));
 }
