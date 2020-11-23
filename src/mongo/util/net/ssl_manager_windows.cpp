@@ -1695,7 +1695,7 @@ StatusWith<std::vector<std::string>> getSubjectAlternativeNames(PCCERT_CONTEXT c
             if (swCIDRSan.isOK()) {
                 LOGV2_WARNING(23273,
                               "You have an IP Address in the DNS Name field on your "
-                              "certificate. This formulation is depreceated.");
+                              "certificate. This formulation is deprecated.");
             }
         } else if (altNames->rgAltEntry[i].dwAltNameChoice == CERT_ALT_NAME_IP_ADDRESS) {
             auto ipAddrStruct = altNames->rgAltEntry[i].IPAddress;

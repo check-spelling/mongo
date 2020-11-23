@@ -385,7 +385,7 @@ Status OptionSection::getBoostOptions(po::options_description* boostOptions,
                                         oditerator->_description.c_str());
 
             if (!visibleOnly) {
-                for (const std::string& depreatedSingleName : oditerator->_deprecatedSingleNames) {
+                for (const std::string& deprecatedSingleName : oditerator->_deprecatedSingleNames) {
                     std::unique_ptr<po::value_semantic> boostTypeDep;
                     Status retDep =
                         typeToBoostType(&boostTypeDep,
@@ -396,7 +396,7 @@ Status OptionSection::getBoostOptions(po::options_description* boostOptions,
                     if (!retDep.isOK()) {
                         return retDep;
                     }
-                    boostOptions->add_options()(depreatedSingleName.c_str(),
+                    boostOptions->add_options()(deprecatedSingleName.c_str(),
                                                 boostTypeDep.release(),
                                                 oditerator->_description.c_str());
                 }
