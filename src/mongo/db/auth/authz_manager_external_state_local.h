@@ -136,7 +136,7 @@ protected:
 
     /**
      * Set an auto-releasing shared lock on the roles database.
-     * This allows us to maintain a consistent state during user acquisiiton.
+     * This allows us to maintain a consistent state during user acquisition.
      *
      * virtual to allow Mock to not lock anything.
      */
