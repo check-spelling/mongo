@@ -265,7 +265,7 @@ function testUsersInfoCommand(conn) {
                 });
 
     print(
-        "Authentication restrictions can be obtained through usersInfo for a single user with restrictioned roles");
+        "Authentication restrictions can be obtained through usersInfo for a single user with restricted roles");
     forEachUser(assert.commandWorked(admin.runCommand(
                     {usersInfo: "userWithRestrictedRole", showAuthenticationRestrictions: true})),
                 function(userDoc) {
@@ -277,7 +277,7 @@ function testUsersInfoCommand(conn) {
                 });
 
     print(
-        "Authentication restrictions can be obtained through usersInfo for a single restricted user with restrictioned roles");
+        "Authentication restrictions can be obtained through usersInfo for a single restricted user with restricted roles");
     forEachUser(
         assert.commandWorked(admin.runCommand(
             {usersInfo: "restrictedUserWithRestrictedRole", showAuthenticationRestrictions: true})),
