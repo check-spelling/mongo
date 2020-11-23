@@ -614,7 +614,7 @@ TEST(ClonablePtrTest, basic_construction_test) {
 // TODO: Bring in an "equivalence class for equality predicate testing" framework.
 // Equals and Not Equals need to be tested independently -- It is not valid to assume that equals
 // and not equals are correctly implemented as complimentary predicates.  Equality must be
-// reflexive, symmetric and transitive.  This requres several instances that all have the same
+// reflexive, symmetric and transitive.  This requires several instances that all have the same
 // value.  Simply testing "2 == 2" and "3 != 2" is insufficient.  Every combination of position and
 // equality must be tested to come out as expected.
 //
