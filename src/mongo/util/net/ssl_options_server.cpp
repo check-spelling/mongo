@@ -200,8 +200,8 @@ MONGO_STARTUP_OPTIONS_POST(SSLServerOptions)(InitializerContext*) {
 
     const int clusterAuthMode = serverGlobalParams.clusterAuthMode.load();
     if (sslGlobalParams.sslMode.load() != SSLParams::SSLMode_disabled) {
-        bool usingCertifiateSelectors = params.count("net.tls.certificateSelector");
-        if (sslGlobalParams.sslPEMKeyFile.size() == 0 && !usingCertifiateSelectors) {
+        bool usingCertificateSelectors = params.count("net.tls.certificateSelector");
+        if (sslGlobalParams.sslPEMKeyFile.size() == 0 && !usingCertificateSelectors) {
             return {ErrorCodes::BadValue,
                     "need tlsCertificateKeyFile or certificateSelector when TLS is enabled"};
         }
@@ -214,9 +214,9 @@ MONGO_STARTUP_OPTIONS_POST(SSLServerOptions)(InitializerContext*) {
             " no CA file has been provided; please specify an"
             " tlsCAFile parameter");
 
-        // When using cetificate selectors, we use the local system certificate store for verifying
+        // When using certificate selectors, we use the local system certificate store for verifying
         // X.509 certificates for auth instead of relying on a CA file.
-        if (sslGlobalParams.sslCAFile.empty() && !usingCertifiateSelectors &&
+        if (sslGlobalParams.sslCAFile.empty() && !usingCertificateSelectors &&
             clusterAuthMode == ServerGlobalParams::ClusterAuthMode_x509) {
             return {ErrorCodes::BadValue, sslCANotFoundError};
         }

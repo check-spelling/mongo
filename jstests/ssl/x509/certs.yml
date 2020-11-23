@@ -259,7 +259,7 @@ certs:
     - {role: readAnyDatabase, db: admin}
 
 - name: 'password_protected.pem'
-  description: Server cerificate using an encrypted private key.
+  description: Server certificate using an encrypted private key.
   Subject: {CN: server}
   passphrase: 'qwerty'
   pkcs1: true

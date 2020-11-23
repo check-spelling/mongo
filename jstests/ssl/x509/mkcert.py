@@ -95,7 +95,7 @@ def load_authority_file(issuer):
         signing_key = OpenSSL.crypto.load_privatekey(OpenSSL.crypto.FILETYPE_PEM, pem, passphrase=passphrase)
         return (certificate, signing_key)
 
-    # Externally sourced certifiate, try by path. Hopefully unencrypted.
+    # Externally sourced certificate, try by path. Hopefully unencrypted.
     # pylint: disable=bare-except
     try:
         pem = open(issuer, 'rt').read()
