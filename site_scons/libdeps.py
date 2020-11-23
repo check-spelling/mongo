@@ -101,7 +101,7 @@ class FlaggedLibdep:
         it determines where this FlaggedLibdep starts in the larger list of libdeps.
 
         The start_index will cut the larger list, and then re-apply this libdep with flags
-        at that location. This class will exract the prefix and postfix flags
+        at that location. This class will extract the prefix and postfix flags
         from the Libdep nodes env.
         """
         self.libnode = libnode
