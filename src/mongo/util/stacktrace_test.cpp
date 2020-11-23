@@ -610,12 +610,12 @@ TEST_F(PrintAllThreadStacksTest, WithDeadThreads) {
         const BSONObj& obj = ti.Obj();
         int tid = obj.getIntField("tid");
         mustSee.erase(tid);
-        auto witer =
+        auto writer =
             std::find_if(workers.begin(), workers.end(), [&](auto&& w) { return w.tid == tid; });
-        if (witer == workers.end())
+        if (writer == workers.end())
             continue;
         bool missingBacktrace = !obj.hasElement("backtrace");
-        ASSERT_EQ(witer->blocks, missingBacktrace);
+        ASSERT_EQ(writer->blocks, missingBacktrace);
     }
     ASSERT(mustSee.empty()) << format(FMT_STRING("tids missing from report: {}"),
                                       fmt::join(mustSee, ","));
