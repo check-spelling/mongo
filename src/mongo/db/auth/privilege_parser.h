@@ -122,7 +122,7 @@ private:
 };
 
 /**
- * This class is used to parse documents describing privileges in the role managment commands.
+ * This class is used to parse documents describing privileges in the role management commands.
  */
 class ParsedPrivilege {
     ParsedPrivilege(const ParsedPrivilege&) = delete;
