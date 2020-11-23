@@ -71,7 +71,7 @@ countTags(1, 'Bad min: tag range does not exist');
 assert.commandWorked(st.removeTagRange('test.tag_range', {_id: 5}, {_id: 12}, 'a'));
 countTags(1, 'Bad max: tag range does not exist');
 
-// Invalid namesapce
+// Invalid namespace
 assert.commandFailed(st.removeTagRange(35, {_id: 5}, {_id: 11}, 'a'));
 countTags(1, 'Invalid namespace: tag range does not exist');
 
