@@ -52,7 +52,7 @@ structs:
               cpp_name: jsScope
               type: object
               optional: true
-              description: Optional scope variables accessible from internal javacsript expressions.
+              description: Optional scope variables accessible from internal javascript expressions.
           isMapReduce:
               cpp_name: isMapReduce
               type: bool
