@@ -982,7 +982,7 @@ void MigrationDestinationManager::_migrateDriver(OperationContext* outerOpCtx) {
         recipientDeletionTask.setPending(true);
 
         // It is illegal to wait for write concern with a session checked out, so persist the range
-        // deletion task with an immediately satsifiable write concern and then wait for majority
+        // deletion task with an immediately satisfiable write concern and then wait for majority
         // after yielding the session.
         migrationutil::persistRangeDeletionTaskLocally(
             outerOpCtx, recipientDeletionTask, WriteConcernOptions());

@@ -765,7 +765,7 @@ TEST_F(ServiceContextTest, ValidateConfigForReconfig_NewConfigInvalid) {
     ASSERT_EQUALS(ErrorCodes::BadValue, validateConfigForReconfig(oldConfig, newConfig, true));
 }
 
-TEST_F(ServiceContextTest, ValidateConfigForReconfig_NewConfigWriteConcernNotSatisifiable) {
+TEST_F(ServiceContextTest, ValidateConfigForReconfig_NewConfigWriteConcernNotSatisfiable) {
     // The new config is not valid due to an unsatisfiable write concern. This tests that if the
     // new config is invalid, validateConfigForReconfig will return a status indicating what is
     // wrong with the new config.

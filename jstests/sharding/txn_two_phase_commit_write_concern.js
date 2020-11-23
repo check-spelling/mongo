@@ -21,7 +21,7 @@ const st = new ShardingTest({
         // Disallow chaining to force both secondaries to sync from the primary. The testcase for
         // writeConcern "majority" disables replication on one of the secondaries, with chaining
         // that would effectively disable replication on both secondaries, causing the testcase to
-        // to fail since writeConcern is unsatsifiable.
+        // to fail since writeConcern is unsatisfiable.
         settings: {chainingAllowed: false}
     },
     causallyConsistent: true
