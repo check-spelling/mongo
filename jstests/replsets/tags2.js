@@ -49,8 +49,8 @@ assert.commandWorked(db.foo.insert({x: 2}, {writeConcern: {w: 'backedUp', wtimeo
 
 nextVersion++;
 conf.version = nextVersion;
-conf.members[0].priorty = 3;
-conf.members[2].priorty = 0;
+conf.members[0].priority = 3;
+conf.members[2].priority = 0;
 primary.getDB("admin").runCommand({replSetReconfig: conf});
 
 primary = replTest.getPrimary();
