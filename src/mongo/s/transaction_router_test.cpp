@@ -1708,7 +1708,7 @@ TEST_F(TransactionRouterTestWithDefaultSession, OnlyNewlyCreatedParticipantsClea
         operationContext(), txnNum, TransactionRouter::TransactionActions::kStart);
     txnRouter.setDefaultAtClusterTime(operationContext());
 
-    // First statement successfully targets one shard, selecing it as the coordinator.
+    // First statement successfully targets one shard, selecting it as the coordinator.
 
     txnRouter.attachTxnFieldsIfNeeded(operationContext(), shard1, {});
 
