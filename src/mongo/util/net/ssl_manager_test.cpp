@@ -440,7 +440,7 @@ TEST(SSLManager, DNParsingAndNormalization) {
          {{"2.5.4.3", R"(James "Jim" Smith, III)"},
           {"0.9.2342.19200300.100.1.25", "example"},
           {"0.9.2342.19200300.100.1.25", "net"}}},
-        // Per RFC4518, control sequences are mapped to nothing and whitepace is mapped to ' '
+        // Per RFC4518, control sequences are mapped to nothing and whitespace is mapped to ' '
         {"CN=Before\\0aAfter,O=tabs\tare\tspaces\u200B,DC=\\07\\08example,DC=net",
          {{"2.5.4.3", "Before After"},
           {"2.5.4.10", "tabs are spaces"},
