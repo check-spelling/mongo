@@ -503,7 +503,7 @@ void DBConnectionPool::clear() {
     LOGV2_DEBUG(20114,
                 2,
                 "Removing connections on all pools owned by {poolName}",
-                "Removing all connectionns associated with this set of pools",
+                "Removing all connections associated with this set of pools",
                 "poolName"_attr = _name);
     for (PoolMap::iterator iter = _pools.begin(); iter != _pools.end(); ++iter) {
         iter->second.clear();

@@ -326,7 +326,7 @@ public:
 
     /**
      * Get information about the certificates and CRL that will be used for outgoing and incoming
-     * SSL connecctions.
+     * SSL connections.
      */
     virtual SSLInformationToLog getSSLInformationToLog() const = 0;
 };
