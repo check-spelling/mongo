@@ -43,7 +43,7 @@ int RouterSessionCatalog::reapSessionsOlderThan(OperationContext* opCtx,
                                                 Date_t possiblyExpired) {
     const auto catalog = SessionCatalog::get(opCtx);
 
-    // Capture the possbily expired in-memory session ids
+    // Capture the possibly expired in-memory session ids
     LogicalSessionIdSet lsids;
     catalog->scanSessions(
         SessionKiller::Matcher(KillAllSessionsByPatternSet{makeKillAllSessionsByPattern(opCtx)}),
