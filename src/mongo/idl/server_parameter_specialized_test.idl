@@ -72,7 +72,7 @@ server_parameters:
             data: ExtraDataForServerParameter
             override_set: true
     specializedWithCtorAndValue:
-        description: "Attach a simple value and a constum constructor."
+        description: "Attach a simple value and a custom constructor."
         set_at: startup
         cpp_class:
             name: SpecializedWithCtorAndValueServerParameter
