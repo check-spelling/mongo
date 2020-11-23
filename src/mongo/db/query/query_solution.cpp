@@ -834,7 +834,7 @@ ProvidedSortSet computeSortsForScan(const IndexEntry& index,
     // Example, consider an index pattern {a: 1, b: 1, c: 1, d: 1},
     // - If the query predicate is {a: 1} and 'c' is a multikey field then, unsupportedFields = {c},
     // equalityFields = {a}, ignoreFields = {} and baseSortPattern = {b: 1}. Field 'a' is dropped
-    // from the base sort pattern because it is an equality field. Fields 'c' and 'd' are truncted
+    // from the base sort pattern because it is an equality field. Fields 'c' and 'd' are truncated
     // from the base sort pattern because 'c' is an unsupported field.
     // - If the query predicate is {} and 'a' is a multikey field then, unsupportedFields = {a},
     // equalityFields = {}, ignoreFields = {} and baseSortPattern = {}. The entire sort pattern is
