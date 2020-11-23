@@ -204,7 +204,7 @@ var extractMajorVersionFromVersionString = function(versionString) {
 // dev/stable MongoDB release cycle.
 //
 // If you add a new version substitution to this list, you should add it to the lists of
-// versions being checked in 'verify_versions_test.js' to verify it is susbstituted correctly.
+// versions being checked in 'verify_versions_test.js' to verify it is substituted correctly.
 MongoRunner.binVersionSubs = [
     new MongoRunner.VersionSub("latest", shellVersion()),
     new MongoRunner.VersionSub(extractMajorVersionFromVersionString(shellVersion()),
