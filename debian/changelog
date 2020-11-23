@@ -42,7 +42,7 @@ mongodb (1.7.6) unstable; urgency=low
 
 mongodb (1.7.5) unstable; urgency=low
 
-  * durability journalingin place
+  * durability journaling in place
   * see http://jira.mongodb.org/browse/SERVER/fixforversion/10214
 
  -- Richard Kreuter <richard@10gen.com>  Wed, 26 Jan 2011 16:56:28 -0500
