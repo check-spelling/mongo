@@ -176,7 +176,7 @@ intrusive_ptr<DocumentSource> DocumentSourceRedact::createFromBson(
     BSONElement elem, const intrusive_ptr<ExpressionContext>& expCtx) {
     VariablesParseState vps = expCtx->variablesParseState;
     Variables::Id currentId = vps.defineVariable("CURRENT");  // will differ from ROOT
-    Variables::Id decendId = vps.defineVariable("DESCEND");
+    Variables::Id descendId = vps.defineVariable("DESCEND");
     Variables::Id pruneId = vps.defineVariable("PRUNE");
     Variables::Id keepId = vps.defineVariable("KEEP");
     intrusive_ptr<Expression> expression = Expression::parseOperand(expCtx.get(), elem, vps);
@@ -186,7 +186,7 @@ intrusive_ptr<DocumentSource> DocumentSourceRedact::createFromBson(
     // Set up variables. Never need to reset DESCEND, PRUNE, or KEEP.
     source->_currentId = currentId;
     auto& variables = expCtx->variables;
-    variables.setValue(decendId, descendVal);
+    variables.setValue(descendId, descendVal);
     variables.setValue(pruneId, pruneVal);
     variables.setValue(keepId, keepVal);
 
