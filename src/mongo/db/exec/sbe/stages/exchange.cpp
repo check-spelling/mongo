@@ -293,7 +293,7 @@ void ExchangeConsumer::open(bool reOpen) {
 PlanState ExchangeConsumer::getNext() {
     if (_orderPreserving) {
         // Build a heap and return min element.
-        uasserted(4822834, "ordere exchange not yet implemented");
+        uasserted(4822834, "ordered exchange not yet implemented");
     } else {
         while (_eofs < _state->numOfProducers()) {
             auto buffer = getBuffer(0);

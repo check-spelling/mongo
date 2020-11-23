@@ -53,7 +53,7 @@ namespace {
 
 namespace wcp = ::mongo::wildcard_planning;
 
-// Create an ordred interval list which represents the bounds for all BSON elements of type String,
+// Create an ordered interval list which represents the bounds for all BSON elements of type String,
 // Object, or Array.
 OrderedIntervalList buildStringBoundsOil(const std::string& keyName) {
     OrderedIntervalList ret;
