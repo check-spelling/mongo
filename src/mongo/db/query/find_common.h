@@ -89,7 +89,7 @@ public:
     // This max may be exceeded by epsilon for output documents that approach the maximum user
     // document size. That is, if we must return a BSONObjMaxUserSize document, then the total
     // response size will be BSONObjMaxUserSize plus the amount of size required for the message
-    // header and the cursor response "envelope". (The envolope contains namespace and cursor id
+    // header and the cursor response "envelope". (The envelope contains namespace and cursor id
     // info.)
     static const int kMaxBytesToReturnToClientAtOnce = BSONObjMaxUserSize;
 
