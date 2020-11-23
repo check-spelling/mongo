@@ -74,7 +74,7 @@ class MongoProcessInterface {
 public:
     /**
      * Storage for a batch of BSON Objects to be updated in the write namespace. For each element
-     * in the batch we store a tuple of the folliwng elements:
+     * in the batch we store a tuple of the following elements:
      *   1. BSONObj - specifies the query that identifies a document in the to collection to be
      *      updated.
      *   2. write_ops::UpdateModification - either the new document we want to upsert or insert into

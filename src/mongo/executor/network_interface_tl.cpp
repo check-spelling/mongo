@@ -973,7 +973,7 @@ void NetworkInterfaceTL::ExhaustCommandState::continueExhaustRequest(
 
     onReplyFn(onAnyResponse);
 
-    // Reset the stopwatch to measure the correct duration for the folowing reply
+    // Reset the stopwatch to measure the correct duration for the following reply
     stopwatch.restart();
     if (deadline != kNoExpirationDate) {
         deadline = stopwatch.start() + requestOnAny.timeout;
