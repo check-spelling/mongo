@@ -2056,7 +2056,7 @@ Examples:
 
     program_options.add_option(
         "--remotePython", dest="remote_python",
-        help="The python intepreter to use on the remote host"
+        help="The python interpreter to use on the remote host"
         " [default: '%default']."
         " To be able to use a python virtual environment,"
         " which has already been provisioned on the remote"
