@@ -402,7 +402,7 @@ private:
     NetworkOperationList _unscheduled;  // (M)
 
     // List of network operations that have been returned by getNextReadyRequest() but not
-    // yet scheudled, black-holed or requeued.
+    // yet scheduled, black-holed or requeued.
     NetworkOperationList _processing;  // (M)
 
     // List of network operations whose responses have been scheduled but not delivered, sorted
