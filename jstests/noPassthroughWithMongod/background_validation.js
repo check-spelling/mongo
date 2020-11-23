@@ -45,7 +45,7 @@ assert.commandFailedWithCode(testColl.validate({background: true, full: true}),
 
 forceCheckpoint();
 
-// Check that {backround:true} is successful.
+// Check that {background:true} is successful.
 let res = testColl.validate({background: true});
 assert.commandWorked(res);
 assert(res.valid, "Validate cmd with {background:true} failed: " + tojson(res));

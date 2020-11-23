@@ -38,7 +38,7 @@ const awaitShell = stepDownPrimary(rst);
 const error = assert.throws(function() {
     // DBClientRS will continue to send command requests to the node it believed to be primary
     // even after it stepped down so long as it hasn't closed its connection. But this may also
-    // throw if the ReplicaSetMonitor's backgroud refresh has already noticed that this node is
+    // throw if the ReplicaSetMonitor's background refresh has already noticed that this node is
     // no longer primary.
     assert.commandFailedWithCode(rsConn.getDB("test").runCommand({find: "mycoll"}),
                                  ErrorCodes.NotPrimaryNoSecondaryOk);

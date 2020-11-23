@@ -78,7 +78,7 @@ function runTest({rst, readDB, writeDB}) {
 
     // The commitIndexBuild oplog entry may block $planCacheStats on the secondary during oplog
     // application because it will hold the PBWM while waiting for the index build to complete in
-    // the backgroud. Therefore, we get the primary to hold off on writing the commitIndexBuild
+    // the background. Therefore, we get the primary to hold off on writing the commitIndexBuild
     // oplog entry until we are ready to resume index builds on the secondary.
     if (writeDB.getMongo().host != readDB.getMongo().host) {
         assert.commandWorked(writeDB.adminCommand(

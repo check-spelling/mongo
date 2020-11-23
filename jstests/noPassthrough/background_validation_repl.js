@@ -64,7 +64,7 @@ const doTest = replSet => {
 
     assert.commandWorked(testDB.adminCommand({fsync: 1}));
 
-    // Check that {backround:true} is successful.
+    // Check that {background:true} is successful.
     let res = testColl.validate({background: true});
     assert.commandWorked(res);
     assert(res.valid, "Validate cmd with {background:true} failed: " + tojson(res));

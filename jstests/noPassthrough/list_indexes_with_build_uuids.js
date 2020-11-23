@@ -59,7 +59,7 @@ IndexBuildTest.pauseIndexBuilds(secondary);
 
 // With storage engines that do not support snapshot reads, the commitIndexBuild oplog entry may
 // block the listIndexes command on the secondary during oplog application because it will hold the
-// PBWM while waiting for the index build to complete in the backgroud. Therefore, we get the
+// PBWM while waiting for the index build to complete in the background. Therefore, we get the
 // primary to hold off on writing the commitIndexBuild oplog entry until we are ready to resume
 // index builds on the secondary.
 IndexBuildTest.pauseIndexBuilds(primary);
