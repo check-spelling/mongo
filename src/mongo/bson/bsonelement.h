@@ -382,7 +382,7 @@ public:
      * returns zero. If the element holds a double, truncates the fractional part.
      *
      * Results in undefined behavior if called on a double that is NaN, +/-infinity, or too
-     * large/small to be repsented as a long. Use 'safeNumberLong()' to safely convert an arbitrary
+     * large/small to be represented as a long. Use 'safeNumberLong()' to safely convert an arbitrary
      * BSON element to an integer without risk of UB.
      */
     long long numberLong() const;
