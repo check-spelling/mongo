@@ -1148,7 +1148,7 @@ void BenchRunOp::executeOnce(DBClientBase* conn,
             if (this->expected >= 0 && count != this->expected) {
                 LOGV2_INFO(22797,
                            "Bench query on: {namespace} expected: {expected} got: {got}",
-                           "Bench query on namespace got diffrent results then expected",
+                           "Bench query on namespace got different results then expected",
                            "namespace"_attr = this->ns,
                            "expected"_attr = this->expected,
                            "got"_attr = count);

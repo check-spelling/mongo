@@ -6612,7 +6612,7 @@ TEST_F(ReplCoordTest,
 }
 
 TEST_F(ReplCoordTest,
-       DontRescheduleElectionTimeoutWhenProcessingHeartbeatResponseFromPrimaryInDiffertTerm) {
+       DontRescheduleElectionTimeoutWhenProcessingHeartbeatResponseFromPrimaryInDifferentTerm) {
     assertStartSuccess(BSON("_id"
                             << "mySet"
                             << "protocolVersion" << 1 << "version" << 2 << "members"
