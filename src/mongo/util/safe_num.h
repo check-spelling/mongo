@@ -173,7 +173,7 @@ public:
     // Below exposed for testing purposes. Treat as private.
     //
 
-    // Maximum integer that can be converted accuratelly into a double, assuming a
+    // Maximum integer that can be converted accurately into a double, assuming a
     // double precission IEEE 754 representation.
     // TODO use numeric_limits to make this portable
     static const int64_t maxIntInDouble = 9007199254740992LL;  // 2^53

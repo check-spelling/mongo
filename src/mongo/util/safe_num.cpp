@@ -127,7 +127,7 @@ bool SafeNum::isEquivalent(const SafeNum& rhs) const {
     }
 
     // If we're mixing integers and doubles, we should be careful. Some integers are
-    // too big to be accuratelly represented in a double. If we're within a safe range
+    // too big to be accurately represented in a double. If we're within a safe range
     // we compare both sides as doubles.
     const double lhsDouble = getDouble(*this);
     const double rhsDouble = getDouble(rhs);
