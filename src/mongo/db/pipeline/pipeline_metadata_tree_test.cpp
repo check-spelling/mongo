@@ -243,7 +243,7 @@ TEST_F(PipelineMetadataTreeTest, BranchingPipelinesConstructProperTrees) {
             "foreignField: \"sicovam\"}}, "
             "{$unwind: \"$instr\"}, "
             "{$group: {_id: {PositionID: \"$trade.mvtident\", \"InstrumentReference\": "
-            "\"$instr.libelle\"}, NumberOfSecurities: {$sum:\"$trade.quantite\"}}}]");
+            "\"$instr.libelle\"}, NumberOfSecurities: {$sum:\"$trade.quantity\"}}}]");
         return makeTree<TestThing>({{NamespaceString("test.collection"), {"1"}},
                                     {NamespaceString("test.folios"), {"2"}},
                                     {NamespaceString("test.trades"), {"2"}},
@@ -359,7 +359,7 @@ TEST_F(PipelineMetadataTreeTest, ZipWalksAPipelineAndTreeInTandemAndInOrder) {
             "foreignField: \"sicovam\"}}, "
             "{$unwind: \"$instr\"}, "
             "{$group: {_id: {PositionID: \"$trade.mvtident\", \"InstrumentReference\": "
-            "\"$instr.libelle\"}, NumberOfSecurities: {$sum:\"$trade.quantite\"}}}]");
+            "\"$instr.libelle\"}, NumberOfSecurities: {$sum:\"$trade.quantity\"}}}]");
         auto tree = makeTree<TestThing>({{NamespaceString("test.collection"), {}},
                                          {NamespaceString("test.folios"), {}},
                                          {NamespaceString("test.trades"), {}},
