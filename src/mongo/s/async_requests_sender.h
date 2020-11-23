@@ -209,7 +209,7 @@ private:
          *
          * 1. resolveShardIdToHostAndPort
          * 2. scheduleRemoteCommand
-         * 3. handlResponse
+         * 3. handleResponse
          *
          * for the given shard.
          */

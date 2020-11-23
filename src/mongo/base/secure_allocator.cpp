@@ -351,7 +351,7 @@ namespace secure_allocator_details {
  * To save on allocations, we try to serve multiple requests out of the same mlocked page where
  * possible.  We do this by invoking the system allocator in multiples of a full page, and keep the
  * last page around, giving out pointers from that page if its possible to do so.  We also keep an
- * unordered_map of all the allocations we've handed out, which hold shared_ptrs that get rid of
+ * unordered_map of all the allocations we've handled out, which hold shared_ptrs that get rid of
  * pages when we're not using them anymore.
  */
 void* allocate(std::size_t bytes, std::size_t alignOf) {

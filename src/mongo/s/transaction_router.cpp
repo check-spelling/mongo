@@ -1242,9 +1242,9 @@ void TransactionRouter::Router::implicitlyAbortTransaction(OperationContext* opC
             22896,
             3,
             "{sessionId}:{txnNumber} Router not sending implicit abortTransaction because commit "
-            "may have been handed off to the coordinator",
+            "may have been handled off to the coordinator",
             "Not sending implicit abortTransaction to participant shards after error because "
-            "coordinating the commit decision may have been handed off to the coordinator shard",
+            "coordinating the commit decision may have been handled off to the coordinator shard",
             "sessionId"_attr = _sessionId().getId(),
             "txnNumber"_attr = o().txnNumber,
             "error"_attr = redact(status));

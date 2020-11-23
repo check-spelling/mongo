@@ -337,7 +337,7 @@ public:
                 // _evictedCheckedOutValues map
             }
 
-            // evictedValue must always be handed-off to guard so that the destructor never runs run
+            // evictedValue must always be handled-off to guard so that the destructor never runs run
             // while the mutex is held
             guard.releasePtr(std::move(evictedValue));
         }
@@ -395,7 +395,7 @@ public:
                 }
             }
 
-            // evictedValue must always be handed-off to guard so that the destructor never runs
+            // evictedValue must always be handled-off to guard so that the destructor never runs
             // while the mutex is held
             guard.releasePtr(std::move(evictedValue));
         }

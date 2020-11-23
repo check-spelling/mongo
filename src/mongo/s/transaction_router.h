@@ -703,7 +703,7 @@ private:
         StringMap<Participant> participants;
 
         // The id of participant chosen as the two-phase commit coordinator. If, at commit time,
-        // two-phase commit is required, the participant list is handed off to this shard. Is unset
+        // two-phase commit is required, the participant list is handled off to this shard. Is unset
         // until the transaction has targeted a participant, and is set to the first participant
         // targeted. Is reset if the first participant targeted returns a "needs retargeting" error.
         boost::optional<ShardId> coordinatorId;

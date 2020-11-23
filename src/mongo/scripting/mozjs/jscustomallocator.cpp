@@ -68,7 +68,7 @@ namespace sm {
 
 namespace {
 /**
- * These two variables track the total number of bytes handed out, and the
+ * These two variables track the total number of bytes handled out, and the
  * maximum number of bytes we will consider handing out. They are set by
  * MozJSImplScope on start up.
  */

@@ -1,5 +1,5 @@
 /**
- * This test artificially throttles a replica set by limiting the tickets handed out. It first
+ * This test artificially throttles a replica set by limiting the tickets handled out. It first
  * performs a calibrating run that sees how many inserts per second a one node replica set can
  * handle. Non-batch inserts should acquire one lock per insert. The test then sets the ticket
  * generation to a fraction of this discovered calibration value. A following benchrun validates the

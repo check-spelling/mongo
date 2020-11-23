@@ -108,7 +108,7 @@ private:
 
 /**
  * This is an abstract representation of a query plan.  It can be transcribed into a tree of
- * PlanStages, which can then be handed to a PlanRunner for execution.
+ * PlanStages, which can then be handled to a PlanRunner for execution.
  */
 struct QuerySolutionNode {
     QuerySolutionNode() = default;

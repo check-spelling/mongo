@@ -821,13 +821,13 @@ TEST_F(ConnectionPoolTest, maxConnectingWithMultipleRefresh) {
     ASSERT_EQ(ConnectionImpl::setupQueueDepth(), 0u);
     firstNBound(0);
 
-    // After one refresh, one refreshed connection gets handed out
+    // After one refresh, one refreshed connection gets handled out
     ConnectionImpl::pushRefresh(Status::OK());
     ASSERT_EQ(ConnectionImpl::refreshQueueDepth(), 2u);
     ASSERT_EQ(ConnectionImpl::setupQueueDepth(), 0u);
     firstNBound(1);
 
-    // After two refresh, one enters the setup queue, one refreshed connection gets handed out
+    // After two refresh, one enters the setup queue, one refreshed connection gets handled out
     ConnectionImpl::pushRefresh(Status::OK());
     ASSERT_EQ(ConnectionImpl::refreshQueueDepth(), 1u);
     ASSERT_EQ(ConnectionImpl::setupQueueDepth(), 1u);

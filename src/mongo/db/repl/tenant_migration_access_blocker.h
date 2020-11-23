@@ -79,7 +79,7 @@ namespace mongo {
  *
  * At this point:
  * - Writes that have already passed checkIfCanWriteOrThrow must have been assigned an OpTime before
- *   the blockTimestamp, since the blockTimestamp hasn't been assigned yet, and OpTimes are handed
+ *   the blockTimestamp, since the blockTimestamp hasn't been assigned yet, and OpTimes are handled
  *   out in monotonically increasing order.
  * - Writes that have not yet passed checkIfCanWriteOrThrow will end up blocking. Some of these
  *   writes may have already been assigned an OpTime, or may end up being assigned an OpTime that is

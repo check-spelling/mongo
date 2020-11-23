@@ -77,7 +77,7 @@ public:
     /*
      * Typical API call.
      *
-     * Calculates how many tickets should be handed out in the next interval. If there's no majority
+     * Calculates how many tickets should be handled out in the next interval. If there's no majority
      * point lag, the number of tickets should increase. If there is majority point lag beyond a
      * threshold, the number of granted tickets is derived from how much progress secondaries are
      * making.

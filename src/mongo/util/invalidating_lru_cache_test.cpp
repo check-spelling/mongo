@@ -343,7 +343,7 @@ TEST(InvalidatingLRUCacheTest, OrderOfDestructionOfHandlesDiffersFromOrderOfInse
     ASSERT(secondValue.isValid());
     ASSERT(!firstValue->isValid());
 
-    // This makes the first value of 100's handle go away before the second value's hande
+    // This makes the first value of 100's handle go away before the second value's handle
     firstValue.reset();
     ASSERT(secondValue.isValid());
 

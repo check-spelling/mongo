@@ -17,7 +17,7 @@ ServiceContext at startup and lives for the lifetime of the mongod process.  Dur
 startup, all PrimaryOnlyServices must be registered against the PrimaryOnlyServiceRegistry before
 the ReplicationCoordinator is started up (as it is the ReplicationCoordinator startup that starts up
 the registered PrimaryOnlyServices). Specific PrimaryOnlyServices can be looked up from the registry
-at runtime, and are handed out by raw pointer, which is safe since the set of registered
+at runtime, and are handled out by raw pointer, which is safe since the set of registered
 PrimaryOnlyServices does not change during runtime.  The PrimaryOnlyServiceRegistry is itself a
 [ReplicaSetAwareService](../src/mongo/db/repl/README.md#ReplicaSetAwareService-interface), which is
 how it receives notifications about changes in and out of Primary state.
