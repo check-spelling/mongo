@@ -161,7 +161,7 @@ public:
     virtual void appendInfo(BSONObjBuilder& b, bool forFTDC = false) const = 0;
 
     /**
-     * Returns true if the monitor knows a usable primary from it's interal view.
+     * Returns true if the monitor knows a usable primary from it's internal view.
      */
     virtual bool isKnownToHaveGoodPrimary() const = 0;
 
