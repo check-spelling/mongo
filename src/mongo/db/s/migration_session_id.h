@@ -69,7 +69,7 @@ public:
     static MigrationSessionId parseFromBSON(const BSONObj& obj);
 
     /**
-     * Compares two session identifiers. Two idendifiers match only if they are the same.
+     * Compares two session identifiers. Two identifiers match only if they are the same.
      */
     bool matches(const MigrationSessionId& other) const;
 
