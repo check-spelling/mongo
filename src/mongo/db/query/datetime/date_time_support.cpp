@@ -62,7 +62,7 @@ long long seconds(Date_t date) {
     // We want the division below to truncate toward -inf rather than 0
     // eg Dec 31, 1969 23:59:58.001 should be -2 seconds rather than -1
     // This is needed to get the correct values from coerceToTM
-    constexpr auto needsRounding = -1999 / 1000 != -2;  // This is implementaiton defined.
+    constexpr auto needsRounding = -1999 / 1000 != -2;  // This is implementation defined.
     if (auto millis = date.toMillisSinceEpoch(); millis < 0 && millis % 1000 != 0 && needsRounding)
         return durationCount<Seconds>(Milliseconds(millis)) - 1ll;
     else

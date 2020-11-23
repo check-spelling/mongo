@@ -1334,7 +1334,7 @@ public:
     }
 
     void restore() override {
-        // Lets begin by calling the base implementaion
+        // Lets begin by calling the base implementation
         WiredTigerIndexCursorBase::restore();
 
         // If this is not timestamp safe unique index, we are done
