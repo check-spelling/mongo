@@ -210,7 +210,7 @@ public:
      * value, then `*this` will have an independent pointer.  If `copy` stores `nullptr`, then
      * `*this` will also store `nullptr`.
      *
-     * NOTE: The `CloneFactory` will be copied from the `copy` poiner, by default.
+     * NOTE: The `CloneFactory` will be copied from the `copy` pointer, by default.
      *
      * `copy`: The original value to copy.
      * `factory`: The factory to use for cloning.  Defaults to the source's factory.
