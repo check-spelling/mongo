@@ -228,7 +228,7 @@ function isRetryableShardCollectionResponse(res) {
     return RetryableWritesUtil.errmsgContainsRetryableCodeName(res.errmsg) ||
         // shardCollection creates collections on each shard that will receive a chunk using
         // _cloneCollectionsOptionsFromPrimaryShard, which may fail with the following code if
-        // interupted by a failover.
+        // interrupted by a failover.
         res.code === ErrorCodes.CallbackCanceled;
 }
 
