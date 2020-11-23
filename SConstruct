@@ -481,7 +481,7 @@ add_option('runtime-hardening',
 add_option('use-hardware-crc32',
     choices=["on", "off"],
     default="on",
-    help="Enable CRC32 hardware accelaration",
+    help="Enable CRC32 hardware acceleration",
     type='choice',
 )
 
