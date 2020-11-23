@@ -345,7 +345,7 @@ TEST_F(MetadataManagerTest, ClearUnneededChunkManagerObjectSnapshotInMiddleOfLis
 
         /**
          * The CollectionMetadata object created when creating scm2 above will be set to boost::none
-         * when we overrwrite scm2 below. The _metadata list will then look like:
+         * when we overwrite scm2 below. The _metadata list will then look like:
          * [
          *      CollectionMetadataTracker{ metadata: xxx, orphans: [], usageCounter: 1},
          *      CollectionMetadataTracker{ metadata: boost::none, orphans: [], usageCounter: 0},
