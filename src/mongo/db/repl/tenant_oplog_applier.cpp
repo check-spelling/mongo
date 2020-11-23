@@ -364,7 +364,7 @@ TenantOplogApplier::OpTimePair TenantOplogApplier::_writeNoOpEntries(
 
 // These two routines can't be the ultimate solution.  It's not necessarily practical to keep a list
 // of every op we've written, and it doesn't work for failover.  But as far as I can tell, it's
-// possible to refer to oplog entries arbitarily far back.  We probably don't want to search the
+// possible to refer to oplog entries arbitrarily far back.  We probably don't want to search the
 // oplog each time because it requires a collection scan to do so.
 // TODO(SERVER-50263): Come up with the right way to do this.
 OpTime TenantOplogApplier::_getRecipientOpTime(const OpTime& donorOpTime) {
