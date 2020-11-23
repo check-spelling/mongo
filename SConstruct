@@ -785,7 +785,7 @@ env_vars.Add('ICECC_DEBUG',
     default=False)
 
 env_vars.Add('ICECC_SCHEDULER',
-    help='Tell ICECC where the sceduler daemon is running')
+    help='Tell ICECC where the scheduler daemon is running')
 
 env_vars.Add('ICECC_VERSION',
     help='Tell ICECC where the compiler package is')
