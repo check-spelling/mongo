@@ -1,4 +1,4 @@
-"""Unit tests for builscripts/resmokelib/jasper.proto."""
+"""Unit tests for buildscripts/resmokelib/jasper.proto."""
 
 import os
 import subprocess
