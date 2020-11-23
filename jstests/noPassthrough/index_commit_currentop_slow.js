@@ -57,7 +57,7 @@ assert.soon(function() {
 }, 'secondary did not receive commitIndexBuild oplog entry');
 
 jsTestLog('Running currentOp() with slow operation logging.');
-// Lower slowms to make currentOp() log slow operation while the secondary is procesing the
+// Lower slowms to make currentOp() log slow operation while the secondary is processing the
 // commitIndexBuild oplog entry during oplog application.
 const profileResult = assert.commandWorked(secondaryDB.setProfilingLevel(0, {slowms: -1}));
 jsTestLog('Configured profiling to always log slow ops: ' + tojson(profileResult));

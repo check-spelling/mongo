@@ -43,7 +43,7 @@ try {
     checkLog.containsJson(secondary, 20289);
 
     jsTestLog('Running currentOp() with slow operation logging.');
-    // Lower slowms to make currentOp() log slow operation while the secondary is procesing the
+    // Lower slowms to make currentOp() log slow operation while the secondary is processing the
     // commitIndexBuild oplog entry during oplog application.
     // Use admin db on secondary to avoid lock conflict with inserts in test db.
     const secondaryAdminDB = secondaryDB.getSiblingDB('admin');
