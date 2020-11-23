@@ -136,7 +136,7 @@ public:
 
     /**
      * Called as part of the process of transitioning to primary and run with the global X lock and
-     * the replication coordinator mutex acquired, so no majoirty writes are allowed while in this
+     * the replication coordinator mutex acquired, so no majority writes are allowed while in this
      * state. See the call site in ReplicationCoordinatorImpl for details about when and how it is
      * called.
      *

@@ -65,7 +65,7 @@ StatusWith<BalanceChunkRequest> BalanceChunkRequest::parseFromConfigCommand(cons
 
     // The secondary throttle options being sent to the config server are contained within a
     // sub-object on the request because they contain the writeConcern field, which when sent to the
-    // config server gets checked for only being w:1 or w:majoirty.
+    // config server gets checked for only being w:1 or w:majority.
     BSONObj secondaryThrottleObj;
 
     {
