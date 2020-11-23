@@ -79,7 +79,7 @@ public:
     /* listDatabases is always authorized,
      * however the results returned will be redacted
      * based on read privileges if auth is enabled
-     * and the current user does not have listDatabases permisison.
+     * and the current user does not have listDatabases permission.
      */
     Status checkAuthForCommand(Client* client,
                                const std::string& dbname,
