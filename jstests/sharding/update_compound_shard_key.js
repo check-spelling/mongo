@@ -113,7 +113,7 @@ function assertUpdateWorkedWithNoMatchingDoc(query, update, isUpsert, inTransact
 assertUpdateWorked({x: 4}, {x: 4, y: 3, z: 3, a: 1}, false, 0);
 assertUpdateWorked({x: 4, _id: 0, z: 3}, {y: 3, x: 4, z: 3, a: 3}, false, 0);
 
-// Parital shard key in the query, update succeeds with no op when there is no matching document
+// Partial shard key in the query, update succeeds with no op when there is no matching document
 // for the query.
 assertUpdateWorkedWithNoMatchingDoc({x: 10}, {x: 10, y: 3, z: 3, a: 5}, false);
 assertUpdateWorkedWithNoMatchingDoc({x: 100, y: 55, a: 15}, {x: 100, y: 55, z: 3, a: 6}, false);
@@ -236,7 +236,7 @@ assertUpdateWorkedWithNoMatchingDoc(
 assertUpdateWorked({_id: 0}, {"$set": {opStyle: 6}}, false, 0);
 assertUpdateWorked({_id: 0, y: 3}, {"$set": {opStyle: 8, y: 3, x: 4}}, false, 0);
 
-// Parital shard key in the query targets single shard. Update succeeds with no op when there is
+// Partial shard key in the query targets single shard. Update succeeds with no op when there is
 // no matching document for the query.
 assertUpdateWorkedWithNoMatchingDoc({x: 14, _id: 0}, {"$set": {opStyle: 5}}, false);
 assertUpdateWorkedWithNoMatchingDoc({x: 14}, {"$set": {opStyle: 5}}, false);

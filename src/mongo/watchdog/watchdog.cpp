@@ -496,7 +496,7 @@ void checkFile(OperationContext* opCtx, const boost::filesystem::path& file) {
         // Warn if the write was incomplete
         if (bytesWrittenTotal == 0 && static_cast<size_t>(bytesWrittenInWrite) != nowStr.size()) {
             LOGV2_WARNING(23412,
-                          "parital write for '{file_generic_string}' expected {nowStr_size} bytes "
+                          "partial write for '{file_generic_string}' expected {nowStr_size} bytes "
                           "but wrote {bytesWrittenInWrite} bytes",
                           "file_generic_string"_attr = file.generic_string(),
                           "nowStr_size"_attr = nowStr.size(),
