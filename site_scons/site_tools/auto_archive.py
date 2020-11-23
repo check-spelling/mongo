@@ -118,7 +118,7 @@ def collect_transitive_files(env, entry):
     cache.clear()
     files, stack = stack, files
 
-    # Now we will call the scanner to find the transtive files of any files that
+    # Now we will call the scanner to find the transitive files of any files that
     # we found from the component DAG.
 
     while stack:
