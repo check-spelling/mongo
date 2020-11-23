@@ -361,7 +361,7 @@ private:
 
     /**
      * Runs all ready network operations, called while holding "lk".  May drop and
-     * reaquire "lk" several times, but will not return until the executor has blocked
+     * reacquire "lk" several times, but will not return until the executor has blocked
      * in waitFor*.
      */
     void _runReadyNetworkOperations_inlock(stdx::unique_lock<stdx::mutex>* lk);

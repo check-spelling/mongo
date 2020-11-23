@@ -1079,7 +1079,7 @@ TEST_F(LockerImplTest, GetLockerInfoShouldReportPendingLocks) {
     ASSERT(conflictingLocker.unlockGlobal());
 }
 
-TEST_F(LockerImplTest, ReaquireLockPendingUnlock) {
+TEST_F(LockerImplTest, ReacquireLockPendingUnlock) {
     auto opCtx = makeOperationContext();
 
     const ResourceId resId(RESOURCE_COLLECTION, "TestDB.collection"_sd);

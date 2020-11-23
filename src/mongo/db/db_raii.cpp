@@ -78,7 +78,7 @@ bool supportsLockFreeRead(OperationContext* opCtx) {
 template <typename GetCollectionAndEstablishReadSourceFunc,
           typename GetCollectionAfterSnapshotFunc,
           typename ResetFunc>
-auto aquireCollectionAndConsistentSnapshot(
+auto acquireCollectionAndConsistentSnapshot(
     OperationContext* opCtx,
     CollectionCatalogStasher& catalogStasher,
     GetCollectionAndEstablishReadSourceFunc getCollectionAndEstablishReadSource,
@@ -378,7 +378,7 @@ void AutoGetCollectionForReadLockFree::EmplaceHelper::emplace(
         [& catalogStasher = _catalogStasher](std::shared_ptr<const Collection>& collection,
                                              OperationContext* opCtx,
                                              CollectionUUID uuid) {
-            collection = aquireCollectionAndConsistentSnapshot(
+            collection = acquireCollectionAndConsistentSnapshot(
                 opCtx,
                 catalogStasher,
                 /* GetCollectionAndEstablishReadSourceFunc */
@@ -421,7 +421,7 @@ AutoGetCollectionForReadLockFree::AutoGetCollectionForReadLockFree(
     invariant(supportsLockFreeRead(opCtx) && !opCtx->recoveryUnit()->isActive());
 
     EmplaceHelper emplaceFunc(opCtx, _catalogStash, nsOrUUID, viewMode, deadline);
-    aquireCollectionAndConsistentSnapshot(
+    acquireCollectionAndConsistentSnapshot(
         opCtx,
         _catalogStash,
         /* GetCollectionAndEstablishReadSourceFunc */

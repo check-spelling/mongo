@@ -328,7 +328,7 @@ Message getMore(OperationContext* opCtx,
     *isCursorAuthorized = true;
 
     // Only used by the failpoints.
-    std::function<void()> dropAndReaquireReadLock = [&] {
+    std::function<void()> dropAndReacquireReadLock = [&] {
         // Make sure an interrupted operation does not prevent us from reacquiring the lock.
         UninterruptibleLockGuard noInterrupt(opCtx->lockState());
 
@@ -346,13 +346,13 @@ Message getMore(OperationContext* opCtx,
     // pinned-cursor failpoints in this file (see SERVER-21997).
     waitAfterPinningCursorBeforeGetMoreBatch.execute([&](const BSONObj& data) {
         if (data["shouldNotdropLock"].booleanSafe()) {
-            dropAndReaquireReadLock = []() {};
+            dropAndReacquireReadLock = []() {};
         }
 
         CurOpFailpointHelpers::waitWhileFailPointEnabled(&waitAfterPinningCursorBeforeGetMoreBatch,
                                                          opCtx,
                                                          "waitAfterPinningCursorBeforeGetMoreBatch",
-                                                         dropAndReaquireReadLock,
+                                                         dropAndReacquireReadLock,
                                                          false,
                                                          nss);
     });
@@ -550,7 +550,7 @@ Message getMore(OperationContext* opCtx,
             &waitBeforeUnpinningOrDeletingCursorAfterGetMoreBatch,
             opCtx,
             "waitBeforeUnpinningOrDeletingCursorAfterGetMoreBatch",
-            dropAndReaquireReadLock);
+            dropAndReacquireReadLock);
     }
 
     QueryResult::View qr = bb.buf();
