@@ -5,7 +5,7 @@
  */
 load("jstests/libs/fts.js");
 
-t = db.text_parition1;
+t = db.text_partition1;
 t.drop();
 
 t.insert({_id: 1, x: 1, y: "foo"});
