@@ -164,7 +164,7 @@ void KMSOAuthService::makeBearerTokenRequest() {
     _cachedToken = kmsResponse.getAccess_token().toString();
 
     // Offset the expiration time by a the socket timeout as proxy for round-trip time to the OAuth
-    // server. This approximation will compute the expiration time a litte earlier then needed but
+    // server. This approximation will compute the expiration time a little earlier then needed but
     // will ensure that it uses a stale bearer token.
     Seconds requestBufferTime = 2 * Seconds((int)KMSNetworkConnection::so_timeout_seconds);
 
