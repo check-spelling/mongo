@@ -167,7 +167,7 @@ class InvalidatingLRUCache {
                 return;
             auto storedValue = it->second.lock();
             // 2) There are no more references to 'key', but it is stil on the map, which means
-            // either we are running its destrutor, or some other thread is running the destructor
+            // either we are running its destructor, or some other thread is running the destructor
             // of a different epoch. In either case it is fine to remove the 'it' because we are
             // under a mutex.
             if (!storedValue) {

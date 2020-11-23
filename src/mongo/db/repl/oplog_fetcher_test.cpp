@@ -777,7 +777,7 @@ TEST_F(OplogFetcherTest, OplogFetcherResetsOnShutdownCallbackFnOnCompletion) {
     ASSERT_TRUE(callbackInvoked);
 
     // We need to check sharedCallbackStateDestroyed in a loop because SharedCallbackState's
-    // desctructor is run after the oplog fetcher transitions to complete and outside of the oplog
+    // destructor is run after the oplog fetcher transitions to complete and outside of the oplog
     // fetcher's mutex, which means that it does not necessarily run before the oplog fetcher is
     // joined.
     ASSERT_TRUE(sharedCallbackStateDestroyedSoon());
