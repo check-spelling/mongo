@@ -77,7 +77,7 @@ ScopedMigrationRequest::~ScopedMigrationRequest() {
 }
 
 ScopedMigrationRequest::ScopedMigrationRequest(ScopedMigrationRequest&& other) {
-    // This function relies on the move assigment to nullify 'other._opCtx'. If this is no longer
+    // This function relies on the move assignment to nullify 'other._opCtx'. If this is no longer
     // the case, this function should be updated to ensure that it nulls out 'other._opCtx'.
     *this = std::move(other);
 }
