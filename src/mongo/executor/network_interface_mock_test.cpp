@@ -205,7 +205,7 @@ TEST_F(NetworkInterfaceMockTest, ConnectionHook) {
     ASSERT(handleReplyCalled);
     ASSERT(gotExpectedReply);
 
-    // We should not have responsed to the actual command.
+    // We should not have responded to the actual command.
     ASSERT(!commandFinished);
 
     {
