@@ -1,5 +1,5 @@
 /*
- * Ensures that error is reported when overlappping range is submitted for deletion.
+ * Ensures that error is reported when overlapping range is submitted for deletion.
  */
 
 (function() {
