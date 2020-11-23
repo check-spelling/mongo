@@ -570,7 +570,7 @@ Status getAttachmentError(const ElementRep& rep) {
 }
 
 
-// Enable paranoid mode to force a reallocation on mutation of the princple data
+// Enable paranoid mode to force a reallocation on mutation of the principle data
 // structures in Document::Impl. This is really slow, but can be very helpful if you
 // suspect an invalidation logic error and want to find it with valgrind. Paranoid mode
 // only works in debug mode; it is ignored in release builds.
@@ -1008,7 +1008,7 @@ public:
             *size = _objects[0].objsize();
 
         // Swap our damage event queue with upstream, and reset ours to an empty vector. In
-        // princple, we can do another round of in-place updates.
+        // principle, we can do another round of in-place updates.
         damages->swap(_damages);
         _damages.clear();
 
