@@ -57,7 +57,7 @@ server_parameters:
         default: 1000000
         validator: { gt: 0 }
     flowControlSamplePeriod:
-        description: 'How often flow control samples optimes. Smaller periods have higher resolution, but will suffer degredation sooner in the event of commit point lag.'
+        description: 'How often flow control samples optimes. Smaller periods have higher resolution, but will suffer degradation sooner in the event of commit point lag.'
         set_at: [ startup, runtime ]
         cpp_vartype: 'AtomicWord<int>'
         cpp_varname: 'gFlowControlSamplePeriod'
