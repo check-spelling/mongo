@@ -71,7 +71,7 @@ TEST_F(ClusterGetLastErrorTest,
     auto future = launchAsync([&] {
         const RemoteCommandRequest request(host,
                                            "mydb",
-                                           BSON("unusued"
+                                           BSON("unused"
                                                 << "obj"),
                                            operationContext());
         executor()
@@ -115,7 +115,7 @@ TEST_F(ClusterGetLastErrorTest, ClusterLastErrorInfoNotUpdatedIfNotInitialized) 
     auto future = launchAsync([&] {
         const RemoteCommandRequest request(host,
                                            "mydb",
-                                           BSON("unusued"
+                                           BSON("unused"
                                                 << "obj"),
                                            operationContext());
         executor()
@@ -159,7 +159,7 @@ TEST_F(ClusterGetLastErrorTest, ClusterLastErrorInfoNotUpdatedIfReplyDoesntHaveS
     auto future = launchAsync([&] {
         const RemoteCommandRequest request(host,
                                            "mydb",
-                                           BSON("unusued"
+                                           BSON("unused"
                                                 << "obj"),
                                            operationContext());
         executor()
