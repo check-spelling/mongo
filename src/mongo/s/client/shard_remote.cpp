@@ -101,7 +101,7 @@ ShardRemote::ShardRemote(const ShardId& id,
 
 ShardRemote::~ShardRemote() = default;
 
-bool ShardRemote::isRetriableError(ErrorCodes::Error code, RetryPolicy options) {
+bool ShardRemote::isRetryableError(ErrorCodes::Error code, RetryPolicy options) {
     if (gInternalProhibitShardOperationRetry.loadRelaxed()) {
         return false;
     }
@@ -112,7 +112,7 @@ bool ShardRemote::isRetriableError(ErrorCodes::Error code, RetryPolicy options) 
         } break;
 
         case RetryPolicy::kIdempotent: {
-            return isMongosRetriableError(code);
+            return isMongosRetryableError(code);
         } break;
 
         case RetryPolicy::kNotIdempotent: {

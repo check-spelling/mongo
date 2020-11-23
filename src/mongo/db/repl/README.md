@@ -1447,7 +1447,7 @@ run a `getMore` on an open cursor to get the next batch, exhaust cursors make it
 left.
 
 The cloners are resilient to transient errors.  If a cloner encounters an error marked with the
-`RetriableError` label in
+`RetryableError` label in
 [`error_codes.yml`](https://github.com/mongodb/mongo/blob/r4.3.2/src/mongo/base/error_codes.yml), it
 will retry whatever network operation it was attempting.  It will continue attempting to retry for a
 length of time set by the server parameter `initialSyncTransientErrorRetryPeriodSeconds`, after

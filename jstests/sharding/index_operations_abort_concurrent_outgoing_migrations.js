@@ -16,17 +16,17 @@ TestData.skipCheckOrphans = true;
  */
 function runMoveChunk(host, ns, findCriteria, toShard) {
     const mongos = new Mongo(host);
-    let res, hasRetriableError;
+    let res, hasRetryableError;
     do {
-        hasRetriableError = false;
+        hasRetryableError = false;
         res = mongos.adminCommand({moveChunk: ns, find: findCriteria, to: toShard});
         // If a migration is interrupted by an index build, the test may run another migration
         // before the recipient discovers the first one failed, leading to transient
         // ConflictingOperationInProgress errors.
         if (!res.ok && res.code === ErrorCodes.ConflictingOperationInProgress) {
-            hasRetriableError = true;
+            hasRetryableError = true;
         }
-    } while (hasRetriableError);
+    } while (hasRetryableError);
     return res;
 }
 

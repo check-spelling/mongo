@@ -63,8 +63,8 @@ bool ErrorLabelBuilder::isRetryableWriteError() const {
     // Return with RetryableWriteError label on retryable error codes for retryable writes or
     // transactions commit/abort.
     if (isRetryableWrite() || isTransactionCommitOrAbort()) {
-        if ((_code && ErrorCodes::isRetriableError(_code.get())) ||
-            (_wcCode && ErrorCodes::isRetriableError(_wcCode.get()))) {
+        if ((_code && ErrorCodes::isRetryableError(_code.get())) ||
+            (_wcCode && ErrorCodes::isRetryableError(_wcCode.get()))) {
             return true;
         }
     }
@@ -79,7 +79,7 @@ bool ErrorLabelBuilder::isResumableChangeStreamError() const {
     // Determine whether this operation is a candidate for the ResumableChangeStreamError label.
     const bool mayNeedResumableChangeStreamErrorLabel =
         (_commandName == "aggregate" || _commandName == "getMore") && _code && !_wcCode &&
-        (ErrorCodes::isRetriableError(*_code) || ErrorCodes::isNetworkError(*_code) ||
+        (ErrorCodes::isRetryableError(*_code) || ErrorCodes::isNetworkError(*_code) ||
          ErrorCodes::isNeedRetargettingError(*_code) || _code == ErrorCodes::RetryChangeStream ||
          _code == ErrorCodes::FailedToSatisfyReadPreference);
 
@@ -188,7 +188,7 @@ bool isTransientTransactionError(ErrorCodes::Error code,
         // rolled back.
         isTransient |= code == ErrorCodes::NoSuchTransaction && !hasWriteConcernError;
     } else {
-        isTransient |= ErrorCodes::isRetriableError(code) || code == ErrorCodes::NoSuchTransaction;
+        isTransient |= ErrorCodes::isRetryableError(code) || code == ErrorCodes::NoSuchTransaction;
     }
 
     return isTransient;

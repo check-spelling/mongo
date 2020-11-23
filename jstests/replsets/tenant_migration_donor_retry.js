@@ -184,7 +184,7 @@ const kTotalStateDocUpdates = 3;
 const kWriteErrorTimeMS = 50;
 
 (() => {
-    jsTest.log("Test that the donor retries state doc insert on retriable errors");
+    jsTest.log("Test that the donor retries state doc insert on retryable errors");
 
     const tenantId = makeTenantId();
 
@@ -221,7 +221,7 @@ const kWriteErrorTimeMS = 50;
 })();
 
 (() => {
-    jsTest.log("Test that the donor retries state doc update on retriable errors");
+    jsTest.log("Test that the donor retries state doc update on retryable errors");
 
     const tenantId = kTenantIdPrefix + "RetryOnStateDocUpdateError";
 

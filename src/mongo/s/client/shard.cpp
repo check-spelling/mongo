@@ -93,7 +93,7 @@ Status Shard::CommandResponse::processBatchWriteResponse(
 const Milliseconds Shard::kDefaultConfigCommandTimeout = Seconds{30};
 
 bool Shard::shouldErrorBePropagated(ErrorCodes::Error code) {
-    return !isMongosRetriableError(code) && (code != ErrorCodes::NetworkInterfaceExceededTimeLimit);
+    return !isMongosRetryableError(code) && (code != ErrorCodes::NetworkInterfaceExceededTimeLimit);
 }
 
 Shard::Shard(const ShardId& id) : _id(id) {}
@@ -124,7 +124,7 @@ StatusWith<Shard::CommandResponse> Shard::runCommand(OperationContext* opCtx,
 
         auto swResponse = _runCommand(opCtx, readPref, dbName, maxTimeMSOverride, cmdObj);
         auto status = CommandResponse::getEffectiveStatus(swResponse);
-        if (isRetriableError(status.code(), retryPolicy)) {
+        if (isRetryableError(status.code(), retryPolicy)) {
             LOGV2_DEBUG(22719,
                         2,
                         "Command {command} failed with retryable error and will be retried. Caused "
@@ -165,7 +165,7 @@ StatusWith<Shard::CommandResponse> Shard::runCommandWithFixedRetryAttempts(
 
         auto swResponse = _runCommand(opCtx, readPref, dbName, maxTimeMSOverride, cmdObj);
         auto status = CommandResponse::getEffectiveStatus(swResponse);
-        if (retry < kOnErrorNumRetries && isRetriableError(status.code(), retryPolicy)) {
+        if (retry < kOnErrorNumRetries && isRetryableError(status.code(), retryPolicy)) {
             LOGV2_DEBUG(22720,
                         2,
                         "Command {command} failed with retryable error and will be retried. Caused "
@@ -192,7 +192,7 @@ StatusWith<Shard::QueryResponse> Shard::runExhaustiveCursorCommand(
             _runExhaustiveCursorCommand(opCtx, readPref, dbName, maxTimeMSOverride, cmdObj);
 
         if (retry < kOnErrorNumRetries &&
-            isRetriableError(result.getStatus().code(), RetryPolicy::kIdempotent)) {
+            isRetryableError(result.getStatus().code(), RetryPolicy::kIdempotent)) {
             continue;
         }
         return result;
@@ -214,7 +214,7 @@ BatchedCommandResponse Shard::runBatchWriteCommand(OperationContext* opCtx,
 
         BatchedCommandResponse batchResponse;
         auto writeStatus = CommandResponse::processBatchWriteResponse(swResponse, &batchResponse);
-        if (retry < kOnErrorNumRetries && isRetriableError(writeStatus.code(), retryPolicy)) {
+        if (retry < kOnErrorNumRetries && isRetryableError(writeStatus.code(), retryPolicy)) {
             LOGV2_DEBUG(22721,
                         2,
                         "Batch write command to shard {shardId} failed with retryable error "
@@ -246,7 +246,7 @@ StatusWith<Shard::QueryResponse> Shard::exhaustiveFindOnConfig(
             _exhaustiveFindOnConfig(opCtx, readPref, readConcernLevel, nss, query, sort, limit);
 
         if (retry < kOnErrorNumRetries &&
-            isRetriableError(result.getStatus().code(), RetryPolicy::kIdempotent)) {
+            isRetryableError(result.getStatus().code(), RetryPolicy::kIdempotent)) {
             continue;
         }
 

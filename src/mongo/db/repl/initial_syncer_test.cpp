@@ -1580,7 +1580,7 @@ TEST_F(InitialSyncerTest,
 }
 
 TEST_F(InitialSyncerTest,
-       InitialSyncerResendsFindCommandIfLastOplogEntryFetcherReturnsRetriableError) {
+       InitialSyncerResendsFindCommandIfLastOplogEntryFetcherReturnsRetryableError) {
     auto initialSyncer = &getInitialSyncer();
     auto opCtx = makeOpCtx();
 
@@ -1603,7 +1603,7 @@ TEST_F(InitialSyncerTest,
     assertRemoteCommandNameEquals("find", request);
     net->runReadyNetworkOperations();
 
-    // Last oplog entry first attempt - retriable error.
+    // Last oplog entry first attempt - retryable error.
     assertRemoteCommandNameEquals(
         "find", net->scheduleErrorResponse(Status(ErrorCodes::HostUnreachable, "")));
     net->runReadyNetworkOperations();
@@ -1840,7 +1840,7 @@ TEST_F(InitialSyncerTest, InitialSyncerCancelsFCVFetcherOnShutdown) {
     ASSERT_EQUALS(ErrorCodes::CallbackCanceled, _lastApplied);
 }
 
-TEST_F(InitialSyncerTest, InitialSyncerResendsFindCommandIfFCVFetcherReturnsRetriableError) {
+TEST_F(InitialSyncerTest, InitialSyncerResendsFindCommandIfFCVFetcherReturnsRetryableError) {
     auto initialSyncer = &getInitialSyncer();
     auto opCtx = makeOpCtx();
 
@@ -1866,7 +1866,7 @@ TEST_F(InitialSyncerTest, InitialSyncerResendsFindCommandIfFCVFetcherReturnsRetr
     // Oplog entry associated with the beginApplyingTimestamp.
     processSuccessfulLastOplogEntryFetcherResponse({makeOplogEntryObj(1)});
 
-    // FCV first attempt - retriable error.
+    // FCV first attempt - retryable error.
     assertRemoteCommandNameEquals(
         "find", net->scheduleErrorResponse(Status(ErrorCodes::HostUnreachable, "")));
     net->runReadyNetworkOperations();

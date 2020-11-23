@@ -330,7 +330,7 @@ void InitialSyncer::_cancelRemainingWork_inlock() {
     _shutdownComponent_inlock(_oplogFetcher);
     if (_sharedData) {
         // We actually hold the required lock, but the lock object itself is not passed through.
-        _clearRetriableError(WithLock::withoutLock());
+        _clearRetryableError(WithLock::withoutLock());
         stdx::lock_guard<InitialSyncSharedData> lock(*_sharedData);
         _sharedData->setStatusIfOK(
             lock, Status{ErrorCodes::CallbackCanceled, "Initial sync attempt canceled"});
@@ -921,7 +921,7 @@ Status InitialSyncer::_scheduleGetBeginFetchingOpTime_inlock(
         ReadPreferenceSetting::secondaryPreferredMetadata(),
         RemoteCommandRequest::kNoTimeout /* find network timeout */,
         RemoteCommandRequest::kNoTimeout /* getMore network timeout */,
-        RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetriableError>(
+        RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetryableError>(
             numInitialSyncOplogFindAttempts.load(), executor::RemoteCommandRequest::kNoTimeout));
     Status scheduleStatus = _beginFetchingOpTimeFetcher->schedule();
     if (!scheduleStatus.isOK()) {
@@ -1049,7 +1049,7 @@ void InitialSyncer::_lastOplogEntryFetcherCallbackForBeginApplyingTimestamp(
         ReadPreferenceSetting::secondaryPreferredMetadata(),
         RemoteCommandRequest::kNoTimeout /* find network timeout */,
         RemoteCommandRequest::kNoTimeout /* getMore network timeout */,
-        RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetriableError>(
+        RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetryableError>(
             numInitialSyncOplogFindAttempts.load(), executor::RemoteCommandRequest::kNoTimeout));
     Status scheduleStatus = _fCVFetcher->schedule();
     if (!scheduleStatus.isOK()) {
@@ -1852,7 +1852,7 @@ Status InitialSyncer::_scheduleLastOplogEntryFetcher_inlock(
         RemoteCommandRequest::kNoTimeout /* find network timeout */,
         RemoteCommandRequest::kNoTimeout /* getMore network timeout */,
         (retryStrategy == kFetcherHandlesRetries)
-            ? RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetriableError>(
+            ? RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetryableError>(
                   numInitialSyncOplogFindAttempts.load(),
                   executor::RemoteCommandRequest::kNoTimeout)
             : RemoteCommandRetryScheduler::makeNoRetryPolicy());
@@ -1960,17 +1960,17 @@ void InitialSyncer::_scheduleRollbackCheckerCheckForRollback_inlock(
 }
 
 bool InitialSyncer::_shouldRetryError(WithLock lk, Status status) {
-    if (ErrorCodes::isRetriableError(status)) {
+    if (ErrorCodes::isRetryableError(status)) {
         stdx::lock_guard<InitialSyncSharedData> sharedDataLock(*_sharedData);
         return _sharedData->shouldRetryOperation(sharedDataLock, &_retryingOperation);
     }
-    // The status was OK or some error other than a retriable error, so clear the retriable error
+    // The status was OK or some error other than a retryable error, so clear the retryable error
     // state and indicate that we should not retry.
-    _clearRetriableError(lk);
+    _clearRetryableError(lk);
     return false;
 }
 
-void InitialSyncer::_clearRetriableError(WithLock lk) {
+void InitialSyncer::_clearRetryableError(WithLock lk) {
     _retryingOperation = boost::none;
 }
 
@@ -2179,7 +2179,7 @@ void InitialSyncer::InitialSyncAttemptInfo::append(BSONObjBuilder* builder) cons
 
 bool InitialSyncer::OplogFetcherRestartDecisionInitialSyncer::shouldContinue(OplogFetcher* fetcher,
                                                                              Status status) {
-    if (ErrorCodes::isRetriableError(status)) {
+    if (ErrorCodes::isRetryableError(status)) {
         stdx::lock_guard<InitialSyncSharedData> lk(*_sharedData);
         return _sharedData->shouldRetryOperation(lk, &_retryingOperation);
     }

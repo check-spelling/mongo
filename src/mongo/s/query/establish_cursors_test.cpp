@@ -141,7 +141,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithSuccess) {
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithNonretriableError) {
+TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithNonError) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{{kTestShardIds[0], cmdObj}};
 
@@ -155,7 +155,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithNonretriableError) {
                       ExceptionFor<ErrorCodes::FailedToParse>);
     });
 
-    // Remote responds with non-retriable error.
+    // Remote responds with non-retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return createErrorCursorResponse(Status(ErrorCodes::FailedToParse, "failed to parse"));
@@ -224,12 +224,12 @@ TEST_F(EstablishCursorsTest, SingleRemoteInterruptedWhileCommandInFlight) {
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithNonretriableErrorAllowPartialResults) {
+TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithNonErrorAllowPartialResults) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{{kTestShardIds[0], cmdObj}};
 
     auto future = launchAsync([&] {
-        // A non-retriable error is not ignored even though allowPartialResults is true.
+        // A non-retryable error is not ignored even though allowPartialResults is true.
         ASSERT_THROWS(establishCursors(operationContext(),
                                        executor(),
                                        _nss,
@@ -239,7 +239,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithNonretriableErrorAllowParti
                       ExceptionFor<ErrorCodes::FailedToParse>);
     });
 
-    // Remote responds with non-retriable error.
+    // Remote responds with non-retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return createErrorCursorResponse(Status(ErrorCodes::FailedToParse, "failed to parse"));
@@ -247,7 +247,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithNonretriableErrorAllowParti
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetriableErrorThenSuccess) {
+TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetryableErrorThenSuccess) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{{kTestShardIds[0], cmdObj}};
 
@@ -261,7 +261,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetriableErrorThenSuccess) 
         ASSERT_EQUALS(remotes.size(), cursors.size());
     });
 
-    // Remote responds with retriable error.
+    // Remote responds with retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return Status(ErrorCodes::HostUnreachable, "host unreachable");
@@ -279,7 +279,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetriableErrorThenSuccess) 
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetriableErrorThenSuccessAllowPartialResults) {
+TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetryableErrorThenSuccessAllowPartialResults) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{{kTestShardIds[0], cmdObj}};
 
@@ -293,7 +293,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetriableErrorThenSuccessAl
         ASSERT_EQUALS(remotes.size(), cursors.size());
     });
 
-    // Remote responds with retriable error.
+    // Remote responds with retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return Status(ErrorCodes::HostUnreachable, "host unreachable");
@@ -312,7 +312,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteRespondsWithRetriableErrorThenSuccessAl
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetriableErrors) {
+TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetryableErrors) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{{kTestShardIds[0], cmdObj}};
 
@@ -326,7 +326,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetriableErrors) {
                       ExceptionFor<ErrorCodes::HostUnreachable>);
     });
 
-    // Remote repeatedly responds with retriable errors.
+    // Remote repeatedly responds with retryable errors.
     for (int i = 0; i < kMaxRetries + 1; ++i) {
         onCommand([this](const RemoteCommandRequest& request) {
             ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
@@ -340,7 +340,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetriableErrors) {
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetriableErrorsAllowPartialResults) {
+TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetryableErrorsAllowPartialResults) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{{kTestShardIds[0], cmdObj}};
 
@@ -352,7 +352,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetriableErrorsAllowPartialResu
                                         remotes,
                                         true);  // allowPartialResults
 
-        // Failure to establish a cursor due to maxing out retriable errors on one remote (in this
+        // Failure to establish a cursor due to maxing out retryable errors on one remote (in this
         // case, the only remote) was ignored, since allowPartialResults is true. The cursor entry
         // is marked as 'partialResultReturned:true', with a CursorId of 0 and no HostAndPort.
         ASSERT_EQ(cursors.size(), 1);
@@ -362,7 +362,7 @@ TEST_F(EstablishCursorsTest, SingleRemoteMaxesOutRetriableErrorsAllowPartialResu
         ASSERT_EQ(cursors.front().getCursorResponse().getCursorId(), CursorId{0});
     });
 
-    // Remote repeatedly responds with retriable errors.
+    // Remote repeatedly responds with retryable errors.
     for (int i = 0; i < kMaxRetries + 1; ++i) {
         onCommand([this](const RemoteCommandRequest& request) {
             ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
@@ -402,7 +402,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesRespondWithSuccess) {
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithNonretriableError) {
+TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithNonError) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{
         {kTestShardIds[0], cmdObj}, {kTestShardIds[1], cmdObj}, {kTestShardIds[2], cmdObj}};
@@ -426,7 +426,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithNonretriableErr
         return cursorResponse.toBSON(CursorResponse::ResponseType::InitialResponse);
     });
 
-    // Second remote responds with a non-retriable error.
+    // Second remote responds with a non-retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return createErrorCursorResponse(Status(ErrorCodes::FailedToParse, "failed to parse"));
@@ -448,7 +448,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithNonretriableErr
 }
 
 TEST_F(EstablishCursorsTest,
-       MultipleRemotesOneRemoteRespondsWithNonretriableErrorAllowPartialResults) {
+       MultipleRemotesOneRemoteRespondsWithNonErrorAllowPartialResults) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{
         {kTestShardIds[0], cmdObj}, {kTestShardIds[1], cmdObj}, {kTestShardIds[2], cmdObj}};
@@ -473,7 +473,7 @@ TEST_F(EstablishCursorsTest,
         return cursorResponse.toBSON(CursorResponse::ResponseType::InitialResponse);
     });
 
-    // Second remote responds with a non-retriable error.
+    // Second remote responds with a non-retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return createErrorCursorResponse(Status(ErrorCodes::FailedToParse, "failed to parse"));
@@ -494,7 +494,7 @@ TEST_F(EstablishCursorsTest,
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithRetriableErrorThenSuccess) {
+TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithRetryableErrorThenSuccess) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{
         {kTestShardIds[0], cmdObj}, {kTestShardIds[1], cmdObj}, {kTestShardIds[2], cmdObj}};
@@ -518,7 +518,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithRetriableErrorT
         return cursorResponse.toBSON(CursorResponse::ResponseType::InitialResponse);
     });
 
-    // Second remote responds with a retriable error.
+    // Second remote responds with a retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return Status(ErrorCodes::HostUnreachable, "host unreachable");
@@ -546,7 +546,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteRespondsWithRetriableErrorT
 }
 
 TEST_F(EstablishCursorsTest,
-       MultipleRemotesOneRemoteRespondsWithRetriableErrorThenSuccessAllowPartialResults) {
+       MultipleRemotesOneRemoteRespondsWithRetryableErrorThenSuccessAllowPartialResults) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{
         {kTestShardIds[0], cmdObj}, {kTestShardIds[1], cmdObj}, {kTestShardIds[2], cmdObj}};
@@ -570,7 +570,7 @@ TEST_F(EstablishCursorsTest,
         return cursorResponse.toBSON(CursorResponse::ResponseType::InitialResponse);
     });
 
-    // Second remote responds with a retriable error.
+    // Second remote responds with a retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return Status(ErrorCodes::HostUnreachable, "host unreachable");
@@ -597,7 +597,7 @@ TEST_F(EstablishCursorsTest,
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetriableErrors) {
+TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetryableErrors) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{
         {kTestShardIds[0], cmdObj}, {kTestShardIds[1], cmdObj}, {kTestShardIds[2], cmdObj}};
@@ -621,7 +621,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetriableErrors) {
         return cursorResponse.toBSON(CursorResponse::ResponseType::InitialResponse);
     });
 
-    // Second remote responds with a retriable error.
+    // Second remote responds with a retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return Status(ErrorCodes::HostUnreachable, "host unreachable");
@@ -650,7 +650,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetriableErrors) {
     future.default_timed_get();
 }
 
-TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetriableErrorsAllowPartialResults) {
+TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetryableErrorsAllowPartialResults) {
     BSONObj cmdObj = fromjson("{find: 'testcoll'}");
     std::vector<std::pair<ShardId, BSONObj>> remotes{
         {kTestShardIds[0], cmdObj}, {kTestShardIds[1], cmdObj}, {kTestShardIds[2], cmdObj}};
@@ -662,7 +662,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetriableErrorsAllo
                                         ReadPreferenceSetting{ReadPreference::PrimaryOnly},
                                         remotes,
                                         true);  // allowPartialResults
-        // Failure to establish a cursor due to maxing out retriable errors on one remote was
+        // Failure to establish a cursor due to maxing out retryable errors on one remote was
         // ignored, since allowPartialResults is true. The cursor entry for that shard is marked
         // 'partialResultReturned:true', with a CursorId of 0 and no HostAndPort.
         ASSERT_EQ(remotes.size(), cursors.size());
@@ -684,7 +684,7 @@ TEST_F(EstablishCursorsTest, MultipleRemotesOneRemoteMaxesOutRetriableErrorsAllo
         return cursorResponse.toBSON(CursorResponse::ResponseType::InitialResponse);
     });
 
-    // Second remote responds with a retriable error.
+    // Second remote responds with a retryable error.
     onCommand([this](const RemoteCommandRequest& request) {
         ASSERT_EQ(_nss.coll(), request.cmdObj.firstElement().valueStringData());
         return Status(ErrorCodes::HostUnreachable, "host unreachable");

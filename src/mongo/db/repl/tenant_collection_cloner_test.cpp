@@ -218,7 +218,7 @@ TEST_F(TenantCollectionClonerTest, CountStageNegativeCount) {
     ASSERT_EQ(0, getProgressMeter(cloner.get()).total());
 }
 
-TEST_F(TenantCollectionClonerTest, CollectionClonerPassesThroughNonRetriableErrorFromCountCommand) {
+TEST_F(TenantCollectionClonerTest, CollectionClonerPassesThroughNonRetryableErrorFromCountCommand) {
     auto cloner = makeCollectionCloner();
     _mockServer->setCommandReply("count", Status(ErrorCodes::OperationFailed, ""));
     ASSERT_EQUALS(ErrorCodes::OperationFailed, cloner->run());
@@ -264,7 +264,7 @@ TEST_F(TenantCollectionClonerTest, ListIndexesHasResults) {
     ASSERT_EQ(3, cloner->getStats().indexes);
 }
 
-TEST_F(TenantCollectionClonerTest, ListIndexesNonRetriableError) {
+TEST_F(TenantCollectionClonerTest, ListIndexesNonRetryableError) {
     auto cloner = makeCollectionCloner();
     _mockServer->setCommandReply("count", createCountResponse(1));
     _mockServer->setCommandReply("listIndexes", Status(ErrorCodes::OperationFailed, ""));

@@ -1207,7 +1207,7 @@ TEST_F(AsyncResultsMergerTest, AllowPartialResultsSingleNode) {
     ASSERT_TRUE(unittest::assertGet(arm->nextReady()).isEOF());
 }
 
-TEST_F(AsyncResultsMergerTest, AllowPartialResultsOnRetriableErrorNoRetries) {
+TEST_F(AsyncResultsMergerTest, AllowPartialResultsOnRetryableErrorNoRetries) {
     BSONObj findCmd = fromjson("{find: 'testcoll', allowPartialResults: true}");
     std::vector<RemoteCursor> cursors;
     cursors.push_back(
@@ -1226,7 +1226,7 @@ TEST_F(AsyncResultsMergerTest, AllowPartialResultsOnRetriableErrorNoRetries) {
     responses.emplace_back(kTestNss, CursorId(0), batch);
     scheduleNetworkResponses(std::move(responses));
 
-    // From the second host we get a network (retriable) error.
+    // From the second host we get a network (retryable) error.
     scheduleErrorResponse({ErrorCodes::HostUnreachable, "host unreachable"});
 
     executor()->waitForEvent(readyEvent);
@@ -1238,7 +1238,7 @@ TEST_F(AsyncResultsMergerTest, AllowPartialResultsOnRetriableErrorNoRetries) {
     ASSERT_TRUE(arm->ready());
 }
 
-TEST_F(AsyncResultsMergerTest, ReturnsErrorOnRetriableError) {
+TEST_F(AsyncResultsMergerTest, ReturnsErrorOnRetryableError) {
     BSONObj findCmd = fromjson("{find: 'testcoll', sort: {_id: 1}}");
     std::vector<RemoteCursor> cursors;
     cursors.push_back(
@@ -1251,7 +1251,7 @@ TEST_F(AsyncResultsMergerTest, ReturnsErrorOnRetriableError) {
     auto readyEvent = unittest::assertGet(arm->nextEvent());
     ASSERT_FALSE(arm->ready());
 
-    // Both hosts return network (retriable) errors.
+    // Both hosts return network (retryable) errors.
     scheduleErrorResponse({ErrorCodes::HostUnreachable, "host unreachable"});
     scheduleErrorResponse({ErrorCodes::HostUnreachable, "host unreachable"});
 

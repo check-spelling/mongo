@@ -136,12 +136,12 @@ public:
      * describes whether the operation that generated the given code was idempotent, which affects
      * which codes are safe to retry on.
      */
-    virtual bool isRetriableError(ErrorCodes::Error code, RetryPolicy options) = 0;
+    virtual bool isRetryableError(ErrorCodes::Error code, RetryPolicy options) = 0;
 
     /**
      * Runs the specified command returns the BSON command response plus parsed out Status of this
      * response and write concern error (if present). Retries failed operations according to the
-     * given "retryPolicy".  Retries indefinitely until/unless a non-retriable error is encountered,
+     * given "retryPolicy".  Retries indefinitely until/unless a non-retryable error is encountered,
      * the maxTimeMs on the OperationContext expires, or the operation is interrupted.
      */
     StatusWith<CommandResponse> runCommand(OperationContext* opCtx,
@@ -209,7 +209,7 @@ public:
     /**
      * Runs a write command against a shard. This is separate from runCommand, because write
      * commands return errors in a different format than regular commands do, so checking for
-     * retriable errors must be done differently.
+     * retryable errors must be done differently.
      */
     BatchedCommandResponse runBatchWriteCommand(OperationContext* opCtx,
                                                 const Milliseconds maxTimeMS,
@@ -248,7 +248,7 @@ public:
     static const Milliseconds kDefaultConfigCommandTimeout;
 
     /**
-     * Returns false if the error is a retriable error and/or causes a replset monitor update. These
+     * Returns false if the error is a retryable error and/or causes a replset monitor update. These
      * errors, if from a remote call, should not be further propagated back to another server
      * because that server will interpret them as originating on this server rather than the one this
      * server called.

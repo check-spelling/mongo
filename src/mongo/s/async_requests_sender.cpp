@@ -273,7 +273,7 @@ auto AsyncRequestsSender::RemoteData::handleResponse(RemoteCommandOnAnyCallbackA
 
         shard->updateReplSetMonitor(failedTargets.front(), status);
         bool isStartingTransaction = _cmdObj.getField("startTransaction").booleanSafe();
-        if (!_ars->_stopRetrying && shard->isRetriableError(status.code(), _ars->_retryPolicy) &&
+        if (!_ars->_stopRetrying && shard->isRetryableError(status.code(), _ars->_retryPolicy) &&
             _retryCount < kMaxNumFailedHostRetryAttempts && !isStartingTransaction) {
 
             LOGV2_DEBUG(4615637,

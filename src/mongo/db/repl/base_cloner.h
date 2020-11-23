@@ -113,7 +113,7 @@ protected:
          * Returns true if the Status represents an error which should be retried.
          */
         virtual bool isTransientError(const Status& status) {
-            return ErrorCodes::isRetriableError(status);
+            return ErrorCodes::isRetryableError(status);
         }
 
         /**

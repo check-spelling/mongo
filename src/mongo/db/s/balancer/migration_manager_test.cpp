@@ -602,7 +602,7 @@ TEST_F(MigrationManagerTest, FailMigrationRecovery) {
     // distributed locks are unlocked.
 }
 
-// Check that retriable / replset monitor altering errors returned from remote moveChunk commands
+// Check that retryable / replset monitor altering errors returned from remote moveChunk commands
 // sent to source shards are not returned to the caller (mongos), but instead converted into
 // OperationFailed errors.
 TEST_F(MigrationManagerTest, RemoteCallErrorConversionToOperationFailed) {
@@ -655,7 +655,7 @@ TEST_F(MigrationManagerTest, RemoteCallErrorConversionToOperationFailed) {
                   migrationStatuses.at(migrationRequests.back().getName()));
     });
 
-    // Expect a moveChunk command that will fail with a retriable error.
+    // Expect a moveChunk command that will fail with a retryable error.
     expectMoveChunkCommand(
         chunk1,
         kShardId1,

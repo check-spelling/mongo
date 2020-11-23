@@ -267,6 +267,6 @@ auto RemoteCommandRetryScheduler::makeRetryPolicy(std::size_t maxAttempts,
                                                                maxResponseElapsedTotal);
 }
 
-bool isMongosRetriableError(const ErrorCodes::Error& code);
+bool isMongosRetryableError(const ErrorCodes::Error& code);
 
 }  // namespace mongo

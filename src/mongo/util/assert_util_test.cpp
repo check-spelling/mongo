@@ -88,10 +88,10 @@ TEST(AssertUtils, UassertNamedCodeWithoutCategories) {
     ASSERT_NOT_CATCHES(ErrorCodes::BadValue, ExceptionForCat<ErrorCategory::Interruption>);
 }
 
-// NotWritablePrimary - NotPrimaryError, RetriableError
+// NotWritablePrimary - NotPrimaryError, RetryableError
 MONGO_STATIC_ASSERT(std::is_same<error_details::ErrorCategoriesFor<ErrorCodes::NotWritablePrimary>,
                                  error_details::CategoryList<ErrorCategory::NotPrimaryError,
-                                                             ErrorCategory::RetriableError>>());
+                                                             ErrorCategory::RetryableError>>());
 MONGO_STATIC_ASSERT(
     std::is_base_of<AssertionException, ExceptionFor<ErrorCodes::NotWritablePrimary>>());
 MONGO_STATIC_ASSERT(!std::is_base_of<ExceptionForCat<ErrorCategory::NetworkError>,
@@ -113,12 +113,12 @@ TEST(AssertUtils, UassertNamedCodeWithOneCategory) {
                        ExceptionForCat<ErrorCategory::Interruption>);
 }
 
-// InterruptedDueToReplStateChange - NotPrimaryError, Interruption, RetriableError
+// InterruptedDueToReplStateChange - NotPrimaryError, Interruption, RetryableError
 MONGO_STATIC_ASSERT(
     std::is_same<error_details::ErrorCategoriesFor<ErrorCodes::InterruptedDueToReplStateChange>,
                  error_details::CategoryList<ErrorCategory::Interruption,
                                              ErrorCategory::NotPrimaryError,
-                                             ErrorCategory::RetriableError>>());
+                                             ErrorCategory::RetryableError>>());
 MONGO_STATIC_ASSERT(std::is_base_of<AssertionException,
                                     ExceptionFor<ErrorCodes::InterruptedDueToReplStateChange>>());
 MONGO_STATIC_ASSERT(!std::is_base_of<ExceptionForCat<ErrorCategory::NetworkError>,

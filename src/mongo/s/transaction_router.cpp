@@ -158,7 +158,7 @@ const StringMap<int> alwaysRetryableCmds = {
 // https://github.com/mongodb/specifications/blob/master/source/transactions/transactions.rst#unknowntransactioncommitresult.
 bool isCommitResultUnknown(const Status& commitStatus, const Status& commitWCStatus) {
     if (!commitStatus.isOK()) {
-        return isMongosRetriableError(commitStatus.code()) ||
+        return isMongosRetryableError(commitStatus.code()) ||
             ErrorCodes::isExceededTimeLimitError(commitStatus) ||
             commitStatus.code() == ErrorCodes::WriteConcernFailed ||
             commitStatus.code() == ErrorCodes::TransactionTooOld;

@@ -509,7 +509,7 @@ Status AsyncResultsMerger::_scheduleGetMores(WithLock lk) {
 }
 
 /*
- * Note: When nextEvent() is called to do retries, only the remotes with retriable errors will
+ * Note: When nextEvent() is called to do retries, only the remotes with retryable errors will
  * be rescheduled because:
  *
  * 1. Other pending remotes still have callback assigned to them.

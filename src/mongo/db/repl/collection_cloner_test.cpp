@@ -202,7 +202,7 @@ TEST_F(CollectionClonerTestResumable, CountStageNamespaceNotFound) {
 }
 
 TEST_F(CollectionClonerTestResumable,
-       CollectionClonerPassesThroughNonRetriableErrorFromCountCommand) {
+       CollectionClonerPassesThroughNonRetryableErrorFromCountCommand) {
     auto cloner = makeCollectionCloner();
     // The collection cloner pre-stage makes a remote call to collStats to store in-progress
     // metrics.
@@ -280,7 +280,7 @@ TEST_F(CollectionClonerTestResumable, ListIndexesHasResults) {
     ASSERT_EQ(3, cloner->getStats().indexes);
 }
 
-TEST_F(CollectionClonerTestResumable, CollectionClonerResendsListIndexesCommandOnRetriableError) {
+TEST_F(CollectionClonerTestResumable, CollectionClonerResendsListIndexesCommandOnRetryableError) {
     auto cloner = makeCollectionCloner();
     cloner->setStopAfterStage_forTest("listIndexes");
 
@@ -770,7 +770,7 @@ TEST_F(CollectionClonerTestResumable, ResumableQueryFailTransientlyAfterFirstBat
     ASSERT_EQUALS(5u, stats.documentsCopied);
 }
 
-TEST_F(CollectionClonerTestResumable, ResumableQueryNonRetriableError) {
+TEST_F(CollectionClonerTestResumable, ResumableQueryNonRetryableError) {
     _mockServer->setCommandReply("replSetGetRBID", fromjson("{ok:1, rbid:1}"));
 
     // Set up data for preliminary stages
@@ -859,7 +859,7 @@ TEST_F(CollectionClonerTestResumable,
     clonerThread.join();
 }
 
-// We retry the query after a transient error and we immediately encounter a non-retriable one.
+// We retry the query after a transient error and we immediately encounter a non-retryable one.
 TEST_F(CollectionClonerTestResumable, ResumableQueryNonTransientErrorAtRetry) {
     _mockServer->setCommandReply("replSetGetRBID", fromjson("{ok:1, rbid:1}"));
 
@@ -908,7 +908,7 @@ TEST_F(CollectionClonerTestResumable, ResumableQueryNonTransientErrorAtRetry) {
     afterBatchFailpoint->setMode(FailPoint::off, 0);
     beforeRetryFailPoint->waitForTimesEntered(timesEnteredBeforeRetry + 1);
 
-    // Follow-up the transient error with a non-retriable one.
+    // Follow-up the transient error with a non-retryable one.
     failNextBatch->setMode(FailPoint::nTimes, 1, fromjson("{errorType: 'UnknownError'}"));
 
     beforeRetryFailPoint->setMode(FailPoint::off, 0);
@@ -920,7 +920,7 @@ TEST_F(CollectionClonerTestResumable, ResumableQueryNonTransientErrorAtRetry) {
 }
 
 // We retry the query after a transient error, we make a bit more progress and then we encounter
-// a non-retriable one.
+// a non-retryable one.
 TEST_F(CollectionClonerTestResumable, ResumableQueryNonTransientErrorAfterPastRetry) {
     _mockServer->setCommandReply("replSetGetRBID", fromjson("{ok:1, rbid:1}"));
 
@@ -976,7 +976,7 @@ TEST_F(CollectionClonerTestResumable, ResumableQueryNonTransientErrorAfterPastRe
     beforeRetryFailPoint->setMode(FailPoint::off, 0);
     afterBatchFailpoint->waitForTimesEntered(timesEnteredAfterBatch + 1);
 
-    // Follow-up the transient error with a non-retriable one.
+    // Follow-up the transient error with a non-retryable one.
     failNextBatch->setMode(FailPoint::nTimes, 1, fromjson("{errorType: 'UnknownError'}"));
 
     afterBatchFailpoint->setMode(FailPoint::off, 0);

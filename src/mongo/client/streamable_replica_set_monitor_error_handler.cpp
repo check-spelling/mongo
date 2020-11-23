@@ -116,7 +116,7 @@ BSONObj StreamableReplicaSetMonitorErrorHandler::ErrorActions::toBSON() const {
 }
 
 bool SdamErrorHandler::_isNodeRecovering(const Status& status) const {
-    return ErrorCodes::isA<ErrorCategory::RetriableError>(status.code());
+    return ErrorCodes::isA<ErrorCategory::RetryableError>(status.code());
 }
 
 bool SdamErrorHandler::_isNetworkTimeout(const Status& status) const {

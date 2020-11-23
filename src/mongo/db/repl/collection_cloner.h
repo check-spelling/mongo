@@ -148,7 +148,7 @@ private:
             if (isCursorError(status)) {
                 return true;
             }
-            return ErrorCodes::isRetriableError(status);
+            return ErrorCodes::isRetryableError(status);
         }
 
         static bool isCursorError(const Status& status) {

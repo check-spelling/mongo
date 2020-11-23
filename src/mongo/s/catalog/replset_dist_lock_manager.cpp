@@ -393,7 +393,7 @@ StatusWith<DistLockHandle> ReplSetDistLockManager::lockWithSessionID(OperationCo
         }
 
         // If a network error occurred, unlock the lock synchronously and try again
-        if (configShard->isRetriableError(status.code(), Shard::RetryPolicy::kIdempotent) &&
+        if (configShard->isRetryableError(status.code(), Shard::RetryPolicy::kIdempotent) &&
             networkErrorRetries < kMaxNumLockAcquireRetries) {
             LOGV2_DEBUG(22656,
                         1,

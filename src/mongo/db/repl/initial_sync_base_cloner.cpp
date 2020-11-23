@@ -130,11 +130,11 @@ Status InitialSyncBaseCloner::checkInitialSyncIdIsUnchanged() {
         initialSyncId = getClient()->findOne(
             ReplicationConsistencyMarkersImpl::kDefaultInitialSyncIdNamespace.toString(), Query());
     } catch (DBException& e) {
-        if (ErrorCodes::isRetriableError(e)) {
+        if (ErrorCodes::isRetryableError(e)) {
             auto status = e.toStatus().withContext(
                 ": failed while attempting to retrieve initial sync ID after re-connect");
             LOGV2_DEBUG(
-                4608505, 1, "Retrieving Initial Sync ID retriable error", "error"_attr = status);
+                4608505, 1, "Retrieving Initial Sync ID retryable error", "error"_attr = status);
             return status;
         }
         throw;
@@ -157,7 +157,7 @@ Status InitialSyncBaseCloner::checkRollBackIdIsUnchanged() {
     try {
         getClient()->simpleCommand("admin", &info, "replSetGetRBID");
     } catch (DBException& e) {
-        if (ErrorCodes::isRetriableError(e)) {
+        if (ErrorCodes::isRetryableError(e)) {
             static constexpr char errorMsg[] =
                 "Failed while attempting to retrieve rollBackId after re-connect";
             LOGV2_DEBUG(21073, 1, errorMsg, "error"_attr = e);

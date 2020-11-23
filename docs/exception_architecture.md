@@ -89,8 +89,8 @@ stopped. The internal error codes are for internal use only and must never be re
 (i.e., in a network response).
 
 Zero or more error categories can be assigned to `ErrorCodes`, which allows a single handler to
-serve a group of `ErrorCodes`. `RetriableError`, for instance, is an `ErrorCategory` that includes
-all retriable `ErrorCodes` (e.g., `HostUnreachable` and `HostNotFound`). This implies that an
+serve a group of `ErrorCodes`. `RetryableError`, for instance, is an `ErrorCategory` that includes
+all retryable `ErrorCodes` (e.g., `HostUnreachable` and `HostNotFound`). This implies that an
 operation that fails with any error code in this category can be safely retried. We can use
 `ErrorCodes::isA<${category}>(${error})` to check if `error` belongs to `category`. Alternatively,
 we can use `ErrorCodes::is${category}(${error})` to check error categories. Both methods provide

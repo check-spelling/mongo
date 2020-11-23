@@ -148,7 +148,7 @@ public:
      * If the operation is interrupted, the status of some responses may be CallbackCanceled.
      *
      * If stopRetrying() has not been called, schedules retries for any remotes that have had a
-     * retriable error and have not exhausted their retries.
+     * retryable error and have not exhausted their retries.
      *
      * Note: Must only be called from one thread at a time, and invalid to call if done() is true.
      */

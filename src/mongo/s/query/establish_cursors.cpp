@@ -165,12 +165,12 @@ std::vector<RemoteCursor> establishCursors(OperationContext* opCtx,
                     uassertStatusOK(cursor.getStatus());
                 }
             } catch (const AssertionException& ex) {
-                // Retriable errors are swallowed if 'allowPartialResults' is true. Targeting shard
+                // Retryable errors are swallowed if 'allowPartialResults' is true. Targeting shard
                 // replica sets can also throw FailedToSatisfyReadPreference, so we swallow it too.
-                bool isEligibleException = (isMongosRetriableError(ex.code()) ||
+                bool isEligibleException = (isMongosRetryableError(ex.code()) ||
                                             ex.code() == ErrorCodes::FailedToSatisfyReadPreference);
 
-                // Fail if the exception is something other than a retriable or read preference
+                // Fail if the exception is something other than a retryable or read preference
                 // error, or if the 'allowPartialResults' query parameter was not enabled.
                 if (!allowPartialResults || !isEligibleException) {
                     throw;

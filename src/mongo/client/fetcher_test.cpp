@@ -999,7 +999,7 @@ TEST_F(FetcherTest, ShutdownDuringSecondBatch) {
 }
 
 TEST_F(FetcherTest, FetcherAppliesRetryPolicyToFirstCommandButNotToGetMoreRequests) {
-    auto policy = RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetriableError>(
+    auto policy = RemoteCommandRetryScheduler::makeRetryPolicy<ErrorCategory::RetryableError>(
         3U, executor::RemoteCommandRequest::kNoTimeout);
 
     fetcher = std::make_unique<Fetcher>(&getExecutor(),

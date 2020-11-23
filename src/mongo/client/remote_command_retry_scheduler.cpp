@@ -216,8 +216,8 @@ void RemoteCommandRetryScheduler::_onComplete(
     _condition.notify_all();
 }
 
-bool isMongosRetriableError(const ErrorCodes::Error& code) {
-    return ErrorCodes::isRetriableError(code) || code == ErrorCodes::BalancerInterrupted;
+bool isMongosRetryableError(const ErrorCodes::Error& code) {
+    return ErrorCodes::isRetryableError(code) || code == ErrorCodes::BalancerInterrupted;
 }
 
 }  // namespace mongo

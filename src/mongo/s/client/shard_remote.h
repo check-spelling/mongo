@@ -69,7 +69,7 @@ public:
 
     std::string toString() const override;
 
-    bool isRetriableError(ErrorCodes::Error code, RetryPolicy options) final;
+    bool isRetryableError(ErrorCodes::Error code, RetryPolicy options) final;
 
     Status createIndexOnConfig(OperationContext* opCtx,
                                const NamespaceString& ns,

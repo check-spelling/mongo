@@ -55,7 +55,7 @@ namespace {
 
 const int kOnErrorNumRetries = 3;
 
-bool isRetriableError(ErrorCodes::Error code, Shard::RetryPolicy options) {
+bool isRetryableError(ErrorCodes::Error code, Shard::RetryPolicy options) {
     if (options == Shard::RetryPolicy::kNoRetry) {
         return false;
     }
@@ -127,7 +127,7 @@ StatusWith<Shard::QueryResponse> KeysCollectionClientDirect::_query(
             _rsLocalClient.queryOnce(opCtx, readPref, readConcernLevel, nss, query, sort, limit);
 
         if (retry < kOnErrorNumRetries &&
-            isRetriableError(result.getStatus().code(), Shard::RetryPolicy::kIdempotent)) {
+            isRetryableError(result.getStatus().code(), Shard::RetryPolicy::kIdempotent)) {
             continue;
         }
 
@@ -156,10 +156,10 @@ Status KeysCollectionClientDirect::_insert(OperationContext* opCtx,
         auto writeStatus =
             Shard::CommandResponse::processBatchWriteResponse(swResponse, &batchResponse);
         if (retry < kOnErrorNumRetries &&
-            isRetriableError(writeStatus.code(), Shard::RetryPolicy::kIdempotent)) {
+            isRetryableError(writeStatus.code(), Shard::RetryPolicy::kIdempotent)) {
             LOGV2_DEBUG(20704,
                         2,
-                        "Batch write command to {nss_db}failed with retriable error and will be "
+                        "Batch write command to {nss_db}failed with retryable error and will be "
                         "retried{causedBy_writeStatus}",
                         "nss_db"_attr = nss.db(),
                         "causedBy_writeStatus"_attr = causedBy(redact(writeStatus)));

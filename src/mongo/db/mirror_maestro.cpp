@@ -379,9 +379,9 @@ void MirrorMaestroImpl::_mirror(const std::vector<HostAndPort>& hosts,
                 return;
             }
 
-            if (ErrorCodes::isRetriableError(args.response.status)) {
+            if (ErrorCodes::isRetryableError(args.response.status)) {
                 LOGV2_WARNING(5089200,
-                              "Received mirroring response with a retriable failure",
+                              "Received mirroring response with a retryable failure",
                               "error"_attr = args.response);
                 return;
             } else if (!args.response.isOK()) {
