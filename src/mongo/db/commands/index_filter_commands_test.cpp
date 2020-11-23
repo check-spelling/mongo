@@ -411,7 +411,7 @@ TEST(IndexFilterCommandsTest, SetAndClearFilters) {
     filters = getFilters(querySettings);
     ASSERT_EQUALS(filters.size(), 2U);
 
-    // Query shape should not exist in plan cache after cleaing 1 hint.
+    // Query shape should not exist in plan cache after cleaning 1 hint.
     ASSERT_FALSE(planCacheContains(opCtx.get(), planCache, "{a: 1}", "{}", "{}", "{}"));
     ASSERT_TRUE(planCacheContains(opCtx.get(), planCache, "{b: 1}", "{}", "{}", "{}"));
 
