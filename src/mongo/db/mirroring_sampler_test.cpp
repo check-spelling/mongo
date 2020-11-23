@@ -106,7 +106,7 @@ public:
         }
     }
 
-    void populteHitCounts(std::vector<HostAndPort>& targets) {
+    void populateHitCounts(std::vector<HostAndPort>& targets) {
         for (auto host : targets) {
             auto it = _hitCounts.find(host.toString());
             invariant(it != _hitCounts.end());
@@ -168,7 +168,7 @@ TEST_F(MirroringSamplerFixture, SamplerFunction) {
 
             for (size_t i = 0; i < repeats; i++) {
                 auto targets = MirroringSampler::getMirroringTargets(hello, ratio, pseudoRandomGen);
-                populteHitCounts(targets);
+                populateHitCounts(targets);
             }
 
             // The number of mirrored commands is at least 95% of the promise
@@ -195,7 +195,7 @@ TEST_F(MirroringSamplerFixture, MirrorAll) {
 
         for (size_t i = 0; i < repeats; i++) {
             auto targets = MirroringSampler::getMirroringTargets(hello, 1.0);
-            populteHitCounts(targets);
+            populateHitCounts(targets);
         }
 
         const double observedMirroredCmds = getHitCountsSum();
