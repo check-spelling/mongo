@@ -1920,7 +1920,7 @@ bool turnIxscanIntoDistinctIxscan(QuerySolution* soln,
             soln->setRoot(std::unique_ptr<QuerySolutionNode>(fetchNode));
         }
 
-        // Whenver we have a FETCH node, the IXSCAN is its child. We detach the IXSCAN from the
+        // Whenever we have a FETCH node, the IXSCAN is its child. We detach the IXSCAN from the
         // solution tree and take ownership of it, so that it gets destroyed when we leave this
         // scope.
         std::unique_ptr<IndexScanNode> ownedIsn(indexScanNode);
