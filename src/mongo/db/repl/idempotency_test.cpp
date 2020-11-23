@@ -285,7 +285,7 @@ void RandomizedIdempotencyTest::runUpdateV2IdempotencyTestCase(double v2Probabil
             BSONObj oplogDiff;
             boost::optional<BSONObj> generatedDoc;
             if (rng.nextCanonicalDouble() <= v2Probability) {
-                // With delta based updates, we cannot just generate any random diff since certains
+                // With delta based updates, we cannot just generate any random diff since certain
                 // diff when applied to an unrelated object (which would never have produced by
                 // computing the input objects) would break idempotency. So we do a dry run of what
                 // the collection state would look like and compute diffs based on that.
