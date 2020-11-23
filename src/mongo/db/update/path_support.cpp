@@ -194,7 +194,7 @@ StatusWith<mutablebson::Element> createPathAt(const FieldRef& prefix,
         }
 
         // If this field is an array element, we wrap it in an object (because array
-        // elements are wraped in { "N": <element> } objects.
+        // elements are wrapped in { "N": <element> } objects.
         if (inArray) {
             // TODO pass empty StringData to makeElementObject, when that's supported.
             mutablebson::Element arrayObj = doc.makeElementObject("" /* it's an array */);
