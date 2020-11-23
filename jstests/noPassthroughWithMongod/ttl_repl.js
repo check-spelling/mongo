@@ -29,7 +29,7 @@ var secondary1col = secondary1db['c'];
 primarycol.drop();
 primarydb.createCollection(primarycol.getName());
 
-// create new collection. insert 24 docs, aged at one-hour intervalss
+// create new collection. insert 24 docs, aged at one-hour intervals
 now = (new Date()).getTime();
 var bulk = primarycol.initializeUnorderedBulkOp();
 for (i = 0; i < 24; i++) {
