@@ -163,7 +163,7 @@ checkServerStatus(configPrimaryConn, configSecondaryConn, connsWithoutIndexConsi
 
 st.stop();
 
-// Verify that the serverStatus output for standalones and non-sharded repilca set servers does
+// Verify that the serverStatus output for standalones and non-sharded replica set servers does
 // not contain the index consistency metrics.
 const standaloneMongod = MongoRunner.runMongod();
 assertServerStatusNotContainIndexMetrics(standaloneMongod);
