@@ -488,7 +488,7 @@ MONGO_EMBEDDED_API mongo_embedded_v1_lib* MONGO_API_CALL mongo_embedded_v1_lib_i
  * open databases that haven't been closed with `mongo_embedded_v1_instance_create()`.
  *
  * @returns Returns `MONGO_EMBEDDED_V1_ERROR_EXCEPTION` and modifies `status` for errors that
- * resulted in an exception. Details can be retrived via `mongo_embedded_v1_process_get_status()`.
+ * resulted in an exception. Details can be retrieved via `mongo_embedded_v1_process_get_status()`.
  *
  * @invariant This function is not thread safe. It cannot be called concurrently with any other
  * non-`mongo_embedded_v1_status` operation.
