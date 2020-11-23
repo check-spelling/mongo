@@ -1726,7 +1726,7 @@ expressionField:
     }
 ;
 
-// All fieldnames that don't indicate agg functons/operators or start with dollars.
+// All fieldnames that don't indicate agg functions/operators or start with dollars.
 expressionFieldname:
     invariableUserFieldname | argAsUserFieldname | idAsUserFieldname
 ;
