@@ -338,7 +338,7 @@ TEST(Decimal128Test, TestNonCanonicalDecimal) {
     ASSERT_EQUALS(nonCanonical0E3.getCoefficientHigh(), 0u);
     ASSERT_EQUALS(nonCanonical0E3.getCoefficientLow(), 0u);
 
-    // Check doing some arithmetic opations and number conversions
+    // Check doing some arithmetic operations and number conversions
     const double minusZeroDouble = nonCanonicalM0E0.toDouble();
     ASSERT_EQUALS(minusZeroDouble, 0.0);
     ASSERT_EQUALS(-1.0, std::copysign(1.0, minusZeroDouble));
