@@ -1458,7 +1458,7 @@ advanced as new oplog writes occur and holes disappear. Forward cursor oplog rea
 specified timestamp set at which to read (secondary callers) will automatically use the
 `oplogReadTimestamp` to avoid missing entries due to oplog holes. This is essential for secondary
 replica set members querying the oplog of their sync source so they do not miss any oplog entries:
-subsequent `getMores` will fetch entries as they become visibile without any holes behind them.
+subsequent `getMores` will fetch entries as they become visible without any holes behind them.
 Backward cursor oplog readers bypass the oplog visibility rules to see the latest oplog entries,
 disregarding any oplog holes.
 

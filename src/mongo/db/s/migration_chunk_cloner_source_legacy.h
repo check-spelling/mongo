@@ -185,7 +185,7 @@ public:
      *
      * This waiting is necessary because session migration is only allowed to send out committed
      * entries, as opposed to chunk migration, which can send out uncommitted documents. With chunk
-     * migration, the uncommitted documents will not be visibile until the end of the migration
+     * migration, the uncommitted documents will not be visible until the end of the migration
      * commits, which means that if it fails, they won't be visible, whereas session oplog entries
      * take effect immediately since they are appended to the chain.
      */
