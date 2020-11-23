@@ -892,17 +892,17 @@ TEST(RemoveFirstPart, PathWithTwoComponentsOnlyHoldsSecond) {
 }
 
 TEST(RemoveFirstPart, RemovingFirstPartFromLongPathMultipleTimes) {
-    FieldRef path("first.second.third.fourth.fifth.sixth.seventh.eigth.ninth.tenth");
+    FieldRef path("first.second.third.fourth.fifth.sixth.seventh.eighth.ninth.tenth");
     path.removeFirstPart();
-    ASSERT_EQ(path, FieldRef("second.third.fourth.fifth.sixth.seventh.eigth.ninth.tenth"));
+    ASSERT_EQ(path, FieldRef("second.third.fourth.fifth.sixth.seventh.eighth.ninth.tenth"));
     path.removeFirstPart();
-    ASSERT_EQ(path, FieldRef("third.fourth.fifth.sixth.seventh.eigth.ninth.tenth"));
+    ASSERT_EQ(path, FieldRef("third.fourth.fifth.sixth.seventh.eighth.ninth.tenth"));
     path.removeFirstPart();
-    ASSERT_EQ(path, FieldRef("fourth.fifth.sixth.seventh.eigth.ninth.tenth"));
+    ASSERT_EQ(path, FieldRef("fourth.fifth.sixth.seventh.eighth.ninth.tenth"));
     path.removeFirstPart();
-    ASSERT_EQ(path, FieldRef("fifth.sixth.seventh.eigth.ninth.tenth"));
+    ASSERT_EQ(path, FieldRef("fifth.sixth.seventh.eighth.ninth.tenth"));
     path.removeFirstPart();
-    ASSERT_EQ(path, FieldRef("sixth.seventh.eigth.ninth.tenth"));
+    ASSERT_EQ(path, FieldRef("sixth.seventh.eighth.ninth.tenth"));
 }
 
 }  // namespace
