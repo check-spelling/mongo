@@ -620,7 +620,7 @@ data on a collection and performed the first drain of side-writes. Voting is imp
 `voteCommitIndexBuild` command, and is persisted as a write to the replicated
 `config.system.indexBuilds` collection.
 
-While waiting for a commit decision, primaries and secondaries continue recieving and applying new
+While waiting for a commit decision, primaries and secondaries continue receiving and applying new
 side writes. When a quorum is reached, the current primary, under a collection X lock, will check
 all index constraints. If there are errors, it will replicate an `abortIndexBuild` oplog entry. If
 the index build is successful, it will replicate a `commitIndexBuild` oplog entry.
