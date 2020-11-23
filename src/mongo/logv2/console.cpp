@@ -203,7 +203,7 @@ const int ConsoleStreamBuffer::_bitsToSequenceLength[] = {
 // Command Prompt and Power Shell (GetFileType() == FILE_TYPE_CHAR):
 //     Set the font to either Lucida Console or Consolas to see 2 and 3-byte sequences.
 //     The fonts provided by the existing Windows console programs do not
-//     render complex 4-byte sequences propertly.
+//     render complex 4-byte sequences properly.
 // File redirection (GetFileType() == FILE_TYPE_DISK):
 //     When the output is redirected from the console, WriteConsoleW will fail and we
 //     will fall back on using _write().
