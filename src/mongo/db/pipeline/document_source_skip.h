@@ -67,7 +67,7 @@ public:
     }
 
     /**
-     * Attempts to move a subsequent $limit before the skip, potentially allowing for forther
+     * Attempts to move a subsequent $limit before the skip, potentially allowing for further
      * optimizations earlier in the pipeline.
      */
     Pipeline::SourceContainer::iterator doOptimizeAt(Pipeline::SourceContainer::iterator itr,
