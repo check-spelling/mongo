@@ -43,7 +43,7 @@ namespace mongo {
 namespace repl {
 namespace {
 
-// Creates a bson document reprsenting a replica set config doc with the given members, and votes
+// Creates a bson document representing a replica set config doc with the given members, and votes
 BSONObj createConfigDoc(int members, int voters = ReplSetConfig::kMaxVotingMembers) {
     str::stream configJson;
     configJson << "{_id:'rs0', version:1, protocolVersion:1, members:[";

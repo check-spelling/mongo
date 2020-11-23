@@ -49,7 +49,7 @@ using CollectionAndChangedChunks = CatalogCacheLoader::CollectionAndChangedChunk
 namespace {
 
 /**
- * Structure repsenting the generated query and sort order for a chunk diffing operation.
+ * Structure representing the generated query and sort order for a chunk diffing operation.
  */
 struct QueryAndSort {
     const BSONObj query;
