@@ -5374,7 +5374,7 @@ TEST_F(
     reconfigThread.join();
     ASSERT_OK(status);
 
-    // writeconcern feasability should be reevaluated and an error should be returned
+    // writeconcern feasibility should be reevaluated and an error should be returned
     ReplicationCoordinator::StatusAndDuration statusAndDur = awaiter.getResult();
     ASSERT_EQUALS(ErrorCodes::UnsatisfiableWriteConcern, statusAndDur.status);
     awaiter.reset();
@@ -5452,7 +5452,7 @@ TEST_F(ReplCoordTest,
     reconfigThread.join();
     ASSERT_OK(status);
 
-    // writeconcern feasability should be reevaluated and be satisfied
+    // writeconcern feasibility should be reevaluated and be satisfied
     ReplicationCoordinator::StatusAndDuration statusAndDur = awaiter.getResult();
     ASSERT_OK(statusAndDur.status);
     awaiter.reset();
