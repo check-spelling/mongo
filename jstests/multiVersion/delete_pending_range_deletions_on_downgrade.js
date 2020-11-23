@@ -30,7 +30,7 @@ let deletionTask = {
     range: {min: {x: 50}, max: {x: MaxKey}},
     whenToClean: "now",
     // Mark the range as pending, otherwise the task will be processed immediately on being
-    // inserted (and deleted after it's proessed) rather than being deleted on setFCV downgrade.
+    // inserted (and deleted after it's processed) rather than being deleted on setFCV downgrade.
     pending: true
 };
 
