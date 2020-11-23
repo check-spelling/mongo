@@ -114,7 +114,7 @@ public:
                                                   DurableCatalogImpl* catalog);
 
     /**
-     * Returns whethers the data files are compatible with the current code:
+     * Returns whether the data files are compatible with the current code:
      *
      *   - Status::OK() if the data files are compatible with the current code.
      *

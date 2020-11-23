@@ -643,7 +643,7 @@ public:
     virtual std::string getFilesystemPathForDb(const std::string& dbName) const = 0;
 
     /**
-     * Returns whethers the data files are compatible with the current code:
+     * Returns whether the data files are compatible with the current code:
      *
      *   - Status::OK() if the data files are compatible with the current code.
      *

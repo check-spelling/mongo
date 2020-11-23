@@ -93,7 +93,7 @@ sh.help = function() {
     print("\tsh.getShouldAutoSplit()                 returns whether autosplit is enabled");
     print(
         "\tsh.balancerCollectionStatus(fullName)       " +
-        "returns wheter the specified collection is balanced or the balancer needs to take more actions on it");
+        "returns whether the specified collection is balanced or the balancer needs to take more actions on it");
 };
 
 sh.status = function(verbose, configDB) {
