@@ -1114,7 +1114,7 @@ std::tuple<bool, value::TypeTags, value::Value> ByteCode::builtinDoubleDoubleSum
 }
 
 /**
- * A helper for the bultinDate method. The formal parameters yearOrWeekYear and monthOrWeek carry
+ * A helper for the built-inDate method. The formal parameters yearOrWeekYear and monthOrWeek carry
  * values depending on wether the date is a year-month-day or ISOWeekYear.
  */
 using DateFn = std::function<Date_t(
