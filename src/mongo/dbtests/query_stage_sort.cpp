@@ -295,7 +295,7 @@ public:
     }
 };
 
-// Sort in descreasing order with limit applied
+// Sort in decreasing order with limit applied
 template <int LIMIT>
 class QueryStageSortDecWithLimit : public QueryStageSortDec {
 public:
