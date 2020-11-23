@@ -470,7 +470,7 @@ public:
      *  are undoubtedly fine. But it is very easy to invalidate 'source' by calling any
      *  mutating operation, so proceed with due caution.
      *
-     *  It is expected, though, that in normal modes of operation obtainin the damage
+     *  It is expected, though, that in normal modes of operation obtaining the damage
      *  vector is one of the last operations performed on a Document before its
      *  destruction, so this is not so great a restriction.
      *
