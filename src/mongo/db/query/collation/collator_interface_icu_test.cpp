@@ -525,10 +525,10 @@ TEST(CollatorInterfaceICUTest, CodePointBeyondLargestValidComparesEqualToReplace
 }
 
 TEST(CollatorInterfaceICUTest, StringsWithDifferentEmbeddedInvalidSequencesCompareEqual) {
-    // U+0123 ("latin small letter g with cedilla"), follwed by invalid byte \xEF, followed by
+    // U+0123 ("latin small letter g with cedilla"), followed by invalid byte \xEF, followed by
     // U+0145 ("latin capital letter n with cedilla").
     StringData invalid1("\xC4\xA3\xEF\xC5\x85");
-    // U+0123 ("latin small letter g with cedilla"), follwed by unexpected continuation byte \x80,
+    // U+0123 ("latin small letter g with cedilla"), followed by unexpected continuation byte \x80,
     // followed by U+0145 ("latin capital letter n with cedilla").
     StringData invalid2("\xC4\xA3\x80\xC5\x85");
     // U+0123 ("latin small letter g with cedilla"), followed by the replacement character, followed
@@ -548,10 +548,10 @@ TEST(CollatorInterfaceICUTest, DifferentEmbeddedInvalidSequencesAndDifferentFina
     // with cedilla").
     StringData valid2("\xC4\xA3\xC5\x85");
 
-    // U+0123 ("latin small letter g with cedilla"), follwed by unexpected continuation byte \x80,
+    // U+0123 ("latin small letter g with cedilla"), followed by unexpected continuation byte \x80,
     // followed by U+0146 ("latin small letter n with cedilla").
     StringData invalid1("\xC4\xA3\x80\xC5\x86");
-    // U+0123 ("latin small letter g with cedilla"), follwed by invalid byte \xEF, followed by
+    // U+0123 ("latin small letter g with cedilla"), followed by invalid byte \xEF, followed by
     // U+0145 ("latin capital letter n with cedilla").
     StringData invalid2("\xC4\xA3\xEF\xC5\x85");
 
