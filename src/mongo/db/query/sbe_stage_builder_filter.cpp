@@ -404,7 +404,7 @@ void generateArraySize(MatchExpressionVisitorContext* context,
 }
 
 /**
- * Generates a path traversal SBE plan stage sub-tree which implments the comparison match
+ * Generates a path traversal SBE plan stage sub-tree which implements the comparison match
  * expression 'expr'. The comparison itself executes using the given 'binaryOp'.
  */
 void generateComparison(MatchExpressionVisitorContext* context,
