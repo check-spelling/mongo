@@ -385,12 +385,12 @@ TEST_F(TopologyStateMachineTestFixture, ShouldSaveNewMaxElectionId) {
     ASSERT_EQUALS(oidTwo, topologyDescription->getMaxElectionId());
 }
 
-// The following two tests (ShouldNotUpdateToplogyType, ShouldUpdateToCorrectToplogyType) assert
+// The following two tests (ShouldNotUpdateTopologyType, ShouldUpdateToCorrectTopologyType) assert
 // that the topology type is correct given an initial state and a ServerType. Together, they
 // cover all the cases specified in the SDAM spec here:
 // https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring.rst#topologytype-table
 
-TEST_F(TopologyStateMachineTestFixture, ShouldNotUpdateToplogyType) {
+TEST_F(TopologyStateMachineTestFixture, ShouldNotUpdateTopologyType) {
     using T = TopologyTypeTestCase;
 
     // test cases that should not change TopologyType
@@ -430,7 +430,7 @@ TEST_F(TopologyStateMachineTestFixture, ShouldNotUpdateToplogyType) {
     }
 }
 
-TEST_F(TopologyStateMachineTestFixture, ShouldUpdateToCorrectToplogyType) {
+TEST_F(TopologyStateMachineTestFixture, ShouldUpdateToCorrectTopologyType) {
     using T = TopologyTypeTestCase;
 
     // test cases that should change TopologyType

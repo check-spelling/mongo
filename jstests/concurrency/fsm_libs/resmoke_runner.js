@@ -214,7 +214,7 @@ const clusterOptions = {
     sharded: {enabled: false},
 };
 
-// The TestData.discoverTopoloy is false when we only care about connecting to either a
+// The TestData.discoverTopology is false when we only care about connecting to either a
 // standalone or primary node in a replica set.
 if (TestData.discoverTopology !== false) {
     const topology = DiscoverTopology.findConnectedNodes(db.getMongo());

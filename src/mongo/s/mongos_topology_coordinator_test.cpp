@@ -61,7 +61,7 @@ public:
 
 protected:
     /**
-     * Gets the MongosTopologCoordinator.
+     * Gets the MongosTopologyCoordinator.
      */
     MongosTopologyCoordinator& getTopoCoord() {
         return *_topo;
