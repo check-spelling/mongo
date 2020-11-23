@@ -885,7 +885,7 @@ TEST(ExpressionArray, ExpressionArrayWithAllConstantValuesShouldOptimizeToExpres
     auto expCtx = ExpressionContextForTest{};
     VariablesParseState vps = expCtx.variablesParseState;
 
-    // ExpressionArray of constant values should optimize to ExpressionConsant.
+    // ExpressionArray of constant values should optimize to ExpressionConstant.
     BSONObj bsonarrayOfConstants = BSON("" << BSON_ARRAY(1 << 2 << 3 << 4));
     BSONElement elementArray = bsonarrayOfConstants.firstElement();
     auto expressionArr = ExpressionArray::parse(&expCtx, elementArray, vps);
