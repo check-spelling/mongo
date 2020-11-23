@@ -235,7 +235,7 @@ public:
  * Command for extracting the oplog entries that needs to be migrated for the given migration
  * session id.
  * Note: this command is not stateless. Calling this command has a side-effect of gradually
- * depleting the buffer that contains the oplog entries to be transfered.
+ * depleting the buffer that contains the oplog entries to be transferred.
  */
 class MigrateSessionCommand : public BasicCommand {
 public:

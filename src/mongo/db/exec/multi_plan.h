@@ -170,7 +170,7 @@ private:
     CanonicalQuery* _query;
 
     // Candidate plans. Each candidate includes a child PlanStage tree and QuerySolution. Ownership
-    // of all QuerySolutions is retained here, and will *not* be tranferred to the PlanExecutor that
+    // of all QuerySolutions is retained here, and will *not* be transferred to the PlanExecutor that
     // wraps this stage. Ownership of the PlanStages will be in PlanStage::_children which maps
     // one-to-one with _candidates.
     std::vector<plan_ranker::CandidatePlan> _candidates;

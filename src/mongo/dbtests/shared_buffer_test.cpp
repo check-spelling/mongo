@@ -159,7 +159,7 @@ TEST_F(SharedBufferTest, SharedBufferFragmentBuilder) {
     ASSERT_EQ(fragment1.get() + fragment1.size(), fragment2.get());
     verifyFragment(fragment2, two);
 
-    // Verify that anything written is transfered when we grow
+    // Verify that anything written is transferred when we grow
     builder.start(builder.capacity());
     ASSERT_EQ(builder.capacity(), kBlockSize / 4);
     uint8_t three = 3;

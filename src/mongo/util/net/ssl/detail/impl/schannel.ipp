@@ -742,8 +742,8 @@ ssl_want SSLWriteManager::writeUnencryptedData(const void* pMessage,
         // position.
         _lastWriteOffset = 0;
 
-        // ASIO's buffering of engine calls assumes that bytes_transfered refers to all the
-        // bytes we transfered total when want_output is returned. It ignores bytes_transfered
+        // ASIO's buffering of engine calls assumes that bytes_transferred refers to all the
+        // bytes we transferred total when want_output is returned. It ignores bytes_transferred
         // when want_output_and_retry is returned;
         bytes_transferred = messageLength;
 
@@ -805,7 +805,7 @@ ssl_want SSLWriteManager::encryptMessage(const void* pMessage,
 
     _pOutBuffer->resize(size);
 
-    // Tell asio that all the clear text was transfered.
+    // Tell asio that all the clear text was transferred.
     bytes_transferred = messageLength;
 
     return ssl_want::want_output;

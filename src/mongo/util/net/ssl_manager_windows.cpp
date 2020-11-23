@@ -525,7 +525,7 @@ int SSLManagerWindows::SSL_read(SSLConnectionInterface* connInterface, void* buf
                 continue;
             }
             case asio::ssl::detail::engine::want_nothing: {
-                // ASIO wants nothing, return to caller with anything transfered.
+                // ASIO wants nothing, return to caller with anything transferred.
                 return bytes_transferred;
             }
             default:
