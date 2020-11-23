@@ -197,7 +197,7 @@ private:
     HostAndPort _peer;
     transport::ConnectSSLMode _sslMode;
     NetworkConnectionHook* const _onConnectHook;
-    // SSL context to use intead of the default one for this pool.
+    // SSL context to use instead of the default one for this pool.
     const std::shared_ptr<const transport::SSLConnectionContext> _transientSSLContext;
     AsyncDBClient::Handle _client;
 };

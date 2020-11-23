@@ -91,7 +91,7 @@ inline constexpr bool isFutureLike<SharedSemiFuture<T>> = true;
 // std::is_copy_constructible incorrectly returns true for containers of move-only types, so we use
 // our own modified version instead. Note this version is brittle at the moment, since it determines
 // whether or not the type is a container by the presense of a value_type field. After we switch to
-// C++20 we can use the Container concept for this instread.
+// C++20 we can use the Container concept for this instead.
 template <typename T, typename = void>
 struct is_really_copy_constructible : std::is_copy_constructible<T> {};
 template <typename T>

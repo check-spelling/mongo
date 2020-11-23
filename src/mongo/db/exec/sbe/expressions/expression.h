@@ -209,7 +209,7 @@ struct CompileCtx {
 
 private:
     // Any data that a PlanStage needs from the RuntimeEnvironment should not be accessed directly
-    // but insteady by looking up the corresponding slots. These slots are set up during the process
+    // but instead by looking up the corresponding slots. These slots are set up during the process
     // of building PlanStages, so the PlanStages themselves should never need to add new slots to
     // the RuntimeEnvironment.
     std::unique_ptr<RuntimeEnvironment> env;
