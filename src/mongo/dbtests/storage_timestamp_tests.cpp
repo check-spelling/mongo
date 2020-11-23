@@ -1035,7 +1035,7 @@ public:
 class SecondaryAtomicApplyOpsWCEToNonAtomic : public StorageTimestampTest {
 public:
     void run() {
-        // Create a new collectiont.
+        // Create a new collection.
         NamespaceString nss("unitteTsts.insertToUpsert");
         reset(nss);
 

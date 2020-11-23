@@ -30,7 +30,7 @@ const coll = testDB.getCollection('test');
 
 assert.commandWorked(testDB.createCollection(coll.getName()));
 
-// Insert an invalid geo document that will be removed before the indexer starts a collecton
+// Insert an invalid geo document that will be removed before the indexer starts a collection
 // scan.
 assert.commandWorked(coll.insert({
     _id: 0,

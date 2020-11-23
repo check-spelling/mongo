@@ -547,7 +547,7 @@ if (!FixtureHelpers.isSharded(coll)) {
         expectedResult: [{_id: 1, x: 10}, {_id: 2, x: 20}, {_id: 3, x: 30}]
     });
 }
-// Test getMore puts a correct namespace into profile data for a colletion with optimized away
+// Test getMore puts a correct namespace into profile data for a collection with optimized away
 // pipeline. Cannot be run on mongos as profiling can be enabled only on mongod. Also profiling
 // is supported on WiredTiger only.
 if (!FixtureHelpers.isMongos(db) && isWiredTiger(db)) {

@@ -70,7 +70,7 @@ assert.commandWorked(st.shard1.adminCommand(
     {_flushRoutingTableCacheUpdates: tempReshardingNss, syncFromConfig: true}));
 st.refreshCatalogCacheForNs(mongos, ns);
 
-// TODO(SERVER-52620): Use the actual reshardColleciton command to set up the environment for the
+// TODO(SERVER-52620): Use the actual reshardCollection command to set up the environment for the
 // test. const donor = st.rs0.getPrimary(); const config = st.configRS.getPrimary();
 
 // const failpoint = configureFailPoint(config, "reshardingFieldsInitialized");

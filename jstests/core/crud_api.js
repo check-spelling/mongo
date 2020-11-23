@@ -16,7 +16,7 @@ load("jstests/aggregation/extras/utils.js");  // For arrayEq.
 var crudAPISpecTests = function crudAPISpecTests() {
     "use strict";
 
-    // Get the colllection
+    // Get the collection
     var coll = db.crud_tests;
 
     // Setup

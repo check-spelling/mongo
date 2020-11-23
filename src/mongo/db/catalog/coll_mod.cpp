@@ -91,7 +91,7 @@ void assertMovePrimaryInProgress(OperationContext* opCtx, NamespaceString const&
         }
     } catch (const DBException& ex) {
         if (ex.toStatus() != ErrorCodes::MovePrimaryInProgress) {
-            LOGV2(4945201, "Error when getting colleciton description", "what"_attr = ex.what());
+            LOGV2(4945201, "Error when getting collection description", "what"_attr = ex.what());
             return;
         }
         throw;

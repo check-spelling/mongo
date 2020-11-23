@@ -41,7 +41,7 @@ assert.commandWorked(bulk.execute());
 
 var x = dbForTest.foo.stats();
 
-// verify the colleciton has been sharded and documents are evenly distributed
+// verify the collection has been sharded and documents are evenly distributed
 assert.eq("test.foo", x.ns, "namespace mismatch");
 assert(x.sharded, "collection is not sharded");
 assert.eq(numDocs, x.count, "total count");

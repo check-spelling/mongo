@@ -422,7 +422,7 @@ private:
 
     boost::optional<ChunkVersion> _chunkVersion;
 
-    // Locally incremented sequence number that allows to compare two colection versions with
+    // Locally incremented sequence number that allows to compare two collection versions with
     // different epochs. Each new comparableChunkVersion will have a greater sequence number than
     // the ones created before.
     uint64_t _epochDisambiguatingSequenceNum{0};

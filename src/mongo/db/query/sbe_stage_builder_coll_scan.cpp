@@ -302,7 +302,7 @@ std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots> generateOptimizedOplo
 }
 
 /**
- * Generates a generic collecion scan sub-tree. If a resume token has been provided, the scan will
+ * Generates a generic collection scan sub-tree. If a resume token has been provided, the scan will
  * start from a RecordId contained within this token, otherwise from the beginning of the
  * collection.
  */

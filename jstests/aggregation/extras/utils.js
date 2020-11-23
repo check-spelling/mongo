@@ -356,7 +356,7 @@ function assertArrayEq({actual = [], expected = [], fieldsToSkip = []} = {}) {
 
 /**
  * Generates the 'numDocs' number of documents each of 'docSize' size and inserts them into the
- * collecton 'coll'. Each document is generated from the 'template' function, which, by default,
+ * collection 'coll'. Each document is generated from the 'template' function, which, by default,
  * returns a document in the form of {_id: i}, where 'i' is the iteration index, starting from 0.
  * The 'template' function is called on each iteration and can take three arguments and return
  * any JSON document which will be used as a document template:

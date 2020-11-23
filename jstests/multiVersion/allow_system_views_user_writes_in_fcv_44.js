@@ -1,5 +1,5 @@
 /**
- * Tests that users are allowed to write to the system.views collecion if not on the latest FCV.
+ * Tests that users are allowed to write to the system.views collection if not on the latest FCV.
  *
  * TODO (SERVER-49545): Remove this test when 5.0 becomes last-lts.
  */

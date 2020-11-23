@@ -1,5 +1,5 @@
 /**
- * Tests that users are disallowed from writing to the system.views collecion.
+ * Tests that users are disallowed from writing to the system.views collection.
  *
  * @tags: [
  *   requires_non_retryable_writes,

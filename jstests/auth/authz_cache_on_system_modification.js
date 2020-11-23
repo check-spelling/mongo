@@ -45,7 +45,7 @@ assert.commandWorked(db.runCommand({createUser: 'custom', pwd: 'pwd', roles: ['w
         "Privileges retained after modification to system.roles collections");
 })();
 
-// tests that a user does not retain their privileges after the system.users colleciton is modified
+// tests that a user does not retain their privileges after the system.users collection is modified
 (function testModifySystemUsersCollection() {
     jsTestLog("Testing authz cache invalidation on system.users collection modification");
     assert(db.auth('root', 'pwd'));
