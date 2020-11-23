@@ -1,5 +1,5 @@
 /**
- * Tests that benchRun can understand pipeline-style updates and findAndModifys.
+ * Tests that benchRun can understand pipeline-style updates and findAndModifies.
  *
  * @tags: [uses_multiple_connections]
  */
