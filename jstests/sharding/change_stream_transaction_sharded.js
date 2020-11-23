@@ -222,7 +222,7 @@ function shardHasDocumentAtChangeListIndex(changeDoc, shardChangeList, changeLis
 }
 
 /**
- * Test that change stream returns the expected set of documuments when resumed from each
+ * Test that change stream returns the expected set of documents when resumed from each
  * point captured by 'changeList'.
  */
 function confirmResumeForChangeList(changeList, changeListShard1, changeListShard2) {

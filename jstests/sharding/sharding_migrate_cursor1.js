@@ -83,7 +83,7 @@ join();
 
 // assert.soon( function(){ return numDocs == t.count(); } , "at end 1" )
 // 6. Check the total number of docs on both shards to make sure no doc is lost.
-// Use itcount() to ignore orphan docments.
+// Use itcount() to ignore orphan documents.
 assert.eq(numDocs, t.find().itcount(), "at end 2");
 
 s.stop();
