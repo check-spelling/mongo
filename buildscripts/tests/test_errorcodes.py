@@ -57,7 +57,7 @@ class TestErrorcodes(unittest.TestCase):
         self.assertEqual(1230101, next(generator))
         self.assertEqual(1230103, next(generator))
 
-    def test_ticket_coersion(self):
+    def test_ticket_coercion(self):
         """Test `coerce_to_number`."""
         self.assertEqual(0, errorcodes.coerce_to_number(0))
         self.assertEqual(1234, errorcodes.coerce_to_number('1234'))

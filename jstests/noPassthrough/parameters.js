@@ -19,7 +19,7 @@ function setAndCheckParameter(dbConn, parameterName, newValue, expectedResult) {
 
     const finalResult = assert.commandWorked(dbConn.adminCommand(getParameterCommand));
     // If we have explicitly set an "exptectedResult", use that, else use "newValue".  This is for
-    // cases where the server does some type coersion that changes the value.
+    // cases where the server does some type coercion that changes the value.
     if (typeof expectedResult === "undefined") {
         expectedResult = newValue;
     }

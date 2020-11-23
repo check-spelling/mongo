@@ -61,7 +61,7 @@ void doStorageTest(StringData name,
     IDLServerParameterWithStorage<spt, T> param(name, val);
     using element_type = typename decltype(param)::element_type;
 
-    // Check type coersion.
+    // Check type coercion.
     for (const auto& v : valid) {
         element_type typedVal =
             uassertStatusOK(idl_server_parameter_detail::coerceFromString<element_type>(v));
