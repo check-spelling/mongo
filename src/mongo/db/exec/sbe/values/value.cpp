@@ -572,7 +572,7 @@ std::size_t hashValue(TypeTags tag, Value val) noexcept {
 
 /**
  * Performs a three-way comparison for any type that has < and == operators. Additionally,
- * guarantees that the result will be exactlty -1, 0, or 1, which is important, because not all
+ * guarantees that the result will be exactly -1, 0, or 1, which is important, because not all
  * comparison functions make that guarantee.
  *
  * The std::string_view::compare(basic_string_view s) function, for example, only promises that it
