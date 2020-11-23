@@ -1158,7 +1158,7 @@ TEST_F(QueryPlannerTest, EmptyQueryWithProjectionUsesCollscanIfNoCoveredIxscans)
 }
 
 TEST_F(QueryPlannerTest,
-       EmptyQueryWithProjectionUsesCoveredIxscanOnDotttedNonMultikeyIndexIfEnabled) {
+       EmptyQueryWithProjectionUsesCoveredIxscanOnDottedNonMultikeyIndexIfEnabled) {
     params.options = QueryPlannerParams::GENERATE_COVERED_IXSCANS;
     addIndex(BSON("a.b" << 1));
     runQueryAsCommand(fromjson("{find: 'testns', projection: {_id: 0, 'a.b': 1}}"));
@@ -1170,7 +1170,7 @@ TEST_F(QueryPlannerTest,
 }
 
 TEST_F(QueryPlannerTest,
-       EmptyQueryWithProjectionDoesNotUseCoveredIxscanOnDotttedNonMultikeyIndexIfDisabled) {
+       EmptyQueryWithProjectionDoesNotUseCoveredIxscanOnDottedNonMultikeyIndexIfDisabled) {
     params.options &= ~QueryPlannerParams::GENERATE_COVERED_IXSCANS;
     addIndex(BSON("a.b" << 1));
     runQueryAsCommand(fromjson("{find: 'testns', projection: {_id: 0, 'a.b': 1}}"));
