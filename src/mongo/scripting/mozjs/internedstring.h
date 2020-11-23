@@ -37,7 +37,7 @@ namespace mozjs {
 
 /**
  * An enum that includes members for each interned string we own. These values
- * can be used with InteredStringId to get a handle to an id that matches that
+ * can be used with InternedStringId to get a handle to an id that matches that
  * identifier, or directly in ObjectWrapper.
  */
 enum class InternedString {
