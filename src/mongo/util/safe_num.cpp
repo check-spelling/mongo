@@ -112,7 +112,7 @@ bool SafeNum::isEquivalent(const SafeNum& rhs) const {
     if (_type == NumberDecimal || rhs._type == NumberDecimal) {
         // Note: isEqual is faster than using compareDecimals, however it does not handle
         // comparing NaN as equal (differing from BSONElement::woCompare).  This case
-        // is not handled for double comparison above eihter.
+        // is not handled for double comparison above either.
         return getDecimal(*this).isEqual(getDecimal(rhs));
     }
 
