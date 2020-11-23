@@ -164,7 +164,7 @@ public:
                           BSONArrayBuilder* arrBuilder);
 
     /**
-     * Called by the recipient shard. Transfers the accummulated local mods from source to
+     * Called by the recipient shard. Transfers the accumulated local mods from source to
      * destination. Must not be called before all cloned objects have been fetched through calls to
      * nextCloneBatch.
      *
