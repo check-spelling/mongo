@@ -249,7 +249,7 @@ function setUpTwoZonesOnShard0(coll) {
 
 /**
  * Helper function to set up two zones such that 'nonHashedPrefix1' zone is assigned to shard0 and
- * shard1. 'nonHashedPrefix2' is assinged to shard1 and shard2.
+ * shard1. 'nonHashedPrefix2' is assigned to shard1 and shard2.
  */
 function setUpTwoZones(coll) {
     assert.commandWorked(
