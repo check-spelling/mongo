@@ -64,7 +64,7 @@ constexpr wchar_t kMongoServiceAccountPassword[] = L"MONGO_SERVICE_ACCOUNT_PASSW
 constexpr wchar_t kMongoServiceAccountDomain[] = L"MONGO_SERVICE_ACCOUNT_DOMAIN";
 
 /**
- * Log a messge to MSIExec's log file.
+ * Log a message to MSIExec's log file.
  *
  * Does not work for immediately executed custom actions.
  */
