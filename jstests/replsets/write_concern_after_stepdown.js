@@ -86,7 +86,7 @@ assert.commandWorked(nodes[1].getDB(dbName).getCollection(collName).insert(
 
 jsTest.log("Reconnect the old primary to the rest of the nodes");
 // Only allow the old primary to connect to the other nodes, not the other way around.
-// This is so that the old priamry will detect that it needs to step down and step itself down,
+// This is so that the old primary will detect that it needs to step down and step itself down,
 // rather than one of the other nodes detecting this and sending it a replSetStepDown command,
 // which would cause the old primary to kill all operations and close all connections, making
 // the way that the insert in the parallel shell fails be nondeterministic.  Rather than
