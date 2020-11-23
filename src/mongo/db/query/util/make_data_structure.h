@@ -55,7 +55,7 @@ auto pushBackUnlessNone(DS&& ds, Arg&& arg, bool) -> decltype(*arg, void()) {
 
 /**
  * Appends an element to the end of a data structure. SFINAE backup for elements without an
- * operator*. The ... arguments casue this function to lose overload priority.
+ * operator*. The ... arguments cause this function to lose overload priority.
  */
 template <typename T, typename DS, typename Arg>
 void pushBackUnlessNone(DS&& ds, Arg&& arg, ...) {
