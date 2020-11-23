@@ -223,7 +223,7 @@ Status repairCollection(OperationContext* opCtx,
         return status;
     }
 
-    // Run collection validation to avoid unecessarily rebuilding indexes on valid collections
+    // Run collection validation to avoid unnecessarily rebuilding indexes on valid collections
     // with consistent indexes. Initialize the collection prior to validation.
     collection->init(opCtx);
 

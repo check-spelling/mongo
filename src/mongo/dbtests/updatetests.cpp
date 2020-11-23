@@ -342,7 +342,7 @@ class SetOnInsertMissingParent : public SetBase {
 public:
     void run() {
         // In a mod that uses dontApply, we should be careful not to create a
-        // parent unneccesarily.
+        // parent unnecessarily.
         BSONObj initial = fromjson("{'_id':0}");
         BSONObj final = fromjson("{'_id':0, d:1}");
         _client.insert(ns(), initial);
