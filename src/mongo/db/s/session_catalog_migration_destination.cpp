@@ -209,7 +209,7 @@ ProcessOplogResult processSessionOplog(const BSONObj& oplogBSON,
             result.isPrePostImage = true;
 
             uassert(40632,
-                    str::stream() << "Can't handle 2 pre/post image oplog in a row. Prevoius oplog "
+                    str::stream() << "Can't handle 2 pre/post image oplog in a row. Previous oplog "
                                   << lastResult.oplogTime.getTimestamp().toString()
                                   << ", oplog ts: " << oplogEntry.getTimestamp().toString() << ": "
                                   << oplogBSON,
