@@ -527,7 +527,7 @@ TEST(GeoHash, NeighborsAtFinestLevel) {
 TEST(GeoHash, ClearUnusedBitsClearsSomeBits) {
     GeoHash geoHash("10110010");
     // 'parent' should have the four higher order bits from the original hash (1011, or the
-    // hexidecimal digit 'b').
+    // hexadecimal digit 'b').
     GeoHash parent = geoHash.parent(2);
     ASSERT_EQUALS(parent, GeoHash("1011"));
     const long long expectedHash = 0xb000000000000000LL;
