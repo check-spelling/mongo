@@ -807,7 +807,7 @@ private:
 #define TEMPLATE_COMPARISON_ASSERTION_CTOR_REFLEXIVE(EXTERN, OP, T) \
     TEMPLATE_COMPARISON_ASSERTION_CTOR_A_OP_B(EXTERN, OP, T, T)
 
-// Call with `extern` to declace extern instantiations, and with no args to explicitly instantiate.
+// Call with `extern` to declare extern instantiations, and with no args to explicitly instantiate.
 #define INSTANTIATE_COMPARISON_ASSERTION_CTORS(...)                                             \
     __VA_ARGS__ template class ComparisonAssertion<ComparisonOp::kEq>;                          \
     __VA_ARGS__ template class ComparisonAssertion<ComparisonOp::kNe>;                          \
