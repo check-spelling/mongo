@@ -230,7 +230,7 @@ public:
          */
         enum RequestedInfo {
             // Only usable part of the return is whether it is engaged or not.
-            kJustExistance = 0,
+            kJustExistence = 0,
             // Key must be filled in.
             kWantKey = 1,
             // Loc must be fulled in.

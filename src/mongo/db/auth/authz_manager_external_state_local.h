@@ -97,7 +97,7 @@ public:
                            BSONObj* result) = 0;
 
     /**
-     * Checks for the existance of a document matching "query" in "collectionName".
+     * Checks for the existence of a document matching "query" in "collectionName".
      */
     virtual bool hasOne(OperationContext* opCtx,
                         const NamespaceString& collectionName,

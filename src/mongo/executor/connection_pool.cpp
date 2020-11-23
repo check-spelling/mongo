@@ -216,7 +216,7 @@ auto ConnectionPool::makeLimitController() noexcept -> std::shared_ptr<Controlle
 /**
  * A pool for a specific HostAndPort
  *
- * Pools come into existance the first time a connection is requested and
+ * Pools come into existence the first time a connection is requested and
  * go out of existence after hostTimeout passes without any of their
  * connections being used.
  */

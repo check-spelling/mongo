@@ -336,7 +336,7 @@ void WiredTigerIndex::fullValidate(OperationContext* opCtx,
     long long count = 0;
     LOGV2_TRACE_INDEX(20094, "fullValidate");
 
-    const auto requestedInfo = TRACING_ENABLED ? Cursor::kKeyAndLoc : Cursor::kJustExistance;
+    const auto requestedInfo = TRACING_ENABLED ? Cursor::kKeyAndLoc : Cursor::kJustExistence;
 
     KeyString::Value keyStringForSeek =
         IndexEntryComparison::makeKeyStringFromBSONKeyForSeek(BSONObj(),
@@ -421,7 +421,7 @@ bool WiredTigerIndex::isEmpty(OperationContext* opCtx) {
                                                                   false /* inclusive */
             );
 
-        return cursor->seek(keyStringForSeek, Cursor::RequestedInfo::kJustExistance) == boost::none;
+        return cursor->seek(keyStringForSeek, Cursor::RequestedInfo::kJustExistence) == boost::none;
     }
 
     WiredTigerCursor curwrap(_uri, _tableId, false, opCtx);
