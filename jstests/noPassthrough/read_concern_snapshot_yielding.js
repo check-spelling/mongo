@@ -31,7 +31,7 @@ TestData.numDocs = 4;
 assert.commandWorked(db.adminCommand({setParameter: 1, internalQueryExecYieldIterations: 2}));
 
 // Set 'internalQueryExecYieldPeriodMS' to 24 hours to significantly reduce a probability of a
-// situation occuring where the execution threads do not receive enough CPU time and commands yield
+// situation occurring where the execution threads do not receive enough CPU time and commands yield
 // on timeout (i.e. yield period expiration) instead of on the second try as expected by setting
 // parameter 'internalQueryExecYieldIterations' to 2.
 assert.commandWorked(db.adminCommand({setParameter: 1, internalQueryExecYieldPeriodMS: 86400000}));

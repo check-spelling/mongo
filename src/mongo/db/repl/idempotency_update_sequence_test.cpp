@@ -297,7 +297,7 @@ TEST(UpdateGenTest, OnlySetUpdatesWithScalarsAtMaxDepth) {
                 if (!isDocOrArr) {
                     StringBuilder sb;
                     sb << "The set argument: " << elem
-                       << " is a scalar, but the probability of a scalar occuring for a path that "
+                       << " is a scalar, but the probability of a scalar occurring for a path that "
                           "does not meet the maximum depth is zero.";
                     FAIL(sb.str());
                 }

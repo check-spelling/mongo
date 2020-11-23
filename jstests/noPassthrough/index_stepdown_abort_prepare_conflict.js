@@ -12,7 +12,7 @@
  *    block stepDown. Since commit must acquire the RSTL to write its oplog entry, ensures that the
  *    index build is able to retry after failing once due to a stepDown.
  * 6) Steps up a new primary. Ensure that the blocked index build on the secondary does not prevent
- *    step-up from ocurring.
+ *    step-up from occurring.
  *
  * @tags: [
  *     uses_transactions,

@@ -1,6 +1,6 @@
 /**
  * Test to make sure that range deleter deletions blocked on prepare conflicts do not prevent
- * stepdown from occuring.
+ * stepdown from occurring.
  *
  * Layout:
  * 1. Shard a collection and split it into two chunks, both of which live on shard 0.

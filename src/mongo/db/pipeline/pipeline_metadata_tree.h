@@ -99,7 +99,7 @@ struct Stage {
     T contents;
 
     /**
-     * The child occuring directly before this stage in the pipeline. This is empty for the first
+     * The child occurring directly before this stage in the pipeline. This is empty for the first
      * Stage in any pipeline or sub-pipeline.
      */
     std::unique_ptr<Stage> principalChild;

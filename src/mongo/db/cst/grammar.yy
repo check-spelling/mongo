@@ -1685,7 +1685,7 @@ slice:
     }
 ;
 
-// These are arrays occuring in Expressions outside of $const/$literal. They may contain further
+// These are arrays occurring in Expressions outside of $const/$literal. They may contain further
 // Expressions.
 expressionArray:
     START_ARRAY expressions END_ARRAY {
@@ -1702,7 +1702,7 @@ expressionSingletonArray:
 
 singleArgExpression: nonArrayExpression | expressionSingletonArray;
 
-// These are objects occuring in Expressions outside of $const/$literal. They may contain further
+// These are objects occurring in Expressions outside of $const/$literal. They may contain further
 // Expressions.
 expressionObject:
     START_OBJECT expressionFields END_OBJECT {

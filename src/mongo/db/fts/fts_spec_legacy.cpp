@@ -99,7 +99,7 @@ void FTSSpec::_scoreStringV1(const Tools& tools,
 
         // in order to adjust weights as a function of term count as it
         // relates to total field length. ie. is this the only word or
-        // a frequently occuring term? or does it only show up once in
+        // a frequently occurring term? or does it only show up once in
         // a long block of text?
 
         double coeff = (0.5 * data.count / numTokens) + 0.5;
