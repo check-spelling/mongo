@@ -80,7 +80,7 @@ ERROR_ID_CHAINED_NO_NESTED_CHAINED = "ID0033"
 ERROR_ID_BAD_EMPTY_ENUM = "ID0034"
 ERROR_ID_NO_ARRAY_ENUM = "ID0035"
 ERROR_ID_ENUM_BAD_TYPE = "ID0036"
-ERROR_ID_ENUM_BAD_INT_VAUE = "ID0037"
+ERROR_ID_ENUM_BAD_INT_VALUE = "ID0037"
 ERROR_ID_ENUM_NON_UNIQUE_VALUES = "ID0038"
 ERROR_ID_ENUM_NON_CONTINUOUS_RANGE = "ID0039"
 ERROR_ID_BAD_COMMAND_NAMESPACE = "ID0041"
@@ -583,7 +583,7 @@ class ParserContext(object):
         # type: (common.SourceLocation, str, str, str) -> None
         """Add an error for an enum value not being an integer."""
         self._add_error(
-            location, ERROR_ID_ENUM_BAD_INT_VAUE,
+            location, ERROR_ID_ENUM_BAD_INT_VALUE,
             "Enum '%s' value '%s' is not an integer, exception '%s'" % (enum_name, enum_value,
                                                                         err_msg))
 

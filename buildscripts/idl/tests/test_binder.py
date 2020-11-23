@@ -1322,7 +1322,7 @@ class TestBinder(testcase.IDLTestcase):
                 values:
                     v1: foo
                     v3: 1
-            """), idl.errors.ERROR_ID_ENUM_BAD_INT_VAUE)
+            """), idl.errors.ERROR_ID_ENUM_BAD_INT_VALUE)
 
         # Test string - dups
         self.assert_bind_fail(
