@@ -132,7 +132,7 @@ expected =
     [{_id: "dog", locationId: "doghouse", location: {_id: "doghouse", coordinates: [25.0, 60.0]}}];
 assert.eq(result, expected);
 
-// Test that a $match with $jsonSchema works as expected although ineligable for absorbtion by a
+// Test that a $match with $jsonSchema works as expected although ineligible for absorbtion by a
 // $lookup.
 result = testDB.animals
                  .aggregate([
@@ -163,7 +163,7 @@ expected =
     [{_id: "bull", locationId: "bullpen", location: {_id: "bullpen", coordinates: [-25.0, -60.0]}}];
 assert.eq(result, expected);
 
-// Test that a more complex $match with $jsonSchema works as expected although ineligable for
+// Test that a more complex $match with $jsonSchema works as expected although ineligible for
 // absorbtion by a $lookup.
 result = testDB.animals
                  .aggregate([
@@ -190,7 +190,7 @@ expected =
     [{_id: "bull", locationId: "bullpen", location: {_id: "bullpen", coordinates: [-25.0, -60.0]}}];
 assert.eq(result, expected);
 
-// Test that a $match with $alwaysTrue works as expected although ineligable for absorbtion by a
+// Test that a $match with $alwaysTrue works as expected although ineligible for absorbtion by a
 // $lookup.
 result = testDB.animals
                  .aggregate([
@@ -216,7 +216,7 @@ expected = [
 ];
 assert.eq(result, expected);
 
-// Test that a $match with $alwaysFalse works as expected although ineligable for absorbtion by a
+// Test that a $match with $alwaysFalse works as expected although ineligible for absorbtion by a
 // $lookup.
 result = testDB.animals
                  .aggregate([
@@ -238,7 +238,7 @@ result = testDB.animals
 expected = [];
 assert.eq(result, expected);
 
-// Test that a $match with $expr works as expected although ineligable for absorbtion by a $lookup.
+// Test that a $match with $expr works as expected although ineligible for absorbtion by a $lookup.
 result = testDB.animals
                  .aggregate([
                      {
