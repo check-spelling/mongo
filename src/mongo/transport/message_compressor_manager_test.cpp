@@ -300,7 +300,7 @@ TEST(MessageCompressorManager, SERVER_28008) {
     ASSERT_EQ(compressorId, snappyId);
 
     // Now, force the client to send as zLib. We should round trip as
-    // zlib if we feed the out compresor id parameter from
+    // zlib if we feed the out compressor id parameter from
     // decompressMessage back in to compressMessage.
     toSend = buildMessage();
     toSend = assertOk(clientManager.compressMessage(toSend, &zlibId));
@@ -311,7 +311,7 @@ TEST(MessageCompressorManager, SERVER_28008) {
     ASSERT_EQ(compressorId, zlibId);
 
     // Then, force the client to send as zstd. We should round trip as
-    // zstd if we feed the out compresor id parameter from
+    // zstd if we feed the out compressor id parameter from
     // decompressMessage back in to compressMessage.
     toSend = buildMessage();
     toSend = assertOk(clientManager.compressMessage(toSend, &zstdId));
