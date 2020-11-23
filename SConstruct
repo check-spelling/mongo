@@ -1415,7 +1415,7 @@ if has_option("cache"):
     env.CacheDir(str(env.Dir(cacheDir)))
 
 # Normalize the link model. If it is auto, then for now both developer and release builds
-# use the "static" mode. Somday later, we probably want to make the developer build default
+# use the "static" mode. Someday later, we probably want to make the developer build default
 # dynamic.
 link_model = get_option('link-model')
 if link_model == "auto":
