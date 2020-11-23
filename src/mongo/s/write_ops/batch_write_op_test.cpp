@@ -569,7 +569,7 @@ TEST_F(BatchWriteOpTest, MultiOpTwoShardsEachOrdered) {
     ASSERT_EQUALS(clientResponse.getN(), 4);
 }
 
-// Multi-op (unaordered) targeting test where each op goes to both shards. There should be one set
+// Multi-op (unordered) targeting test where each op goes to both shards. There should be one set
 // of two batches to each shard (containing writes for both ops).
 TEST_F(BatchWriteOpTest, MultiOpTwoShardsEachUnordered) {
     NamespaceString nss("foo.bar");

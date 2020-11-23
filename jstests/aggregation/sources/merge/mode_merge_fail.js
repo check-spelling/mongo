@@ -92,7 +92,7 @@ const pipeline = [mergeStage];
     assertArrayEq({actual: target.find().toArray(), expected: [{_id: 1, b: 1}, {_id: 2, b: 2}]});
 })();
 
-// Test $merge uses unorderded batch update. When a mismatch is detected in a batch, the error
+// Test $merge uses unordered batch update. When a mismatch is detected in a batch, the error
 // should be returned once the batch is processed and no further documents should be processed
 // and updated.
 (function testMergeUnorderedBatchUpdate() {
