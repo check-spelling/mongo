@@ -4035,7 +4035,7 @@ Value ExpressionSetDifference::evaluate(const Document& root, Variables* variabl
 
     for (vector<Value>::const_iterator it = lhsArray.begin(); it != lhsArray.end(); ++it) {
         // rhsSet serves the dual role of filtering out elements that were originally present
-        // in RHS and of eleminating duplicates from LHS
+        // in RHS and of eliminating duplicates from LHS
         if (rhsSet.insert(*it).second) {
             returnVec.push_back(*it);
         }
