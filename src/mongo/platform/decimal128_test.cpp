@@ -63,7 +63,7 @@ TEST(Decimal128Test, TestConstructor) {
         ASSERT_EQ(dv.low64, static_cast<uint64_t>(LOW64));   \
     }
 
-// Veriy that constructor does the same thing whether N is constexpr or not.
+// Verify that constructor does the same thing whether N is constexpr or not.
 // Undefined behavior in the constructor could cause divergence.
 #define TEST_CTOR(N, HIGH64, LOW64)               \
     {                                             \

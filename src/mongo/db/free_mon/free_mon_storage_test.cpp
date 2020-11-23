@@ -155,7 +155,7 @@ TEST_F(FreeMonStorageTest, TestStorage) {
         ASSERT_FALSE(emptyDoc.is_initialized());
     }
 
-    // Verfiy delete of nothing succeeds
+    // Verify delete of nothing succeeds
     FreeMonStorage::deleteState(_opCtx.get());
 }
 
@@ -226,7 +226,7 @@ TEST_F(FreeMonStorageTest, TestSecondary) {
         ASSERT_TRUE(persistedDoc.is_initialized());
     }
 
-    // Verfiy delete of nothing succeeds
+    // Verify delete of nothing succeeds
     FreeMonStorage::deleteState(_opCtx.get());
 }
 
