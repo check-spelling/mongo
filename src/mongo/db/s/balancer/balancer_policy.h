@@ -239,7 +239,7 @@ private:
      * moving when not necessary.
      *
      * Returns true if a migration was suggested, false otherwise. This method is intented to be
-     * called multiple times until all posible migrations for a zone have been selected.
+     * called multiple times until all possible migrations for a zone have been selected.
      */
     static bool _singleZoneBalance(const ShardStatisticsVector& shardStats,
                                    const DistributionStatus& distribution,
