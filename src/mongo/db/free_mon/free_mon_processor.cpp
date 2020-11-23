@@ -796,7 +796,7 @@ void FreeMonProcessor::doAsyncMetricsComplete(
     Client* client,
     const FreeMonMessageWithPayload<FreeMonMessageType::AsyncMetricsComplete>* msg) {
 
-    // If we have disabled the store between the metrics send message and the metrcs complete
+    // If we have disabled the store between the metrics send message and the metrics complete
     // message then it means that we need to stop processing metrics on this instance. We ignore the
     // message entirely including an errors as the disabling of the store takes priority.
     if (_lastReadState == boost::none) {
