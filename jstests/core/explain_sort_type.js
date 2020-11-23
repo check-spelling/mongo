@@ -61,7 +61,7 @@ sortStage = getPlanStage(explain.queryPlanner.winningPlan, "SORT");
 assert.neq(null, sortStage, explain);
 assert.eq("simple", sortStage.type, explain);
 
-// When the blokcing sort is covered, operating on index key data, we use the "default" algorithm.
+// When the blocking sort is covered, operating on index key data, we use the "default" algorithm.
 assert.commandWorked(coll.createIndex({a: 1, b: 1}));
 assert.eq([{a: 1, b: 1}, {a: 2, b: 1}, {a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 2, b: 3}],
           coll.find({a: {$gt: 0}}, {_id: 0, a: 1, b: 1}).sort({b: 1, a: 1}).toArray());
