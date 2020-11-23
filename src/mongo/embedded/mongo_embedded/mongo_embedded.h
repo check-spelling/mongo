@@ -457,7 +457,7 @@ MONGO_EMBEDDED_API mongo_embedded_v1_lib* MONGO_API_CALL mongo_embedded_v1_lib_i
 /**
  * Tears down the state of the library, all databases must be closed before calling this.
  *
- * The Embedded MongoDB Library must be quiesced before the containg process can be safely
+ * The Embedded MongoDB Library must be quiesced before the containing process can be safely
  * terminated. Dataloss is not a risk; however, some database repair routines may be executed at
  * next initialization if the library is not properly quiesced. It is permissible to create and
  * destroy `mongo_embedded_v1_status` objects after the library has been quiesced. The library may

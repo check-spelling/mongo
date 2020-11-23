@@ -266,7 +266,7 @@ bool AuthzManagerExternalStateMongos::hasAnyPrivilegeDocuments(OperationContext*
     if (!ok) {
         // If we were unable to complete the query,
         // it's best to assume that there _are_ privilege documents.  This might happen
-        // if the node contaning the users collection becomes transiently unavailable.
+        // if the node containing the users collection becomes transiently unavailable.
         // See SERVER-12616, for example.
         return true;
     }
