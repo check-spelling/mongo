@@ -153,7 +153,7 @@ private:
 
     // _isInitialized guards the use of heap allocated members like _executor
     // Even if _isInitialized is true, any member function of the variables below must still be
-    // inately thread safe. If _isInitialized is false, there may not even be correct pointers to
+    // innate thread safe. If _isInitialized is false, there may not even be correct pointers to
     // call member functions upon.
     AtomicWord<bool> _isInitialized;
     MirroredReadsServerParameter* _params = nullptr;
