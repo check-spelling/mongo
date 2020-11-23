@@ -522,7 +522,7 @@ TEST(ExpressionTrimTest, ShouldNotTrimUTF8InputWithTrailingExtraContinuationByte
         Value(stringWithExtraContinuationByte));
 }
 
-TEST(ExpressionTrimTest, ShouldRetunNullIfInputIsNullish) {
+TEST(ExpressionTrimTest, ShouldReturnNullIfInputIsNullish) {
     ASSERT_VALUE_EQ(evaluateNamedArgExpression("$trim", Document{{"input", BSONNULL}}),
                     Value(BSONNULL));
     ASSERT_VALUE_EQ(evaluateNamedArgExpression("$trim", Document{{"input", "$missingField"_sd}}),
@@ -549,7 +549,7 @@ TEST(ExpressionTrimTest, ShouldRetunNullIfInputIsNullish) {
                     Value(BSONNULL));
 }
 
-TEST(ExpressionTrimTest, ShouldRetunNullIfCharsIsNullish) {
+TEST(ExpressionTrimTest, ShouldReturnNullIfCharsIsNullish) {
     ASSERT_VALUE_EQ(
         evaluateNamedArgExpression("$trim", Document{{"input", " x "_sd}, {"chars", BSONNULL}}),
         Value(BSONNULL));
