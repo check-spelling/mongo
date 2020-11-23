@@ -925,7 +925,7 @@ var ShardingTest = function(params) {
      * started
      * with its previous parameters.
      *
-     * Warning: Overwrites the old cn/confign member variables.
+     * Warning: Overwrites the old cn/config member variables.
      */
     this.restartConfigServer = function(n) {
         var mongod;

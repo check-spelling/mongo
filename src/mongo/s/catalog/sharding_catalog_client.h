@@ -260,7 +260,7 @@ public:
                                            repl::ReadConcernLevel readConcern) = 0;
 
     /**
-     * Reads global sharding settings from the confing.settings collection. The key parameter is
+     * Reads global sharding settings from the config.settings collection. The key parameter is
      * used as the _id of the respective setting document.
      *
      * NOTE: This method should generally not be used directly and instead the respective

@@ -10,7 +10,7 @@ jsTest.log("Testing \"replication.replSetName\" config file option");
 expectedResult = {
     "parsed": {
         "config": "jstests/libs/config_files/set_replsetname.json",
-        "replication": {"replSetName": "myconfigname"}
+        "replication": {"replSetName": "myconfigame"}
     }
 };
 testGetCmdLineOptsMongod({config: "jstests/libs/config_files/set_replsetname.json"},
