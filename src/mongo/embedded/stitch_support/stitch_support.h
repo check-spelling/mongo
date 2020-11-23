@@ -461,7 +461,7 @@ typedef struct stitch_support_v1_update stitch_support_v1_update;
  *
  * The optional 'arrayFiltersBSON' argument must be a BSON array where each element of the array
  * represents an array filter with the field name storing the placeholder name and the value storing
- * the assoicated match expression. This argument is permitted to be NULL in the case where there
+ * the associated match expression. This argument is permitted to be NULL in the case where there
  * are no array filters. If 'updateBSON' contains a placeholder ($[*]) that does not have a
  * corresponding 'arrayFiltersBSON' entry this function will fail to parse.
  *
