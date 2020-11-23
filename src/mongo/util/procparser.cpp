@@ -115,7 +115,7 @@ StatusWith<std::string> readFileAsString(StringData filename) {
             if (size_read == -1) {
                 int err = errno;
 
-                // Retry if we hit EGAIN or EINTR a few times before giving up
+                // Retry if we hit EAGAIN or EINTR a few times before giving up
                 if (retry < kFileReadRetryCount && (err == EAGAIN || err == EINTR)) {
                     ++retry;
                     continue;
