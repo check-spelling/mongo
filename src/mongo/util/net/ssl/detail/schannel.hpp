@@ -468,7 +468,7 @@ public:
         // Remote side has signaled graceful SSL shutdown
         Shutdown,
 
-        // Remote side has signaled renegtiation
+        // Remote side has signaled renegotiation
         Renegotiate,
     };
 
