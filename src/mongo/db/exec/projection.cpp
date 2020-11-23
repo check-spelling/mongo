@@ -85,7 +85,7 @@ auto attachMetadataToWorkingSetMember(Document&& doc, WorkingSetMember* member) 
  * index key after adding field names according to 'keyPattern'.
  *
  * For example, given:
- *    - the 'keyPatern' of {'a.b': 1, c: 1}
+ *    - the 'keyPattern' of {'a.b': 1, c: 1}
  *    - the 'dehydratedKey' of {'': 'abc', '': 10}
  *
  * The resulting document will be: {a: {b: 'abc'}, c: 10}
