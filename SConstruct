@@ -579,7 +579,7 @@ except ValueError as e:
 
 # Setup the command-line variables
 def variable_shlex_converter(val):
-    # If the argument is something other than a string, propogate
+    # If the argument is something other than a string, propagate
     # it literally.
     if not isinstance(val, str):
         return val

@@ -55,7 +55,7 @@ let recreateUniqueIndexes = function(db, secondary) {
     db.adminCommand("listDatabases").databases.forEach(function(d) {
         if (secondary && !(d.name === "local")) {
             // All replicated indexes will be dropped on the primary, and have that
-            // drop propogated. Secondary nodes need to recreate unique indexes
+            // drop propagated. Secondary nodes need to recreate unique indexes
             // associated with local collections.
             return;
         }

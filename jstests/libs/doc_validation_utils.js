@@ -4,7 +4,7 @@
 
 /**
  * Assert that a command fails with a DocumentValidationFailure, and verify that the
- * 'errInfo' field is propogated as a part of the doc validation failure.
+ * 'errInfo' field is propagated as a part of the doc validation failure.
  */
 function assertDocumentValidationFailure(res, coll) {
     assert.commandFailedWithCode(res, ErrorCodes.DocumentValidationFailure, tojson(res));

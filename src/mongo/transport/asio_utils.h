@@ -79,7 +79,7 @@ inline Status errorCodeToStatus(const std::error_code& ec) {
         return {ErrorCodes::HostUnreachable, "Connection reset by network"};
     }
 
-    // If the ec.category() is a mongoErrorCategory() then this error was propogated from
+    // If the ec.category() is a mongoErrorCategory() then this error was propagated from
     // mongodb code and we should just pass the error cdoe along as-is.
     ErrorCodes::Error errorCode = (ec.category() == mongoErrorCategory())
         ? ErrorCodes::Error(ec.value())

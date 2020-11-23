@@ -1,4 +1,4 @@
-// Test that authorization information gets propogated correctly to secondaries.
+// Test that authorization information gets propagated correctly to secondaries.
 
 var baseName = "jstests_auth_repl";
 var rsName = baseName + "_rs";

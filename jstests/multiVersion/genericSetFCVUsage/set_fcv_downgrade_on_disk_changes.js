@@ -140,7 +140,7 @@ function runReplicaSetTest() {
 
     jsTestLog(
         "Test that setFeatureCompatibilityVersion succeeds with {downgradeOnDiskChanges: true} " +
-        "and propogates to the secondary");
+        "and propagates to the secondary");
     assert.commandWorked(primaryAdminDB.runCommand(
         {setFeatureCompatibilityVersion: lastContinuousFCV, downgradeOnDiskChanges: true}));
     checkFCV(primaryAdminDB, lastContinuousFCV);
