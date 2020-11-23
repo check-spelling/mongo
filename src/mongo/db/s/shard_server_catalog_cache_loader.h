@@ -149,7 +149,7 @@ private:
      *
      *     tasks[i].minQueryVersion == tasks[i-1].maxQueryVersion.
      *
-     * or applying a complete update from the minumum version, where
+     * or applying a complete update from the minimum version, where
      *
      *     minQueryVersion == ChunkVersion::UNSHARDED().
      */
