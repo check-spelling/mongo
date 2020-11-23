@@ -345,7 +345,7 @@ AbstractTagsBasedSplitPolicy::SplitInfo SingleChunkPerTagSplitPolicy::buildSplit
     auto shardId = shardIdsForTag[nextShardIndex % shardIdsForTag.size()];
 
     // Do not generate any split points when using this strategy. We create one chunk on a shard
-    // choosen using round-robin.
+    // chosen using round-robin.
     return {{}, {std::make_pair(shardId, 1)}};
 }
 
