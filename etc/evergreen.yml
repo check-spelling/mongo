@@ -1877,7 +1877,7 @@ functions:
         # build on the waterfall, then we don't need the --release
         # flag. Otherwise, this is potentially a build that "leaves
         # the building", so we do want that flag. The non --release
-        # case should auto enale the faster decider when
+        # case should auto enable the faster decider when
         # applicable. Furthermore, for the non --release cases we can
         # accelerate the build slightly for situations where we invoke
         # SCons multiple times on the same machine by allowing SCons
