@@ -624,7 +624,7 @@ public:
      * to ensure that we never process more than one stepdown request at a time.
      * Returns OK if it is safe to continue with the stepdown attempt, or returns:
      * - NotWritablePrimary if this node is not a leader.
-     * - ConflictingOperationInProgess if this node is already processing a stepdown request of any
+     * - ConflictingOperationInProgress if this node is already processing a stepdown request of any
      * kind.
      * On an OK return status also returns a function object that can be called to abort the
      * pending stepdown attempt and return this node to normal (writable) primary state.

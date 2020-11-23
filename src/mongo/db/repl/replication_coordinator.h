@@ -491,7 +491,7 @@ public:
      * Sets this node into a specific follower mode.
      *
      * Returns OK if the follower mode was successfully set.  Returns NotSecondary if the
-     * node is a leader when setFollowerMode is called and ElectionInProgess if the node is in the
+     * node is a leader when setFollowerMode is called and ElectionInProgress if the node is in the
      * process of trying to elect itself primary.
      *
      * Follower modes are RS_STARTUP2 (initial sync), RS_SECONDARY, RS_ROLLBACK and
