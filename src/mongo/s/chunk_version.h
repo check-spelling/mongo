@@ -45,7 +45,7 @@ namespace mongo {
  * 3. (n, 0), n > 0 - invalid configuration.
  * 4. (n, m), n > 0, m > 0 - normal sharded collection version.
  *
- * TODO: This is a "manual type" but, even so, still needs to comform to what's
+ * TODO: This is a "manual type" but, even so, still needs to conform to what's
  * expected from types.
  */
 struct ChunkVersion {
