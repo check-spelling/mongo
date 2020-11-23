@@ -167,7 +167,7 @@ AdvanceCommitPoint ==
         /\ state[leader] = Leader
         /\ acknowledgers \subseteq Agree(leader, Len(log[leader]))
         /\ acknowledgers \in Quorum(leader)
-        \* If we comment out the following line, a replicated log entry from old primary will voilate the safety.
+        \* If we comment out the following line, a replicated log entry from old primary will violate the safety.
         \* [ P (2), S (), S ()]
         \* [ S (2), S (), P (3)]
         \* [ S (2), S (2), P (3)] !!! the log from term 2 shouldn't be considered as committed.
