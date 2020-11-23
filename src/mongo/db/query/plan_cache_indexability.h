@@ -136,7 +136,7 @@ private:
      * A sparse index discriminator distinguishes equality matches to null from other expression
      * types.  For example, this allows the predicate {a: 1} to be considered of a different
      * shape from the predicate {a: null}, if there is a sparse index defined with "a" as an
-     * element of the key pattern.  The former predicate is compatibile with this index, but the
+     * element of the key pattern.  The former predicate is compatible with this index, but the
      * latter is not compatible.
      */
     void processSparseIndex(const std::string& indexName, const BSONObj& keyPattern);
