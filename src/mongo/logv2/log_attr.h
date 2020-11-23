@@ -46,7 +46,7 @@ public:
     ComposedAttr(Ts&&... args) : _values(std::move(args)...) {}
 
     /**
-     * Creates a flattend tuple of loggable named attributes
+     * Creates a flattened tuple of loggable named attributes
      */
     auto attributes() const;
 
