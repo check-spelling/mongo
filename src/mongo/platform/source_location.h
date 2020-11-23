@@ -123,7 +123,7 @@ private:
  * - makes a best effort with various macros and local static constants
  *
  * Since __FUNCSIG__ and __PRETTY_FUNCTION__ aren't defined outside of functions, there is also
- * MONGO_SOURCE_LOCATION_NO_FUNC() for use with a default member initializatizer or constant
+ * MONGO_SOURCE_LOCATION_NO_FUNC() for use with a default member initializer or constant
  * initialization.
  */
 #if defined(_MSC_VER)  // windows
