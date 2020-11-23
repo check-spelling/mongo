@@ -55,7 +55,7 @@ auto SessionsCollectionRS::_makePrimaryConnection(OperationContext* opCtx) {
     // Find the primary
     if (stdx::lock_guard lk(_mutex); !_targeter) {
         // There is an assumption here that for the lifetime of a given process, the
-        // ReplicationCoordiation will only return configs for a single replica set
+        // ReplicationCoordination will only return configs for a single replica set
         auto coord = mongo::repl::ReplicationCoordinator::get(opCtx);
         auto config = coord->getConfig();
         uassert(ErrorCodes::NotYetInitialized,
