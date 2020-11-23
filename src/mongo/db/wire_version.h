@@ -45,7 +45,7 @@ namespace mongo {
  *
  * We use the wire version to determine if two agents (a driver, a mongos, or a mongod) can
  * interact. Each agent carries two versions, a 'max' and a 'min' one. If the two agents
- * are on the same 'max' number, they stricly speak the same wire protocol and it is safe
+ * are on the same 'max' number, they strictly speak the same wire protocol and it is safe
  * to allow them to communicate. If two agents' ranges do not intersect, they should not be
  * allowed to communicate.
  *

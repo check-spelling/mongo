@@ -43,7 +43,7 @@ namespace {
 
 // For legacy purposes, we must handle empty fieldnames, which FieldRef clearly
 // prohibits. It is preferrable to have FieldRef keep that constraint and relax it here
-// -- stricly in update code. The rationale is that, if we want to ban data with no
+// -- strictly in update code. The rationale is that, if we want to ban data with no
 // field names, we must allow that data to be updated.
 StringData safeFirstPart(const FieldRef* fieldRef) {
     if (fieldRef->numParts() == 0) {
