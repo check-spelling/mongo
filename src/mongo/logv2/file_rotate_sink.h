@@ -38,7 +38,7 @@
 
 namespace mongo::logv2 {
 // boost::log backend sink to provide MongoDB style file rotation.
-// Uses custom stream type to open log files with shared access on Windows, somthing the built-in
+// Uses custom stream type to open log files with shared access on Windows, something the built-in
 // boost file rotation sink does not do.
 class FileRotateSink : public boost::log::sinks::text_ostream_backend {
 public:
