@@ -735,7 +735,7 @@ IndexBoundsChecker::Location IndexBoundsChecker::findIntervalForField(
     // Key behind all intervals: [BEHIND, ..., BEHIND]
     // Key ahead of all intervals: [AHEAD, ..., AHEAD]
     // Key within one interval: [AHEAD, ..., WITHIN, BEHIND, ...]
-    // Key not in any inteval: [AHEAD, ..., AHEAD, BEHIND, ...]
+    // Key not in any interval: [AHEAD, ..., AHEAD, BEHIND, ...]
 
     // Find left-most BEHIND/WITHIN interval.
     vector<Interval>::const_iterator i = std::lower_bound(oil.intervals.begin(),
