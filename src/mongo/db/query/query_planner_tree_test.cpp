@@ -2771,7 +2771,7 @@ TEST_F(QueryPlannerTest, LockstepOrEnumerationDoesPrioritizeLockstepIterationMix
         "]}, node: {ixscan: {pattern: {a: 1, e: 1}}}}}}");
 }
 
-TEST_F(QueryPlannerTest, LockstepOrEnumerationApplysToEachOrInTree) {
+TEST_F(QueryPlannerTest, LockstepOrEnumerationAppliesToEachOrInTree) {
     params.options =
         QueryPlannerParams::NO_TABLE_SCAN | QueryPlannerParams::ENUMERATE_OR_CHILDREN_LOCKSTEP;
     ASSERT_EQ(internalQueryEnumerationMaxOrSolutions.load(), 10ul);
