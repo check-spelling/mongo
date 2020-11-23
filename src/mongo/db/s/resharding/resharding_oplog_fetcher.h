@@ -64,7 +64,7 @@ public:
      * In the first two circumstances, the task will return. In the last circumstance, the task will
      * be rescheduled in a way that resumes where it had left off from.
      */
-    void schedule(executor::TaskExecutor* exector);
+    void schedule(executor::TaskExecutor* executor);
 
     /**
      * Given a connection, fetches and copies oplog entries until reaching an error, or coming
