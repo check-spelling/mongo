@@ -115,7 +115,7 @@ private:
         // Initial state. The server must be under exclusive lock when this state is entered. No
         // metadata is available yet and it is not known whether there is any min optime metadata,
         // which needs to be recovered. From this state, the server may enter INITIALIZING, if a
-        // recovey document is found or stay in it until initialize has been called.
+        // recovery document is found or stay in it until initialize has been called.
         kNew,
 
         // Sharding state is fully usable.
