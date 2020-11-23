@@ -78,7 +78,7 @@ assert.eq(cursor.firstBatch.length, 0);
 assert.commandWorked(primaryColl.insert({_id: 2}, {writeConcern: {w: 1}}));
 assertNextBatchIsEmpty(cursor);
 
-// Restart data replicaiton and wait until the new write becomes visible.
+// Restart data replication and wait until the new write becomes visible.
 restartReplicationOnSecondaries(rst);
 rst.awaitLastOpCommitted();
 
