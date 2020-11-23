@@ -237,7 +237,7 @@ public:
     class ValueHandle {
     public:
         // The three constructors below are present in order to offset the fact that the cache
-        // doesn't support pinning items. Their only usage must be in the authorization mananager
+        // doesn't support pinning items. Their only usage must be in the authorization manager
         // for the internal authentication user.
         explicit ValueHandle(Value&& value)
             : _value(std::make_shared<StoredValue>(
