@@ -63,7 +63,7 @@ assert.commandFailedWithCode(testDB.coll.update({_id: 1}, {$set: {x: 2}}, {upser
 assert.commandWorked(unshardedColl.update({_id: "missing"}, {$set: {a: 1}}, {multi: false}));
 assert.commandWorked(unshardedColl.update({_id: 1}, {$set: {a: 2}}, {multi: false}));
 
-// Shouldn't incement the metrics when query had invalid operator.
+// Shouldn't increment the metrics when query had invalid operator.
 assert.commandFailedWithCode(
     testDB.coll.update({_id: 1, $invalidOperator: 1}, {$set: {a: 2}}, {multi: false}),
     ErrorCodes.BadValue);

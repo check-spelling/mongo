@@ -429,7 +429,7 @@ TEST(MatchesExpressionParserTest, InternalExprEqComparisonToUndefinedDoesNotPars
 
 TEST(MatchExpressionParserTest, SampleRateDesugarsToExprAndExpressionRandom) {
     boost::intrusive_ptr<ExpressionContextForTest> expCtx(new ExpressionContextForTest());
-    // Test parsing of argument in incements of 0.001.
+    // Test parsing of argument in increments of 0.001.
     for (int i = 0; i <= 1000; i++) {
         BSONObj query = BSON("$sampleRate" << i / 1000.0);
         StatusWithMatchExpression result = MatchExpressionParser::parse(query, expCtx);

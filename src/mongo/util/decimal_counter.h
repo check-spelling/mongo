@@ -85,7 +85,7 @@ public:
     }
 
     /**
-     *  Post-inrement version of operator++. Typically slower than pre-increment due to the need
+     *  Post-increment version of operator++. Typically slower than pre-increment due to the need
      *  to return the pre-image by value.
      */
     DecimalCounter<T> operator++(int) {
