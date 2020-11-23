@@ -31,7 +31,7 @@ let doCreateIndexesTest = function(explicitCollectionCreate, multikeyIndex) {
     assert.eq(sessionColl.getIndexes().length, 2);
     sessionColl.drop({writeConcern: {w: "majority"}});
 
-    jsTest.log("Testing multiple createIndexess in a transaction");
+    jsTest.log("Testing multiple createIndexes in a transaction");
     withTxnAndAutoRetryOnMongos(session, function() {
         createIndexAndCRUDInTxn(sessionDB, collName, explicitCollectionCreate, multikeyIndex);
         createIndexAndCRUDInTxn(sessionDB, secondCollName, explicitCollectionCreate, multikeyIndex);
