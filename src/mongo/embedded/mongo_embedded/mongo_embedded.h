@@ -448,7 +448,7 @@ struct mongo_embedded_v1_init_params {
  *
  * @note This function exhibits undefined behavior unless its preconditions are met.
  *
- * @note This function may return diagnosic errors for violations of its preconditions, but this
+ * @note This function may return diagnostic errors for violations of its preconditions, but this
  * behavior is not guaranteed.
  */
 MONGO_EMBEDDED_API mongo_embedded_v1_lib* MONGO_API_CALL mongo_embedded_v1_lib_init(
@@ -494,7 +494,7 @@ MONGO_EMBEDDED_API mongo_embedded_v1_lib* MONGO_API_CALL mongo_embedded_v1_lib_i
  * non-`mongo_embedded_v1_status` operation.
  *
  * @note This function exhibits undefined behavior unless its preconditions are met.  @note This
- * function may return diagnosic errors for violations of its preconditions, but this behavior is
+ * function may return diagnostic errors for violations of its preconditions, but this behavior is
  * not guaranteed.
  */
 MONGO_EMBEDDED_API int MONGO_API_CALL mongo_embedded_v1_lib_fini(mongo_embedded_v1_lib* lib,
@@ -551,7 +551,7 @@ typedef struct mongo_embedded_v1_instance mongo_embedded_v1_instance;
  *
  * @note This function exhibits undefined behavior unless its preconditions are met.
  *
- * @note This function may return diagnosic errors for violations of its preconditions, but this
+ * @note This function may return diagnostic errors for violations of its preconditions, but this
  * behavior is not guaranteed.
  */
 MONGO_EMBEDDED_API mongo_embedded_v1_instance* MONGO_API_CALL mongo_embedded_v1_instance_create(
@@ -594,7 +594,7 @@ MONGO_EMBEDDED_API mongo_embedded_v1_instance* MONGO_API_CALL mongo_embedded_v1_
  *
  * @note This function exhibits undefined behavior unless its preconditions are met.
  *
- * @note This function may return diagnosic errors for violations of its precondition, but this
+ * @note This function may return diagnostic errors for violations of its precondition, but this
  * behavior is not guaranteed.
  */
 MONGO_EMBEDDED_API int MONGO_API_CALL mongo_embedded_v1_instance_destroy(
@@ -669,7 +669,7 @@ MONGO_EMBEDDED_API mongo_embedded_v1_client* MONGO_API_CALL mongo_embedded_v1_cl
  *
  * @note This function exhibits undefined behavior unless its preconditions are met.
  *
- * @note This function may return diagnosic errors for violations of its precondition, but this
+ * @note This function may return diagnostic errors for violations of its precondition, but this
  * behavior is not guaranteed.
  */
 MONGO_EMBEDDED_API int MONGO_API_CALL mongo_embedded_v1_client_destroy(
