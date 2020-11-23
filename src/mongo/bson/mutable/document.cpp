@@ -1260,7 +1260,7 @@ Status Element::remove() {
     if (thisRep.sibling.right != kInvalidRepIdx)
         impl.getElementRep(thisRep.sibling.right).sibling.left = thisRep.sibling.left;
 
-    // Similarly, if our left sibling is not the beginning of the obejct, then set its
+    // Similarly, if our left sibling is not the beginning of the object, then set its
     // right sibling to be our right sibling.
     if (thisRep.sibling.left != kInvalidRepIdx) {
         ElementRep& leftRep = impl.getElementRep(thisRep.sibling.left);

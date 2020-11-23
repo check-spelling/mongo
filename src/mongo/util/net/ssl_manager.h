@@ -315,7 +315,7 @@ public:
 
     /**
      * No-op function for SChannel and SecureTransport. Attaches stapled OCSP response to the
-     * SSL_CTX obect.
+     * SSL_CTX object.
      */
     virtual Status stapleOCSPResponse(SSLContextType context, bool asyncOCSPStaple) = 0;
 

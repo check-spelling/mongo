@@ -138,7 +138,7 @@ StatusWith<bool> completeSpeculativeAuth(DBClientConnection* conn,
     if (specAuth.isEmpty()) {
         return {ErrorCodes::BadValue,
                 str::stream() << "isMaster." << auth::kSpeculativeAuthenticate
-                              << " reply must be a non-empty obejct"};
+                              << " reply must be a non-empty object"};
     }
 
     if (speculativeAuthType == auth::SpeculativeAuthType::kAuthenticate) {
