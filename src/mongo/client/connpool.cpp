@@ -133,7 +133,7 @@ auto PoolForHost::done(DBConnectionPool* pool, DBClientBase* c) -> ConnectionHea
               "Ending idle connection to {connString} (with timeout of {socketTimeout}) "
               "because its pool meets constraints; "
               "{numOpenConns} connections to that host remain open",
-              "Ending idle connection to a host because its pool mees constraints",
+              "Ending idle connection to a host because its pool meets constraints",
               "connString"_attr = _hostName,
               "socketTimeout"_attr = makeDuration(_socketTimeoutSecs),
               "numOpenConns"_attr = openConnections());
