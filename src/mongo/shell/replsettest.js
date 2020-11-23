@@ -1105,7 +1105,7 @@ var ReplSetTest = function(opts) {
     };
 
     /**
-     * Calls stop() on the node identifed by nodeId and removes it from the list of nodes managed by
+     * Calls stop() on the node identified by nodeId and removes it from the list of nodes managed by
      * ReplSetTest.
      */
     this.remove = function(nodeId) {
