@@ -1222,8 +1222,8 @@ protected:
 
     /**
      * Check that the solution will not be cached. The planner will store
-     * cache data inside non-cachable solutions, but will not do so for
-     * non-cachable solutions. Therefore, we just have to check that
+     * cache data inside non-cacheable solutions, but will not do so for
+     * non-cacheable solutions. Therefore, we just have to check that
      * cache data is NULL.
      */
     void assertNotCached(const string& solnJson) {

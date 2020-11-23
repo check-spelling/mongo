@@ -878,7 +878,7 @@ StatusWith<std::vector<std::unique_ptr<QuerySolution>>> QueryPlanner::plan(
             if (!statusWithCacheData.isOK()) {
                 LOGV2_DEBUG(20977,
                             5,
-                            "Query is not cachable",
+                            "Query is not cacheable",
                             "reason"_attr = redact(statusWithCacheData.getStatus().reason()));
             } else {
                 cacheData = std::move(statusWithCacheData.getValue());
