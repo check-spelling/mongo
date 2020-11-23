@@ -1447,7 +1447,7 @@ unknowingly read past these holes and miss the data therein.
 | -------- | ------------------ | -------------------------------------------- |
 | Writer A | open transaction   | assigned commit timestamp T5                 |
 | Writer B | open transaction   | assigned commit timestamp T6                 |
-| Writer B | commit transation  | T1,T2,T3,T4,T6 are visible to new readers    |
+| Writer B | commit transaction  | T1,T2,T3,T4,T6 are visible to new readers    |
 | Reader X | open transaction   | gets a snapshot of T1-T4 and T6              |
 | Writer A | commit transaction | T1,T2,T3,T4,T5,T6 are visible to new readers |
 | Reader X | close transaction  | returns T1,T2,T3,T4,T6, missing T5           |

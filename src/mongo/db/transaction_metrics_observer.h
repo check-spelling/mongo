@@ -86,7 +86,7 @@ public:
                  Top* top);
 
     /**
-     * Updates relevant metrics when a transcation is prepared.
+     * Updates relevant metrics when a transaction is prepared.
      */
     void onPrepare(ServerTransactionsMetrics* serverTransactionsMetrics, TickSource::Tick curTick);
 

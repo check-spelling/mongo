@@ -73,7 +73,7 @@ private:
     std::vector<OplogEntry> _flush(const OplogEntry& entry);
 
     /**
-     * Converts stored transaction infos that has a matching transcation id with the given
+     * Converts stored transaction infos that has a matching transaction id with the given
      * query predicate. Can return an empty vector if there is nothing to flush.
      */
     std::vector<OplogEntry> _flushForQueryPredicate(const BSONObj& queryPredicate);

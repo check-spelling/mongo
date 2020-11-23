@@ -54,7 +54,7 @@ function testSuccessOnTxnCommit(cmdDBName, ddlCmd, currentOpFilter) {
     // Setup.
     runSetup();
 
-    jsTestLog("About to start tranasction");
+    jsTestLog("About to start transaction");
     session.startTransaction();
     assert.commandWorked(sessionColl.insert({a: 5, b: 6}));
     jsTestLog("Transaction started, running ddl operation " + ddlCmd);

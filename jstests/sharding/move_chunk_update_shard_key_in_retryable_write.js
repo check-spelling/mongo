@@ -207,7 +207,7 @@ test(
         assert.eq(testColl.find({x: shardKeyValueOnShard1}).itcount(), 1);
 
         // Move the chunk that contained the original document to shard 2,
-        // which does not know about the tranasaction.
+        // which does not know about the transaction.
         assert.commandWorked(st.s.adminCommand(
             {moveChunk: ns, find: {x: shardKeyValueOnShard0}, to: st.shard2.shardName}));
 

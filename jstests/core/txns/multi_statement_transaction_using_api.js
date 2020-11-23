@@ -78,7 +78,7 @@ withTxnAndAutoRetryOnMongos(session, () => {
     assert(!cursor.hasNext());
 }, {readConcern: {level: "snapshot"}, writeConcern: {w: "majority"}});
 
-// Make sure the correct documents exist after committing the transaciton.
+// Make sure the correct documents exist after committing the transaction.
 assert.eq({_id: "insert-1", a: 1}, sessionColl.findOne({_id: "insert-1"}));
 assert.eq({_id: "insert-3", a: 2}, sessionColl.findOne({_id: "insert-3"}));
 assert.eq(null, sessionColl.findOne({_id: "insert-2"}));

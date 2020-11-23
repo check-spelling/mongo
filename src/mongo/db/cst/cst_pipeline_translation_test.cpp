@@ -918,7 +918,7 @@ TEST(CstPipelineTranslationTest, AbsConstantTranslation) {
                                            expr->serialize(false)));
 }
 
-TEST(CstPipelineTranslationTest, AbsVariableTransation) {
+TEST(CstPipelineTranslationTest, AbsVariableTransaction) {
     const auto cst = CNode{CNode::ObjectChildren{
         {KeyFieldname::abs, CNode{AggregationPath{makeVector<std::string>("foo")}}}}};
     auto expCtx = getExpCtx();
