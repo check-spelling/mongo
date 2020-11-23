@@ -535,7 +535,7 @@ testGetMore({
     expectedResult: [{x: 20}, {x: 30}]
 });
 // Test getMore on a view with an optimized away pipeline. Since views cannot be created when
-// imlicit sharded collection mode is on, this test will be run only on a non-sharded
+// implicit sharded collection mode is on, this test will be run only on a non-sharded
 // collection.
 let view;
 if (!FixtureHelpers.isSharded(coll)) {
