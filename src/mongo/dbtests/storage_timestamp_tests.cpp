@@ -299,7 +299,7 @@ public:
                                        _opCtx, coll->ns(), coll->uuid(), indexSpec, false);
                                },
                                MultiIndexBlock::kNoopOnCommitFn));
-            // The timestamping repsponsibility is placed on the caller rather than the
+            // The timestamping responsibility is placed on the caller rather than the
             // MultiIndexBlock.
             wuow.commit();
         }
