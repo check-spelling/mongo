@@ -574,10 +574,10 @@ TEST(Parsing, PositionalMultiple) {
     ASSERT_OK(environment.get(moe::Key("positional"), &value));
     std::vector<std::string> positional;
     ASSERT_OK(value.get(&positional));
-    std::vector<std::string>::iterator positionalit = positional.begin();
-    ASSERT_EQUALS(*positionalit, "positional1");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional2");
+    std::vector<std::string>::iterator positionality = positional.begin();
+    ASSERT_EQUALS(*positionality, "positional1");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional2");
 }
 
 TEST(Parsing, PositionalMultipleExtra) {
@@ -622,16 +622,16 @@ TEST(Parsing, PositionalMultipleUnlimited) {
     ASSERT_OK(environment.get(moe::Key("positional"), &value));
     std::vector<std::string> positional;
     ASSERT_OK(value.get(&positional));
-    std::vector<std::string>::iterator positionalit = positional.begin();
-    ASSERT_EQUALS(*positionalit, "positional1");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional2");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional3");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional4");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional5");
+    std::vector<std::string>::iterator positionality = positional.begin();
+    ASSERT_EQUALS(*positionality, "positional1");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional2");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional3");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional4");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional5");
 }
 
 TEST(Parsing, PositionalMultipleAndFlag) {
@@ -657,10 +657,10 @@ TEST(Parsing, PositionalMultipleAndFlag) {
     ASSERT_OK(environment.get(moe::Key("positional"), &value));
     std::vector<std::string> positional;
     ASSERT_OK(value.get(&positional));
-    std::vector<std::string>::iterator positionalit = positional.begin();
-    ASSERT_EQUALS(*positionalit, "positional1");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional2");
+    std::vector<std::string>::iterator positionality = positional.begin();
+    ASSERT_EQUALS(*positionality, "positional1");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional2");
     ASSERT_OK(environment.get(moe::Key("port"), &value));
     int port;
     ASSERT_OK(value.get(&port));
@@ -2834,10 +2834,10 @@ TEST(ChainingInterface, PositionalMultiple) {
     ASSERT_OK(environment.get(moe::Key("positional"), &value));
     std::vector<std::string> positional;
     ASSERT_OK(value.get(&positional));
-    std::vector<std::string>::iterator positionalit = positional.begin();
-    ASSERT_EQUALS(*positionalit, "positional1");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional2");
+    std::vector<std::string>::iterator positionality = positional.begin();
+    ASSERT_EQUALS(*positionality, "positional1");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional2");
 }
 
 TEST(ChainingInterface, PositionalMultipleExtra) {
@@ -2882,16 +2882,16 @@ TEST(ChainingInterface, PositionalMultipleUnlimited) {
     ASSERT_OK(environment.get(moe::Key("positional"), &value));
     std::vector<std::string> positional;
     ASSERT_OK(value.get(&positional));
-    std::vector<std::string>::iterator positionalit = positional.begin();
-    ASSERT_EQUALS(*positionalit, "positional1");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional2");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional3");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional4");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional5");
+    std::vector<std::string>::iterator positionality = positional.begin();
+    ASSERT_EQUALS(*positionality, "positional1");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional2");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional3");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional4");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional5");
 }
 
 TEST(ChainingInterface, PositionalMultipleAndFlag) {
@@ -2917,10 +2917,10 @@ TEST(ChainingInterface, PositionalMultipleAndFlag) {
     ASSERT_OK(environment.get(moe::Key("positional"), &value));
     std::vector<std::string> positional;
     ASSERT_OK(value.get(&positional));
-    std::vector<std::string>::iterator positionalit = positional.begin();
-    ASSERT_EQUALS(*positionalit, "positional1");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional2");
+    std::vector<std::string>::iterator positionality = positional.begin();
+    ASSERT_EQUALS(*positionality, "positional1");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional2");
     ASSERT_OK(environment.get(moe::Key("port"), &value));
     int port;
     ASSERT_OK(value.get(&port));
@@ -2961,7 +2961,7 @@ TEST(ChainingInterface, PositionalSingleMultipleUnlimitedAndFlag) {
     argv.push_back("positional9");
 
     moe::Value value;
-    std::vector<std::string>::iterator positionalit;
+    std::vector<std::string>::iterator positionality;
 
     ASSERT_OK(parser.run(testOpts, argv, &environment));
     ASSERT_OK(environment.get(moe::Key("positional1"), &value));
@@ -2972,26 +2972,26 @@ TEST(ChainingInterface, PositionalSingleMultipleUnlimitedAndFlag) {
     ASSERT_OK(environment.get(moe::Key("positional2"), &value));
     std::vector<std::string> positionalMultiple;
     ASSERT_OK(value.get(&positionalMultiple));
-    positionalit = positionalMultiple.begin();
-    ASSERT_EQUALS(*positionalit, "positional2");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional3");
+    positionality = positionalMultiple.begin();
+    ASSERT_EQUALS(*positionality, "positional2");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional3");
 
     ASSERT_OK(environment.get(moe::Key("positional3"), &value));
     std::vector<std::string> positionalUnlimited;
     ASSERT_OK(value.get(&positionalUnlimited));
-    positionalit = positionalUnlimited.begin();
-    ASSERT_EQUALS(*positionalit, "positional4");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional5");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional6");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional7");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional8");
-    positionalit++;
-    ASSERT_EQUALS(*positionalit, "positional9");
+    positionality = positionalUnlimited.begin();
+    ASSERT_EQUALS(*positionality, "positional4");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional5");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional6");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional7");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional8");
+    positionality++;
+    ASSERT_EQUALS(*positionality, "positional9");
 
     ASSERT_OK(environment.get(moe::Key("port"), &value));
     int port;
