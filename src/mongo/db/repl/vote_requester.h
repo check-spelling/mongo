@@ -109,7 +109,7 @@ public:
      * Begins the process of sending replSetRequestVotes commands to all non-DOWN nodes
      * in currentConfig, in attempt to receive sufficient votes to win the election.
      * If primaryIndex is not -1, then it means that the primary's vote is required
-     * to win the elction.
+     * to win the election.
      *
      * evh can be used to schedule a callback when the process is complete.
      * If this function returns Status::OK(), evh is then guaranteed to be signaled.
