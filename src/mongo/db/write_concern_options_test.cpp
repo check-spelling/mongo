@@ -64,7 +64,7 @@ TEST(WriteConcernOptionsTest, ParseReturnsFailedToParseIfBothJAndFSyncAreTrue) {
     ASSERT_EQUALS("fsync and j options cannot be used together", status.reason());
 }
 
-TEST(WriteConcernOptionsTest, ParseSetsSyncModeToJournelIfJIsTrue) {
+TEST(WriteConcernOptionsTest, ParseSetsSyncModeToJournalIfJIsTrue) {
     auto sw = WriteConcernOptions::parse(BSON("j" << true));
     ASSERT_OK(sw.getStatus());
     WriteConcernOptions options = sw.getValue();
