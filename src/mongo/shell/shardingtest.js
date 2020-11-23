@@ -1810,7 +1810,7 @@ var ShardingTest = function(params) {
             });
         }
     } catch (e) {
-        // Clean up the running procceses on failure
+        // Clean up the running processes on failure
         print("Failed to add shards, stopping cluster.");
         this.stop();
         throw e;

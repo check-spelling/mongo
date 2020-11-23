@@ -76,11 +76,11 @@ class RunCommand(object):
                                              **self._preexec_kargs)
 
     def send_to_process(self, string=None):
-        """Send 'string' to a running processs and return stdout, stderr."""
+        """Send 'string' to a running processes and return stdout, stderr."""
         return self._process.communicate(string)
 
     def wait_for_process(self):
-        """Wait for a running processs to end and return stdout, stderr."""
+        """Wait for a running processes to end and return stdout, stderr."""
         return self.send_to_process()
 
     def stop_process(self):
