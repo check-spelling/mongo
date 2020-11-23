@@ -136,7 +136,7 @@ TEST(CstProjectTest, ParsesCompoundProjection) {
     }
 }
 
-TEST(CstProjectTest, ParsesPositonalProjection) {
+TEST(CstProjectTest, ParsesPositionalProjection) {
     {
         CNode output;
         auto input = fromjson("{project: {\"a.$\": 1}}");
