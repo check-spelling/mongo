@@ -32,7 +32,7 @@ const res = assert.commandWorked(testDB.runCommand({
                                   {
                                     $let: {
                                         // Variable shadowing here is intentional. It confirms that
-                                        // the localy defined variables are used over ones defined
+                                        // the locally defined variables are used over ones defined
                                         // in the outer scope.
                                         vars: {two: 200, three: 300},
                                         in : {$add: ["$$two", "$$three"]}
