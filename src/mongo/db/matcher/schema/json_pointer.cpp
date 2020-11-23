@@ -37,7 +37,7 @@
 namespace {
 
 
-//  Check for unespaced '~' characters, then replace all occurrences of '~1' with '/', and '~0'
+//  Check for unescaped '~' characters, then replace all occurrences of '~1' with '/', and '~0'
 //  with '~'.
 std::string replaceEscapeChars(std::string str) {
     size_t tildaLoc = 0;
