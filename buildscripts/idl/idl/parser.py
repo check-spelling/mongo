@@ -29,7 +29,7 @@
 IDL Parser.
 
 Converts a YAML document to an idl.syntax tree.
-Only validates the document is syntatically correct, not semantically.
+Only validates the document is syntactically correct, not semantically.
 """
 
 from abc import ABCMeta, abstractmethod
