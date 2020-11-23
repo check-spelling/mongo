@@ -391,7 +391,7 @@ class RemoteOperationCopyFrom(RemoteOperationsTestCase):
             l_temp_path = os.path.join(self.temp_local_dir, basefile_name)
             self.assertTrue(os.path.isfile(l_temp_path))
 
-        # Copy files from remote with wilcard
+        # Copy files from remote with wildcard
         num_files = 3
         r_temp_files = []
         for i in range(num_files):

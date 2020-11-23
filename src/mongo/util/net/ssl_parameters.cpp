@@ -201,7 +201,7 @@ void TLSCATrustsSetParameter::append(OperationContext*,
  * containing roles which it has not been authorized to grant,
  * then the connection will be refused.
  *
- * Wilcard roles may be defined by omitting the role and/or db portions:
+ * Wildcard roles may be defined by omitting the role and/or db portions:
  *
  *   { role: "", db: "foo" }       // May grant any role on the 'foo' DB.
  *   { role: "read", db: "" }      // May grant 'read' role on any DB.
