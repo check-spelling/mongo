@@ -50,7 +50,7 @@ env.CppUnitTest(
     UNITTEST_HAS_CUSTOM_MAINLINE=True,
 )
 
-# The tests for `stdx::set_terminate` need to run outside of the mongo unittest harneses.
+# The tests for `stdx::set_terminate` need to run outside of the mongo unittest harness.
 # The tests require altering the global `set_terminate` handler, which our unittest framework
 # doesn't expect to have happen.  Further, the tests have to return successfully from a
 # terminate condition which interacts poorly with the unittest framework.
