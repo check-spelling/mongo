@@ -193,7 +193,7 @@ protected:
         LOGV2_DEBUG(457992,
                     1,
                     "Advancing time",
-                    "elpasedStart"_attr = elapsed(),
+                    "elapsedStart"_attr = elapsed(),
                     "elapsedEnd"_attr = (elapsed() + d));
         _net->advanceTime(_net->now() + d);
         LOGV2_DEBUG(457993, 1, "Advanced time", "timeElapsed"_attr = elapsed());

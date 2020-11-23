@@ -282,7 +282,7 @@ public:
     }
 
     /**
-     * Get the total number of microseconds ellapsed during all observed events.
+     * Get the total number of microseconds elapsed during all observed events.
      */
     unsigned long long getTotalTimeMicros() const {
         return _totalTimeMicros;
