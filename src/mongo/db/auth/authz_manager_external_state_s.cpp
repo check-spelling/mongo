@@ -61,7 +61,7 @@ std::string rolesFieldName(PrivilegeFormat showPrivileges) {
 }
 
 /**
- * Attches a string representation of a PrivilegeFormat to the provided BSONObjBuilder.
+ * Attaches a string representation of a PrivilegeFormat to the provided BSONObjBuilder.
  */
 void addShowToBuilder(BSONObjBuilder* builder,
                       PrivilegeFormat showPrivileges,
