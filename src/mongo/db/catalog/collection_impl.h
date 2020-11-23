@@ -420,7 +420,7 @@ private:
                                    RecordData data) final;
 
         // As we're holding a MODE_X lock when cloning Collections we may have up to two current
-        // Collection instances at the same time if there's a pending clone that is not commited to
+        // Collection instances at the same time if there's a pending clone that is not committed to
         // the catalog yet. We need to keep track of the previous instance in case of a rollback.
         // When we delete from capped, operate on the latest collection.
         CollectionImpl* _collectionLatest = nullptr;

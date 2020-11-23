@@ -103,7 +103,7 @@ function setFailPointAndSendUpdateToShardKeyInParallelShell(
     thread.start();
     assert.soon(() => opStarted("update"));
     // Once we commit the transaction, the non-transaction update should finish, but it should
-    // not actually modify any documents since the transaction commited first.
+    // not actually modify any documents since the transaction committed first.
     assert.commandWorked(session.commitTransaction_forTesting());
     thread.join();
     assert.commandWorked(thread.returnData());

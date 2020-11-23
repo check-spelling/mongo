@@ -789,7 +789,7 @@ function assertCannotUpdateInBulkOpWhenDocsMoveShards(
         assert.eq(0, bulkRes.nMatched);
         assert.eq(0, bulkRes.nModified);
     } else {
-        // Both updates target the same shard, so neither write will be commited when the second
+        // Both updates target the same shard, so neither write will be committed when the second
         // errors.
         assert.eq(1, st.s.getDB(kDbName).foo.find({"x": 500, "a": 6}).itcount());
         assert.eq(0, st.s.getDB(kDbName).foo.find({"x": 500, "a": 7}).itcount());

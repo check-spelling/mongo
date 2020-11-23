@@ -192,7 +192,7 @@ public:
     /**
      * Starts and commits a transaction on the config server, with a no-op find on the specified
      * namespace in order to internally start the transaction. All writes done inside the
-     * passed-in function must assume that they are run inside a transaction that will be commited
+     * passed-in function must assume that they are run inside a transaction that will be committed
      * after the function itself has completely finished.
      */
     static void withTransaction(OperationContext* opCtx,

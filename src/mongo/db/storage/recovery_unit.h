@@ -240,7 +240,7 @@ public:
     }
 
     /**
-     * Returns whether or not a majority commmitted snapshot is available. If no snapshot has yet
+     * Returns whether or not a majority committed snapshot is available. If no snapshot has yet
      * been marked as Majority Committed, returns a status with error code
      * ReadConcernMajorityNotAvailableYet. After this returns successfully, at any point where
      * implementations attempt to acquire committed snapshot, if there are none available due to a

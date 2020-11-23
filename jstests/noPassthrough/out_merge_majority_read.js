@@ -114,7 +114,7 @@ function runTests(sourceColl, mongodConnection) {
     setCommittedSnapshot(makeSnapshot());
 
     // Insert a document that will collide with $merge insert. The insert is not majority
-    // commited.
+    // committed.
     assert.commandWorked(targetColl.insert({_id: 1, state: 'collision'}));
 
     res = db.runCommand({

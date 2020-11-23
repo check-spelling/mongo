@@ -76,11 +76,11 @@ private:
 
     Mutex _mutex = MONGO_MAKE_LATCH("WaitForMajorityService::_mutex");
 
-    // Contains an ordered list of opTimes to wait to be majority comitted.
+    // Contains an ordered list of opTimes to wait to be majority committed.
     OpTimeWaitingMap _queuedOpTimes;
 
     // Contains the last opTime that the background thread was able to successfully wait to be
-    // majority comitted.
+    // majority committed.
     repl::OpTime _lastOpTimeWaited;
 
     // The background thread.

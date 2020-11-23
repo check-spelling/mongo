@@ -4725,7 +4725,7 @@ const ReadPreference ReplicationCoordinatorImpl::_getSyncSourceReadPreference(Wi
             // resyncs from a node which does not have those writes, and (before it replicates them
             // again) helps elect a new primary which also does not have those writes, the writes
             // may be lost.  By resyncing from the primary (if possible), which always has the
-            // majority-commited writes, the probability of this scenario is reduced.
+            // majority-committed writes, the probability of this scenario is reduced.
             readPreference = ReadPreference::PrimaryPreferred;
         }
     }

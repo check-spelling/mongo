@@ -320,7 +320,7 @@ public:
     void waitUntilDurable(OperationContext* opCtx, Fsync syncType, UseJournalListener useListener);
 
     /**
-     * Waits until a prepared unit of work has ended (either been commited or aborted). This
+     * Waits until a prepared unit of work has ended (either been committed or aborted). This
      * should be used when encountering WT_PREPARE_CONFLICT errors. The caller is required to retry
      * the conflicting WiredTiger API operation. A return from this function does not guarantee that
      * the conflicting transaction has ended, only that one prepared unit of work in the process has

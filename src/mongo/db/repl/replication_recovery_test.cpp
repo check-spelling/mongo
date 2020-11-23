@@ -1162,7 +1162,7 @@ TEST_F(ReplicationRecoveryTest, CommitTransactionOplogEntryCorrectlyUpdatesConfi
 
     std::vector<BSONObj> expectedTxnColl{expectedTxnRecord.toBSON()};
 
-    // Make sure that the transaction table shows that the transaction is commited.
+    // Make sure that the transaction table shows that the transaction is committed.
     _assertDocumentsInCollectionEqualsOrdered(
         opCtx, NamespaceString::kSessionTransactionsTableNamespace, expectedTxnColl);
 
@@ -1247,7 +1247,7 @@ TEST_F(ReplicationRecoveryTest,
 
     std::vector<BSONObj> expectedTxnColl{expectedTxnRecord.toBSON()};
 
-    // Make sure that the transaction table shows that the transaction is commited.
+    // Make sure that the transaction table shows that the transaction is committed.
     _assertDocumentsInCollectionEqualsOrdered(
         opCtx, NamespaceString::kSessionTransactionsTableNamespace, expectedTxnColl);
 

@@ -65,8 +65,8 @@ StackLocator::StackLocator() {
     // Now, we skip down to the bottom, where the uncommitted memory
     // is, and get its size. So, we ask for the region at the
     // allocation base (the real bottom of the stack), after which
-    // uncommitedMbi will have a BaseAddress and a RegionSize that
-    // describes the uncommited area. The memory should have the
+    // uncommittedMbi will have a BaseAddress and a RegionSize that
+    // describes the uncommitted area. The memory should have the
     // RESERVE state set.
     MEMORY_BASIC_INFORMATION uncommittedMbi = {};
     invariant(VirtualQuery(committedMbi.AllocationBase, &uncommittedMbi, sizeof(uncommittedMbi)) !=

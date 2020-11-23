@@ -151,7 +151,7 @@ assert.sameMembers([], docs);
 // Commit the transaction.
 assert.commandWorked(session.commitTransaction_forTesting());
 
-// Read with default read concern sees the commmitted transaction.
+// Read with default read concern sees the committed transaction.
 assert.eq(null, testColl.findOne({_id: "doc-1"}));
 assert.eq(null, testColl.findOne({_id: "doc-2"}));
 assert.eq(null, testColl.findOne({_id: "doc-3"}));

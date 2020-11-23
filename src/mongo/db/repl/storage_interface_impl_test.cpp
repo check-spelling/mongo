@@ -582,7 +582,7 @@ TEST_F(StorageInterfaceImplTest, CreateCollectionWithIDIndexCommits) {
     ASSERT_EQ(count, 2LL);
 }
 
-void _testDestroyUncommitedCollectionBulkLoader(
+void _testDestroyUncommittedCollectionBulkLoader(
     OperationContext* opCtx,
     const NamespaceString& nss,
     std::vector<BSONObj> secondaryIndexes,
@@ -621,7 +621,7 @@ TEST_F(StorageInterfaceImplTest, DestroyingUncommittedCollectionBulkLoaderDropsI
     auto destroyLoaderFn = [](std::unique_ptr<CollectionBulkLoader> loader) {
         // Destroy 'loader' by letting it go out of scope.
     };
-    _testDestroyUncommitedCollectionBulkLoader(opCtx, nss, indexes, destroyLoaderFn);
+    _testDestroyUncommittedCollectionBulkLoader(opCtx, nss, indexes, destroyLoaderFn);
 }
 
 TEST_F(StorageInterfaceImplTest, DestructorInitializesClientBeforeDestroyingIdIndexBuilder) {
@@ -632,7 +632,7 @@ TEST_F(StorageInterfaceImplTest, DestructorInitializesClientBeforeDestroyingIdIn
         // Destroy 'loader' in a new thread that does not have a Client.
         stdx::thread([&loader]() { loader.reset(); }).join();
     };
-    _testDestroyUncommitedCollectionBulkLoader(opCtx, nss, indexes, destroyLoaderFn);
+    _testDestroyUncommittedCollectionBulkLoader(opCtx, nss, indexes, destroyLoaderFn);
 }
 
 TEST_F(StorageInterfaceImplTest,
@@ -645,7 +645,7 @@ TEST_F(StorageInterfaceImplTest,
         // Destroy 'loader' in a new thread that does not have a Client.
         stdx::thread([&loader]() { loader.reset(); }).join();
     };
-    _testDestroyUncommitedCollectionBulkLoader(opCtx, nss, indexes, destroyLoaderFn);
+    _testDestroyUncommittedCollectionBulkLoader(opCtx, nss, indexes, destroyLoaderFn);
 }
 
 TEST_F(StorageInterfaceImplTest, CreateCollectionThatAlreadyExistsFails) {
