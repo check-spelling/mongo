@@ -768,7 +768,7 @@ TEST(MongoURI, specTests) {
                     }
                 }
 
-                // Create the URITestCase abnd
+                // Create the URITestCase and
                 const URITestCase testCase = {
                     uri, username, password, connectionType, setName, numHosts, options, database};
                 testValidURIFormat(testCase);

@@ -197,7 +197,7 @@ public:
     /**
      * Atomically compute and store 'load() & bits'
      *
-     * Returns the value of this before bitand-ing.
+     * Returns the value of this before bit and-ing.
      */
     WordType fetchAndBitAnd(WordType bits) {
         return _value.fetch_and(bits);

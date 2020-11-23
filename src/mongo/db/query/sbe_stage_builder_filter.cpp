@@ -151,7 +151,7 @@ enum class LeafTraversalMode {
     // Don't generate a TraverseStage for the leaf.
     kDoNotTraverseLeaf = 0,
 
-    // Traverse the leaf, ard for arrays visit both the array's elements _and_ the array itself.
+    // Traverse the leaf, and for arrays visit both the array's elements _and_ the array itself.
     kArrayAndItsElements = 1,
 
     // Traverse the leaf, and for arrays visit the array's elements but not the array itself.
