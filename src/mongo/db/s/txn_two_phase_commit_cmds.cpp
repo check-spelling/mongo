@@ -76,7 +76,7 @@ public:
             }
 
             // If a node has majority read concern disabled, replication must use the legacy
-            // 'rollbackViaRefetch' algortithm, which does not support prepareTransaction oplog
+            // 'rollbackViaRefetch' algorithm, which does not support prepareTransaction oplog
             // entries
             uassert(ErrorCodes::ReadConcernMajorityNotEnabled,
                     "'prepareTransaction' is not supported with 'enableMajorityReadConcern=false'",
