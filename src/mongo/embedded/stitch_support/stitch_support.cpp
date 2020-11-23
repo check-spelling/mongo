@@ -373,7 +373,7 @@ stitch_support_v1_update* update_create(stitch_support_v1_lib* const lib,
     if (library.get() != lib) {
         throw StitchSupportException{
             STITCH_SUPPORT_V1_ERROR_INVALID_LIB_HANDLE,
-            "Cannot create a new udpate when the Stitch Support Library is not yet initialized."};
+            "Cannot create a new update when the Stitch Support Library is not yet initialized."};
     }
 
     return new stitch_support_v1_update(lib->serviceContext->makeClient("stitch_support"),

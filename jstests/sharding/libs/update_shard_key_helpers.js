@@ -558,7 +558,7 @@ function assertCanUpdateInBulkOpWhenDocsRemainOnSameShard(
 
     // Check that final doc is correct after doing $inc on doc A and then updating the shard key
     // for doc A. The outcome should be the same for both ordered and unordered bulk ops because
-    // the doc will not change shards, so both udpates will be targeted to the same shard.
+    // the doc will not change shards, so both updates will be targeted to the same shard.
     shardCollectionMoveChunks(st, kDbName, ns, {"x": 1}, docsToInsert, {"x": 100}, {"x": 300});
     if (inTxn) {
         session.startTransaction();
@@ -587,7 +587,7 @@ function assertCanUpdateInBulkOpWhenDocsRemainOnSameShard(
 
     // Check that updating the shard key for doc A, then doing $inc on the old doc A does not
     // inc the field on the final doc. The outcome should be the same for both ordered and
-    // unordered bulk ops because the doc will not change shards, so both udpates will be
+    // unordered bulk ops because the doc will not change shards, so both updates will be
     // targeted to the same shard.
     shardCollectionMoveChunks(st, kDbName, ns, {"x": 1}, docsToInsert, {"x": 100}, {"x": 300});
     if (inTxn) {

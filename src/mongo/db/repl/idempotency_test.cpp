@@ -249,7 +249,7 @@ void RandomizedIdempotencyTest::runUpdateV2IdempotencyTestCase(double v2Probabil
     PseudoRandom seedGenerator(this->seed);
     RandomizedScalarGenerator scalarGenerator{PseudoRandom(seedGenerator.nextInt64())};
 
-    // Eliminate modification of array elements when generating $v:1 oplog udpates, because they
+    // Eliminate modification of array elements when generating $v:1 oplog updates, because they
     // cause theoretically valid sequences that cause idempotency issues.
     //
     // For example oplog entries '{$unset: {a.1: null}}' and '{$set: {a.1.1: null}}' can break

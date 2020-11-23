@@ -117,7 +117,7 @@
             called = true;
         });
 
-        assert.eq(false, called, 'called should not have been udpated');
+        assert.eq(false, called, 'called should not have been updated');
     });
 
     tests.push(function assertShouldCallMsgFunctionsOnFailure() {
@@ -130,7 +130,7 @@
             });
         });
 
-        assert.eq(true, called, 'called should not have been udpated');
+        assert.eq(true, called, 'called should not have been updated');
     });
 
     tests.push(function assertShouldAcceptObjectAsMsg() {
