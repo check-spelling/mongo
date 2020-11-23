@@ -408,7 +408,7 @@ private:
      *   2) Leave the filter alone so that it can be affixed as part of a fetch node later.
      *   3) Detach the filter from its parent and attach it directly to an index scan node.
      *   We can sometimes due this for INEXACT_COVERED predicates which are not answered exactly
-     *   by the bounds, but can be answered by examing the data in the index key.
+     *   by the bounds, but can be answered by examining the data in the index key.
      *   4) Detach the filter from its parent and attach it as a child of a separate
      *   MatchExpression tree. This is done for proper handling of inexact bounds for $or
      *   queries.
