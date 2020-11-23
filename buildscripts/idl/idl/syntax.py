@@ -312,7 +312,7 @@ class Validator(common.SourceLocation):
     def __init__(self, file_name, line, column):
         # type: (str, int, int) -> None
         """Construct a Validator."""
-        # Don't lint gt/lt as bad attibute names.
+        # Don't lint gt/lt as bad attribute names.
         # pylint: disable=C0103
         self.gt = None  # type: Expression
         self.lt = None  # type: Expression
