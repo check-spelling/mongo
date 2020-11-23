@@ -210,7 +210,7 @@ using sf = std::function<FT>;
 
 // Check expected `is_convertible` traits (which also checks if this kind of conversion will compile
 // correctly too.
-TEST(UniqueFunctionTest, convertability_tests) {
+TEST(UniqueFunctionTest, convertibility_tests) {
 // TODO when on C++17, see if the new MSVC can handle these `std::isconvertible` static assertions.
 #ifndef _MSC_VER
     // Note that `mongo::unique_function` must never convert to `std::function` in any of the
