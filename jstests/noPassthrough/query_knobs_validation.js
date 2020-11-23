@@ -1,6 +1,6 @@
 /**
  * Tests to validate the input values accepted by internal query server parameters. The test
- * verfies that the system responds with the expected error code for input values that fall outside
+ * verifies that the system responds with the expected error code for input values that fall outside
  * each parameter's valid bounds, and correctly applies input values which fall within that
  * parameter's valid bounds.
  */

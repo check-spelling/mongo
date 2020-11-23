@@ -1,5 +1,5 @@
 /**
- * Test to verify 'scope' parameter of mapReduce command. This test verfies that 'map', 'reduce' and
+ * Test to verify 'scope' parameter of mapReduce command. This test verifies that 'map', 'reduce' and
  * 'finalize' functions can use 'scope' variable passed in the input.
  */
 (function() {

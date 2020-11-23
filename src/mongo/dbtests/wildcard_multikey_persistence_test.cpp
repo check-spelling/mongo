@@ -130,7 +130,7 @@ protected:
     }
 
     /**
-     * Verifes that the index access method associated with 'indexName' in the collection identified
+     * Verifies that the index access method associated with 'indexName' in the collection identified
      * by 'nss' reports 'expectedPaths' as the set of multikey paths.
      */
     void assertMultikeyPathSetEquals(const std::set<std::string>& expectedPaths,
