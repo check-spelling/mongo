@@ -293,7 +293,7 @@ struct DynamicPrompt : public PromptBase {
         size_t promptStartLength = basePrompt->length();
         promptChars = promptStartLength + endSearchBasePrompt.length();
         promptLastLinePosition =
-            promptChars;  // TODO fix this, we are asssuming that the history prompt won't wrap (!)
+            promptChars;  // TODO fix this, we are assuming that the history prompt won't wrap (!)
         promptPreviousLen = promptChars;
         Utf32String tempUnicode(promptChars + 1);
         memcpy(tempUnicode.get(), basePrompt->get(), sizeof(UChar32) * promptStartLength);
