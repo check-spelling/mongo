@@ -85,7 +85,7 @@ assert.commandFailedWithCode(upsertedResult(coll, {}, {$set: {a: 1, x: 1}}),
 assert.commandFailedWithCode(upsertedResult(coll, {x: {$gt: 10}}, {$set: {a: 1, x: 5}}),
                              ErrorCodes.ShardKeyNotFound);
 
-// Regex shard key value in query is ambigious and cannot be extracted for an equality match.
+// Regex shard key value in query is ambiguous and cannot be extracted for an equality match.
 assert.commandFailedWithCode(
     upsertedResult(coll, {x: {$eq: /abc*/}}, {$set: {a: 1, x: "regexValue"}}),
     ErrorCodes.ShardKeyNotFound);
