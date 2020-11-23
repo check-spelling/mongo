@@ -139,7 +139,7 @@ public:
 
     void rename(Key key, const char* to);
 
-    // has field walks the prototype heirarchy
+    // has field walks the prototype hierarchy
     bool hasField(Key key);
 
     // has own field checks for the field directly on the object

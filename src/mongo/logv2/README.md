@@ -578,7 +578,7 @@ implemented as a friend function in a class with the following signature:
 
 In some cases a loggable type might be composed as a hierarchy in the C++ type
 system which would lead to a very verbose structured log output as every level
-in the hierarcy needs a name when outputted as JSON. The attribute naming
+in the hierarchy needs a name when outputted as JSON. The attribute naming
 abstraction system can also be used to collapse such hierarchies. Instead of
 making a type loggable it can instead return one or more attributes from its
 members by using `multipleAttrs` in `logAttrs` functions.
