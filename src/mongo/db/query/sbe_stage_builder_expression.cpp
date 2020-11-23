@@ -2452,7 +2452,7 @@ private:
     }
 
     /**
-     * Shared expression building logic for trignometric expressions to make sure the operand
+     * Shared expression building logic for trigonometric expressions to make sure the operand
      * is numeric and is not null.
      */
     void generateTrigonometricExpression(StringData exprName) {
@@ -2460,7 +2460,7 @@ private:
         auto binds = sbe::makeEs(_context->popExpr());
         sbe::EVariable inputRef(frameId, 0);
 
-        auto genericTrignomentricExpr = sbe::makeE<sbe::EIf>(
+        auto genericTrigonometricExpr = sbe::makeE<sbe::EIf>(
             generateNullOrMissing(frameId, 0),
             sbe::makeE<sbe::EConstant>(sbe::value::TypeTags::Null, 0),
             sbe::makeE<sbe::EIf>(
@@ -2471,11 +2471,11 @@ private:
                                                      << " supports only numeric types")));
 
         _context->pushExpr(sbe::makeE<sbe::ELocalBind>(
-            frameId, std::move(binds), std::move(genericTrignomentricExpr)));
+            frameId, std::move(binds), std::move(genericTrigonometricExpr)));
     }
 
     /**
-     * Shared expression building logic for trignometric expressions with bounds for the valid
+     * Shared expression building logic for trigonometric expressions with bounds for the valid
      * values of the argument.
      */
     void generateTrigonometricExpressionWithBounds(StringData exprName,
@@ -2502,7 +2502,7 @@ private:
                 sbe::makeE<sbe::EConstant>(sbe::value::TypeTags::NumberDouble,
                                            sbe::value::bitcastFrom<double>(upperBound.bound))));
 
-        auto genericTrignomentricExpr = sbe::makeE<sbe::EIf>(
+        auto genericTrigonometricExpr = sbe::makeE<sbe::EIf>(
             generateNullOrMissing(frameId, 0),
             sbe::makeE<sbe::EConstant>(sbe::value::TypeTags::Null, 0),
             sbe::makeE<sbe::EIf>(
@@ -2522,7 +2522,7 @@ private:
                                                          << upperBound.printUpperBound()))));
 
         _context->pushExpr(sbe::makeE<sbe::ELocalBind>(
-            frameId, std::move(binds), std::move(genericTrignomentricExpr)));
+            frameId, std::move(binds), std::move(genericTrigonometricExpr)));
     }
 
     /*
