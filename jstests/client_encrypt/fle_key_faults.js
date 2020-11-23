@@ -82,7 +82,7 @@ testFaults((keyId, shell) => {
     });
 });
 
-// Negative - corrupt the master key with an unkown provider
+// Negative - corrupt the master key with an unknown provider
 testFaults((keyId, shell) => {
     collection.updateMany({}, {$set: {"masterKey.provider": "fake"}});
 

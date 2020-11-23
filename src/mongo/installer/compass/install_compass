@@ -183,7 +183,7 @@ def download_and_install_compass():
     # but these are a catch all so we don't just dump Python stack traces to
     # the user in the case we have a new failure case we didn't think about.
     except Exception:
-        print('Unkown error downloading compass. Please open a ticket on the' \
+        print('Unknown error downloading compass. Please open a ticket on the' \
             ' SERVER project at https://jira.mongodb.org/')
 
     print('Installing the package...')
@@ -195,7 +195,7 @@ def download_and_install_compass():
         else:
             print('Unrecognized os_type: %s' % os_type)
     except Exception:
-        print('Unkown error downloading compass. Please open a ticket on the' \
+        print('Unknown error downloading compass. Please open a ticket on the' \
             ' SERVER project at https://jira.mongodb.org/')
 
     print('Cleaning up...')

@@ -59,7 +59,7 @@ constexpr auto kMongos = "mongos"_sd;
 constexpr auto kClient = "client"_sd;
 constexpr auto kHost = "host"_sd;
 
-constexpr auto kUnknown = "unkown"_sd;
+constexpr auto kUnknown = "unknown"_sd;
 
 #define ASSERT_DOC_OK(...)                                                                \
     do {                                                                                  \

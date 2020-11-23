@@ -259,7 +259,7 @@ class SetUpEC2Instance(PowercycleCommand):
                 cmds = f"{cmds}; {add_rule} name='MongoDB port {secret_port} out' dir=in action=allow protocol=TCP localport={secret_port}"
                 cmds = f"{cmds}; netsh advfirewall firewall show rule name=all | grep -A 13 'MongoDB'"
             else:
-                print("Firewall not active or unkown firewall command on this platform")
+                print("Firewall not active or unknown firewall command on this platform")
                 return
 
             self.remote_op.operation(SSHOperation.SHELL, cmds, None)
