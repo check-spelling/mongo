@@ -680,7 +680,7 @@ public:
 
     /**
      * All default constructed iterators are equal to each other.
-     * They are in a dereferencable state, and return an EOO BSONElement.
+     * They are in a dereferenceable state, and return an EOO BSONElement.
      * They must not be incremented.
      */
     BSONObjStlIterator() = default;
