@@ -389,7 +389,7 @@ class LibdepLinter:
     def linter_rule_no_dangling_dep_final_check(self):
         # At this point the SConscripts have defined all the build items,
         # and so we can go check any DEPS_DEPENDENTS listed and make sure a builder
-        # was instanciated to build them.
+        # was instantiated to build them.
         for dep_dependent in self.__class__.dangling_dep_dependents:
             dep_node = _get_node_with_ixes(self.env, dep_dependent[0], dep_dependent[1])
             if not dep_node.has_builder():
