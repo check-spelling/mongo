@@ -616,7 +616,7 @@ TEST_F(QueryPlannerTest, MultikeySharedPrefixElemMatch) {
 
 // Bounds cannot be compounded for the multikey index even though there is an
 // $elemMatch, because the $elemMatch does not join the two predicates. This
-// query is semantically indentical to {'a.b': 1, 'a.c': 1}.
+// query is semantically identical to {'a.b': 1, 'a.c': 1}.
 TEST_F(QueryPlannerTest, MultikeySharedPrefixElemMatchNotShared) {
     // true means multikey
     addIndex(BSON("a.b" << 1 << "a.c" << 1), true);
@@ -632,7 +632,7 @@ TEST_F(QueryPlannerTest, MultikeySharedPrefixElemMatchNotShared) {
 
 // Bounds cannot be compounded for the multikey index even though there are
 // $elemMatch's, because there is not an $elemMatch which joins the two
-// predicates. This query is semantically indentical to {'a.b': 1, 'a.c': 1}.
+// predicates. This query is semantically identical to {'a.b': 1, 'a.c': 1}.
 TEST_F(QueryPlannerTest, MultikeySharedPrefixTwoElemMatches) {
     // true means multikey
     addIndex(BSON("a.b" << 1 << "a.c" << 1), true);

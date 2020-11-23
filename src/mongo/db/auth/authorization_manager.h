@@ -221,7 +221,7 @@ public:
      *
      * kRoles:        Collect RoleNames in the "roles" field in each role document for subordinates.
      * kPrivileges:   Examine the "privileges" field in each role document and
-     *                merge "actions" for identicate "resource" patterns.
+     *                merge "actions" for identical "resource" patterns.
      * kRestrictions: Collect the "authenticationRestrictions" field in each role document.
      *
      * kDirectOnly:   If specified, only the RoleNames explicitly supplied to resolveRoles()

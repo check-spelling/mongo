@@ -623,7 +623,7 @@ Status AuthzManagerExternalStateLocal::getRoleDescriptionsForDB(
                 }
                 privsBuilder.doneFast();
 
-                // Builtin roles have identival privs/inheritedPrivs
+                // Builtin roles have identical privs/inheritedPrivs
                 BSONArrayBuilder ipBuilder(roleBuilder.subarrayStart("inheritedPrivileges"));
                 for (const auto& privilege : privs) {
                     ipBuilder.append(privilege.toBSON());

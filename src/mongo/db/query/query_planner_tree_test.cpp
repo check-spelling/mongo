@@ -312,7 +312,7 @@ TEST_F(QueryPlannerTest, OrOfAnd6) {
 }
 
 // We do collapse OR of ANDs if branches of the OR plan are using identical index scans.
-TEST_F(QueryPlannerTest, RootedOrOfAndCollapseIndenticalScans) {
+TEST_F(QueryPlannerTest, RootedOrOfAndCollapseIdenticalScans) {
     addIndex(BSON("a" << 1 << "b" << 1));
     runQuery(fromjson("{$or: [{a:1, b:2}, {a:1, b:2}]}"));
 
@@ -324,7 +324,7 @@ TEST_F(QueryPlannerTest, RootedOrOfAndCollapseIndenticalScans) {
         "filter: null}}}");
 }
 
-TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIndenticalScans) {
+TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIdenticalScans) {
     addIndex(BSON("a" << 1 << "b" << 1));
     runQuery(fromjson("{c: 1, $or: [{a:1, b:2}, {a:1, b:2}]}"));
 
@@ -336,7 +336,7 @@ TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIndenticalScans) {
         "filter: null}}}");
 }
 
-TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIndenticalScansWithFilter) {
+TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIdenticalScansWithFilter) {
     addIndex(BSON("a" << 1 << "b" << 1));
     runQuery(fromjson("{c: 1, $or: [{a:1, b:2}, {a:1, b:2, d:3}]}"));
 
@@ -348,7 +348,7 @@ TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIndenticalScansWithFilter) {
         "filter: null}}}");
 }
 
-TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIndenticalScansWithFilter2) {
+TEST_F(QueryPlannerTest, ContainedOrOfAndCollapseIdenticalScansWithFilter2) {
     addIndex(BSON("a" << 1 << "b" << 1));
     runQuery(fromjson("{c: 1, $or: [{a:{$gte:1,$lte:1}, b:2}, {a:1, b:2, d:3}]}"));
 

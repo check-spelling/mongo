@@ -523,7 +523,7 @@ inline int Document::compareWith(const Document& other,
                                  const StringData::ComparatorInterface* comparator,
                                  bool considerFieldName) const {
     // We cheat and use Element::compareWithElement since we know that 'other' is a
-    // Document and has a 'hidden' fieldname that is always indentical across all Document
+    // Document and has a 'hidden' fieldname that is always identical across all Document
     // instances.
     return root().compareWithElement(other.root(), comparator, considerFieldName);
 }
