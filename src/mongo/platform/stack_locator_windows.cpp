@@ -85,7 +85,7 @@ StackLocator::StackLocator() {
         // stack is committed. So, querying AllocationBase should give you back
         // the same region.
         //
-        // Bizzarely, that doesn't seem to be the case. Even though
+        // Bizarrely, that doesn't seem to be the case. Even though
         // it has the same protections, state, etc., VirtualQuery seems
         // to consider the stack that has been used distinct from the part
         // that hasn't.
