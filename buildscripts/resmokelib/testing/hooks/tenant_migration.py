@@ -293,7 +293,7 @@ class _TenantMigrationThread(threading.Thread):  # pylint: disable=too-many-inst
         donor_primary_client = donor_primary.mongo_client()
 
         self.logger.info(
-            "Forgeting tenant migration with donor primary on port %d of replica set '%s'.",
+            "Forgetting tenant migration with donor primary on port %d of replica set '%s'.",
             donor_primary.port, donor_rs.replset_name)
 
         try:
