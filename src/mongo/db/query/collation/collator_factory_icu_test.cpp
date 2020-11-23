@@ -1124,7 +1124,7 @@ TEST(CollatorFactoryICUTest, CaseFirstUpperWithStrengthTwoFails) {
     ASSERT_NOT_OK(collator.getStatus());
 }
 
-TEST(CollatorFactoryICUTest, GermanPhonebookCollatoHasExpectedComparisonSemantics) {
+TEST(CollatorFactoryICUTest, GermanPhonebookCollatorHasExpectedComparisonSemantics) {
     CollatorFactoryICU factory;
     auto dictionaryCollator = factory.makeFromBSON(BSON("locale"
                                                         << "de"));
