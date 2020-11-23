@@ -75,7 +75,7 @@
 // correctly.  I believe "correctly" is the following:
 //
 // #ifdef _WIN32
-// #define MONGO_COMIPLER_API_EXPORT __attribute__(( __dllexport__ ))
+// #define MONGO_COMPILER_API_EXPORT __attribute__(( __dllexport__ ))
 // #define MONGO_COMPILER_API_IMPORT __attribute__(( __dllimport__ ))
 // #ifdef _M_IX86
 // #define MONGO_COMPILER_API_CALLING_CONVENTION __attribute__((__cdecl__))
