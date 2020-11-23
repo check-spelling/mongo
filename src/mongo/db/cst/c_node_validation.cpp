@@ -180,7 +180,7 @@ auto validateNotRedundantOrPrefixConflicting(const std::vector<StringData>& curr
     // before the most recent 'emplace()'. If another path is the prefix of the emplaced path,
     // it must appear directly previous in order since any sibling that could otherwise appear
     // previous would be also prefixed by the path that prefixes the emplaced path and violate
-    // the invariant. Thus it sufficies to check only these two positions in the set after
+    // the invariant. Thus it suffices to check only these two positions in the set after
     // emplacing to guarantee there are no prefix relationships in the entire set.
     if (auto&& [iter, notDuplicate] = seenPaths->emplace(currentPath); notDuplicate) {
         if (iter != seenPaths->begin())
