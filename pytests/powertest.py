@@ -600,7 +600,7 @@ def install_mongod(bin_dir=None, tarball_url="latest", root_dir=None):
     chmod_x_binaries(get_bin_dir(root_dir))
 
     # Symlink the bin dir from the tarball to 'root_bin_dir'.
-    # Since get_bin_dir returns an abolute path, we need to remove 'root_dir'
+    # Since get_bin_dir returns an absolute path, we need to remove 'root_dir'
     tarball_bin_dir = get_bin_dir(root_dir).replace("{}/".format(root_dir), "")
     LOGGER.debug("Symlink %s to %s", tarball_bin_dir, root_bin_dir)
     symlink_dir(tarball_bin_dir, root_bin_dir)
