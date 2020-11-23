@@ -883,8 +883,8 @@ public:
     }
 
 private:
-    Turner& inc(size_t perOperatioCost, size_t numberOfOperations) {
-        _count += (perOperatioCost * numberOfOperations);
+    Turner& inc(size_t perOperationCost, size_t numberOfOperations) {
+        _count += (perOperationCost * numberOfOperations);
         return *this;
     }
 
