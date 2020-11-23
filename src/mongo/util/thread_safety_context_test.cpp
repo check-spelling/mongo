@@ -69,7 +69,7 @@ TEST_F(ThreadSafetyContextTest, CreateThreadsWithNoSafetyContext) {
     }
 }
 
-DEATH_TEST_F(ThreadSafetyContextTest, CreateThreadsAfterForbidingMultiThreading, "invariant") {
+DEATH_TEST_F(ThreadSafetyContextTest, CreateThreadsAfterForbiddingMultiThreading, "invariant") {
     ThreadSafetyContext::getThreadSafetyContext()->forbidMultiThreading();
     // Must terminate after starting the thread
     auto thread = stdx::thread([] { sleepFor(Milliseconds(50)); });
