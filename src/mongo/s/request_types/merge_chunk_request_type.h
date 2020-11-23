@@ -75,7 +75,7 @@ public:
     BSONObj toConfigCommandBSON(const BSONObj& writeConcern);
 
     /**
-     * Creates a serialized BSONObj of the internal _configsvCommitChunkMerge command from this
+     * Creates a serialized BSONObj of the internal _configsvrCommitChunkMerge command from this
      * MergeChunkRequest instance.
      */
     void appendAsConfigCommand(BSONObjBuilder* cmdBuilder);

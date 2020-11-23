@@ -578,7 +578,7 @@ TEST_F(
     init(settings);
     start();
 
-    // check status NoReplicationEnabled and result mentions configsrv
+    // check status NoReplicationEnabled and result mentions configsvr
     BSONObjBuilder result;
     Status status = getReplCoord()->checkReplEnabledForCommand(&result);
     ASSERT_EQUALS(status, ErrorCodes::NoReplicationEnabled);
