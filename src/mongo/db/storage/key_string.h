@@ -802,7 +802,7 @@ public:
     HeapBuilder(const HeapBuilder& other) : BufferHolder(0), BuilderBase(other) {}
 
     /**
-     * Releases the data held in this buffer into a Value type, releasing and transfering ownership
+     * Releases the data held in this buffer into a Value type, releasing and transferring ownership
      * of the buffer _buffer and TypeBits _typeBits to the returned Value object from the current
      * Builder.
      */
