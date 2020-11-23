@@ -45,7 +45,7 @@ class StopWords;
  * A iterator of "documents" where a document contains ASCII space (U+0020) delimited words.
  * Uses
  * - Tokenizer for tokenizing words via ASCII space (ie, U+0020 space).
- * - tolower from the C standard libary to lower letters, ie, it only supports lower casing
+ * - tolower from the C standard library to lower letters, ie, it only supports lower casing
  * -     ASCII letters (U+0000 - U+007F)
  * - Stemmer (ie, Snowball Stemmer) to stem words.
  * - Embedded stop word lists for each language in StopWord class
