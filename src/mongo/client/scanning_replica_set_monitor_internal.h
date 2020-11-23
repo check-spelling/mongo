@@ -206,7 +206,7 @@ public:
 
     Status makeUnsatisfedReadPrefError(const ReadPreferenceSetting& criteria) const;
 
-    // Tiny enum to convey semantics for rescheduleFefresh()
+    // Tiny enum to convey semantics for rescheduleRefresh()
     enum class SchedulingStrategy {
         kKeepEarlyScan,
         kCancelPreviousScan,
