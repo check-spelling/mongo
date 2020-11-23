@@ -1099,7 +1099,7 @@ private:
     // RS_STARTUP2 (initial sync) and RS_ROLLBACK.  Only meaningful if _role == Role::follower.
     // Configured via setFollowerMode().  If the sub-mode is RS_SECONDARY, then the effective
     // sub-mode is either RS_SECONDARY or RS_RECOVERING, depending on _maintenanceModeCalls.
-    // Rather than accesing this variable direclty, one should use the getMemberState() method,
+    // Rather than accessing this variable direclty, one should use the getMemberState() method,
     // which computes the replica set node state on the fly.
     MemberState::MS _followerMode;
 
