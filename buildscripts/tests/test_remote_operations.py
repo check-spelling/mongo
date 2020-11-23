@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Unit test for buildscripts/remote_operations.py.
 
-   Note - Tests require sshd to be enabled on localhost with paswordless login
+   Note - Tests require sshd to be enabled on localhost with passwordless login
    and can fail otherwise."""
 
 import os
