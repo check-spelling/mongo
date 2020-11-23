@@ -3223,7 +3223,7 @@ def doConfigure(myenv):
                 #
                 # See https://github.com/google/sanitizers/issues/943
                 # for why we disallow combining TSAN with
-                # libunwind. We could, atlernatively, have added logic
+                # libunwind. We could, alternatively, have added logic
                 # to automate the decision about whether to enable
                 # libunwind based on whether TSAN is enabled, but that
                 # logic is already complex, and it feels better to
