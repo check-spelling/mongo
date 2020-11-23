@@ -284,7 +284,7 @@ protected:
     // Protects the fields below
     //
     // Note that ConfigTime is advanced under the ReplicationCoordinator mutex, so to avoid
-    // potential deadlocks the ReplicationCoordator mutex should never be acquired whilst the
+    // potential deadlocks the ReplicationCoordinator mutex should never be acquired whilst the
     // VectorClock mutex is held.
     mutable Mutex _mutex = MONGO_MAKE_LATCH("VectorClock::_mutex");
 

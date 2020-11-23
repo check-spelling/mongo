@@ -647,7 +647,7 @@ SemiFuture<void> ReshardingCoordinatorService::ReshardingCoordinator::run(
             // namespace would fail with a SnapshotUnavailable error response.
             //
             // TODO SERVER-52924: There is the possibility of donor shards refreshing the existing
-            // sharded collection independently of the coodinator instructing them to do so. This
+            // sharded collection independently of the coordinator instructing them to do so. This
             // means the coordinator triggering the refresh here isn't a robust way to ensure donor
             // shards have always created the
             // config.cache.chunks.<database>.system.resharding.<existingUUID> collection before

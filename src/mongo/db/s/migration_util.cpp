@@ -804,7 +804,7 @@ void resumeMigrationCoordinationsOnStepUp(OperationContext* opCtx) {
                   [&opCtx, &unfinishedMigrationsCount](const MigrationCoordinatorDocument& doc) {
                       // MigrationCoordinators are only created under the MigrationBlockingGuard,
                       // which means that only one can possibly exist on an instance at a time.
-                      // Furthermore, recovery of an incomplete MigrationCoordator also acquires the
+                      // Furthermore, recovery of an incomplete MigrationCoordinator also acquires the
                       // MigrationBlockingGuard. Because of this it is not possible to have more
                       // than one unfinished migration.
                       invariant(unfinishedMigrationsCount == 0,
