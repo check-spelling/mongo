@@ -71,7 +71,7 @@ namespace mutablebson {
  *    the Document::Impl for the Document), and an index into the Elements Vector in the
  *    Document::Impl. These two pieces of information make it possible for us to obtain the
  *    ElementRep associated with a given Element. Note that the Elements Vector is append
- *    only: ElementReps are never removed from it, even if the cooresponding Element is
+ *    only: ElementReps are never removed from it, even if the corresponding Element is
  *    removed from the Document. By never removing ElementReps, and by using indexes into
  *    the Elements Vector, we can ensure that Elements are never invalidated. Note that
  *    every Document comes with an automatically provided 'root' element of mongo::Object
