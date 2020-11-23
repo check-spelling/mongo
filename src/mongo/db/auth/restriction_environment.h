@@ -56,7 +56,7 @@ public:
                     std::unique_ptr<RestrictionEnvironment> environment);
 
     // Returns the source address of the client.
-    // This value is useful for filering clients by their address, or network block. Note that
+    // This value is useful for filtering clients by their address, or network block. Note that
     // clients on some networks can spoof this address.
     const SockAddr& getClientSource() const& {
         return clientSource;
