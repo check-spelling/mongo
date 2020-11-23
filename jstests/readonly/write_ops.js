@@ -9,7 +9,7 @@ runReadOnlyTest(function() {
         },
         exec: function(readableCollection) {
             // Refresh the cluster's collection sharding state in order to have a predictable error
-            // returned from the failed writes, otherwhise MultipleErrorsOcurred might be returned
+            // returned from the failed writes, otherwise MultipleErrorsOcurred might be returned
             // if any shard is stale
             readableCollection.count();
             // Test that insert fails.
