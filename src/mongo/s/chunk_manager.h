@@ -342,7 +342,7 @@ private:
  * ChunkVersions when their epochs's differ.
  *
  * This class wraps a ChunkVersion object with a node-local sequence number
- * (_epochDisambiguatingSequenceNum) that allows the comparision.
+ * (_epochDisambiguatingSequenceNum) that allows the comparison.
  *
  * This class should go away once a cluster-wide comparable ChunkVersion is implemented.
  */
@@ -390,7 +390,7 @@ public:
 
     /**
      * In case the two compared instances have different epochs, the most recently created one will
-     * be greater, otherwise the comparision will be driven by the major/minor versions of the
+     * be greater, otherwise the comparison will be driven by the major/minor versions of the
      * underlying ChunkVersion.
      */
     bool operator<(const ComparableChunkVersion& other) const;

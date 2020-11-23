@@ -342,7 +342,7 @@ public:
 
 
     //
-    // Comparision API.
+    // Comparison API.
     //
 
     /** Compare this Element with Element 'other'. The two Elements may belong to different
@@ -638,7 +638,7 @@ private:
     RepIdx _repIdx;
 };
 
-/** Element comparison support. Comparison is like STL iterator comparision: equal Elements
+/** Element comparison support. Comparison is like STL iterator comparison: equal Elements
  *  refer to the same underlying data. The equality does *not* mean that the underlying
  *  values are equivalent. Use the Element::compareWith methods to compare the represented
  *  data.

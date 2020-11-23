@@ -123,7 +123,7 @@ namespace mutablebson {
  *    relationship to the root Element. Newly created Elements, for instance, are in this
  *    sort of 'detached' state until they are attached to another element. Only Element's
  *    that are children of the root element are traversed when calling top level
- *    serialization or comparision operations on Document.
+ *    serialization or comparison operations on Document.
  *
  *  When you construct a Document that obtains its values from an underlying BSONObj, the
  *  entire BSONObj is not 'unpacked' into ElementReps at Document construction
