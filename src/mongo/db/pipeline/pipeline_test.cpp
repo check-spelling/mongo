@@ -2595,7 +2595,7 @@ class MatchWithSkipAddFieldsAndLimit : public Base {
 /**
  * The addition of a $group stage between the $skip and $limit stages _does_ prevent us from
  * propagating the limit to the shards. The merger will need to see all the documents from each
- * shard before it can aply the $limit.
+ * shard before it can apply the $limit.
  */
 class MatchWithSkipGroupAndLimit : public Base {
     string inputPipeJson() {
