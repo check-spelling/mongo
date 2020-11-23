@@ -112,7 +112,7 @@ struct ReadThroughCacheLookup<Result, Key, Value, CacheNotCausallyConsistent> {
  * Implements an (optionally) causally consistent read-through cache from Key to Value, built on top
  * of InvalidatingLRUCache.
  *
- * Causal consistency is provided by requiring the backing store to asociate every Value it returns
+ * Causal consistency is provided by requiring the backing store to associate every Value it returns
  * with a logical timestamp of type Time.
  */
 template <typename Key, typename Value, typename Time = CacheNotCausallyConsistent>
