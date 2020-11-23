@@ -4,7 +4,7 @@
 "use strict";
 var mongo = db.getMongo();
 
-// Get current log component setttings. We will reset to these later.
+// Get current log component settings. We will reset to these later.
 var originalSettings =
     assert.commandWorked(db.adminCommand({getParameter: 1, logComponentVerbosity: 1}))
         .logComponentVerbosity;
