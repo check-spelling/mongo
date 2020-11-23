@@ -41,7 +41,7 @@ for (let i = 0; i < 2; i++) {
     sessionColl = sessionDb.getCollection(collName);  // Used for updates of the shard key.
     coll.insert({_id: 1, key: 1});
 
-    // Replacment and Opstyle upserts.
+    // Replacement and Opstyle upserts.
     assert.commandWorked(coll.update({_id: 2, key: 2}, {key: 2, foo: 'bar'}, {upsert: true}));
     assert.commandWorked(coll.update({_id: 3, key: 3}, {$set: {foo: 'bar'}}, {upsert: true}));
 

@@ -1360,7 +1360,7 @@ private:
 
     /**
      * Loads a certificate chain from memory into context.
-     * This method is intended to be a repalcement of API call SSL_CTX_use_certificate_chain_file()
+     * This method is intended to be a replacement of API call SSL_CTX_use_certificate_chain_file()
      * but using memory instead of file.
      * @return true if was successful, otherwise false
      */

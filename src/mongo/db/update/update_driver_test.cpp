@@ -91,7 +91,7 @@ TEST(Parse, MixingMods) {
     ASSERT_FALSE(driver.type() == UpdateDriver::UpdateType::kReplacement);
 }
 
-TEST(Parse, ObjectReplacment) {
+TEST(Parse, ObjectReplacement) {
     boost::intrusive_ptr<ExpressionContextForTest> expCtx(new ExpressionContextForTest());
     UpdateDriver driver(expCtx);
     std::map<StringData, std::unique_ptr<ExpressionWithPlaceholder>> arrayFilters;
