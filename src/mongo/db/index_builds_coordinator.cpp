@@ -2549,7 +2549,7 @@ IndexBuildsCoordinator::CommitResult IndexBuildsCoordinator::_insertKeysFromSide
         // are allowed because we cannot control them as they bypass the routine abort machinery.
         invariant(e.code() != ErrorCodes::IndexBuildAborted);
 
-        // Index build commit may not fail on secondaries because it implies diverenge with data on
+        // Index build commit may not fail on secondaries because it implies divergence with data on
         // the primary. The only exception is single-phase builds started on primaries, which may
         // fail after a state transition. In this case, we have not replicated anything to
         // roll-back. With two-phase index builds, if a primary replicated an abortIndexBuild oplog
