@@ -90,7 +90,7 @@ public:
         const uint8_t* in, size_t inLen, uint8_t* out, size_t outLen, size_t* resultLen);
 
     /**
-     * Tranforms temp data back to readable form, after reading from disk.
+     * Transforms temp data back to readable form, after reading from disk.
      */
     virtual Status unprotectTmpData(
         const uint8_t* in, size_t inLen, uint8_t* out, size_t outLen, size_t* resultLen);
