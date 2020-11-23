@@ -557,7 +557,7 @@ class UninterruptibleLockGuard {
 public:
     /*
      * Accepts a Locker, and increments the _uninterruptibleLocksRequested. Decrements the
-     * counter when destoyed.
+     * counter when destroyed.
      */
     explicit UninterruptibleLockGuard(Locker* locker) : _locker(locker) {
         invariant(_locker);
