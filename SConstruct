@@ -2520,7 +2520,7 @@ def doConfigure(myenv):
             # unless other diagnostics are triggered. That makes it tough to check for support
             # for -Wno-xxx. To work around, if we see that we are testing for a flag of the
             # form -Wno-xxx (but not -Wno-error=xxx), we also add -Wxxx to the flags. GCC does
-            # warn on unknown -Wxxx style flags, so this lets us probe for availablity of
+            # warn on unknown -Wxxx style flags, so this lets us probe for availability of
             # -Wno-xxx.
             for kw in list(test_mutation.keys()):
                 test_flags = test_mutation[kw]

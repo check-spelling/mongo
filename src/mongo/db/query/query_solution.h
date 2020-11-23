@@ -1127,7 +1127,7 @@ struct DistinctNode : public QuerySolutionNodeWithSortSet {
         // The distinct scan can return collation keys, but we can still consider the field fully
         // provided. This is because the logic around when the index bounds might incorporate
         // collation keys does not rely on 'getFieldAvailability()'. As a future improvement, we
-        // could look into using 'getFieldAvailabilty()' for collation covering analysis.
+        // could look into using 'getFieldAvailability()' for collation covering analysis.
         return index.keyPattern[field].eoo() ? FieldAvailability::kNotProvided
                                              : FieldAvailability::kFullyProvided;
     }

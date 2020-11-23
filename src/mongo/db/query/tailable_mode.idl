@@ -31,7 +31,7 @@ global:
 
 enums:
     TailableMode:
-        description: "Describes the tailablility of a cursor."
+        description: "Describes the availability of a cursor."
         type: string
         values:
             kNormal: "normal"
