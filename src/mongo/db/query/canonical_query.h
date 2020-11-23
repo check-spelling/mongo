@@ -47,7 +47,7 @@ class OperationContext;
 
 class CanonicalQuery {
 public:
-    // A type that encodes the notion of query shape. Essentialy a query's match, projection and
+    // A type that encodes the notion of query shape. Essentially a query's match, projection and
     // sort with the values taken out.
     typedef std::string QueryShapeString;
 
