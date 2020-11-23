@@ -49,7 +49,7 @@ class StopWords;
  * - A list of Unicode delimiters for tokenizing words (see gen_delimiter_list.py).
  * - tolower from mongo::unicode, which supports UTF-8 simple and Turkish case folding
  * - Stemmer (ie, Snowball Stemmer) to stem words.
- * - Embeded stop word lists for each language in StopWord class
+ * - Embedded stop word lists for each language in StopWord class
  *
  * For each word returns a stem version of a word optimized for full text indexing.
  * Optionally supports returning case sensitive search terms.

@@ -48,7 +48,7 @@ class StopWords;
  * - tolower from the C standard libary to lower letters, ie, it only supports lower casing
  * -     ASCII letters (U+0000 - U+007F)
  * - Stemmer (ie, Snowball Stemmer) to stem words.
- * - Embeded stop word lists for each language in StopWord class
+ * - Embedded stop word lists for each language in StopWord class
  *
  * For each word returns a stem version of a word optimized for full text indexing.
  * Optionally supports returning case sensitive search terms.
