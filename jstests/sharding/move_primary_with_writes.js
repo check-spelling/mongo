@@ -200,7 +200,7 @@ function testMovePrimary(failpoint, fromShard, toShard, db, shouldFail, sharded)
     buildCommands(collName, cmdShouldFail).forEach(commandObj => {
         if (shouldFail && commandObj.shouldFail) {
             jsTestLog("running command: " + tojson(commandObj.command) +
-                      ",\nshoudFail: " + shouldFail);
+                      ",\nshouldFail: " + shouldFail);
             if (commandObj.hasOwnProperty("errorCodes")) {
                 assert.commandFailedWithCode(db.runCommand(commandObj.command),
                                              commandObj.errorCodes);
@@ -210,7 +210,7 @@ function testMovePrimary(failpoint, fromShard, toShard, db, shouldFail, sharded)
             }
         } else if (!shouldFail && !commandObj.shouldFail) {
             jsTestLog("running command: " + tojson(commandObj.command) +
-                      ",\nshoudFail: " + shouldFail);
+                      ",\nshouldFail: " + shouldFail);
             assert.commandWorked(db.runCommand(commandObj.command));
         }
     });
@@ -242,12 +242,12 @@ function testMovePrimaryDDL(failpoint, fromShard, toShard, db, shouldFail, shard
     buildDDLCommands(collName).forEach(commandObj => {
         if (shouldFail) {
             jsTestLog("running command: " + tojson(commandObj.command) +
-                      ",\nshoudFail: " + shouldFail);
+                      ",\nshouldFail: " + shouldFail);
             assert.commandFailedWithCode(db.runCommand(commandObj.command),
                                          ErrorCodes.MovePrimaryInProgress);
         } else if (!commandObj.alwaysFail) {
             jsTestLog("running command: " + tojson(commandObj.command) +
-                      ",\nshoudFail: " + shouldFail);
+                      ",\nshouldFail: " + shouldFail);
             assert.commandWorked(db.runCommand(commandObj.command));
         }
     });

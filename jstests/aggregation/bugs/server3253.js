@@ -97,5 +97,5 @@ assertErrorCode(input, {$out: cappedOutput.getName()}, 17152);
 // ensure everything works even if input doesn't exist.
 test(inputDoesntExist, [], []);
 
-// shoudn't leave temp collections laying around
+// shouldn't leave temp collections laying around
 assert.eq([], listCollections(/tmp\.agg_out/));

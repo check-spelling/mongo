@@ -786,7 +786,7 @@ TEST_F(UnwindStageTest, ShouldRejectEmptyStringIncludeArrayIndex) {
                        28810);
 }
 
-TEST_F(UnwindStageTest, ShoudlRejectDollarPrefixedIncludeArrayIndex) {
+TEST_F(UnwindStageTest, ShouldRejectDollarPrefixedIncludeArrayIndex) {
     ASSERT_THROWS_CODE(createUnwind(BSON("$unwind" << BSON("path"
                                                            << "$x"
                                                            << "includeArrayIndex"
