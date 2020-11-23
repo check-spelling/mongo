@@ -188,7 +188,7 @@ public:
     }
 
 private:
-    const char* _data = nullptr;  // is not guaranted to be null terminated (see "notes" above)
+    const char* _data = nullptr;  // is not guaranteed to be null terminated (see "notes" above)
     size_t _size = 0;             // 'size' does not include the null terminator
 };
 
