@@ -101,7 +101,7 @@ TEST_F(DocumentSourceLimitTest, DisposeShouldCascadeAllTheWayToSource) {
 
     auto limit = DocumentSourceLimit::create(getExpCtx(), 1);
     limit->setSource(match.get());
-    // The limit is not exhauted.
+    // The limit is not exhausted.
     auto next = limit->getNext();
     ASSERT(next.isAdvanced());
     ASSERT_VALUE_EQ(Value(1), next.getDocument().getField("a"));

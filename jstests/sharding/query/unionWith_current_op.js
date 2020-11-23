@@ -117,7 +117,7 @@ runTest({
         cursor: {}
     },
     // We expect to see the merging half of the pipeline still running because the $unionWith hasn't
-    // finished, even though we should have exhaused the input cursors by the time we're looking at
+    // finished, even though we should have exhausted the input cursors by the time we're looking at
     // the union sub-pipeline.
     expectedRunningOps: [
         {coll: shardedColl1, count: 1, stages: ['$mergeCursors', '$unionWith']},
