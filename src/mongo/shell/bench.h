@@ -571,7 +571,7 @@ public:
     void start();
 
     /**
-     * Stop the activity. Block until the activitiy has stopped.
+     * Stop the activity. Block until the activity has stopped.
      */
     void stop();
 
