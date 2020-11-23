@@ -10,7 +10,7 @@ set -o errexit
 fs_type=xfs
 user_group=$USER:$(id -Gn $USER | cut -f1 -d ' ')
 
-# _usage_: Provides usage infomation
+# _usage_: Provides usage information
 function _usage_ {
   cat << EOF
 usage: $0 options

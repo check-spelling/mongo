@@ -8,7 +8,7 @@ set -o errexit
 # Default options
 tag_name="Evergreen AMI"
 
-# _usage_: Provides usage infomation
+# _usage_: Provides usage information
 function _usage_ {
   cat << EOF
 usage: $0 options
