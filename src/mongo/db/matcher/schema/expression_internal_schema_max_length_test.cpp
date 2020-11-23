@@ -89,7 +89,7 @@ TEST(InternalSchemaMaxLengthMatchExpression, TreatsMultiByteCodepointAsOneCharac
     ASSERT_TRUE(matchingMaxLength.matchesBSON(BSON("a" << testString)));
 }
 
-TEST(InternalSchemaMaxLengthMatchExpression, CorectlyCountsUnicodeCodepoints) {
+TEST(InternalSchemaMaxLengthMatchExpression, CorrectlyCountsUnicodeCodepoints) {
     InternalSchemaMaxLengthMatchExpression nonMatchingMaxLength("a", 4);
     InternalSchemaMaxLengthMatchExpression matchingMaxLength("a", 5);
 

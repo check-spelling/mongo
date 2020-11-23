@@ -565,7 +565,7 @@ TEST(InternalSchemaAllElemMatchFromIndexMatchExpression, FailsToParseWithEmptyAr
     ASSERT_EQ(expr.getStatus(), ErrorCodes::FailedToParse);
 }
 
-TEST(InternalSchemaAllElemMatchFromIndexMatchExpression, ParsesCorreclyWithValidInput) {
+TEST(InternalSchemaAllElemMatchFromIndexMatchExpression, ParsesCorrectlyWithValidInput) {
     auto query = fromjson("{a: {$_internalSchemaAllElemMatchFromIndex: [2, {a: { $lt: 4 }}]}}");
     boost::intrusive_ptr<ExpressionContextForTest> expCtx(new ExpressionContextForTest());
     auto expr = MatchExpressionParser::parse(query, expCtx);

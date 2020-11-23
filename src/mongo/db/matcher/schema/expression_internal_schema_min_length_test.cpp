@@ -88,7 +88,7 @@ TEST(InternalSchemaMinLengthMatchExpression, TreatsMultiByteCodepointAsOneCharac
     ASSERT_FALSE(nonMatchingMinLength.matchesBSON(BSON("a" << testString)));
 }
 
-TEST(InternalSchemaMinLengthMatchExpression, CorectlyCountsUnicodeCodepoints) {
+TEST(InternalSchemaMinLengthMatchExpression, CorrectlyCountsUnicodeCodepoints) {
     InternalSchemaMinLengthMatchExpression matchingMinLength("a", 5);
     InternalSchemaMinLengthMatchExpression nonMatchingMinLength("a", 6);
 
