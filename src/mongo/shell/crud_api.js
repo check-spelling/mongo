@@ -428,7 +428,7 @@ DBCollection.prototype.deleteMany = function(filter, options) {
     removeOp.remove();
 
     try {
-        // Remove all documents that matche the selector
+        // Remove all documents that matches the selector
         var r = bulk.execute(writeConcern);
     } catch (err) {
         if (err instanceof BulkWriteError) {
