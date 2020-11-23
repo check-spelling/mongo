@@ -7,7 +7,7 @@
  * test queries below show most $match/$sort/$group combinations where that is possible.
  *
  * @tags: [
- *   # The sharding and $facet passthrough suites modifiy aggregation pipelines in a way that
+ *   # The sharding and $facet passthrough suites modify aggregation pipelines in a way that
  *   # prevents the DISTINCT_SCAN optimization from being applied, which breaks the test.
  *   assumes_unsharded_collection,
  *   do_not_wrap_aggregations_in_facets,
