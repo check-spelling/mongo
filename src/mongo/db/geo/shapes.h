@@ -219,7 +219,7 @@ public:
     virtual bool fastDisjoint(const Box& other) const = 0;
 };
 
-// Annulus is used by GeoNear. Both inner and outer circles are inlcuded.
+// Annulus is used by GeoNear. Both inner and outer circles are included.
 class R2Annulus : public R2Region {
 public:
     R2Annulus();
