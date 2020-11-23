@@ -1909,7 +1909,7 @@ void rollback_internal::syncFixUp(OperationContext* opCtx,
         // before the rollback (i.e. the stable timestamp is at least the local top of oplog). In
         // addition, we must not take a stable checkpoint until the stable timestamp reaches the
         // sync source top of oplog (minValid), since we must not take a stable checkpoint until we
-        // are in a consistent state. We control this by seting the initialDataTimestamp to the
+        // are in a consistent state. We control this by setting the initialDataTimestamp to the
         // maximum of these two values. No checkpoints are taken until stable timestamp >=
         // initialDataTimestamp.
         auto syncSourceTopOfOplog = OpTime::parseFromOplogEntry(rollbackSource.getLastOperation())

@@ -150,7 +150,7 @@ walkThroughBehavior({primaryFollows: false, secondaryFollows: true});
 // updateSetParameters({ShardingTaskExecutorPoolReplicaSetMatching: "matchBusiestNode"});
 // walkThroughBehavior({primaryFollows: true, secondaryFollows: true});
 
-jsTestLog("Reseting to disabled");
+jsTestLog("Resetting to disabled");
 updateSetParameters({ShardingTaskExecutorPoolReplicaSetMatching: "disabled"});
 walkThroughBehavior({primaryFollows: false, secondaryFollows: false});
 
