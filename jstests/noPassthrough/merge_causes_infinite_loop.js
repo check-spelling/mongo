@@ -57,7 +57,7 @@ function pipeline(outColl) {
 const differentCollPipeline = pipeline(out.getName());
 const sameCollPipeline = pipeline(coll.getName());
 
-// Targeting a collection that is not the collection being agggregated over will result in each
+// Targeting a collection that is not the collection being aggregated over will result in each
 // document's value of 'a' being updated exactly once.
 assert.commandWorked(
     db.runCommand({aggregate: coll.getName(), pipeline: differentCollPipeline, cursor: {}}));
