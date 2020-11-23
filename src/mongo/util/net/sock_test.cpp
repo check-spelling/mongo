@@ -143,7 +143,7 @@ SocketPair socketPair(int type, int protocol) {
     }
 
     // I'd prefer to avoid trying to do this non-blocking on Windows. Just spin up some
-    // threads to do the connect and acccept.
+    // threads to do the connect and accept.
 
     Notification<void> accepted;
     SOCKET acceptSock = INVALID_SOCKET;
