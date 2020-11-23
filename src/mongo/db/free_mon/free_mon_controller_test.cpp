@@ -1664,7 +1664,7 @@ TEST_F(FreeMonControllerRSTest, SecondaryRollbackStopMetrics) {
 // TODO: tricky - OnUpser - disable - OnDelete - make sure registration halts
 // TODO: tricky - OnDelete - make sure registration halts
 
-// TODO: Integration: Tricky - secondary as marked via command line - enableCloudFreeMOnitorig =
+// TODO: Integration: Tricky - secondary as marked via command line - enableCloudFreeMOnitoring =
 // false but a primary replicates a change to enable it
 
 // TODO: test SSL???
