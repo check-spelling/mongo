@@ -56,7 +56,7 @@ public:
     }
 
     /**
-     * clears all the thingsd we own, and does NOT delete
+     * clears all the things we own, and does NOT delete
      * someone else has taken ownership
      */
     void clearAndRelease() {
