@@ -213,7 +213,7 @@ void processLoadSegment(const dl_phdr_info& info, const ElfW(Phdr) & phdr, BSONO
  * * "elfType", the ELF type of the object, typically 2 or 3 (executable or SO).
  *
  * At post-processing time, the buildId field can be used to identify the file containing
- * debug symbols for objects loaded at the given "laodAddr", which in turn can be used with
+ * debug symbols for objects loaded at the given "loadAddr", which in turn can be used with
  * the "backtrace" displayed in printStackTrace to get detailed unwind information.
  */
 int outputSOInfo(dl_phdr_info* info, size_t sz, void* data) {
