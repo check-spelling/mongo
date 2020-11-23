@@ -41,7 +41,7 @@ certs:
     output_path: 'jstests/ssl/libs/'
     # Optional, IDs of other public keys to append to the file
     append_certs: ['ca.pem', 'intermediate-ca.pem', ...]
-    # Optional, passphrase to encript private key with
+    # Optional, passphrase to encrypt private key with
     passphrase: 'secret'
     # Optional, x509v3 extensions, refer to: https://www.openssl.org/docs/man1.1.0/man5/x509v3_config.html
     pkcs1: true
