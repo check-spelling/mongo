@@ -7,7 +7,7 @@
  * - Run validate.
  * - Drop all collections.
  * - Recreate all indexes.
- * - Shuwdown mongod and restart with the last-lts version.
+ * - Showdown mongod and restart with the last-lts version.
  * - Run validate.
  *
  * The following index types are tested:
