@@ -84,7 +84,7 @@ function changeShardKeyWhenFailpointsSet(session, sessionDB, runInTxn, isFindAnd
     }));
 
     // Assert that the shard key update is not committed when there are no write errors and the
-    // transaction is explicity aborted.
+    // transaction is explicitly aborted.
     if (runInTxn) {
         session.startTransaction();
         if (isFindAndModify) {

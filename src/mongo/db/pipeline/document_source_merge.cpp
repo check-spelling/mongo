@@ -275,7 +275,7 @@ DocumentSourceMergeSpec parseMergeSpecAndResolveTargetNamespace(const BSONElemen
             // database, and the provided namespace value as a collection name.
             targetNss = {defaultDb, targetNss.ns()};
         } else if (targetNss.db().empty()) {
-            // Use the default database name if it wasn't specified explicilty.
+            // Use the default database name if it wasn't specified explicitly.
             targetNss = {defaultDb, targetNss.coll()};
         }
     }

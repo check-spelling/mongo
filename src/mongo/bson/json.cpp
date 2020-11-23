@@ -1312,7 +1312,7 @@ Status JParse::chars(std::string* result, const char* terminalSet, const char* a
                 case 'v':
                     result->push_back('\v');
                     break;
-                // Escape characters we explicity disallow
+                // Escape characters we explicitly disallow
                 case 'x':
                     return parseError("Hex escape not supported");
                 case '0':

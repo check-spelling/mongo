@@ -152,7 +152,7 @@ public:
     }
 
     /*
-     * Returns true if the last heartbeat data explicilty stated that the node is not electable.
+     * Returns true if the last heartbeat data explicitly stated that the node is not electable.
      */
     bool isUnelectable() const {
         return _lastResponse.hasIsElectable() && !_lastResponse.isElectable();

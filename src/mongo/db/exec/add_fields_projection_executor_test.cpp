@@ -221,7 +221,7 @@ TEST(AddFieldsProjectionExecutorSerialize, EmptySpecSerializesToCorrectForm) {
     ASSERT_DOCUMENT_EQ(expectedSerialization, addition.serializeTransformation(boost::none));
 }
 
-// Verify that serialize treats the _id field as any other field: including when explicity included.
+// Verify that serialize treats the _id field as any other field: including when explicitly included.
 TEST(AddFieldsProjectionExecutorSerialize, AddsIdToSerializeWhenExplicitlyIncluded) {
     boost::intrusive_ptr<ExpressionContextForTest> expCtx(new ExpressionContextForTest());
     AddFieldsProjectionExecutor addition(expCtx);

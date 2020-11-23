@@ -1405,7 +1405,7 @@ void TransactionParticipant::Participant::commitPreparedTransaction(
         if (opCtx->writesAreReplicated()) {
             invariant(!commitOplogEntryOpTime);
             // When this receiving node is not in a readable state, the cluster time gossiping
-            // protocol is not enabled, thus it is necessary to advance it explicitely,
+            // protocol is not enabled, thus it is necessary to advance it explicitly,
             // so that causal consistency is maintained in these situations.
             VectorClockMutable::get(opCtx)->tickClusterTimeTo(LogicalTime(commitTimestamp));
 

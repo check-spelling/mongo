@@ -386,7 +386,7 @@ private:
      * Number as value - strtoll and strtod
      * Date - strtoll
      * Timestamp - strtoul for both timestamp and increment and '-'
-     * before a number explicity disallowed
+     * before a number explicitly disallowed
      */
     Status number(StringData fieldName, BSONObjBuilder&);
 

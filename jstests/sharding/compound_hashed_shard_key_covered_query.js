@@ -76,7 +76,7 @@ for (let i = 0; i < 100; i++) {
     }
 }
 
-// Insert documents by directly connecting to the shard1 so that we can explicity create orphan
+// Insert documents by directly connecting to the shard1 so that we can explicitly create orphan
 // documents. We then run a 'find' command by connecting to mongos and validate that the orphan
 // documents are correctly rejected.
 const shard1DB = st.rs1.getPrimary().getDB(kDbName);

@@ -49,7 +49,7 @@ assert.soon(
     },
     70 * 1000);
 
-// now lets check things explicily on each shard
+// now lets check things explicitly on each shard
 var shard0 = s._connections[0].getDB(dbname);
 var shard1 = s._connections[1].getDB(dbname);
 

@@ -72,7 +72,7 @@ TEST(V2LogBuilder, UpdateFieldWithTopLevelMutableBsonElement) {
     mmb::Document doc;
     // Element is an array. Modifying a sub-element of mmb::Element does not store the data
     // serialized. So we need to call Element::writeToArray() in those cases to serialize the array.
-    // We explicity modify the sub-element so that this logic can be tested.
+    // We explicitly modify the sub-element so that this logic can be tested.
     const mmb::Element eltArr = doc.makeElementArray("",
                                                      BSON_ARRAY(1 << BSON("sub"
                                                                           << "obj")
@@ -81,7 +81,7 @@ TEST(V2LogBuilder, UpdateFieldWithTopLevelMutableBsonElement) {
 
     // Element is an obj. Modifying a sub-element of mmb::Element does not store the data
     // serialized. So we need to call Element::writeChildren() in those cases to serialize the
-    // object. We explicity modify the sub-element so that this logic can be tested.
+    // object. We explicitly modify the sub-element so that this logic can be tested.
     mmb::Element eltObj = doc.makeElementObject("", fromjson("{arr: [{a: [0]}, 2]}"));
     ASSERT_OK(eltObj.leftChild().rightChild().setValueString("val"));
 
@@ -109,7 +109,7 @@ TEST(V2LogBuilder, UpdateFieldMutableBson) {
 
     // Element is an obj. Modifying a sub-element of mmb::Element does not store the data
     // serialized. So we need to call Element::writeChildren() in those cases to serialize the
-    // object. We explicity modify the sub-element so that this logic can be tested.
+    // object. We explicitly modify the sub-element so that this logic can be tested.
     mmb::Element eltObj = doc.root().leftChild().leftChild();
     ASSERT_OK(eltObj.leftChild().setValueBSONElement(storage["subArray"]));
 
