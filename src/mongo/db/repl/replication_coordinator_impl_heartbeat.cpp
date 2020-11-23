@@ -272,7 +272,7 @@ void ReplicationCoordinatorImpl::_handleHeartbeatResponse(
         hbStatusResponse = StatusWith<ReplSetHeartbeatResponse>(responseStatus);
     }
 
-    // Leaving networkTime units as ms since the average ping calulation may be affected.
+    // Leaving networkTime units as ms since the average ping calculation may be affected.
     HeartbeatResponseAction action = _topCoord->processHeartbeatResponse(
         now, duration_cast<Milliseconds>(networkTime), target, hbStatusResponse);
 
