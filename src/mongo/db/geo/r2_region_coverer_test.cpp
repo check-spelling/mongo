@@ -442,11 +442,11 @@ TEST(ShapeIntersection, Polygons) {
      *       / |  []
      *      /__|
      */
-    vector<Point> triangleVetices;
-    triangleVetices.push_back(Point(0, 0));
-    triangleVetices.push_back(Point(1, 0));
-    triangleVetices.push_back(Point(1, 4));
-    Polygon triangle(triangleVetices);
+    vector<Point> triangleVertices;
+    triangleVertices.push_back(Point(0, 0));
+    triangleVertices.push_back(Point(1, 0));
+    triangleVertices.push_back(Point(1, 4));
+    Polygon triangle(triangleVertices);
     Box box;
 
     box = Box(1.5, 1.5, 1);
@@ -528,12 +528,12 @@ TEST(ShapeIntersection, Polygons) {
      * |____`. (4,0)
      * (0,0)
      */
-    vector<Point> concaveVetices;
-    concaveVetices.push_back(Point(0, 0));
-    concaveVetices.push_back(Point(4, 0));
-    concaveVetices.push_back(Point(1, 1));
-    concaveVetices.push_back(Point(0, 4));
-    Polygon concave(concaveVetices);
+    vector<Point> concaveVertices;
+    concaveVertices.push_back(Point(0, 0));
+    concaveVertices.push_back(Point(4, 0));
+    concaveVertices.push_back(Point(1, 1));
+    concaveVertices.push_back(Point(0, 4));
+    Polygon concave(concaveVertices);
 
     /*
      * Disjoint
