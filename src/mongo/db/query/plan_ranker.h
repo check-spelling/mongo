@@ -150,7 +150,7 @@ protected:
     virtual double calculateProductivity(const PlanStageStatsType* stats) const = 0;
 
     /**
-     * Returns a string desribing a formula to calculate plan producivity. It can be used for the log
+     * Returns a string describing a formula to calculate plan producivity. It can be used for the log
      * output, for example.
      */
     virtual std::string getProductivityFormula(const PlanStageStatsType* stats) const = 0;
