@@ -1621,7 +1621,7 @@ TEST_F(DConcurrencyTestFixture, TicketAcquireWithMaxDeadlineRespectsUninterrupti
                            R2.emplace(opCtx2, Date_t::max(), Lock::InterruptBehavior::kThrow);
                        },
                        [&] {
-                           // Relase the only ticket available to unblock the other thread.
+                           // Release the only ticket available to unblock the other thread.
                            R1.reset();
                        });
 
