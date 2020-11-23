@@ -2905,7 +2905,7 @@ def doConfigure(myenv):
 
     # If we are using libstdc++, check to see if we are using a
     # libstdc++ that is older than our GCC minimum of 5.3.0. This is
-    # primarly to help people using clang on OS X but forgetting to
+    # primarily to help people using clang on OS X but forgetting to
     # use --libc++ (or set the target OS X version high enough to get
     # it as the default). We would, ideally, check the __GLIBCXX__
     # version, but for various reasons this is not workable. Instead,
