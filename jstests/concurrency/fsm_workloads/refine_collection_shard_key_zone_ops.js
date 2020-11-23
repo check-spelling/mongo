@@ -297,12 +297,12 @@ var $config = (function() {
 
                 // Assign a range to the zone.
                 const lowerZoneRange = {[this.oldShardKeyField]: currentRangeLowerBound};
-                const uppperZoneRange =
+                const upperZoneRange =
                     {[this.oldShardKeyField]: currentRangeLowerBound + this.partitionSize};
                 assertAlways.commandWorked(db.adminCommand({
                     updateZoneKeyRange: latchColl.getFullName(),
                     min: lowerZoneRange,
-                    max: uppperZoneRange,
+                    max: upperZoneRange,
                     zone: zoneName
                 }));
 
