@@ -363,7 +363,7 @@ TEST_F(ShardedUnionTest, IncorporatesViewDefinitionAndRetriesWhenViewErrorReceiv
     loadRoutingTableWithTwoChunksAndTwoShards(kTestAggregateNss);
 
     NamespaceString nsToUnionWith(expCtx()->ns.db(), "view");
-    // Mock out the view namespace as emtpy for now - this is what it would be when parsing in a
+    // Mock out the view namespace as empty for now - this is what it would be when parsing in a
     // sharded cluster - only later would we learn the actual view definition.
     expCtx()->setResolvedNamespaces(StringMap<ExpressionContext::ResolvedNamespace>{
         {nsToUnionWith.coll().toString(), {nsToUnionWith, std::vector<BSONObj>{}}}});

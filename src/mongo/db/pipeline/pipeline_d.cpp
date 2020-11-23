@@ -483,7 +483,7 @@ SkipThenLimit extractSkipAndLimitForPushdown(Pipeline* pipeline) {
 auto buildProjectionForPushdown(const DepsTracker& deps, Pipeline* pipeline) {
     auto&& sources = pipeline->getSources();
 
-    // Short-circuit if the pipeline is emtpy, there is no projection and nothing to push down.
+    // Short-circuit if the pipeline is empty, there is no projection and nothing to push down.
     if (sources.empty()) {
         return BSONObj();
     }

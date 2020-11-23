@@ -276,7 +276,7 @@ TEST(Comparison, NonEqual) {
     ASSERT_FALSE(a >= b);
 }
 
-TEST(Comparison, MixedEmtpyAndNot) {
+TEST(Comparison, MixedEmptyAndNot) {
     FieldRef a("a"), b;
     ASSERT_FALSE(a == b);
     ASSERT_TRUE(a != b);
