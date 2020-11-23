@@ -1729,7 +1729,7 @@ StatusWith<std::unique_ptr<PlanExecutor, PlanExecutor::Deleter>> getExecutorCoun
     // for its number of records. This is implemented by the CountStage, and we don't need
     // to create a child for the count stage in this case.
     //
-    // If there is a hint, then we can't use a trival count plan as described above.
+    // If there is a hint, then we can't use a trivial count plan as described above.
     const bool isEmptyQueryPredicate =
         cq->root()->matchType() == MatchExpression::AND && cq->root()->numChildren() == 0;
     const bool useRecordStoreCount = isEmptyQueryPredicate && request.getHint().isEmpty();
