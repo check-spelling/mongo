@@ -2063,7 +2063,7 @@ TEST(PlanCacheTest, ComputeKeyWildcardDiscriminatesCorrectlyBasedOnPartialFilter
     }
 
     // $eq:null predicates cannot be assigned to a wildcard index. Make sure that this is
-    // discrimated correctly. This test is designed to reproduce SERVER-48614.
+    // discriminated correctly. This test is designed to reproduce SERVER-48614.
     {
         auto compatibleQuery = canonicalize("{x: {$eq: 5}, y: 1}");
         auto incompatibleQuery = canonicalize("{x: {$eq: 5}, y: null}");
