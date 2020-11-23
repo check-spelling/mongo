@@ -2199,7 +2199,7 @@ Status WiredTigerRecordStore::oplogDiskLocRegister(OperationContext* opCtx,
         return opCtx->recoveryUnit()->setTimestamp(ts);
     }
 
-    // This handles non-primary (secondary) state behavior; we simply set the oplog visiblity read
+    // This handles non-primary (secondary) state behavior; we simply set the oplog visibility read
     // timestamp here, as there cannot be visible holes prior to the opTime passed in.
     _kvEngine->getOplogManager()->setOplogReadTimestamp(ts);
 

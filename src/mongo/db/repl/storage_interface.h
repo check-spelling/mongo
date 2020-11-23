@@ -460,7 +460,7 @@ public:
     virtual Timestamp getAllDurableTimestamp(ServiceContext* serviceCtx) const = 0;
 
     /**
-     * Registers a timestamp with the storage engine so that it can enforce oplog visiblity rules.
+     * Registers a timestamp with the storage engine so that it can enforce oplog visibility rules.
      * orderedCommit - specifies whether the timestamp provided is ordered w.r.t. commits; that is,
      * all commits with older timestamps have already occurred, and any commits with newer
      * timestamps have not yet occurred.
