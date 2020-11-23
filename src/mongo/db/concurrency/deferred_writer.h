@@ -166,7 +166,7 @@ private:
     int64_t _numBytes;
 
     /**
-     * The number of deffered entries that have been dropped. Resets when the
+     * The number of deferred entries that have been dropped. Resets when the
      * rate-limited system log is written out.
      */
     int64_t _droppedEntries;
