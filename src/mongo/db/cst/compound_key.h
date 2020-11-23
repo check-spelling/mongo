@@ -69,7 +69,7 @@ struct CompoundExclusionKey final {
     }
     std::unique_ptr<CNode> obj;
 };
-// This indicates inconsitent compound exclusion projection. This type of projection is disallowed
+// This indicates inconsistent compound exclusion projection. This type of projection is disallowed
 // and will produce an error in $project.
 struct CompoundInconsistentKey final {
     CompoundInconsistentKey() = default;
