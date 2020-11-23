@@ -616,7 +616,7 @@ TEST(MatchExpressionParserArrayTest, AllElemMatch3) {
     ASSERT_EQUALS(MatchExpression::AND, and2->matchType());
     ASSERT_EQUALS(2U, and2->numChildren());
 
-    // Both children should be equalites, with paths "y" and "z".
+    // Both children should be equalities, with paths "y" and "z".
     MatchExpression* leaf1 = and2->getChild(0);
     ASSERT_EQUALS(MatchExpression::EQ, leaf1->matchType());
     ASSERT_EQUALS(0U, leaf1->numChildren());
