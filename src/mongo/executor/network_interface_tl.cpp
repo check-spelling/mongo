@@ -628,7 +628,7 @@ void NetworkInterfaceTL::RequestManager::cancelRequests() {
 
     for (size_t i = 0; i < requests.size(); i++) {
         // Note that right now, this will cause the connection to be discarded before most if not
-        // all responsnes for our _killOperations.
+        // all responses for our _killOperations.
         // TODO SERVER-47602 should fix this.
         if (auto requestState = requests[i].lock()) {
             LOGV2_DEBUG(4646301,
