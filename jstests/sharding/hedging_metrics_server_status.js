@@ -7,7 +7,7 @@
 load("jstests/libs/fail_point_util.js");
 
 /*
- * Verifies that the server status response has the hegingMetrics fields that we expect.
+ * Verifies that the server status response has the hedgingMetrics fields that we expect.
  */
 function verifyServerStatusFields(serverStatusResponse) {
     assert(serverStatusResponse.hasOwnProperty("hedgingMetrics"),
