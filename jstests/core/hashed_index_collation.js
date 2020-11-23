@@ -108,7 +108,7 @@ validateFindCmdOutputAndPlan({
 });
 
 // Hashed indexes with collation cannot be covered, if the query predicate doesn't restrict strings
-// from being returneds.
+// from being returned.
 validateFindCmdOutputAndPlan({
     filter: {"a.b": "string"},
     projection: {"a.e": 1, _id: 0},
