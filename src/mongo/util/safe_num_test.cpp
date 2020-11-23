@@ -136,7 +136,7 @@ TEST(Addition, Zero) {
     ASSERT_EQUALS(zero + 1, plusOne);
 }
 
-TEST(Addition, UpConvertion) {
+TEST(Addition, UpConversion) {
     const SafeNum zeroInt32(0);
     const SafeNum zeroInt64(static_cast<int64_t>(0));
     const SafeNum zeroDouble(0.0);
@@ -427,7 +427,7 @@ TEST(Multiplication, DoubleOne) {
     ASSERT_EQUALS(plusOne * plusOne, plusOne);
 }
 
-TEST(Multiplication, UpConvertion) {
+TEST(Multiplication, UpConversion) {
     const SafeNum zeroInt32(0);
     const SafeNum zeroInt64(static_cast<int64_t>(0));
     const SafeNum zeroDouble(0.0);
