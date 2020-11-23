@@ -3936,7 +3936,7 @@ def doConfigure(myenv):
     # some knowledge that they have larger cache line sizes. In
     # particular, POWER8 uses 128 byte lines and zSeries uses 256. We
     # start at the goal state, and work down until we find something
-    # the compiler can actualy do for us.
+    # the compiler can actually do for us.
     extended_alignment_search_sequence = {
         'ppc64le' : [ 128, 64, 32 ],
         's390x' : [ 256, 128, 64, 32 ],
