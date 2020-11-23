@@ -2055,7 +2055,7 @@ public:
  *
  * Primaries log no-ops when starting an index build to acquire a timestamp. A primary committing
  * an index build gets timestamped when the `createIndexes` command creates an oplog entry. That
- * step is mimiced here.
+ * step is mimicked here.
  *
  * Secondaries timestamp starting their index build by being in a `TimestampBlock` when the oplog
  * entry is processed. Secondaries will look at the logical clock when completing the index
