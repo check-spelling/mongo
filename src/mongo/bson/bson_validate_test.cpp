@@ -384,7 +384,7 @@ TEST(BSONValidateFast, BoolValuesAreValidated) {
     ASSERT_OK(validateBSON(obj.objdata(), obj.objsize()));
     const BSONElement x = obj["x"];
     // Legal, because we know that the BufBuilder gave
-    // us back some heap memory, which isn't oringinally const.
+    // us back some heap memory, which isn't originally const.
     auto writable = const_cast<char*>(x.value());
     for (int val = std::numeric_limits<char>::min();
          val != (int(std::numeric_limits<char>::max()) + 1);
