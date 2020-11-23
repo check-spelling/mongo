@@ -39,7 +39,7 @@ namespace mongo {
  * Creates a new type with the same interface as T, but having the
  * given alignment. Note that if the given alignment is less than
  * alignof(T), the program is ill-formed. To ensure that your program
- * is well formed, see WithAligmentAtLeast, which will not reduce
+ * is well formed, see WithAlignmentAtLeast, which will not reduce
  * alignment below the natural alignment of T.
  */
 template <typename T, size_t alignment>
