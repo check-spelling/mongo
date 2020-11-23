@@ -1,6 +1,6 @@
 """Test hook for verifying data consistency across a replica set.
 
-Unlike dbhash.py, this version of the hook runs continously in a background thread while the test is
+Unlike dbhash.py, this version of the hook runs continuously in a background thread while the test is
 running.
 """
 

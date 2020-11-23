@@ -1,6 +1,6 @@
 """Test hook for running background validate collection commands against a standalone or members of a replica.
 
-This hook runs continously in a background thread while the test is running.
+This hook runs continuously in a background thread while the test is running.
 
 This should not be run against a sharded cluster!
 """

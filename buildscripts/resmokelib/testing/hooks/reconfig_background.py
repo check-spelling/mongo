@@ -1,6 +1,6 @@
 """Test hook for running safe reconfigs against the primary of a replica set.
 
-This hook runs continously in a background thread while the test is running.
+This hook runs continuously in a background thread while the test is running.
 """
 
 import os.path
