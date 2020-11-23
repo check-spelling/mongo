@@ -89,7 +89,7 @@ for (let validDoc of validDocs) {
 validateFindCmdOutputAndPlan({
     filter: {a: 0},
     projection: {a: 1, c: 1, _id: 0},
-    expectedOutput: validDocs,  // Ophan documents are not returned.
+    expectedOutput: validDocs,  // Orphan documents are not returned.
     expectedStages: ["IXSCAN", "SHARD_MERGE", "SHARDING_FILTER"],
     stagesNotExpected: ["FETCH"]
 });
