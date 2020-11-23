@@ -736,7 +736,7 @@ int main(const int argc, const char* const* const argv) {
                              const char* message,
                              const char* component,
                              const char* context,
-                             int severety) {
+                             int severity) {
         ASSERT(message);
         ASSERT(component);
         *reinterpret_cast<bool*>(user_data) = true;

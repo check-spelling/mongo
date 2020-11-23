@@ -114,12 +114,12 @@ Status storeMongoShellOptions(const moe::Environment& params,
         shellGlobalParams.enableIPv6 = true;
     }
 
-    auto minimumLoggedSeveity = logv2::LogSeverity::Info();
+    auto minimumLoggedSeverity = logv2::LogSeverity::Info();
     if (params.count("verbose")) {
-        minimumLoggedSeveity = logv2::LogSeverity::Debug(1);
+        minimumLoggedSeverity = logv2::LogSeverity::Debug(1);
     }
     logv2::LogManager::global().getGlobalSettings().setMinimumLoggedSeverity(
-        mongo::logv2::LogComponent::kDefault, minimumLoggedSeveity);
+        mongo::logv2::LogComponent::kDefault, minimumLoggedSeverity);
 
     // `objcheck` option is part of `serverGlobalParams` to avoid making common parts depend upon
     // the client options.  The option is set to false in clients by default.
