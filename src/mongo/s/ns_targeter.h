@@ -61,7 +61,7 @@ struct ShardEndpoint {
  * The NSTargeter interface is used by a WriteOp to generate and target child write operations
  * to a particular collection.
  *
- * The lifecyle of a NSTargeter is:
+ * The life of a NSTargeter is:
  *
  *   0. targetDoc/targetQuery as many times as is required
  *

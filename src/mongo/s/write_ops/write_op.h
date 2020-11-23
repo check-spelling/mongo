@@ -66,7 +66,7 @@ enum WriteOpState {
 /**
  * State of a single write item in-progress from a client request.
  *
- * The lifecyle of a write op:
+ * The life of a write op:
  *
  *   0. Begins at _Ready,
  *
