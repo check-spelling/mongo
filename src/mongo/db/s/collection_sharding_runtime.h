@@ -124,7 +124,7 @@ public:
     void enterCriticalSectionCommitPhase(const CSRLock&);
 
     /**
-     * Method to control the collection's critical secion. Method listed below must be called with
+     * Method to control the collection's critical section. Method listed below must be called with
      * the collection lock in IX mode and the CSRLock in exclusive mode.
      *
      * In this method, the CSRLock ensures concurrent access to the critical section.
