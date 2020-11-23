@@ -311,7 +311,7 @@ function TenantMigrationTest({name = "TenantMigrationTest", donorRst, recipientR
     /**
      * Verifies that the documents on the recipient primary are correct.
      */
-    this.verifyReceipientDB = function(tenantId, dbName, collName, data = loadDummyData()) {
+    this.verifyRecipientDB = function(tenantId, dbName, collName, data = loadDummyData()) {
         // TODO (SERVER-51734): Uncomment this line.
         // const shouldMigrate = this.isNamespaceForTenant(tenantId, dbName);
         const shouldMigrate = false;
