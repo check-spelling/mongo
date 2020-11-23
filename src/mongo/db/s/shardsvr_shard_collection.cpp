@@ -537,7 +537,7 @@ UUID shardCollection(OperationContext* opCtx,
             // Insert chunk documents to config.chunks on the config server.
             writeFirstChunksToConfig(opCtx, initialChunks);
             // If an error happens when contacting the config server, we don't know if the update
-            // succeded or not, which might cause the local shard version to differ from the config
+            // succeeded or not, which might cause the local shard version to differ from the config
             // server, so we clear the metadata to allow another operation to refresh it.
             try {
                 updateShardingCatalogEntryForCollection(opCtx,
