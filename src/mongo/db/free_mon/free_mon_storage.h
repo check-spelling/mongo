@@ -63,7 +63,7 @@ public:
     static void deleteState(OperationContext* opCtx);
 
     /**
-     * Reads the singelton document from local.clustermanager.
+     * Reads the singleton document from local.clustermanager.
      *
      * Returns nothing if there are more then one document or it does not exist.
      */
