@@ -76,7 +76,7 @@ function test(msg, extra = undefined, severity = undefined, debug = undefined) {
 test('Hello World');
 test('Hello World', {arg: 'value'});
 
-// Don't up the log level till now in order to avoid aggregious spammage.
+// Don't up the log level till now in order to avoid egregious spammage.
 admin.setLogLevel(5);
 
 // Now roll up sleeves and check them all.
