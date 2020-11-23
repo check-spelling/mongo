@@ -113,7 +113,7 @@ thread_local MozJSImplScope::ASANHandles* kCurrentASANHandles = nullptr;
 // a stale value here which pointed to a destroyed scope. The theory
 // is that this is due to the different TLS model that applies when
 // building a dynamic library. We never dug down to a complete root
-// cause, but emperically demonstrated that making it atomic allowed
+// cause, but empirically demonstrated that making it atomic allowed
 // the hang analyzer tests to pass. Given that we do intend to read
 // this from "another thread" (being GDB), it makes some sense. Or it
 // might be a GDB bug of some sort that forcing it into an atomic

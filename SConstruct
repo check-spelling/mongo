@@ -3348,7 +3348,7 @@ def doConfigure(myenv):
 
     if get_option('runtime-hardening') == "on" and optBuild:
         # Older glibc doesn't work well with _FORTIFY_SOURCE=2. Selecting 2.11 as the minimum was an
-        # emperical decision, as that is the oldest non-broken glibc we seem to require. It is possible
+        # empirical decision, as that is the oldest non-broken glibc we seem to require. It is possible
         # that older glibc's work, but we aren't trying.
         #
         # https://gforge.inria.fr/tracker/?func=detail&group_id=131&atid=607&aid=14070
