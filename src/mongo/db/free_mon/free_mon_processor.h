@@ -57,7 +57,7 @@ using FreeMonCollectorCollection = FTDCCollectorCollection;
 
 
 /**
- * Reponsible for tracking when to send the next retry after errors are encountered.
+ * Responsible for tracking when to send the next retry after errors are encountered.
  */
 class RetryCounter {
     const int64_t kMax = 60 * 60 * 24;
