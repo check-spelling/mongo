@@ -47,7 +47,7 @@ namespace CollectionValidation {
 
 /**
  * Contains information about the collection being validated and the user provided validation
- * options. Additionally it maintains the state of shared objects throughtout the validation, such
+ * options. Additionally it maintains the state of shared objects throughout the validation, such
  * as locking, cursors and data throttling.
  */
 class ValidateState {

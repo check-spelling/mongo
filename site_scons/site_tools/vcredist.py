@@ -103,7 +103,7 @@ def generate(env):
         return
 
     # We may or may not need to figure out the path to Program files,
-    # depending on the various paths we take throught this logic.
+    # depending on the various paths we take through this logic.
     programfilesx86 = None
 
     # TODO: Getting this path is a start, but we should later provide
