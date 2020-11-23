@@ -286,7 +286,7 @@ extern "C" mongoc_stream_t* embedded_stream_initiator(const mongoc_uri_t* uri,
 
     // Connect the functions to the stream
     // type is not relevant for us. Has to be set for the C Driver, but it has to do with picking
-    // how to communicate over the networ
+    // how to communicate over the network
     stream->type = 1000;
     stream->poll = mongoc_stream_embedded_poll;
     stream->close = mongoc_stream_embedded_close;
