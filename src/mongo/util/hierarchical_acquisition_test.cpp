@@ -88,8 +88,8 @@ private:
 
 TEST_F(HierarchicalAcquisitionTest, AcquireRelease) {
     // This test performs the simplest idempotent set of successful operations on a single level L1:
-    // - add(L1) suceeds because nothing is set
-    // - remove(L1) suceeds because only L1 is set
+    // - add(L1) succeeds because nothing is set
+    // - remove(L1) succeeds because only L1 is set
 
     for (auto i = Level::kMinIndex; i <= Level::kMaxIndex; ++i) {
         Level level(i);
@@ -102,9 +102,9 @@ TEST_F(HierarchicalAcquisitionTest, AcquireRelease) {
 TEST_F(HierarchicalAcquisitionTest, ReleaseAcquireAcquireReleaseRelease) {
     // This test performs an exhaustive idempotent set of operations on a single Level L1:
     // - remove(L1) fails because nothing is set
-    // - add(L1) suceeds because nothing is set
+    // - add(L1) succeeds because nothing is set
     // - add(L1) fails because L1 is set
-    // - remove(L1) suceeds because L1 is set
+    // - remove(L1) succeeds because L1 is set
     // - remove(L1) fails because nothing is set
 
     for (auto i = Level::kMinIndex; i <= Level::kMaxIndex; ++i) {
@@ -130,7 +130,7 @@ TEST_F(HierarchicalAcquisitionTest, ReleaseAcquireAcquireReleaseRelease) {
 TEST_F(HierarchicalAcquisitionTest, DescendingAcquireLagRelease) {
     // This test verifies that interleaved acquire releases fail as expected for two levels L1 and
     // L2 where L1 > L2:
-    // - add(L2) suceeds because L1 > L2
+    // - add(L2) succeeds because L1 > L2
     // - remove(L1) fails because L1 > L2
 
     auto testWithSkip = [&](Level::IndexType skip) {
@@ -159,7 +159,7 @@ TEST_F(HierarchicalAcquisitionTest, AscendingAcquireReleaseLag) {
     // This test verifies that interleaved acquire releases fail as expected for two levels L1 and
     // L2 where L1 < L2:
     // - add(L2) fails because L1 < L2
-    // - remove(L1) suceeds because L1 < L2
+    // - remove(L1) succeeds because L1 < L2
 
     auto testWithSkip = [&](Level::IndexType skip) {
         // Set the first level

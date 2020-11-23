@@ -1,5 +1,5 @@
 /**
- * Test that single-shard transactions succeeed against replica sets whose primary has
+ * Test that single-shard transactions succeed against replica sets whose primary has
  * 'enableMajorityReadConcern':false and whose secondary is significantly lagged.
  *
  * With majority reads disabled, we are not guaranteed to be able to service reads at the majority

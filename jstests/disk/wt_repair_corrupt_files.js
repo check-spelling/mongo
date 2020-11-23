@@ -82,7 +82,7 @@ let runTest = function(mongodOptions) {
     MongoRunner.stopMongod(mongod);
 
     /**
-     * Test 3. Corrupt the _mdb_catalog in an unrecoverable way. Verify that repair suceeds
+     * Test 3. Corrupt the _mdb_catalog in an unrecoverable way. Verify that repair succeeds
      * in creating an empty catalog and recovers the orphaned testColl, which will still be
      * accessible in the 'local.orphan-' namespace.
      */

@@ -33,7 +33,7 @@ function runTest(client, restartCommand) {
         AlwaysRecordTraffic: "notARealPath",
         enableTestCommands: 1
     });
-    assert.neq(null, client, "AlwaysRecordTraffic and with enableTestCommands should suceed");
+    assert.neq(null, client, "AlwaysRecordTraffic and with enableTestCommands should succeed");
     db = getDB(client);
 
     assert(db.runCommand({"serverStatus": 1}).trafficRecording.running);
