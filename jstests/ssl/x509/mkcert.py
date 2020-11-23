@@ -245,7 +245,7 @@ def enable_subject_key_identifier_extension(x509, exts, cert):
     if not ident:
         return
     if ident not in ['hash', 'hash-critical']:
-        raise ValueError("Only the value 'hash' is accepted for subejctKeyIdentifier")
+        raise ValueError("Only the value 'hash' is accepted for subjectKeyIdentifier")
 
     exts.append(OpenSSL.crypto.X509Extension(b'subjectKeyIdentifier', ident == 'hash-critical', b'hash', subject=x509))
 
