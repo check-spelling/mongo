@@ -91,7 +91,7 @@ public:
     void serverNegotiate(const BSONObj& input, BSONObjBuilder* output);
 
     /*
-     * Returns a new Message containing the compressed contentx of 'msg'. If compressorId is null,
+     * Returns a new Message containing the compressed contents of 'msg'. If compressorId is null,
      * then it selects the first negotiated compressor. Otherwise, it uses the compressor with the
      * given identifier. It is intended that this value echo back a value returned as the out
      * parameter value for compressorId from a call to decompressMessage.
