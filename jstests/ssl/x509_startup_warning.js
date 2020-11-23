@@ -4,7 +4,7 @@
 (function() {
 'use strict';
 
-function runTest(checkMongos, opts, expectWarningCertifcates, expectWarningHostnames) {
+function runTest(checkMongos, opts, expectWarningCertificates, expectWarningHostnames) {
     clearRawMongoProgramOutput();
     let mongo;
 
@@ -28,7 +28,7 @@ function runTest(checkMongos, opts, expectWarningCertifcates, expectWarningHostn
     assert.soon(function() {
         const output = rawMongoProgramOutput();
         return (
-            expectWarningCertifcates ==
+            expectWarningCertificates ==
                 output.includes(
                     'While invalid X509 certificates may be used to connect to this server, they will not be considered permissible for authentication') &&
             expectWarningHostnames ==
