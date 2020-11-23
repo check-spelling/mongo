@@ -217,7 +217,7 @@ TEST(PrefixSize, Normal) {
     ASSERT_EQUALS(fieldA.commonPrefixSize(fieldB), 2U);
 }
 
-TEST(PrefixSize, NoCommonatility) {
+TEST(PrefixSize, NoCommonality) {
     FieldRef fieldA, fieldB;
     fieldA.parse("a");
     fieldB.parse("b");
