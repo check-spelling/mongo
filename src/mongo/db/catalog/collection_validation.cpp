@@ -444,7 +444,7 @@ Status validate(OperationContext* opCtx,
     });
     if (validateState.shouldRunRepair()) {
         // Note: cannot set PrepareConflictBehavior here, since the validate command with repair
-        // needs kIngnoreConflictsAllowWrites, but validate repair at startup cannot set that here
+        // needs kIgnoreConflictsAllowWrites, but validate repair at startup cannot set that here
         // due to an already active WriteUnitOfWork.  The prepare conflict behavior for validate
         // command with repair is set in the command code prior to this point.
         invariant(!validateState.isBackground());
