@@ -96,7 +96,7 @@ Status ParsedUpdate::parseRequest() {
     }
     _arrayFilters = std::move(statusWithArrayFilters.getValue());
 
-    // We parse the update portion before the query portion because the dispostion of the update
+    // We parse the update portion before the query portion because the disposition of the update
     // may determine whether or not we need to produce a CanonicalQuery at all.  For example, if
     // the update involves the positional-dollar operator, we must have a CanonicalQuery even if
     // it isn't required for query execution.
