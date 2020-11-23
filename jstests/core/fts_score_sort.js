@@ -29,14 +29,14 @@ assert.throws(function() {
         .itcount();
 });
 
-// Sort spefication should be rejected if a $-keyword other than $meta is used.
+// Sort specification should be rejected if a $-keyword other than $meta is used.
 assert.throws(function() {
     coll.find({$text: {$search: "textual content"}}, {score: {$meta: "textScore"}})
         .sort({score: {$notMeta: "textScore"}})
         .itcount();
 });
 
-// Sort spefication should be rejected if it is a string, not an object with $meta.
+// Sort specification should be rejected if it is a string, not an object with $meta.
 assert.throws(function() {
     coll.find({$text: {$search: "textual content"}}, {score: {$meta: "textScore"}})
         .sort({score: "textScore"})
