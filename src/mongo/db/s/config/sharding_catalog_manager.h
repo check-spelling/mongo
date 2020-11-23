@@ -494,7 +494,7 @@ private:
      */
     StatusWith<boost::optional<ShardType>> _checkIfShardExists(
         OperationContext* opCtx,
-        const ConnectionString& propsedShardConnectionString,
+        const ConnectionString& proposedShardConnectionString,
         const std::string* shardProposedName,
         long long maxSize);
 
