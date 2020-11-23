@@ -47,7 +47,7 @@ using NodeTraversalFunc = std::function<void(MatchExpression*, std::string)>;
 
 /**
  * Returns true if 'expr' has an $exists predicate on 'path.' Note that this only returns true
- * for an $exists predicatated on the exact path given: it will not return true if there is a
+ * for an $exists predicated on the exact path given: it will not return true if there is a
  * $exists predicated on a prefix of the path.
  */
 bool hasExistencePredicateOnPath(const MatchExpression& expr, StringData path);
