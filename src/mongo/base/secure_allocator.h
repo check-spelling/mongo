@@ -176,7 +176,7 @@ struct SecureAllocatorDomain {
         //
         // This allocator is stateless, so we can avoid a runtime check
         // (even though it would probably be optimized out based on the
-        // constrexpr-esque nature of our equality comparison operator),
+        // constexpr-esque nature of our equality comparison operator),
         // so we can set all of these to true.
         using propagate_on_container_copy_assignment = std::true_type;
         using propagate_on_container_move_assignment = std::true_type;
