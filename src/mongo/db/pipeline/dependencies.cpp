@@ -46,7 +46,7 @@ BSONObj DepsTracker::toProjectionWithoutMetadata() const {
 
     if (fields.empty()) {
         // We need no user-level fields (as we would if this was logically a count). Since there is
-        // no way of expressing a projection that indicates no depencies, we return an empty
+        // no way of expressing a projection that indicates no dependencies, we return an empty
         // projection.
         return bb.obj();
     }
