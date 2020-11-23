@@ -51,7 +51,7 @@ namespace {
 
 //
 // BSON size limit management: these functions conditionally append to a
-// BSON object or BSON array buidlder, depending on whether or not the
+// BSON object or BSON array builder, depending on whether or not the
 // maximum user size for a BSON object will be exceeded.
 //
 

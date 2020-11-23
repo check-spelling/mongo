@@ -960,7 +960,7 @@ public:
     }
 
     inline bool doesNotAlias(const BSONObj& o) const {
-        // A BSONObj could alias the leaf buildr.
+        // A BSONObj could alias the leaf builder.
         return !inLeafBuilder(o.objdata());
     }
 

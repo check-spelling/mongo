@@ -4363,7 +4363,7 @@ if get_option('separate-debug') == "on" or env.TargetOSIs("windows"):
 
     # The current ninja builder can't handle --separate-debug on non-Windows platforms
     # like linux or macOS, because they depend on adding extra actions to the link step,
-    # which cannot be translated into the ninja bulider.
+    # which cannot be translated into the ninja builder.
     if not env.TargetOSIs("windows") and get_option('ninja') != 'disabled':
         env.FatalError("Cannot use --separate-debug with Ninja on non-Windows platforms.")
 
