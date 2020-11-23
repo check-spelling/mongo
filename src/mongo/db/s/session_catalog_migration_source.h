@@ -237,7 +237,7 @@ private:
     // List of remaining session records that needs to be cloned.
     std::vector<std::unique_ptr<SessionOplogIterator>> _sessionOplogIterators;
 
-    // Points to the current session record eing cloned.
+    // Points to the current session record being cloned.
     std::unique_ptr<SessionOplogIterator> _currentOplogIterator;
 
     // Used for temporarily storng oplog entries for operations that has more than one entry.
