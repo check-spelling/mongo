@@ -165,7 +165,7 @@ target.drop();
 })();
 
 // Test $merge fails if it cannot find an index to verify that the 'on' fields will be unique.
-(function testMergeFailsIfOnFieldCannotBeVerifiedForUniquness() {
+(function testMergeFailsIfOnFieldCannotBeVerifiedForUniqueness() {
     // The 'on' fields contains a single document field.
     let error = assert.throws(() => source.aggregate(makeMergePipeline({
         target: target.getName(),
