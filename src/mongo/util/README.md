@@ -1,6 +1,6 @@
-# MongoDB Utilities and Primatives
+# MongoDB Utilities and Primitives
 
-This document provides a high-level overview of certain utilities and primatives used within the
+This document provides a high-level overview of certain utilities and primitives used within the
 server. This is a work in progress and more sections will be added gradually.
 
 ## Fail Points
