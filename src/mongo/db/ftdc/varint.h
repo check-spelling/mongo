@@ -40,7 +40,7 @@ namespace mongo {
  * Methods to compress and decompress 64-bit integers into variable integers
  *
  * Uses a technique described here:
- * S. Buttcher, C. L. A. Clarke, and G. V. Cormack.
+ * S. Butcher, C. L. A. Clarke, and G. V. Cormack.
  *  Information Retrieval: Implementing and Evaluating Search Engines. MIT Press, Cambridge, MA,
  *  2010
  */
