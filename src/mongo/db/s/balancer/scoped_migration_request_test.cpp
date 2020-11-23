@@ -132,7 +132,7 @@ TEST_F(ScopedMigrationRequestTest, CreateScopedMigrationRequest) {
 /**
  * A document is created via scoped object, but document is not removed in destructor because
  * keepDocumentOnDestruct() is called beforehand. Then recreate the scoped object without writing to
- * the migraitons collection, and remove on destruct.
+ * the migrations collection, and remove on destruct.
  *
  * Simulates (mostly) Balancer recovery.
  */

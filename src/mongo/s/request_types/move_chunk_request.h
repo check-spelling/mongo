@@ -48,7 +48,7 @@ class StatusWith;
  */
 class MoveChunkRequest {
 public:
-    // This enum represents whether or not a migraiton should attempt to move a large chunk
+    // This enum represents whether or not a migration should attempt to move a large chunk
     enum class ForceJumbo : int {
         kDoNotForce = 0,  // do not attempt to migrate a large chunk
         kForceManual,     // manual moveChunk command specified 'forceJumbo : true'
