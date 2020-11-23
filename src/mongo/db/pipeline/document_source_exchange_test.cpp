@@ -261,7 +261,7 @@ TEST_F(DocumentSourceExchangeTest, ExchangeNConsumerEarlyout) {
                 sleepmillis(prng.nextInt32() % 20 + 1);
                 ++docs;
 
-                // The consumer 1 bails out early wihout consuming all its documents.
+                // The consumer 1 bails out early without consuming all its documents.
                 if (id == 1 && docs == 100) {
                     // Pretend we have seen all docs.
                     docs = nDocs / nConsumers;
