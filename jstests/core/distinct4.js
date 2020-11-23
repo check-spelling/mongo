@@ -1,4 +1,4 @@
-// Vaildate input to distinct command. SERVER-12642
+// Validate input to distinct command. SERVER-12642
 
 (function() {
 "use strict";

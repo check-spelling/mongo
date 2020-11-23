@@ -126,7 +126,7 @@ configureMaxTimeAlwaysTimeOut("alwaysOn");
 assert.commandFailedWithCode(
     coll.runCommand("validate", {maxTimeMS: 60 * 1000}),
     ErrorCodes.MaxTimeMSExpired,
-    "expected vailidate to fail with code " + ErrorCodes.MaxTimeMSExpired +
+    "expected validate to fail with code " + ErrorCodes.MaxTimeMSExpired +
         " due to maxTimeAlwaysTimeOut fail point, but instead got: " + tojson(res));
 
 // Negative test for "validate".

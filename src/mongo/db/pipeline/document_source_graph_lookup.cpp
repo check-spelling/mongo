@@ -72,7 +72,7 @@ NamespaceString parseGraphLookupFromAndResolveNamespace(const BSONElement& elem,
         return fromNss;
     }
 
-    // Valdate the db and coll names.
+    // Validate the db and coll names.
     auto spec = NamespaceSpec::parse({elem.fieldNameStringData()}, elem.embeddedObject());
     auto nss = NamespaceString(spec.getDb().value_or(""), spec.getColl().value_or(""));
     uassert(ErrorCodes::FailedToParse,
