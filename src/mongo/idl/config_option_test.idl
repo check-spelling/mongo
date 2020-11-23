@@ -76,7 +76,7 @@ configs:
     hidden: true
 
   "testConfigOpt7":
-    description: "Muilti-value positional string arguments"
+    description: "Multi-value positional string arguments"
     arg_vartype: StringVector
     source: cli
     positional: 2-

@@ -235,7 +235,7 @@ for (var i = 0; i < 22; i++) {
         } catch (e) {
             print(e);
         }
-        assert(!passed, "Should not be able to shard collection with mulikey index");
+        assert(!passed, "Should not be able to shard collection with multikey index");
     }
     if (i == 13) {
         coll.save({num: [100, 200], x: 10});
@@ -248,7 +248,7 @@ for (var i = 0; i < 22; i++) {
         } catch (e) {
             print(e);
         }
-        assert(!passed, "Should not be able to shard collection with mulikey index");
+        assert(!passed, "Should not be able to shard collection with multikey index");
     }
     if (i == 14) {
         coll.save({num: 100, x: 10, y: [1, 2]});
@@ -261,7 +261,7 @@ for (var i = 0; i < 22; i++) {
         } catch (e) {
             print(e);
         }
-        assert(!passed, "Should not be able to shard collection with mulikey index");
+        assert(!passed, "Should not be able to shard collection with multikey index");
     }
     if (i == 15) {
         // try sharding with a hashed index

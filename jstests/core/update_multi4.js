@@ -1,6 +1,6 @@
 // @tags: [requires_non_retryable_writes]
 
-t = db.update_mulit4;
+t = db.update_multi4;
 t.drop();
 
 for (i = 0; i < 1000; i++) {

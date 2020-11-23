@@ -384,7 +384,7 @@ public:
 };
 
 enum InsertOptions {
-    /** With muli-insert keep processing inserts if one fails */
+    /** With multi-insert keep processing inserts if one fails */
     InsertOption_ContinueOnError = 1 << 0
 };
 
