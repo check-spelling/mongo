@@ -1,6 +1,6 @@
 /**
  * Tests that after a restart of a shard, multi write operations, finds and aggregations still work
- * as expected with a stale router. Requrires persistence because it asumes the shard will still
+ * as expected with a stale router. Requrires persistence because it assumes the shard will still
  * have it's data after a restart.
  *
  * @tags: [

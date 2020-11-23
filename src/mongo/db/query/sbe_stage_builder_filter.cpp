@@ -1011,7 +1011,7 @@ public:
             auto makePredicate = [&, arrSetTag = arrSetTag, arrSetVal = arrSetVal](
                                      sbe::value::SlotId inputSlot,
                                      EvalStage inputStage) -> EvalExprStagePair {
-                // Copy the ArraySet because the the sbe EConstant assmumes ownership and the
+                // Copy the ArraySet because the the sbe EConstant assumes ownership and the
                 // makePredicate function can be invoked multiple times in 'generateTraverse'.
                 auto [equalitiesTag, equalitiesVal] = sbe::value::copyValue(arrSetTag, arrSetVal);
 
