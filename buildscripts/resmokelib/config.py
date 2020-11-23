@@ -309,7 +309,7 @@ EVERGREEN_VERSION_ID = None
 # If set, then any jstests that have any of the specified tags will be excluded from the suite(s).
 EXCLUDE_WITH_ANY_TAGS = None
 
-# A tag which is implicited excluded. This is useful for temporarily disabling a test.
+# A tag which is implicated excluded. This is useful for temporarily disabling a test.
 EXCLUDED_TAG = "__TEMPORARILY_DISABLED__"
 
 # If true, then a test failure or error will cause resmoke.py to exit and not run any more tests.
