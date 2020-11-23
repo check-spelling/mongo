@@ -55,7 +55,7 @@ for (let iteration = 0; iteration < nIterations; iteration++) {
         indexes: [{key: {x: 1}, name: "x_1", background: true, unique: true}]
     }));
 
-    // Generate updates that increment x on each document backwards by _id to avoid conficts
+    // Generate updates that increment x on each document backwards by _id to avoid conflicts
     // when applied in-order.
     updates = [];
     for (let i = 0; i < nOps; i++) {

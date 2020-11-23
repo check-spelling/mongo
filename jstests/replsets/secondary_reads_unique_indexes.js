@@ -93,7 +93,7 @@ for (let iteration = 0; iteration < nIterations; iteration++) {
     assert.commandWorked(primaryDB.runCommand({update: collName, updates: updates}));
     updates = [];
 
-    // Generate updates that increment x on each document backwards by _id to avoid conficts
+    // Generate updates that increment x on each document backwards by _id to avoid conflicts
     // when applied in-order. When these updates get applied to the secondary, they may get
     // applied out of order by different threads and temporarily violate unique index
     // constraints.
