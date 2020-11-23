@@ -5327,7 +5327,7 @@ TEST_F(ReplCoordTest, AwaitHelloResponseReturnsOnReplSetReconfigOnSecondary) {
 
 TEST_F(
     ReplCoordTest,
-    NodeReturnsUnsatisfiableWriteConcernWhenReconfiggingToAClusterThatCannotSatisfyTheWriteConcern) {
+    NodeReturnsUnsatisfiableWriteConcernWhenReconfiguringToAClusterThatCannotSatisfyTheWriteConcern) {
     assertStartSuccess(BSON("_id"
                             << "mySet"
                             << "version" << 2 << "members"
@@ -5384,7 +5384,7 @@ TEST_F(
 }
 
 TEST_F(ReplCoordTest,
-       NodeReturnsOKFromAwaitReplicationWhenReconfiggingToASetWhereMajorityIsSmallerAndSatisfied) {
+       NodeReturnsOKFromAwaitReplicationWhenReconfiguringToASetWhereMajorityIsSmallerAndSatisfied) {
     assertStartSuccess(BSON("_id"
                             << "mySet"
                             << "version" << 2 << "members"

@@ -2841,7 +2841,7 @@ TEST_F(TopoCoordTest, NodeTransitionsToRemovedWhenRemovedFromConfigEvenWhenPrima
     ASSERT_EQUALS(MemberState::RS_REMOVED, getTopoCoord().getMemberState().s);
 }
 
-TEST_F(TopoCoordTest, NodeTransitionsToSecondaryWhenReconfiggingToBeUnelectable) {
+TEST_F(TopoCoordTest, NodeTransitionsToSecondaryWhenReconfiguringToBeUnelectable) {
     ASSERT_TRUE(TopologyCoordinator::Role::kFollower == getTopoCoord().getRole());
     ASSERT_EQUALS(MemberState::RS_STARTUP, getTopoCoord().getMemberState().s);
     updateConfig(BSON("_id"

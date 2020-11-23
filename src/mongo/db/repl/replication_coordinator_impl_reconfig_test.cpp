@@ -705,7 +705,7 @@ TEST_F(
 }
 
 TEST_F(ReplCoordTest, NodeDoesNotAcceptHeartbeatReconfigWhileInTheMidstOfReconfig) {
-    // start up, become primary, reconfig, while reconfigging receive reconfig via heartbeat
+    // start up, become primary, reconfig, while reconfiguring receive reconfig via heartbeat
     assertStartSuccess(BSON("_id"
                             << "mySet"
                             << "version" << 2 << "members"

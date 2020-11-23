@@ -1,4 +1,4 @@
-// test that reconfigging only tag changes is properly reflected in hello
+// test that reconfiguring only tag changes is properly reflected in hello
 
 var replTest = new ReplSetTest({nodes: 2});
 replTest.startSet({oplogSize: 10});
