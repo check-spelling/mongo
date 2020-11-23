@@ -64,7 +64,7 @@ public:
     static StatusWith<LockpingsType> fromBSON(const BSONObj& source);
 
     /**
-     * Returns OK if all fields have been set. Otherwise, retruns NoSuchKey
+     * Returns OK if all fields have been set. Otherwise, returns NoSuchKey
      * and information about the first field that is missing.
      */
     Status validate() const;

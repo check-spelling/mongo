@@ -205,7 +205,7 @@ TEST(ElemMatchProjection, CanMergeWithExistingFieldsInInputDocument) {
                                          "{bar: 6, z: 6}, {bar: 10, z: 10}]}")}));
 }
 
-TEST(ElemMatchProjection, RertursEmptyValuefItContainsNumericSubfield) {
+TEST(ElemMatchProjection, ReturnsEmptyValuefItContainsNumericSubfield) {
     ASSERT_VALUE_EQ(
         {}, applyElemMatch(fromjson("{$gt: 2}"), "foo", Document{BSON("foo" << BSON(0 << 3))}));
 
