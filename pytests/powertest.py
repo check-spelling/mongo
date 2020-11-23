@@ -1950,7 +1950,7 @@ Examples:
     # mongod options
     mongod_options.add_option(
         "--replSet", dest="repl_set",
-        help="Name of mongod single node replica set, if unpsecified mongod"
+        help="Name of mongod single node replica set, if unspecified mongod"
         " defaults to standalone node", default=None)
 
     # The current host used to start and connect to mongod. Not meant to be specified
