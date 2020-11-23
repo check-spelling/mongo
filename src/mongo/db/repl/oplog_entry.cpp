@@ -382,7 +382,7 @@ bool OplogEntry::isSingleOplogEntryTransaction() const {
 bool OplogEntry::isEndOfLargeTransaction() const {
     if (getCommandType() != CommandType::kApplyOps) {
         // If the oplog entry is neither commit nor abort, then it must be an applyOps. Otherwise,
-        // it cannot be a termainal oplog entry of a large transaction.
+        // it cannot be a terminal oplog entry of a large transaction.
         return false;
     }
     auto prevOptimeOpt = getPrevWriteOpTimeInTransaction();
