@@ -36,7 +36,7 @@ function forceAggregationToHangAndCheckMaxTimeMsExpires(
 
     // Enable a failPoint so that the write will hang. 'shouldCheckForInterrupt' is set to true
     // so that maxTimeMS expiration can occur while the $merge operation's thread is hanging on
-    // this failpoiint.
+    // this failpoint.
     const failpointCommand = {
         configureFailPoint: failPointName,
         mode: "alwaysOn",
