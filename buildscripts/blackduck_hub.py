@@ -786,7 +786,7 @@ def _get_field(name, ymap, field: str):
     return ymap[field]
 
 
-def _get_supression_field(ymap, field: str):
+def _get_suppression_field(ymap, field: str):
     if field not in ymap:
         return None
 
@@ -814,8 +814,8 @@ def _read_third_party_components():
                                  _get_field(comp, cmap, 'team_owner'))
 
         tp.is_test_only = cmap.get("is_test_only", False)
-        tp.vulnerability_suppression = _get_supression_field(cmap, "vulnerability_suppression")
-        tp.upgrade_suppression = _get_supression_field(cmap, "upgrade_suppression")
+        tp.vulnerability_suppression = _get_suppression_field(cmap, "vulnerability_suppression")
+        tp.upgrade_suppression = _get_suppression_field(cmap, "upgrade_suppression")
 
         third_party.append(tp)
 
@@ -932,7 +932,7 @@ this text.
 Developer:
 To address this build failure, the next steps are as follows:
 1. File a SERVER ticket to update the software if one already does not exist.
-2. Add a “upgrade_supression” to {THIRD_PARTY_COMPONENTS_FILE} with the SERVER ticket to acknowledge
+2. Add a “upgrade_suppression” to {THIRD_PARTY_COMPONENTS_FILE} with the SERVER ticket to acknowledge
    this report. Note that you do not need to immediately update the library, just file a ticket.
 
 If you believe the library is already up-to-date but Black Duck has the wrong version, please update
@@ -973,7 +973,7 @@ Developer:
 To address this build failure, the next steps are as follows:
 1. File a SERVER ticket to update the software if one already does not exist. Note that you do not
    need to immediately update the library, just file a ticket.
-2. Add a “vulnerability_supression” to {THIRD_PARTY_COMPONENTS_FILE} with the SERVER ticket to
+2. Add a “vulnerability_suppression” to {THIRD_PARTY_COMPONENTS_FILE} with the SERVER ticket to
    acknowledge this report.
 
 If you believe the library is already up-to-date but Black Duck has the wrong version, please update
@@ -1102,7 +1102,7 @@ class Analyzer:
         self.black_duck_components = _query_blackduck()
 
         # Black Duck detects ourself everytime we release a new version
-        # Rather then constantly have to supress this in Black Duck itself which will generate false positives
+        # Rather then constantly have to suppress this in Black Duck itself which will generate false positives
         # We filter ourself out of the list of components.
         self.black_duck_components = [
             comp for comp in self.black_duck_components if not comp.name == "MongoDB"

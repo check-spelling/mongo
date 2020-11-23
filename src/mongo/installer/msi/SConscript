@@ -147,7 +147,7 @@ env.Command(objects,
 pre_msi = "$BUILD_DIR/msi/${SERVER_DIST_BASENAME}.pre.msi"
 
 # Suppress VC140_CRT_CRT.MSM Internal Consistency Errors
-# ICE03 - Supress "String overflow"
+# ICE03 - Suppress "String overflow"
 # -- https://msdn.microsoft.com/en-us/library/windows/desktop/aa369037(v=vs.85).aspx
 # ICE82 - Suppress "duplicate sequence number"
 # -- https://msdn.microsoft.com/en-us/library/windows/desktop/aa368798(v=vs.85).aspx

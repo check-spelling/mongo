@@ -42,7 +42,7 @@ def run_tests():
     # type: () -> None
     """Run all the tests."""
 
-    # my-py's typeshed does not have defaultTestLoader and TestLoader type information so suppresss
+    # my-py's typeshed does not have defaultTestLoader and TestLoader type information so suppress
     # my-py type information.
     all_tests = unittest.defaultTestLoader.discover(start_dir="tests")  # type: ignore
 

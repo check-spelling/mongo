@@ -83,7 +83,7 @@ class Linter:
         self.file_name = file_name
         self.raw_lines = raw_lines
         self.clean_lines = []
-        self.nolint_supression = []
+        self.nolint_suppression = []
         self.generic_fcv_comments = []
         self._error_count = 0
 
@@ -146,7 +146,7 @@ class Linter:
             # // Some explanation NOLINT
             # so we need a regular expression
             if _RE_LINT.search(clean_line):
-                self.nolint_supression.append(linenum)
+                self.nolint_suppression.append(linenum)
 
             if _RE_GENERIC_FCV_COMMENT.search(clean_line):
                 self.generic_fcv_comments.append(linenum)
@@ -299,7 +299,7 @@ class Linter:
                     'before the generic FCV reference.')
 
     def _error(self, linenum, category, message):
-        if linenum in self.nolint_supression:
+        if linenum in self.nolint_suppression:
             return
 
         if category == "legal/license":
