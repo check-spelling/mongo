@@ -45,7 +45,7 @@ StackLocator::StackLocator() {
     // TODO: _WIN32_WINNT >= 0x0602 (windows 8 / 2012 server) may be
     // able to use GetCurrentThreadStackLimits
 
-    // Put something on the stack, convieniently the variable we are
+    // Put something on the stack, conveniently the variable we are
     // going to write into, and ask the VM system for information
     // about the memory region it inhabits, which is the committed
     // part of the stack.
