@@ -21,7 +21,7 @@ function testUserAdminAnyDatabaseSystemCollIndexing(adminDB) {
 }
 
 // SERVER-14701: the backup role should be able to run the
-// collstats command on all resouces, including system resources.
+// collstats command on all resources, including system resources.
 function testBackupSystemCollStats(adminDB) {
     adminDB.auth("root", "pwd");
     adminDB.createUser({user: "backup-agent", pwd: "pwd", roles: ["backup"]});
