@@ -1878,7 +1878,7 @@ TEST_F(RadixStoreTest, MergeConflictingModifications) {
     ASSERT_THROWS(thisStore.merge3(baseStore, otherStore), merge_conflict_exception);
 }
 
-TEST_F(RadixStoreTest, MergeConflictingModifictionOtherAndDeletionThis) {
+TEST_F(RadixStoreTest, MergeConflictingModificationOtherAndDeletionThis) {
     value_type value1 = std::make_pair("foo", "1");
     value_type value2 = std::make_pair("foo", "2");
 
@@ -1891,7 +1891,7 @@ TEST_F(RadixStoreTest, MergeConflictingModifictionOtherAndDeletionThis) {
     ASSERT_THROWS(thisStore.merge3(baseStore, otherStore), merge_conflict_exception);
 }
 
-TEST_F(RadixStoreTest, MergeConflictingModifictionThisAndDeletionOther) {
+TEST_F(RadixStoreTest, MergeConflictingModificationThisAndDeletionOther) {
     value_type value1 = std::make_pair("foo", "1");
     value_type value2 = std::make_pair("foo", "2");
 
