@@ -151,7 +151,7 @@ public:
                             const repl::OpTime& prePostImageOpTime) = 0;
 
     /**
-     * Notifies this cloner that a delede happened to the collection, which it owns. It is up to the
+     * Notifies this cloner that a delete happened to the collection, which it owns. It is up to the
      * cloner's implementation to decide what to do with this information and it is valid for the
      * implementation to ignore it.
      *
