@@ -110,7 +110,7 @@ testTxnFailsWithCode({
 
 jsTestLog("Testing stepdown during commit transaction.");
 testAbortOrCommitTxnFailsWithCode(
-    {failPoint: "hangBeforeCommitingTxn", op: "session.commitTransaction_forTesting()"});
+    {failPoint: "hangBeforeCommittingTxn", op: "session.commitTransaction_forTesting()"});
 
 jsTestLog("Testing stepdown during abort transaction.");
 testAbortOrCommitTxnFailsWithCode(

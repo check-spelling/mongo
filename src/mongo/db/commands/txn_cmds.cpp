@@ -51,7 +51,7 @@ namespace {
 
 MONGO_FAIL_POINT_DEFINE(participantReturnNetworkErrorForAbortAfterExecutingAbortLogic);
 MONGO_FAIL_POINT_DEFINE(participantReturnNetworkErrorForCommitAfterExecutingCommitLogic);
-MONGO_FAIL_POINT_DEFINE(hangBeforeCommitingTxn);
+MONGO_FAIL_POINT_DEFINE(hangBeforeCommittingTxn);
 MONGO_FAIL_POINT_DEFINE(hangBeforeAbortingTxn);
 // TODO SERVER-39704: Remove this fail point once the router can safely retry within a transaction
 // on stale version and snapshot errors.
@@ -132,7 +132,7 @@ public:
                 txnParticipant.transactionIsOpen());
 
         CurOpFailpointHelpers::waitWhileFailPointEnabled(
-            &hangBeforeCommitingTxn, opCtx, "hangBeforeCommitingTxn");
+            &hangBeforeCommittingTxn, opCtx, "hangBeforeCommittingTxn");
 
         auto optionalCommitTimestamp = cmd.getCommitTimestamp();
         if (optionalCommitTimestamp) {

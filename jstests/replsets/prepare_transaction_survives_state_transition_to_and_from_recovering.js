@@ -50,7 +50,7 @@ jsTestLog("Putting secondary in maintenance mode so it will transition to RECOVE
 assert.commandWorked(secondary.adminCommand({replSetMaintenance: 1}));
 replSet.waitForState(secondary, ReplSetTest.State.RECOVERING);
 
-jsTestLog("Commiting the second prepared transaction while a node is in the RECOVERING state");
+jsTestLog("Committing the second prepared transaction while a node is in the RECOVERING state");
 
 assert.commandWorked(PrepareHelpers.commitTransaction(session2, prepareTimestamp2));
 replSet.awaitReplication();

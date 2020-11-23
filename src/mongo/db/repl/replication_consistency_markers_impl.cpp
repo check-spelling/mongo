@@ -173,7 +173,7 @@ void ReplicationConsistencyMarkersImpl::clearInitialSyncFlag(OperationContext* o
     // checkpoint taken after initial sync. So, no way this minValid update can be part of a stable
     // checkpoint taken earlier than lastAppliedTimestamp. So, it's safe to make it as an
     // non-timestamped write. Also, this has to be non-timestamped write because we may have readers
-    // at lastAppliedTimestamp, commiting the storage writes before or at such timestamps is
+    // at lastAppliedTimestamp, committing the storage writes before or at such timestamps is
     // illegal.
     update.timestamp = Timestamp();
 

@@ -374,7 +374,7 @@ void SessionCatalogMigrationDestination::_retrieveSessionStateFromSource(Service
         client->setSystemOperationKillableByStepdown(lk);
     }
 
-    bool oplogDrainedAfterCommiting = false;
+    bool oplogDrainedAfterCommitting = false;
     ProcessOplogResult lastResult;
     repl::OpTime lastOpTimeWaited;
 
@@ -404,11 +404,11 @@ void SessionCatalogMigrationDestination::_retrieveSessionStateFromSource(Service
                         // that it doesn't miss any new oplog created between the time window where
                         // this depleted the buffer from the source shard and receiving the commit
                         // command.
-                        if (oplogDrainedAfterCommiting) {
+                        if (oplogDrainedAfterCommitting) {
                             break;
                         }
 
-                        oplogDrainedAfterCommiting = true;
+                        oplogDrainedAfterCommitting = true;
                     }
                 }
 
