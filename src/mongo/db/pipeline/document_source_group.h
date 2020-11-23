@@ -168,7 +168,7 @@ public:
     /**
      * When possible, creates a document transformer that transforms the first document in a group
      * into one of the output documents of the $group stage. This is possible when we are grouping
-     * on a single field and all accumulators are $first (or there are no accumluators).
+     * on a single field and all accumulators are $first (or there are no accumulators).
      *
      * It is sometimes possible to use a DISTINCT_SCAN to scan the first document of each group,
      * in which case this transformation can replace the actual $group stage in the pipeline
