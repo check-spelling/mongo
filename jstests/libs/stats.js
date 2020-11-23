@@ -66,7 +66,7 @@ function assertTopDiffEq(coll, lastTop, key, expectedCountDiff) {
     let diff = diffTop(key, thisTop, lastTop);
     assert.gte(diff.count, 0, "non-decreasing count");
     // TODO (JBR for SERVER-26812): We don't currently guarantee that the time will not be zero
-    // which causes occaisional test failures here. If we change the timers in top to use a
+    // which causes occasional test failures here. If we change the timers in top to use a
     // monotonic clock in SERVER-26812, then we can uncomment these.
     // assert.gte(diff.time, 0, "non-decreasing time");
     // assert.eq(diff.count !== 0, diff.time > 0, "non-zero time iff non-zero count");
