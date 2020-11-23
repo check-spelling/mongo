@@ -116,7 +116,7 @@ struct SSLParams {
         SSLMode_allowSSL,
 
         /**
-         * Make outgoing SSL-connections and accept both unecrypted and SSL-connections.
+         * Make outgoing SSL-connections and accept both unencrypted and SSL-connections.
          */
         SSLMode_preferSSL,
 
