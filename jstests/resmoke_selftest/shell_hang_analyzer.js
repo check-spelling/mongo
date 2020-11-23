@@ -66,7 +66,7 @@ assert.eq(7, TestData.peerPids.length);
 
 (function() {
 /*
- * Test MongoRunner.runHangAnalzyzer.disable()
+ * Test MongoRunner.runHangAnalyzer.disable()
  */
 clearRawMongoProgramOutput();
 
