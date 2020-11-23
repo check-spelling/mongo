@@ -1792,7 +1792,7 @@ void getCertInfo(CertInformationToLog* info, const ::CFArrayRef cert) {
     ConstDataRange certData(reinterpret_cast<const char*>(::CFDataGetBytePtr(cfCertData.get())),
                             ::CFDataGetLength(cfCertData.get()));
 
-    // Comupte hash from bytes of certificate
+    // Compute hash from bytes of certificate
     const auto certSha1 = SHA1Block::computeHash({certData});
     info->thumbprint =
         std::vector<char>((char*)certSha1.data(), (char*)certSha1.data() + certSha1.kHashLength);
