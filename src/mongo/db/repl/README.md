@@ -1418,7 +1418,7 @@ Before the data clone phase begins, the node will do the following:
    use the `defaultBeginFetchingOpTime` instead. This will ensure that even if a transaction was
    started on the sync source after it was queried for the oldest active transaction timestamp, the
    syncing node will have all the oplog entries associated with an active transaction in its oplog.
-7. Query its sync source's oplog for its lastest OpTime. This will be the `beginApplyingTimestamp`,
+7. Query its sync source's oplog for its latest OpTime. This will be the `beginApplyingTimestamp`,
    or the timestamp that it begins applying oplog entries at once it has completed the data clone
    phase. If there was no active transaction on the sync source, the `beginFetchingTimestamp` will
    be the same as the `beginApplyingTimestamp`.

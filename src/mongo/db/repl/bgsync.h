@@ -91,7 +91,7 @@ public:
                    OplogApplier* oplogApplier);
 
     // stop syncing (when this node becomes a primary, e.g.)
-    // During stepdown, the last fetched optime is not reset in order to keep track of the lastest
+    // During stepdown, the last fetched optime is not reset in order to keep track of the latest
     // optime in the buffer. However, the last fetched optime has to be reset after initial sync or
     // rollback.
     void stop(bool resetLastFetchedOptime);

@@ -122,7 +122,7 @@ function waitForFailpoint(hitFailpointStr, numTimes, timeout) {
 }
 
 /*
- * If all shards in the cluster have binVersion "lastest", sets the server parameter for
+ * If all shards in the cluster have binVersion "latest", sets the server parameter for
  * making the transaction coordinator return decision early to true.
  * TODO (SERVER-48114): Remove this function.
  */

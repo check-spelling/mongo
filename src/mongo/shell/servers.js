@@ -1150,8 +1150,8 @@ function appendSetParameterArgs(argArray) {
 
     // Setting programMajorMinorVersion to the maximum value for the latest binary version
     // simplifies version checks below.
-    const lastestMajorMinorVersion = Number.MAX_SAFE_INTEGER;
-    let programMajorMinorVersion = lastestMajorMinorVersion;
+    const latestMajorMinorVersion = Number.MAX_SAFE_INTEGER;
+    let programMajorMinorVersion = latestMajorMinorVersion;
     if (programVersion) {
         let [major, minor, point] = programVersion.split(".");
         programMajorMinorVersion = parseInt(major) * 100 + parseInt(minor) * 10;
@@ -1192,7 +1192,7 @@ function appendSetParameterArgs(argArray) {
 
         // Since options may not be backward compatible, mongos options are not
         // set on older versions, e.g., mongos-3.0.
-        if (baseProgramName === 'mongos' && programMajorMinorVersion == lastestMajorMinorVersion) {
+        if (baseProgramName === 'mongos' && programMajorMinorVersion == latestMajorMinorVersion) {
             // apply setParameters for mongos
             if (jsTest.options().setParametersMongos) {
                 let params = jsTest.options().setParametersMongos;
@@ -1310,7 +1310,7 @@ function appendSetParameterArgs(argArray) {
             // Since options may not be backward compatible, mongod options are not
             // set on older versions, e.g., mongod-3.0.
             if (baseProgramName === 'mongod' &&
-                programMajorMinorVersion == lastestMajorMinorVersion) {
+                programMajorMinorVersion == latestMajorMinorVersion) {
                 if (jsTest.options().storageEngine === "wiredTiger" ||
                     !jsTest.options().storageEngine) {
                     if (jsTest.options().storageEngineCacheSizeGB &&
