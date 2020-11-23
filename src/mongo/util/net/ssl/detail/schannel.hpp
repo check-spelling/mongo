@@ -268,7 +268,7 @@ public:
           _mode(HandshakeMode::Unknown) {}
 
     /**
-     * Set the current handdshake mode as client or server.
+     * Set the current handshake mode as client or server.
      *
      * Idempotent if called with same mode otherwise it asserts.
      */
