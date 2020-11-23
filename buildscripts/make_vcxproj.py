@@ -230,7 +230,7 @@ class ProjFileGenerator(object):  # pylint: disable=too-many-instance-attributes
 
     def __parse_cl_line(self, line):
         """Parse a compiler line."""
-        # Get the file we are compilong
+        # Get the file we are compiling
         file_name = re.search(r"/c ([\w\\.-]+) ", line).group(1)
 
         # Skip files made by scons for configure testing
