@@ -120,7 +120,7 @@ TEST(Registration, DuplicateSingleName) {
     }
 }
 
-TEST(Registration, DuplicateSeingleNameAcrossSections) {
+TEST(Registration, DuplicateSingleNameAcrossSections) {
     moe::OptionSection group1;
     group1.addOptionChaining("one", "", moe::Switch, "Uno", {}, {}, OptionParserTest);
 

@@ -41,7 +41,7 @@ constexpr StringData InternalExprEqMatchExpression::kName;
 bool InternalExprEqMatchExpression::matchesSingleElement(const BSONElement& elem,
                                                          MatchDetails* details) const {
     // We use NonLeafArrayBehavior::kMatchSubpath traversal in InternalExprEqMatchExpression. This
-    // means matchesSinglElement() will be called when an array is found anywhere along the patch we
+    // means matchesSingleElement() will be called when an array is found anywhere along the patch we
     // are matching against. When this occurs, we return 'true' and depend on the corresponding
     // ExprMatchExpression node to filter properly.
     if (elem.type() == BSONType::Array) {
