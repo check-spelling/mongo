@@ -21,7 +21,7 @@ const map = function() {
     // set property on receiver
     this.feed = {beef: 1};
 
-    // modify property on receiever
+    // modify property on receiver
     this.a = {cake: 1};
     emit(this._id, this.feed);
     emit(this._id, this.a);
