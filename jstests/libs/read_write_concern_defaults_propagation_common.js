@@ -137,7 +137,7 @@ var ReadWriteConcernDefaultsPropagation = (function() {
     /**
      * Asserts eventually all given nodes have no default RWC in their in-memory cache.
      */
-    function verifyPropgationOfNoDefaults(checkConns) {
+    function verifyPropagationOfNoDefaults(checkConns) {
         assert.soon(() => checkConns.every(checkConn => {
             const defaultsRes = assert.commandWorked(
                 checkConn.adminCommand({getDefaultRWConcern: 1, inMemory: true}));
@@ -164,7 +164,7 @@ var ReadWriteConcernDefaultsPropagation = (function() {
         setDefaultsAndVerifyPropagation(mainConn, checkConns);
         assert.commandWorked(
             mainConn.getDB("config").settings.remove({_id: "ReadWriteConcernDefaults"}));
-        verifyPropgationOfNoDefaults(checkConns);
+        verifyPropagationOfNoDefaults(checkConns);
     };
 
     return {runTests, runDropAndDeleteTests};

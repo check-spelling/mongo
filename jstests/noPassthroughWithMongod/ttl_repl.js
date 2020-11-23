@@ -3,7 +3,7 @@
  *  Part 1: Initiate replica set. Insert some docs and create a TTL index.
  *          Check that the correct # of docs age out.
  *  Part 2: Add a new member to the set. Check that it also gets the correct # of docs.
- *  Part 3: Change the TTL expireAfterSeconds field and check successful propogation to secondary.
+ *  Part 3: Change the TTL expireAfterSeconds field and check successful propagation to secondary.
  *  @tags: [requires_replication]
  */
 
