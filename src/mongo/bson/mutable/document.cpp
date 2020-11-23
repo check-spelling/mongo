@@ -114,7 +114,7 @@ namespace mutablebson {
  *    field names are null-byte-delimited. ElementsReps for such elements store an offset
  *    into the Field Name Heap, and when asked for their field name simply return a pointer
  *    to the string data the offset identifies. This exploits the fact that in BSON, valid
- *    field names are null terinated and do not contain embedded null bytes.
+ *    field names are null terminated and do not contain embedded null bytes.
  *
  *  - The 'root' Element. Each Document contains a well known Element, which always refers
  *    to a pre-constructed ElementRep at offset zero in the Elements Vector. This is an
