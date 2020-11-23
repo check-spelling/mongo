@@ -368,7 +368,7 @@ DispatchShardPipelineResults dispatchExchangeConsumerPipeline(
     if (MONGO_unlikely(shardedAggregateFailToDispatchExchangeConsumerPipeline.shouldFail())) {
         LOGV2(22836, "shardedAggregateFailToDispatchExchangeConsumerPipeline fail point enabled");
         uasserted(ErrorCodes::FailPointEnabled,
-                  "Asserting on exhange consumer pipeline dispatch due to failpoint.");
+                  "Asserting on exchange consumer pipeline dispatch due to failpoint.");
     }
 
     // For all consumers construct a request with appropriate cursor ids and send to shards.

@@ -441,7 +441,7 @@ void ExchangeProducer::closePipes() {
 ExchangeProducer::ExchangeProducer(std::unique_ptr<PlanStage> input,
                                    std::shared_ptr<ExchangeState> state,
                                    PlanNodeId planNodeId)
-    : PlanStage("exchangep"_sd, planNodeId), _state(state) {
+    : PlanStage("exchange"_sd, planNodeId), _state(state) {
     _children.emplace_back(std::move(input));
 
     _tid = _state->addProducer(this);

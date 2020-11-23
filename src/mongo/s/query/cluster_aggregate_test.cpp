@@ -146,7 +146,7 @@ TEST_F(ClusterAggregateTest, ShouldFailWhenNeedsMergeIstrueAndFromMongosIsTrue) 
     ASSERT_THROWS_CODE(testRunAggregateEarlyExit(inputBson), AssertionException, 51089);
 }
 
-TEST_F(ClusterAggregateTest, ShouldFailWhenExchengeIsPresent) {
+TEST_F(ClusterAggregateTest, ShouldFailWhenExchangeIsPresent) {
     const BSONObj inputBson = fromjson(
         "{pipeline: [], cursor: {}, exchange: {policy: 'roundrobin', consumers: NumberInt(2)}}");
     ASSERT_THROWS_CODE(testRunAggregateEarlyExit(inputBson), AssertionException, 51028);

@@ -514,13 +514,13 @@ TEST(AggregationRequestTest, ParseFromBSONOverloadsShouldProduceIdenticalRequest
 
 TEST(AggregationRequestTest, ShouldRejectExchangeNotObject) {
     NamespaceString nss("a.collection");
-    const BSONObj inputBson = fromjson("{pipeline: [], exchage: '42'}");
+    const BSONObj inputBson = fromjson("{pipeline: [], exchange: '42'}");
     ASSERT_NOT_OK(AggregationRequest::parseFromBSON(nss, inputBson).getStatus());
 }
 
 TEST(AggregationRequestTest, ShouldRejectExchangeInvalidSpec) {
     NamespaceString nss("a.collection");
-    const BSONObj inputBson = fromjson("{pipeline: [], exchage: {}}");
+    const BSONObj inputBson = fromjson("{pipeline: [], exchange: {}}");
     ASSERT_NOT_OK(AggregationRequest::parseFromBSON(nss, inputBson).getStatus());
 }
 
