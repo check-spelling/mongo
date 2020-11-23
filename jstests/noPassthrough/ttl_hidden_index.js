@@ -2,7 +2,7 @@
 (function() {
 "use strict";
 let runner = MongoRunner.runMongod({setParameter: "ttlMonitorSleepSecs=1"});
-let coll = runner.getDB("test").ttl_hiddenl_index;
+let coll = runner.getDB("test").ttl_hiddenlol_index;
 coll.drop();
 
 // Create TTL index.
