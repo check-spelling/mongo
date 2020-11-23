@@ -300,7 +300,7 @@ int main(int argc, char** argv){
         exit(0);
     }
 
-    // Now pre-emptively collect all the symbols from all the libraries
+    // Now preemptively collect all the symbols from all the libraries
     // the target library depends on.
     symbol_table tmp[num_libs];
     symbol_tables = tmp;
