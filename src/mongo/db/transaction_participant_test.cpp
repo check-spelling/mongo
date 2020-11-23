@@ -273,7 +273,7 @@ protected:
         opCtx()->setInMultiDocumentTransaction();
 
         // Normally, committing a transaction is supposed to usassert if the corresponding prepare
-        // has not been majority committed. We excempt our unit tests from this expectation.
+        // has not been majority committed. We exempt our unit tests from this expectation.
         setGlobalFailPoint("skipCommitTxnCheckPrepareMajorityCommitted",
                            BSON("mode"
                                 << "alwaysOn"));
