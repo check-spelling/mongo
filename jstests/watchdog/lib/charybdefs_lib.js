@@ -2,7 +2,7 @@
 const EXIT_WATCHDOG = 61;
 
 /**
- * Control the Charybdefs file system for Fault Injectiong testing
+ * Control the Charybdefs file system for Fault Injection testing
  *
  * @param {string} test_name unique name for test directories
  */
