@@ -215,7 +215,7 @@ Certificates are used to attach an identifier to a public key. There are two mai
 embedded in certificates: Common Name (CN) and Subject Alternative Name (SAN).
 
 A **Subject Alternative Name (SAN)** allows DNS names or other identifying information to be embedded into a certificate. 
-This information is useful for contacting adminstrators of the domain, or finding other information about the domain. A 
+This information is useful for contacting administrators of the domain, or finding other information about the domain. A 
 SAN can include any combination of the following:
 
 * DNS names
