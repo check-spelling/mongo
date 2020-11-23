@@ -125,7 +125,7 @@ TEST(ClockSourceMockTest, MultipleAlarmsWithDifferentDeadlineTriggeredAtDifferen
     ASSERT_EQ(2, alarmFiredCount) << cs.now();
 }
 
-TEST(ClockSourceMockTest, AlarmScheudlesExpiredAlarmWhenSignaled) {
+TEST(ClockSourceMockTest, AlarmSchedulesExpiredAlarmWhenSignaled) {
     ClockSourceMock cs;
     const auto beginning = cs.now();
     int alarmFiredCount = 0;
@@ -138,7 +138,7 @@ TEST(ClockSourceMockTest, AlarmScheudlesExpiredAlarmWhenSignaled) {
     ASSERT_EQ(2, alarmFiredCount);
 }
 
-TEST(ClockSourceMockTest, ExpiredAlarmScheudlesExpiredAlarm) {
+TEST(ClockSourceMockTest, ExpiredAlarmSchedulesExpiredAlarm) {
     ClockSourceMock cs;
     const auto beginning = cs.now();
     int alarmFiredCount = 0;
@@ -149,7 +149,7 @@ TEST(ClockSourceMockTest, ExpiredAlarmScheudlesExpiredAlarm) {
     ASSERT_EQ(2, alarmFiredCount);
 }
 
-TEST(ClockSourceMockTest, AlarmScheudlesAlarmWhenSignaled) {
+TEST(ClockSourceMockTest, AlarmSchedulesAlarmWhenSignaled) {
     ClockSourceMock cs;
     const auto beginning = cs.now();
     int alarmFiredCount = 0;
