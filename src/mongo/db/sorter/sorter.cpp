@@ -89,7 +89,7 @@ void checkNoExternalSortOnMongos(const SortOptions& opts) {
 
 /**
  * Returns the current EncryptionHooks registered with the global service context.
- * Returns nullptr if the service context is not available; or if the EncyptionHooks
+ * Returns nullptr if the service context is not available; or if the EncryptionHooks
  * registered is not enabled.
  */
 EncryptionHooks* getEncryptionHooksIfEnabled() {
