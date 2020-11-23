@@ -98,7 +98,7 @@ TEST(OverflowArithmetic, SignedMultiplicationTests) {
     ASSERT(testOflow<T>(f, -(1LL << 62), -8));
 }
 
-TEST(OverflowArithmetic, UnignedMultiplicationTests) {
+TEST(OverflowArithmetic, UnsignedMultiplicationTests) {
     using T = uint64_t;
     static constexpr auto f = polyMul;
     ASSERT(test<T>(f, 0, kMax<T>, 0));
