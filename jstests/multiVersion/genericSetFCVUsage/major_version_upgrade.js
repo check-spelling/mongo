@@ -131,7 +131,7 @@ for (let i = 0; i < versions.length; i++) {
         // As of 4.0, mongod will refuse to start up with authSchema 3
         // until the schema has been upgraded.
         // Step back a version (to 3.6) in order to perform the upgrade,
-        // Then try startuing 4.0 again.
+        // Then try starting 4.0 again.
         print(
             "Failed starting mongod, going to try upgrading the auth schema on the prior version");
         conn = MongoRunner.runMongod(
