@@ -204,7 +204,7 @@ struct Interval {
 
     /**
      * Updates 'this" with the union of 'this' and 'other'. If 'this' and 'other' have
-     * been compare()d before, that result can be optionaly passed in 'cmp'.
+     * been compare()d before, that result can be optionally passed in 'cmp'.
      */
     void combine(const Interval& other, IntervalComparison cmp = INTERVAL_UNKNOWN);
 };
