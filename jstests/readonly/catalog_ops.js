@@ -9,7 +9,7 @@ runReadOnlyTest(function() {
         indexSpecs: [{a: 1}, {a: 1, b: -1}, {a: 1, b: 1, c: -1}],
 
         load: function(writableCollection) {
-            // Catalog guarantees are neccessarily weaker in sharded systems since mongos is not
+            // Catalog guarantees are necessarily weaker in sharded systems since mongos is not
             // read-only aware.
             if (TestData.fixture === "sharded")
                 return;
@@ -28,7 +28,7 @@ runReadOnlyTest(function() {
             }
         },
         exec: function(readableCollection) {
-            // Catalog guarantees are neccessarily weaker in sharded systems since mongos is not
+            // Catalog guarantees are necessarily weaker in sharded systems since mongos is not
             // read-only aware.
             if (TestData.fixture === "sharded")
                 return;

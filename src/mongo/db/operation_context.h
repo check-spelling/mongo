@@ -84,7 +84,7 @@ extern FailPoint maxTimeNeverTimeOut;
  * is a separate operation. On construction, an OperationContext associates itself with the
  * current client, and only on destruction it deassociates itself. At any time a client can be
  * associated with at most one OperationContext. Each OperationContext has a RecoveryUnit
- * associated with it, though the lifetime is not necesarily the same, see releaseRecoveryUnit
+ * associated with it, though the lifetime is not necessarily the same, see releaseRecoveryUnit
  * and setRecoveryUnit. The operation context also keeps track of some transaction state
  * (RecoveryUnitState) to reduce complexity and duplication in the storage-engine specific
  * RecoveryUnit and to allow better invariant checking.
