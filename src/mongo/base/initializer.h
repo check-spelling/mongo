@@ -44,7 +44,7 @@ namespace mongo {
  * Such a process is described by a directed acyclic graph of initialization operations, the
  * InitializerDependencyGraph.  One constructs an initialization process by adding nodes and
  * edges to the graph.  Then, one executes the process, causing each initialization operation to
- * execute in an order that respects the programmer-established prerequistes.
+ * execute in an order that respects the programmer-established prerequisites.
  */
 class Initializer {
 public:
