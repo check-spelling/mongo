@@ -71,7 +71,7 @@ public:
 
     virtual void enterTerminalShutdown();
 
-    virtual bool enterQuiesceModeIfSecondary(Milliseconds quieseTime);
+    virtual bool enterQuiesceModeIfSecondary(Milliseconds quiesceTime);
 
     virtual bool inQuiesceMode() const;
 
