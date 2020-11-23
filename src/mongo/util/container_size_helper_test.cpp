@@ -46,7 +46,7 @@ TEST(ContainerSizeHelper, TestEstimateObjectSizeInBytes) {
     // Sum of 'size' of each element '1 + 2 + 3 + 4'.
     uint64_t expectedSize = 10;
 
-    // When 'includeComplieTimeSize' is false should return only the sum of sizes calculated by the
+    // When 'includeCompileTimeSize' is false should return only the sum of sizes calculated by the
     // 'function'.
     ASSERT_EQ(mongo::container_size_helper::estimateObjectSizeInBytes(
                   vect, [](const auto& obj) { return obj.size; }, false),
