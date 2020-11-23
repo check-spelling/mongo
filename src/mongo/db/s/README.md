@@ -978,7 +978,7 @@ the commit path for the transaction.
 
 * If the number of participant shards is zero, the mongos skips the commit and returns immediately.
 * If the number of participant shards is one, the mongos forwards `commitTransaction` directly to that shard.
-* If the number of pariticipant shards is greater than one:
+* If the number of participant shards is greater than one:
    * If the number of write shards is zero, the mongos forwards `commitTransaction` to each shard individually.
    * Otherwise, the mongos sends `coordinateCommitTransaction` with the participant list to the coordinator shard to
    initiate two-phase commit.
