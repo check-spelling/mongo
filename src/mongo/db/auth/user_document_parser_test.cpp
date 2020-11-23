@@ -464,7 +464,7 @@ TEST_F(V2UserDocumentParsing, V2AuthenticationRestrictionsExtraction) {
         user.get()));
 }
 
-TEST_F(V2UserDocumentParsing, V2AuthenticationRestrictionsExtractionAndRetreival) {
+TEST_F(V2UserDocumentParsing, V2AuthenticationRestrictionsExtractionAndRetrieval) {
     enableIPv6(true);
     ASSERT_OK(v2parser.initializeAuthenticationRestrictionsFromUserDocument(
         BSON("user"
