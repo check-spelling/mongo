@@ -279,7 +279,7 @@ void cleanupTask(const ShutdownTaskArgs& shutdownArgs) {
         if (shutdownArgs.quiesceTime) {
             quiesceTime = *shutdownArgs.quiesceTime;
         } else {
-            // IDL gaurantees that quiesceTime is populated.
+            // IDL guarantees that quiesceTime is populated.
             invariant(!shutdownArgs.isUserInitiated);
             quiesceTime = Milliseconds(mongosShutdownTimeoutMillisForSignaledShutdown.load());
         }
