@@ -895,7 +895,7 @@ void ConnectionPool::SpecificPool::triggerShutdown(const Status& status) {
     LOGV2_DEBUG(22571,
                 2,
                 "Delisting connection pool for {hostAndPort}",
-                "Delistinng connection pool",
+                "Delisting connection pool",
                 "hostAndPort"_attr = _hostAndPort);
 
     // Make sure the pool lifetime lasts until the end of this function,
