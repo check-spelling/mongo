@@ -201,7 +201,7 @@ private:
      *   extractNextElement() will then be called from a recursive call to
      *   _getKeysWithArray() for each array element. For instance, it will get called with
      *   'obj' {b: {c: 98}} and '*field' pointing to "b.c". It will return element 98 and
-     *   set '*field' to "". Similarly, it will return elemtn 99 and set '*field' to "" for
+     *   set '*field' to "". Similarly, it will return element 99 and set '*field' to "" for
      *   the second array element.
      */
     BSONElement _extractNextElement(const BSONObj& obj,

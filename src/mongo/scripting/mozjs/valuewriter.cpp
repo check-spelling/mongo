@@ -256,8 +256,8 @@ void ValueWriter::writeThis(BSONObjBuilder* b,
 
         if (intval && _originalParent) {
             // This makes copying an object of numbers O(n**2) :(
-            BSONElement elmt = _originalParent->getField(sd);
-            if (elmt.type() == mongo::NumberInt) {
+            BSONElement element = _originalParent->getField(sd);
+            if (element.type() == mongo::NumberInt) {
                 b->append(sd, *intval);
                 return;
             }
