@@ -79,7 +79,7 @@ assert.commandFailed(mongos.adminCommand({shardCollection: kDbName + '.foo', key
 
 // Verify key format
 assert.commandFailed(
-    mongos.adminCommand({shardCollection: kDbName + '.foo', key: {aKey: "hahahashed"}}));
+    mongos.adminCommand({shardCollection: kDbName + '.foo', key: {aKey: "hahaha"}}));
 
 // Shard key cannot contain embedded objects.
 assert.commandFailed(mongos.adminCommand({shardCollection: kDbName + '.foo', key: {_id: {a: 1}}}));
