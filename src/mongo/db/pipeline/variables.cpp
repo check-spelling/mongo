@@ -168,7 +168,7 @@ void Variables::setRuntimeConstants(const RuntimeConstants& constants) {
     _runtimeConstantsMap[kNowId] = Value(constants.getLocalNow());
     // We use a null Timestamp to indicate that the clusterTime is not available; this can happen if
     // the logical clock is not running. We do not use boost::optional because this would allow the
-    // IDL to serialize a RuntimConstants without clusterTime, which should always be an error.
+    // IDL to serialize a RuntimeConstants without clusterTime, which should always be an error.
     if (!constants.getClusterTime().isNull()) {
         _runtimeConstantsMap[kClusterTimeId] = Value(constants.getClusterTime());
     }
