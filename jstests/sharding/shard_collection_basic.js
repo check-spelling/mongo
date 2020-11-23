@@ -9,7 +9,7 @@ var st = new ShardingTest({mongos: 1, shards: 2});
 var kDbName = 'db';
 var mongos = st.s0;
 
-function testAndClenaupWithKeyNoIndexFailed(keyDoc) {
+function testAndCleanupWithKeyNoIndexFailed(keyDoc) {
     assert.commandWorked(mongos.adminCommand({enableSharding: kDbName}));
 
     var ns = kDbName + '.foo';
@@ -19,7 +19,7 @@ function testAndClenaupWithKeyNoIndexFailed(keyDoc) {
     assert.commandWorked(mongos.getDB(kDbName).dropDatabase());
 }
 
-function testAndClenaupWithKeyOK(keyDoc) {
+function testAndCleanupWithKeyOK(keyDoc) {
     assert.commandWorked(mongos.adminCommand({enableSharding: kDbName}));
     assert.commandWorked(mongos.getDB(kDbName).foo.createIndex(keyDoc));
 
@@ -32,7 +32,7 @@ function testAndClenaupWithKeyOK(keyDoc) {
     assert.commandWorked(mongos.getDB(kDbName).dropDatabase());
 }
 
-function testAndClenaupWithKeyNoIndexOK(keyDoc) {
+function testAndCleanupWithKeyNoIndexOK(keyDoc) {
     assert.commandWorked(mongos.adminCommand({enableSharding: kDbName}));
 
     var ns = kDbName + '.foo';
@@ -112,66 +112,66 @@ assert.commandFailed(
 assert.commandWorked(mongos.getDB(kDbName).dropDatabase());
 
 // Shard empty collections no index required.
-testAndClenaupWithKeyNoIndexOK({_id: 1});
-testAndClenaupWithKeyNoIndexOK({_id: 'hashed'});
+testAndCleanupWithKeyNoIndexOK({_id: 1});
+testAndCleanupWithKeyNoIndexOK({_id: 'hashed'});
 
 // Shard by a plain key.
-testAndClenaupWithKeyNoIndexOK({a: 1});
+testAndCleanupWithKeyNoIndexOK({a: 1});
 
 // Cant shard collection with data and no index on the shard key.
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: 1, b: 1}));
-testAndClenaupWithKeyNoIndexFailed({a: 1});
+testAndCleanupWithKeyNoIndexFailed({a: 1});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: 1, b: 1}));
-testAndClenaupWithKeyOK({a: 1});
+testAndCleanupWithKeyOK({a: 1});
 
 // Shard by a hashed key.
-testAndClenaupWithKeyNoIndexOK({a: 'hashed'});
+testAndCleanupWithKeyNoIndexOK({a: 'hashed'});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: 1, b: 1}));
-testAndClenaupWithKeyNoIndexFailed({a: 'hashed'});
+testAndCleanupWithKeyNoIndexFailed({a: 'hashed'});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: 1, b: 1}));
-testAndClenaupWithKeyOK({a: 'hashed'});
+testAndCleanupWithKeyOK({a: 'hashed'});
 
 // Shard by a compound key.
-testAndClenaupWithKeyNoIndexOK({x: 1, y: 1});
+testAndCleanupWithKeyNoIndexOK({x: 1, y: 1});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({x: 1, y: 1}));
-testAndClenaupWithKeyNoIndexFailed({x: 1, y: 1});
+testAndCleanupWithKeyNoIndexFailed({x: 1, y: 1});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({x: 1, y: 1}));
-testAndClenaupWithKeyOK({x: 1, y: 1});
+testAndCleanupWithKeyOK({x: 1, y: 1});
 
 // Multiple hashed fields are not allowed.
-testAndClenaupWithKeyNoIndexFailed({x: 'hashed', a: 1, y: 'hashed'});
-testAndClenaupWithKeyNoIndexFailed({x: 'hashed', y: 'hashed'});
+testAndCleanupWithKeyNoIndexFailed({x: 'hashed', a: 1, y: 'hashed'});
+testAndCleanupWithKeyNoIndexFailed({x: 'hashed', y: 'hashed'});
 
 // Negative numbers are not allowed.
-testAndClenaupWithKeyNoIndexFailed({x: 'hashed', a: -1});
+testAndCleanupWithKeyNoIndexFailed({x: 'hashed', a: -1});
 
 // Shard by a key component.
-testAndClenaupWithKeyOK({'z.x': 1});
-testAndClenaupWithKeyOK({'z.x': 'hashed'});
+testAndCleanupWithKeyOK({'z.x': 1});
+testAndCleanupWithKeyOK({'z.x': 'hashed'});
 
 // Can't shard by a multikey.
 assert.commandWorked(mongos.getDB(kDbName).foo.createIndex({a: 1}));
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: [1, 2, 3, 4, 5], b: 1}));
-testAndClenaupWithKeyNoIndexFailed({a: 1});
+testAndCleanupWithKeyNoIndexFailed({a: 1});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.createIndex({a: 1, b: 1}));
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: [1, 2, 3, 4, 5], b: 1}));
-testAndClenaupWithKeyNoIndexFailed({a: 1, b: 1});
+testAndCleanupWithKeyNoIndexFailed({a: 1, b: 1});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: 1, b: 1}));
-testAndClenaupWithKeyNoIndexFailed({a: 'hashed'});
+testAndCleanupWithKeyNoIndexFailed({a: 'hashed'});
 
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: 1, b: 1}));
-testAndClenaupWithKeyOK({a: 'hashed'});
+testAndCleanupWithKeyOK({a: 'hashed'});
 
 // Cant shard by a parallel arrays.
 assert.commandWorked(mongos.getDB(kDbName).foo.insert({a: [1, 2, 3, 4, 5], b: [1, 2, 3, 4, 5]}));
-testAndClenaupWithKeyNoIndexFailed({a: 1, b: 1});
+testAndCleanupWithKeyNoIndexFailed({a: 1, b: 1});
 
 assert.commandWorked(mongos.adminCommand({enableSharding: kDbName}));
 
