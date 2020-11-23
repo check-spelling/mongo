@@ -1603,7 +1603,7 @@ TEST_F(TakeoverTest, CatchupTakeoverCallbackCanceledIfElectionTimeoutRuns) {
     ASSERT_EQUALS(
         1, countTextFormatLogLinesContaining("Starting an election, since we've seen no PRIMARY"));
 
-    // Make sure catchup takeover never happend and CatchupTakeover callback was canceled.
+    // Make sure catchup takeover never happened and CatchupTakeover callback was canceled.
     ASSERT_FALSE(replCoord->getCatchupTakeover_forTest());
     ASSERT(replCoord->getMemberState().secondary());
     ASSERT_EQUALS(1, countTextFormatLogLinesContaining("Canceling catchup takeover callback"));
@@ -1665,7 +1665,7 @@ TEST_F(TakeoverTest, CatchupTakeoverCanceledIfTransitionToRollback) {
 
     stopCapturingLogMessages();
 
-    // Make sure catchup takeover never happend and CatchupTakeover callback was canceled.
+    // Make sure catchup takeover never happened and CatchupTakeover callback was canceled.
     ASSERT_FALSE(replCoord->getCatchupTakeover_forTest());
     ASSERT_EQUALS(1, countTextFormatLogLinesContaining("Canceling catchup takeover callback"));
     ASSERT_EQUALS(0,
