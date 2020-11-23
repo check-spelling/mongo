@@ -195,7 +195,7 @@ TEST(QuerySolutionTest, IntervalListAllPoints) {
     ASSERT(node.providedSorts().contains(BSON("a" << 1 << "e" << 1)));
     ASSERT(node.providedSorts().contains(BSON("b" << 1 << "d" << 1 << "a" << 1)));
 
-    // Verify that the order of equality fields is irrelvant.
+    // Verify that the order of equality fields is irrelevant.
     ASSERT(node.providedSorts().contains(BSON("a" << -1 << "e" << 1)));
     ASSERT(node.providedSorts().contains(BSON("b" << -1 << "d" << -1 << "a" << -1)));
     ASSERT(node.providedSorts().contains(BSON("d" << 1 << "e" << -1)));
