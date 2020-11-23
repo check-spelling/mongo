@@ -147,7 +147,7 @@ public:
     /**
      * Indicates whether extra logging should occur during validation.
      *
-     * This is for unit testing only. Intended to improve diagnosibility.
+     * This is for unit testing only. Intended to improve diagnosability.
      */
     bool extraLoggingForTest() {
         return _extraLoggingForTest;
