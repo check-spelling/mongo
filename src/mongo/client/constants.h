@@ -40,7 +40,7 @@ enum ResultFlagType {
     /* { $err : ... } is being returned */
     ResultFlag_ErrSet = 2,
 
-    /* Formerly used to comminicate stale version errors */
+    /* Formerly used to communicate stale version errors */
     ResultFlag_ShardConfigStaleDeprecated = 4,
 
     /* for backward compatibility: this let's us know the server supports
