@@ -9,7 +9,7 @@ const INTERNAL_USER = "C=US,ST=New York,L=New York City,O=MongoDB,OU=Kernel,CN=i
 const CLIENT_USER = "CN=client,OU=KernelUser,O=MongoDB,L=New York City,ST=New York,C=US";
 const INVALID_CLIENT_USER = "C=US,ST=New York,L=New York City,O=MongoDB,OU=KernelUser,CN=invalid";
 
-function authAndTest(mongo, {clusterUserSeparationOveride = false} = {}) {
+function authAndTest(mongo, {clusterUserSeparationOverride = false} = {}) {
     external = mongo.getDB("$external");
     test = mongo.getDB("test");
 
@@ -61,7 +61,7 @@ function authAndTest(mongo, {clusterUserSeparationOveride = false} = {}) {
     }
 
     const overrideDependentTester =
-        clusterUserSeparationOveride ? assert.doesNotThrow : assert.throws;
+        clusterUserSeparationOverride ? assert.doesNotThrow : assert.throws;
     // It should be impossible to create users with the same name as the server's subject,
     // unless guardrails are explicitly overridden
     overrideDependentTester(function() {
@@ -105,7 +105,7 @@ const x509_options = {
     const mongo = MongoRunner.runMongod(Object.merge(
         x509_options, {auth: "", setParameter: {enforceUserClusterSeparation: false}}));
 
-    authAndTest(mongo, {clusterUserSeparationOveride: true});
+    authAndTest(mongo, {clusterUserSeparationOverride: true});
     MongoRunner.stopMongod(mongo);
 }
 
@@ -141,6 +141,6 @@ const x509_options = {
         }
     });
 
-    authAndTest(new Mongo("localhost:" + st.s0.port), {clusterUserSeparationOveride: true});
+    authAndTest(new Mongo("localhost:" + st.s0.port), {clusterUserSeparationOverride: true});
     st.stop();
 }
