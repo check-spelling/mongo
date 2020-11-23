@@ -175,7 +175,7 @@ let testConnReadPreference = function(conn, isMongos, rsNodes, {readPref, expect
      * @param cmdObj the cmd to send.
      * @param secOk true if command can be routed to a secondary.
      * @param isReadOnlyCmd true if command cannot trigger writes.
-     * @param profileQuery the query to perform agains the profile collection to
+     * @param profileQuery the query to perform against the profile collection to
      *     look for the cmd just sent.
      * @param dbName the name of the database against which to run the command,
      *     and to which the 'system.profile' entry for this command is written.

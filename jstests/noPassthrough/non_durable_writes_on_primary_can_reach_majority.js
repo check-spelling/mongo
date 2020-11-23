@@ -85,7 +85,7 @@ try {
     rst.stop(stoppedSecondary);
 
     // Now writes cannot reach majority without the primary. We will do {w: 2, j: false} writes to
-    // get the writes on both remaining nodes. Then follow up with fsync commands againt the two
+    // get the writes on both remaining nodes. Then follow up with fsync commands against the two
     // nodes to make sure the durable timestamps move forward if possible -- this will work only on
     // the secondary, the primary's durable timestamp will not move.
     jsTestLog("Writes cannot become majority confirmed.");

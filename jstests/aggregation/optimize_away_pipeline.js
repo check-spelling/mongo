@@ -33,7 +33,7 @@ assert.commandWorked(coll.insert({_id: 3, x: 30}));
 // using the aggregation module. There should be pipeline stages present in the explain output.
 // The functions also asserts that a query stage passed in the 'stage' argument is present in
 // the explain output. If 'expectedResult' is provided, the pipeline is executed and the
-// returned result as validated agains the expected result without respecting the order of the
+// returned result as validated against the expected result without respecting the order of the
 // documents. If 'preserveResultOrder' is 'true' - the order is respected.
 //
 // If 'optimizedAwayStages' is non-null, then it should contain a list of agg plan stages that
@@ -87,7 +87,7 @@ function assertPipelineUsesAggregation({
 // just the query module. There should be no pipeline stages present in the explain output.
 // The functions also asserts that a query stage passed in the 'stage' argument is present in
 // the explain output. If 'expectedResult' is provided, the pipeline is executed and the
-// returned result as validated agains the expected result without respecting the order of the
+// returned result as validated against the expected result without respecting the order of the
 // documents. If 'preserveResultOrder' is 'true' - the order is respected.
 function assertPipelineDoesNotUseAggregation({
     pipeline = [],
