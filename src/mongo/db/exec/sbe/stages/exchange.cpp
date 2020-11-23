@@ -572,8 +572,8 @@ const SpecificStats* ExchangeProducer::getSpecificStats() const {
 
 bool ExchangeBuffer::appendData(std::vector<value::SlotAccessor*>& data) {
     ++_count;
-    for (auto accesor : data) {
-        auto [tag, val] = accesor->copyOrMoveValue();
+    for (auto accessor : data) {
+        auto [tag, val] = accessor->copyOrMoveValue();
         value::ValueGuard guard{tag, val};
         _typeTags.push_back(tag);
         _values.push_back(val);

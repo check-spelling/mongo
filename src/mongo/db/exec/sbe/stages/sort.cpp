@@ -160,14 +160,14 @@ void SortStage::open(bool reOpen) {
         value::MaterializedRow vals{_inValueAccessors.size()};
 
         size_t idx = 0;
-        for (auto accesor : _inKeyAccessors) {
-            auto [tag, val] = accesor->copyOrMoveValue();
+        for (auto accessor : _inKeyAccessors) {
+            auto [tag, val] = accessor->copyOrMoveValue();
             keys.reset(idx++, true, tag, val);
         }
 
         idx = 0;
-        for (auto accesor : _inValueAccessors) {
-            auto [tag, val] = accesor->copyOrMoveValue();
+        for (auto accessor : _inValueAccessors) {
+            auto [tag, val] = accessor->copyOrMoveValue();
             vals.reset(idx++, true, tag, val);
         }
 
