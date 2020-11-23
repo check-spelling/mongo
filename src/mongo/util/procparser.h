@@ -49,7 +49,7 @@ namespace procparser {
  * corrupt, or missing fields, the builder will simply be missing fields.
  *
  * keys - sorted vector of field names to include in the output, "cpu" will include the 11 fields
- *        that make up cpu. If keys is empty, all keys are outputed.
+ *        that make up cpu. If keys is empty, all keys are outputted.
  * data - string to parsee
  * ticksPerSecond - USER_HZ value
  * builder - BSON output
@@ -73,7 +73,7 @@ Status parseProcStatFile(StringData filename,
 /**
  * Read a string matching /proc/meminfo format, and write the specified list of keys in builder.
  *
- * keys - list of keys to output in BSON. If keys is empty, all keys are outputed.
+ * keys - list of keys to output in BSON. If keys is empty, all keys are outputted.
  * data - string to parsee
  * builder - BSON output
  */
@@ -112,7 +112,7 @@ Status parseProcNetstatFile(const std::vector<StringData>& keys,
  * disks - vector of block devices to include in output. For each disk selected, 11 fields are
  *         output in a nested document. There is no error if the disk is not found in the data. Also
  *         a disk is excluded if it has no activity since startup (i.e. an idle CD-ROM drive). If
- *         disks is empty, all non-zero block devices are outputed (this will include partitions,
+ *         disks is empty, all non-zero block devices are outputted (this will include partitions,
  *         etc).
  * data - string to parsee
  * builder - BSON output
@@ -138,7 +138,7 @@ std::vector<std::string> findPhysicalDisks(StringData directory);
 /**
  * Read a string matching /proc/vmstat format, and write the specified list of keys in builder.
  *
- * keys - list of keys to output in BSON. If keys is empty, all keys are outputed.
+ * keys - list of keys to output in BSON. If keys is empty, all keys are outputted.
  * data - string to parsee
  * builder - BSON output
  */
