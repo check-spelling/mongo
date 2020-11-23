@@ -349,7 +349,7 @@ public:
     }
 
     /**
-     * Gets the amount of time to wait for a response to hearbeats sent to other
+     * Gets the amount of time to wait for a response to heartbeats sent to other
      * nodes in the replica set.
      */
     Seconds getHeartbeatTimeoutPeriod() const {
@@ -357,7 +357,7 @@ public:
     }
 
     /**
-     * Gets the amount of time to wait for a response to hearbeats sent to other
+     * Gets the amount of time to wait for a response to heartbeats sent to other
      * nodes in the replica set, as above, but returns a Milliseconds instead of
      * Seconds object.
      */

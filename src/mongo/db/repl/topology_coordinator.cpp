@@ -224,7 +224,7 @@ TopologyCoordinator::TopologyCoordinator(Options options)
       _maintenanceModeCalls(0),
       _followerMode(MemberState::RS_STARTUP2) {
     invariant(getMemberState() == MemberState::RS_STARTUP);
-    // Need an entry for self in the memberHearbeatData.
+    // Need an entry for self in the memberHeartbeatData.
     _memberData.emplace_back();
     _memberData.back().setIsSelf(true);
 }
@@ -3050,14 +3050,14 @@ bool TopologyCoordinator::shouldChangeSyncSource(const HostAndPort& currentSourc
                       "Choosing new sync source because the most recent OpTime of our sync "
                       "source, {syncSource}, is {syncSourceOpTime} which is more than "
                       "{maxSyncSourceLagSecs} behind member {otherMember} "
-                      "whose most recent OpTime is {otherMemberHearbeatAppliedOpTime}",
+                      "whose most recent OpTime is {otherMemberHeartbeatAppliedOpTime}",
                       "Choosing new sync source because the most recent OpTime of our sync source "
                       "is more than maxSyncSourceLagSecs behind another member",
                       "syncSource"_attr = currentSource,
                       "syncSourceOpTime"_attr = currentSourceOpTime.toString(),
                       "maxSyncSourceLagSecs"_attr = _options.maxSyncSourceLagSecs,
                       "otherMember"_attr = candidateConfig.getHostAndPort().toString(),
-                      "otherMemberHearbeatAppliedOpTime"_attr =
+                      "otherMemberHeartbeatAppliedOpTime"_attr =
                           it->getHeartbeatAppliedOpTime().toString());
                 invariant(itIndex != _selfIndex);
                 return true;

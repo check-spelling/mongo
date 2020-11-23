@@ -1964,8 +1964,8 @@ TEST_F(TopoCoordTest, ReplSetGetStatus) {
     ASSERT_TRUE(member2Status.hasField("uptime"));
     ASSERT_TRUE(member2Status.hasField("optime"));
     ASSERT_TRUE(member2Status.hasField("optimeDate"));
-    ASSERT_FALSE(member2Status.hasField("lastHearbeat"));
-    ASSERT_FALSE(member2Status.hasField("lastHearbeatRecv"));
+    ASSERT_FALSE(member2Status.hasField("lastHeartbeat"));
+    ASSERT_FALSE(member2Status.hasField("lastHeartbeatRecv"));
     ASSERT_FALSE(member2Status.hasField("lastStableRecoveryTimestamp"));
     ASSERT_FALSE(member2Status.hasField("electionTime"));
     ASSERT_TRUE(member2Status.hasField("pingMs"));
