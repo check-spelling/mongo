@@ -126,7 +126,7 @@ entry = getPlansForCacheEntry({a: 3, b: 3}, {a: -1}, {_id: 0, a: 1});
 assert(entry.hasOwnProperty('works'), entry);
 assert.eq(entry.isActive, true);
 
-// There should be the same number of canidate plan scores as candidate plans.
+// There should be the same number of candidate plan scores as candidate plans.
 assert.eq(entry.creationExecStats.length, entry.candidatePlanScores.length, entry);
 
 // Scores should be greater than zero and sorted descending.
