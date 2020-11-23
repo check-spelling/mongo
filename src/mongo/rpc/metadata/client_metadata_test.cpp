@@ -185,7 +185,7 @@ TEST(ClientMetadatTest, TestWithEmptyApplication) {
                                << kOperatingSystem << BSON(kType << kUnknown));
 }
 
-// Negative: test with appplication wrong type
+// Negative: test with application wrong type
 TEST(ClientMetadatTest, TestNegativeWithAppNameWrongType) {
     ASSERT_DOC_NOT_OK(kApplication << "1" << kDriver << BSON(kName << "n1" << kVersion << "v1")
                                    << kOperatingSystem << BSON(kType << kUnknown));
