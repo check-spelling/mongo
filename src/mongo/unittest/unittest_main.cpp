@@ -124,7 +124,7 @@ int main(int argc, char** argv) {
 
     ret = ::mongo::runGlobalDeinitializers();
     if (!ret.isOK()) {
-        std::cerr << "Global deinitilization failed: " << ret.reason() << std::endl;
+        std::cerr << "Global deinitialization failed: " << ret.reason() << std::endl;
     }
 
     ::mongo::checkForTripwireAssertions();

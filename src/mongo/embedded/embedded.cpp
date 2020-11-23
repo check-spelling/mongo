@@ -177,7 +177,7 @@ void shutdown(ServiceContext* srvContext) {
     setGlobalServiceContext(nullptr);
 
     Status status = mongo::runGlobalDeinitializers();
-    uassertStatusOKWithContext(status, "Global deinitilization failed");
+    uassertStatusOKWithContext(status, "Global deinitialization failed");
 
     LOGV2_OPTIONS(22551, {LogComponent::kControl}, "now exiting");
 }

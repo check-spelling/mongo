@@ -135,7 +135,7 @@ struct ServiceContextDestructor {
      */
     void operator()(mongo::ServiceContext* const serviceContext) const noexcept {
         Status status = mongo::runGlobalDeinitializers();
-        uassertStatusOKWithContext(status, "Global deinitilization failed");
+        uassertStatusOKWithContext(status, "Global deinitialization failed");
 
         setGlobalServiceContext(nullptr);
     }

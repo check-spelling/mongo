@@ -293,7 +293,7 @@ int main(int argc, char** argv) {
 
     ret = mongo::runGlobalDeinitializers();
     if (!ret.isOK()) {
-        std::cerr << "Global deinitilization failed";
+        std::cerr << "Global deinitialization failed";
         return EXIT_FAILURE;
     }
 
