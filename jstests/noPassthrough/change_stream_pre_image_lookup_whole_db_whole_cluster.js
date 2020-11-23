@@ -25,7 +25,7 @@ const collWithNoPreImages = testDB.coll_with_no_pre_images;
 assert.commandWorked(
     testDB.createCollection(collWithNoPreImages.getName(), {recordPreImages: false}));
 
-//... and a collection that will hold the sentinal document that marks the end of changes
+//... and a collection that will hold the sentinel document that marks the end of changes
 const sentinelColl = testDB.sentinelColl;
 
 // Insert one document as a starting point and extract its resume token.

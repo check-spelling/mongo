@@ -202,10 +202,10 @@ using VoidToFakeVoid = std::conditional_t<std::is_void_v<T>, FakeVoid, T>;
 template <typename T>
 using FakeVoidToVoid = std::conditional_t<std::is_same_v<T, FakeVoid>, void, T>;
 
-struct InvalidCallSentinal;  // Nothing actually returns this.
+struct InvalidCallSentinel;  // Nothing actually returns this.
 template <typename Func, typename Arg, typename = void>
 struct FriendlyInvokeResultImpl {
-    using type = InvalidCallSentinal;
+    using type = InvalidCallSentinel;
 };
 template <typename Func, typename Arg>
 struct FriendlyInvokeResultImpl<
@@ -229,7 +229,7 @@ using FriendlyInvokeResult = typename FriendlyInvokeResultImpl<Func, Arg>::type;
 // Like is_invocable_v<Func, Args>, but handles Args == void correctly.
 template <typename Func, typename Arg>
 inline constexpr bool isCallable =
-    !std::is_same_v<FriendlyInvokeResult<Func, Arg>, InvalidCallSentinal>;
+    !std::is_same_v<FriendlyInvokeResult<Func, Arg>, InvalidCallSentinel>;
 
 // Like is_invocable_r_v<Func, Args>, but handles Args == void correctly and unwraps the return.
 template <typename Ret, typename Func, typename Arg>

@@ -5,7 +5,7 @@
 // spec.  <http://dochub.mongodb.org/core/positionaloperator>
 
 // If no array element position from a query is available to substitute for the positional operator
-// setinel ('$'), the update fails with an error.  SERVER-6669 SERVER-4713
+// sentinel ('$'), the update fails with an error.  SERVER-6669 SERVER-4713
 
 var res;
 t = db.jstests_updatel;

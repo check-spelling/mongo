@@ -254,7 +254,7 @@ function resumeStreamsOnDowngradedVersion(changeStreams) {
         jsTestLog("Validating change stream for " + tojson(changeStream));
         const csCursor = changeStream.watch({resumeAfter: changeStream.resumeToken});
 
-        // Keep calling 'getmore' until the sentinal entry for the next test is found or until the
+        // Keep calling 'getmore' until the sentinel entry for the next test is found or until the
         // change stream throws an error.
         assert.soon(() => {
             if (!csCursor.hasNext()) {
