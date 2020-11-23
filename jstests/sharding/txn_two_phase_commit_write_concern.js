@@ -131,7 +131,7 @@ function assertDecisionMajorityCommitted(coordinatorRs, numNodes) {
 
 /*
  * Returns an array of nodes that we can stop replication on and still allow writes on
- * the replica set to satsify the given write concern.
+ * the replica set to satisfy the given write concern.
  */
 function getNodesToStopReplication(rs, writeConcern) {
     if (writeConcern.w == "majority") {

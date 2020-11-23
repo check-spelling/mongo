@@ -1400,14 +1400,14 @@ void SetState::notify() {
         } else if (it->deadline <= cachedNow) {
             LOGV2_DEBUG(24086,
                         1,
-                        "Unable to statisfy read preference {criteria} by deadline {deadline}",
-                        "Unable to statisfy read preference by deadline",
+                        "Unable to satisfy read preference {criteria} by deadline {deadline}",
+                        "Unable to satisfy read preference by deadline",
                         "criteria"_attr = it->criteria,
                         "deadline"_attr = it->deadline);
             it->promise.setError(makeUnsatisfedReadPrefError(it->criteria));
             waiters.erase(it++);
         } else if (shouldQuickFail) {
-            LOGV2_DEBUG(24087, 1, "Unable to statisfy read preference because tests fail quickly");
+            LOGV2_DEBUG(24087, 1, "Unable to satisfy read preference because tests fail quickly");
             it->promise.setError(makeUnsatisfedReadPrefError(it->criteria));
             waiters.erase(it++);
         } else {
