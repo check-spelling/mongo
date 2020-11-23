@@ -10,7 +10,7 @@ load("./jstests/replsets/rslib.js");
  * to complete. If the 'fcv' argument is given, sets the feature compatibility version of the
  * replica set to 'fcv' before adding the third node.
  */
-var multversionInitialSyncTest = function(
+var multiversionInitialSyncTest = function(
     name, replSetVersion, newNodeVersion, configSettings, fcv) {
     var nodes = {n1: {binVersion: replSetVersion}, n2: {binVersion: replSetVersion}};
 
