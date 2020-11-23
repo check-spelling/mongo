@@ -133,7 +133,7 @@ def main():
                         help="Distro task is being executed on.")
     parser.add_argument(
         "--jobFactor", dest="jobs_factor", type=float, default=1.0,
-        help=("Job factor to use as a mulitplier with the number of CPUs. Defaults"
+        help=("Job factor to use as a multiplier with the number of CPUs. Defaults"
               " to %(default)s."))
     parser.add_argument(
         "--jobsMax", dest="jobs_max", type=int, default=0,
