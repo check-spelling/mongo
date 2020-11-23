@@ -248,7 +248,7 @@ private:
 };
 
 /**
-   used in conjuction with BSONObjBuilder, allows for proper buffer size to prevent crazy memory
+   used in conjunction with BSONObjBuilder, allows for proper buffer size to prevent crazy memory
    usage
  */
 class BSONSizeTracker {

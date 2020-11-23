@@ -118,7 +118,7 @@ private:
     // Waiters are notified whenever _allIndexBuilds has something added or removed.
     stdx::condition_variable _indexBuildsCondVar;
 
-    // Generation counter of completed index builds. Used in conjuction with the condition
+    // Generation counter of completed index builds. Used in conjunction with the condition
     // variable to receive notifications when an index build completes.
     uint32_t _indexBuildsCompletedGen = 0;
 

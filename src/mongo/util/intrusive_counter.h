@@ -78,7 +78,7 @@ public:
 protected:
     /**
      * Sets the refcount to count, assuming it is currently one more. This must be called only in
-     * conjuction with intrusive_ptr::detach() to exit a scope with an intrusive_ptr without
+     * conjunction with intrusive_ptr::detach() to exit a scope with an intrusive_ptr without
      * destructing the pointed-to object.
      */
     void unsafeRefDecRefCountTo(uint32_t count) const {
