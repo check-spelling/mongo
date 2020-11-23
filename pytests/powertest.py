@@ -2065,7 +2065,7 @@ Examples:
 
     program_options.add_option(
         "--remoteSudo", dest="remote_sudo",
-        help="Use sudo on the remote host for priveleged operations."
+        help="Use sudo on the remote host for privileged operations."
         " [default: %default]."
         " For non-Windows systems, in order to perform privileged"
         " operations on the remote host, specify this, if the"
