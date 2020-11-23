@@ -164,7 +164,7 @@ protected:
         return coll;
     }
 
-    const NamespaceString kNss{"catalgoCacheTestDB.foo"};
+    const NamespaceString kNss{"catalogCacheTestDB.foo"};
     const std::string kPattern{"_id"};
     const ShardKeyPattern kShardKeyPattern{BSON(kPattern << 1)};
     const int kDummyPort{12345};

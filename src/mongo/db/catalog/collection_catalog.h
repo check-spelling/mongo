@@ -316,7 +316,7 @@ public:
     void onCloseCatalog(OperationContext* opCtx);
 
     /**
-     * Puts the catatlog back in open state, removing the pre-close state. See onCloseCatalog.
+     * Puts the catalog back in open state, removing the pre-close state. See onCloseCatalog.
      *
      * Must be called with the global lock acquired in exclusive mode.
      */

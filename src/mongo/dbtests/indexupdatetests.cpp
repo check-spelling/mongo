@@ -544,7 +544,7 @@ protected:
     }
 };
 
-class IndexCatatalogFixIndexKey : public IndexBuildBase {
+class IndexCatalogFixIndexKey : public IndexBuildBase {
 public:
     void run() {
         auto indexCatalog = collection().get()->getIndexCatalog();
@@ -693,7 +693,7 @@ public:
         add<SameSpecDifferentTTL>();
         add<StorageEngineOptions>();
 
-        add<IndexCatatalogFixIndexKey>();
+        add<IndexCatalogFixIndexKey>();
 
         add<InsertSymbolInsideNestedObjectIntoIndexWithCollationFails>();
         add<InsertSymbolIntoIndexWithoutCollationSucceeds>();
