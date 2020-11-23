@@ -53,7 +53,7 @@ TEST(MongoDnsQuery, basic) {
     } tests[] =
         // The reason for a vast number of tests over basic DNS query calls is to provide a
         // redundancy in testing.  We'd like to make sure that this test always passes.  Lazy
-        // maintanance will cause some references to be commented out.  Our belief is that all 13
+        // maintenance will cause some references to be commented out.  Our belief is that all 13
         // root servers and both of Google's public servers will all be unresolvable (when
         // connections are available) only when a major problem occurs.  This test only fails if
         // more than half of the resolved names fail.

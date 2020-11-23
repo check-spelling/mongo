@@ -998,7 +998,7 @@ def _get_third_party_directories():
 
 class Analyzer:
     """
-    Analyze the MongoDB source code for software maintence issues.
+    Analyze the MongoDB source code for software maintenance issues.
 
     Queries Black Duck for out of date software
     Consults a local yaml file for detailed information about third party components included in the MongoDB source code.

@@ -50,9 +50,9 @@ assert.eq(result.ok, 0, tojson(result));
 
 secondarySoon();
 
-print("use replSetMaintenance command to go in/out of maintence mode");
+print("use replSetMaintenance command to go in/out of maintenance mode");
 
-print("primary cannot go into maintence mode");
+print("primary cannot go into maintenance mode");
 result = primary.getDB("admin").runCommand({replSetMaintenance: 1});
 assert.eq(result.ok, 0, tojson(result));
 
