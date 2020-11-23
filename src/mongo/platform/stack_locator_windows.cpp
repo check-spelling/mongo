@@ -100,7 +100,7 @@ StackLocator::StackLocator() {
     invariant(uncommittedMbi.State == MEM_RESERVE);
 
     if (kDebugBuild) {
-        // Locate the guard page, which sits bewteen the uncommitted
+        // Locate the guard page, which sits between the uncommitted
         // region (which we know is not empty!), and the committed
         // region. We can count the guard page as usable stack space,
         // but it is good to find it so we can validate that we walked
