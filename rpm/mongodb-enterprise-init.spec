@@ -140,7 +140,7 @@ MongoDB features:
 * Text Search
 * Aggregation Framework & Native MapReduce
 
-This metapackage exists to simplfy acquisition of both the database tools and the extra database tools.
+This metapackage exists to simplify acquisition of both the database tools and the extra database tools.
 
 %package database-tools-extra
 Summary: MongoDB extra database tools (enterprise)
