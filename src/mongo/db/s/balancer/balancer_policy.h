@@ -183,7 +183,7 @@ public:
                                           const std::string& chunkTag);
 
     /**
-     * Returns a suggested set of chunks to move whithin a collection's shards, given the specified
+     * Returns a suggested set of chunks to move within a collection's shards, given the specified
      * state of the shards (draining, max size reached, etc) and the number of chunks for that
      * collection. If the policy doesn't recommend anything to move, it returns an empty vector. The
      * entries in the vector do are all for separate source/destination shards and as such do not
