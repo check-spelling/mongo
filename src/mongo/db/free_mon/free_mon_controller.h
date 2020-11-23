@@ -207,7 +207,7 @@ private:
     // Network interface
     std::unique_ptr<FreeMonNetworkInterface> _network;
 
-    // Background thead for agent
+    // Background thread for agent
     stdx::thread _thread;
 
     // Crank for test
