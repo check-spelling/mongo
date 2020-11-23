@@ -201,7 +201,7 @@ void R2RegionCoverer::addCandidate(Candidate* candidate) {
     }
 }
 
-// Dones't take ownership of "candidate"
+// Doesn't take ownership of "candidate"
 int R2RegionCoverer::expandChildren(Candidate* candidate) {
     GeoHash childCells[4];
     invariant(candidate->cell.subdivide(childCells));

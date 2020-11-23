@@ -1,4 +1,4 @@
-// Tests SERVER-11475 - Make sure server does't crash when many user defined roles are created where
+// Tests SERVER-11475 - Make sure server doesn't crash when many user defined roles are created where
 // each role is a member of the next, creating a large chain.
 // @tags: [requires_sharding]
 
