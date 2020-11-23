@@ -69,7 +69,7 @@ extern "C" {
 #endif
 
 /**
- * Creates a client with the correct stream intiator set
+ * Creates a client with the correct stream initiator set
  * @param db must be a valid instance handle created by `mongo_embedded_v1_instance_create`
  * @returns a mongoc client or `NULL` on error
  */
