@@ -9,9 +9,9 @@ t.save({a: [{x: 1}]});
 t.save({a: [{x: 1, y: 2, z: 1}]});
 t.save({a: [{x: 1, y: 1, z: 3}]});
 
-function test(exptected, q, name) {
-    assert.eq(exptected, t.find(q).itcount(), name + " " + tojson(q) + " itcount");
-    assert.eq(exptected, t.find(q).count(), name + " " + tojson(q) + " count");
+function test(expected, q, name) {
+    assert.eq(expected, t.find(q).itcount(), name + " " + tojson(q) + " itcount");
+    assert.eq(expected, t.find(q).count(), name + " " + tojson(q) + " count");
 }
 
 test(3, {}, "A1");

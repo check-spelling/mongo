@@ -126,7 +126,7 @@ let expectedChanges = [
     {operationType: "drop", ns: {db: db.getName(), coll: coll.getName()}}
 ];
 
-// Validate that we observe all expected changes in the stream, and replace the'expectedChanges'
+// Validate that we observe all expected changes in the stream, and replace theChanges'
 // list with the changes returned by ChangeStreamTest. These will include the _id resume tokens for
 // each change, so subsequent tests will be able to resume from any point.
 (function validateExpectedChangesAndPopulateResumeTokens() {

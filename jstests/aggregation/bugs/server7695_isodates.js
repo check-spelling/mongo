@@ -19,7 +19,7 @@ function testOp(op, value, expResult) {
     testOpCount++;
     let pipeline = [{$project: {_id: 0, result: {}}}];
     pipeline[0].$project.result[op] = value;
-    let msg = "Exptected {" + op + ": " + value + "} to equal: " + expResult;
+    let msg = "Expected {" + op + ": " + value + "} to equal: " + expResult;
     let res = coll.runCommand('aggregate', {pipeline: pipeline, cursor: {}});
 
     // in the case of $dateToString the date is on property date
