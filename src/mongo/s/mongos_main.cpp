@@ -549,7 +549,7 @@ public:
     void onDroppedSet(const Key& key) noexcept final {}
 
 private:
-    // Schedules updates for replica set 'setName' on the config server. Loosly preserves ordering
+    // Schedules updates for replica set 'setName' on the config server. Loosely preserves ordering
     // of update execution. Newer updates will not be overwritten by older updates in config.shards.
     void _scheduleUpdateConfigServer(std::string setName) {
         ConnectionString update;
