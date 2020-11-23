@@ -49,7 +49,7 @@ public:
     IndexTag(size_t i) : index(i) {}
 
     /**
-     * Assigns a leaf expresssion to position 'p' of index 'i' where whether it is safe to combine
+     * Assigns a leaf expression to position 'p' of index 'i' where whether it is safe to combine
      * bounds with other leaf expressions is defined by 'canCombineBounds_'.
      */
     IndexTag(size_t i, size_t p, bool canCombineBounds_)
