@@ -4913,7 +4913,7 @@ resmoke_install_dir = os.path.normpath(resmoke_install_dir).replace("\\", r"\\")
 # Much blood sweat and tears were shed getting to this point. Any version of
 # this that uses SCons builders and a scanner will either not regenerate when it
 # should, cause everything to rebuild, or conflict with ninja. Sometimes all
-# three. So we've decieded it's best to just write this file here every time
+# three. So we've decided it's best to just write this file here every time
 # because it's the only solution that always works.
 with open("resmoke.ini", "w") as resmoke_config:
     resmoke_config.write("""
