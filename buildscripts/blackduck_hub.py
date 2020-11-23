@@ -702,7 +702,7 @@ class TableData:
         self._rows[col].append(value)
 
     def write(self, headers: [str], writer: io.StringIO):
-        """Write table data as nice prettty table to writer."""
+        """Write table data as nice pretty table to writer."""
         tw = TableWriter(headers)
 
         for row in self._rows:
