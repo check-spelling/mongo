@@ -57,7 +57,7 @@ function assertUpdateWorked(query, update, isUpsert, _id) {
     assert.eq(1, res.nMatched);
     assert.eq(1, res.nModified);
 
-    // Skip find based validation for pipleline update.
+    // Skip find based validation for pipeline update.
     if (!Array.isArray(update)) {
         if (update["$set"] != undefined) {
             update = update["$set"];
@@ -79,7 +79,7 @@ function assertUpdateWorkedWithNoMatchingDoc(query, update, isUpsert, inTransact
     assert.eq(0, res.nMatched);
     assert.eq(0, res.nModified);
 
-    // Skip find based validation for pipleline update or when inside a transaction.
+    // Skip find based validation for pipeline update or when inside a transaction.
     if (Array.isArray(update) || inTransaction)
         return;
 

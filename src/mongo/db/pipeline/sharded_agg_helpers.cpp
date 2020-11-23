@@ -71,7 +71,7 @@ namespace {
  * {aggregate: "myCollection", pipeline: [], ...},
  *
  * produces the corresponding explain command:
- * {explain: {aggregate: "myCollection", pipline: [], ...}, $queryOptions: {...}, verbosity: ...}
+ * {explain: {aggregate: "myCollection", pipeline: [], ...}, $queryOptions: {...}, verbosity: ...}
  */
 Document wrapAggAsExplain(Document aggregateCommand, ExplainOptions::Verbosity verbosity) {
     MutableDocument explainCommandBuilder;

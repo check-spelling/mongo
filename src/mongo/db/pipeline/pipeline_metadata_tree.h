@@ -248,7 +248,7 @@ inline void walk(Stage<T>* stage,
 }  // namespace detail
 
 /**
- * Builds a Stage from a Pipeline. Initial contents for the first pipline stage must be provided. A
+ * Builds a Stage from a Pipeline. Initial contents for the first pipeline stage must be provided. A
  * function 'propagator' is necessary to determine how to build the contents of all further stages.
  * A stage will receive the built contents from its directly preceding stage. Initial contents must
  * be placed in 'initialStageContents'. Any expressive lookup pipelines require an additional

@@ -109,7 +109,7 @@ TEST(ViewDefinitionTest, SetViewOnSucceedsIfNewViewOnIsInSameDatabaseAsView) {
 }
 
 DEATH_TEST_REGEX(ViewDefinitionTest,
-                 SetPiplineFailsIfPipelineTypeIsNotArray,
+                 SetPipelineFailsIfPipelineTypeIsNotArray,
                  R"#(Invariant failure.*pipeline.type\(\) == Array)#") {
     ViewDefinition viewDef(
         viewNss.db(), viewNss.coll(), backingNss.coll(), samplePipeline, nullptr);
