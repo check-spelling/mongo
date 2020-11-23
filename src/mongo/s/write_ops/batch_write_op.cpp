@@ -748,7 +748,7 @@ bool BatchWriteOp::isFinished() {
 }
 
 void BatchWriteOp::buildClientResponse(BatchedCommandResponse* batchResp) {
-    // Note: we aggresively abandon the batch when encountering errors during transactions, so
+    // Note: we aggressively abandon the batch when encountering errors during transactions, so
     // it can be in a state that is not "finished" even for unordered batches.
     dassert(_inTransaction || isFinished());
 

@@ -160,7 +160,7 @@ void WriteOp::_updateOpState() {
     bool hasPendingChild = false;
     for (const auto& childOp : _childOps) {
         // Don't do anything till we have all the info. Unless we're in a transaction because
-        // we abort aggresively whenever we get an error during a transaction.
+        // we abort aggressively whenever we get an error during a transaction.
         if (childOp.state != WriteOpState_Completed && childOp.state != WriteOpState_Error) {
             hasPendingChild = true;
 
