@@ -1,5 +1,5 @@
 /**
- * Intergration test for read preference with hedging mode. The more comprehensive
+ * Integration test for read preference with hedging mode. The more comprehensive
  * unit test can be found in dbtests/read_preference_test.cpp and s/hedge_options_util_test.cpp.
  */
 (function() {
