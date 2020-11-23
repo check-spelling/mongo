@@ -165,7 +165,7 @@ bool TraverseStage::traverse(value::SlotAccessor* inFieldAccessor,
 
         if (!_foldCode) {
             // Create a fresh new output array.
-            // TODO if _inField == _outField then we can do implace update of the input array.
+            // TODO if _inField == _outField then we can do inplace update of the input array.
             auto [tag, val] = value::makeNewArray();
             arrOut = value::getArrayView(val);
             outFieldOutputAccessor->reset(true, tag, val);
