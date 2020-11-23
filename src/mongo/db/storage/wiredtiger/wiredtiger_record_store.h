@@ -330,7 +330,7 @@ private:
      *
      *   1. When a record store is created as part of the recovery process. The SizeStorer will have
      *      no information about that newly-created ident.
-     *   2. When a record store is created at startup but constains no records as of the stable
+     *   2. When a record store is created at startup but contains no records as of the stable
      *      checkpoint timestamp. In this scenario, we will assume that the record store has a size
      *      of zero and will discard all cached size metadata. This assumption is incorrect if there
      *      are pending writes to this ident as part of the recovery process, and so we must

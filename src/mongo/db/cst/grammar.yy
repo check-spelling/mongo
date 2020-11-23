@@ -307,7 +307,7 @@
 ;
 
 %token <std::string> FIELDNAME "fieldname"
-// If a token contians dots but is also prefixed by a dollar, it is converted to a DOTTED_FIELDNAME.
+// If a token contains dots but is also prefixed by a dollar, it is converted to a DOTTED_FIELDNAME.
 %token <std::vector<std::string>> DOTTED_FIELDNAME "fieldname containing dotted path"
 %token <std::string> DOLLAR_PREF_FIELDNAME "$-prefixed fieldname"
 %token <std::string> STRING "string"

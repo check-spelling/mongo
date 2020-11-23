@@ -83,7 +83,7 @@ void ProjectionNode::_addExpressionForPath(const FieldPath& path,
 }
 
 boost::intrusive_ptr<Expression> ProjectionNode::getExpressionForPath(const FieldPath& path) const {
-    // The FieldPath always conatins at least one field.
+    // The FieldPath always contains at least one field.
     auto fieldName = path.getFieldName(0).toString();
 
     if (path.getPathLength() == 1) {
