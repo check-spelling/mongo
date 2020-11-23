@@ -56,7 +56,7 @@ PlanYieldPolicyImpl::PlanYieldPolicyImpl(PlanExecutorImpl* exec,
       _yieldable(yieldable) {}
 
 Status PlanYieldPolicyImpl::yield(OperationContext* opCtx, std::function<void()> whileYieldingFn) {
-    // Can't use writeConflictRetry since we need to call saveState before reseting the
+    // Can't use writeConflictRetry since we need to call saveState before resetting the
     // transaction.
     for (int attempt = 1; true; attempt++) {
         try {

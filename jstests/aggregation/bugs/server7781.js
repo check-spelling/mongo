@@ -51,7 +51,7 @@ function testGeoNearStageOutput({geoNearSpec, limit, batchSize}) {
     }, 0);
 }
 
-// We use this to generate points. Using a single global to avoid reseting RNG in each pass.
+// We use this to generate points. Using a single global to avoid resetting RNG in each pass.
 var pointMaker = new GeoNearRandomTest(coll);
 
 function test(db, indexType) {
