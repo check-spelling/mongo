@@ -45,7 +45,7 @@ class condition_variable;
 
 /**
  * Notifyable is a slim type meant to allow integration of special kinds of waiters for
- * stdx::condition_variable.  Specifially, the notify() on this type will be called directly from
+ * stdx::condition_variable.  Specifically, the notify() on this type will be called directly from
  * stdx::condition_varibale::notify_(one|all).
  *
  * See Waitable for the stdx::condition_variable integration.
