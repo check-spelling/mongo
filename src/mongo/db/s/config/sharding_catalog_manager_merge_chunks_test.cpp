@@ -405,7 +405,7 @@ TEST_F(MergeChunkTest, NonMatchingEpochsOfChunkAndRequestErrors) {
     chunk2.setMin(chunkBound);
     chunk2.setMax(chunkMax);
 
-    // Record chunk baoundaries for passing into commitChunkMerge
+    // Record chunk boundaries for passing into commitChunkMerge
     std::vector<BSONObj> chunkBoundaries{chunkMin, chunkBound, chunkMax};
 
     setupCollection(kNamespace, kKeyPattern, {chunk, chunk2});
