@@ -274,7 +274,7 @@ TEST_F(MoveChunkRegistration, TestBlockingWhileDonateInProgress) {
 
         scopedDonateChunk.getValue().signalComplete(Status::OK());
 
-        // 9. Destroy the ScopedDonateChunk to signal the registy lock.
+        // 9. Destroy the ScopedDonateChunk to signal the registry lock.
     });
 
     // Registry locking thread.
@@ -308,7 +308,7 @@ TEST_F(MoveChunkRegistration, TestBlockingWhileDonateInProgress) {
     // signal the registry lock.
     blockDonate.set_value();
 
-    // 11. The registy locking thread has returned and this future is set.
+    // 11. The registry locking thread has returned and this future is set.
     lockReleased.wait();
 }
 
@@ -336,7 +336,7 @@ TEST_F(MoveChunkRegistration, TestBlockingWhileReceiveInProgress) {
         // 4. Wait for the registry thread to start blocking because there is an active receive.
         blockReceive.get_future().wait();
 
-        // 9. Destroy the scopedReceiveChunk to signal the registy lock.
+        // 9. Destroy the scopedReceiveChunk to signal the registry lock.
     });
 
     // Registry locking thread.
@@ -370,7 +370,7 @@ TEST_F(MoveChunkRegistration, TestBlockingWhileReceiveInProgress) {
     // signal the registry lock.
     blockReceive.set_value();
 
-    // 11. The registy locking thread has returned and this future is set.
+    // 11. The registry locking thread has returned and this future is set.
     lockReleased.wait();
 }
 
