@@ -282,7 +282,7 @@ overrides the `CommandInvocation` class with its own implementation of
 That class implements its own version of
 [`doCheckAuthorization`](https://github.com/mongodb/mongo/blob/r4.4.0/src/mongo/db/commands/find_cmd.cpp#L218).
 `doCheckAuthorization` gets the authorizationSession for the Client that is executing the command
-and checks all the permissioning of the `Client` and either throws if there is an issue or returns
+and checks all the permissions of the `Client` and either throws if there is an issue or returns
 if all the authorization checks are complete.
 
 ### Authorization Caching
