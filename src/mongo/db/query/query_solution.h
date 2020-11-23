@@ -176,7 +176,7 @@ struct QuerySolutionNode {
     virtual FieldAvailability getFieldAvailability(const std::string& field) const = 0;
 
     /**
-     * Syntatic sugar on top of getFieldAvailability(). Returns true if the 'field' is fully
+     * Syntactic sugar on top of getFieldAvailability(). Returns true if the 'field' is fully
      * provided and false otherwise.
      */
     bool hasField(const std::string& field) const {
