@@ -540,9 +540,9 @@ const nsidedPolys = [
         nW: totalObjects - 3,
         nI: totalObjects
     },
-    // Big polygon centered on Shenzen
+    // Big polygon centered on Shenzhen
     {
-        name: "4 sided polygon centered on Shenzen",
+        name: "4 sided polygon centered on Shenzhen",
         type: "Polygon",
         coordinates: [nGonGenerator(4, 5, true, 114.1, 22.55)],
         crs: strictCRS,
@@ -550,7 +550,7 @@ const nsidedPolys = [
         nI: totalObjects - 2
     },
     {
-        name: "4 sided polygon centered on Shenzen (non-big)",
+        name: "4 sided polygon centered on Shenzhen (non-big)",
         type: "Polygon",
         coordinates: [nGonGenerator(4, 5, false, 114.1, 22.55)],
         crs: strictCRS,
