@@ -109,8 +109,8 @@ certs:
   Subject:
     OU: 'KernelUser'
     CN: 'client'
-    '1.2.3.56': 'RandoValue'
-    '1.2.3.45': 'Value,Rando'
+    '1.2.3.56': 'RandomValue'
+    '1.2.3.45': 'Value,Random'
 
 - name: 'client_email.pem'
   description: >-

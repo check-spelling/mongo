@@ -30,7 +30,7 @@ function testClient(conn, name) {
 
 function runTest(conn) {
     const NAME =
-        '1.2.3.45=Value\\,Rando,1.2.3.56=RandoValue,CN=client,OU=KernelUser,O=MongoDB,L=New York City,ST=New York,C=US';
+        '1.2.3.45=Value\\,Random,1.2.3.56=RandomValue,CN=client,OU=KernelUser,O=MongoDB,L=New York City,ST=New York,C=US';
     const admin = conn.getDB('admin');
     admin.createUser({user: "admin", pwd: "admin", roles: ["root"]});
     admin.auth('admin', 'admin');
