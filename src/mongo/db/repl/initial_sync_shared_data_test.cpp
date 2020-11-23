@@ -218,7 +218,7 @@ TEST(InitialSyncSharedDataTest, OperationTimesOut) {
     ASSERT_FALSE(data.shouldRetryOperation(lk, &op1));
     ASSERT_FALSE(op1);
 
-    // op2 is still runnning.
+    // op2 is still running.
     ASSERT_EQ(Seconds(6), data.getCurrentOutageDuration(lk));
     ASSERT_EQ(1, data.getRetryingOperationsCount(lk));
 

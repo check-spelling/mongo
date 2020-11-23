@@ -301,7 +301,7 @@ for (var i = 0; i < 100; i++) {
 // way of providing a second collection for $lookup, $graphLookup and $merge aggregations.
 assert.commandWorked(coll.runCommand("aggregate", {pipeline: [{$out: otherCollName}], cursor: {}}));
 
-jsTest.log("Runing control tests.");
+jsTest.log("Running control tests.");
 checkCRUDCommands(rst0.getPrimary().getDB(dbName));
 checkDDLCommands(rst0.getPrimary().getDB(DDLDbName));
 
