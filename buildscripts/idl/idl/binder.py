@@ -980,7 +980,7 @@ def _bind_server_parameter_class(ctxt, ast_param, param):
             ctxt.add_server_parameter_invalid_attr(param, field, 'specialized')
             return None
 
-    # Fields specific to specialized stroage.
+    # Fields specific to specialized storage.
     cls = param.cpp_class
 
     if param.default is not None:
