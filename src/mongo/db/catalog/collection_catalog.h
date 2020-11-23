@@ -136,7 +136,7 @@ public:
      * Perform a write to the catalog using copy-on-write. A catalog previously returned by get()
      * will not be modified.
      *
-     * This call will block until the modified catalog has been committed. Concurrant writes are
+     * This call will block until the modified catalog has been committed. Concurrent writes are
      * batched together and will thus block each other. It is important to not perform blocking
      * operations such as acquiring locks or waiting for I/O in the write job as that would also
      * block other writers.
