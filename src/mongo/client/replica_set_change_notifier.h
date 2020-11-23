@@ -105,7 +105,7 @@ private:
  * A listener for events from a set of ReplicaSetMonitors
  *
  * This class will normally be notified of events for every replica set in use in the system.
- * The onSet functions are all called syncronously by the notifier,
+ * The onSet functions are all called synchronously by the notifier,
  * if your implementation would block or seriously delay execution,
  * please schedule the majority of the work to complete asynchronously.
  */
