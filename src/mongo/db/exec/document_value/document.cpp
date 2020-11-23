@@ -710,7 +710,7 @@ int Document::compare(const Document& rL,
         const ValueElement& lField = lIt.get();
 
         // For compatibility with BSONObj::woCompare() consider the canonical type of values
-        // before considerting their names.
+        // before considering their names.
         if (lField.val.getType() != rField.val.getType()) {
             const int rCType = canonicalizeBSONType(rField.val.getType());
             const int lCType = canonicalizeBSONType(lField.val.getType());
