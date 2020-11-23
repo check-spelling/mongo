@@ -91,7 +91,7 @@ public:
     }
 
     /**
-     * Returns a string represenation of the chunk for logging.
+     * Returns a string representation of the chunk for logging.
      */
     std::string toString() const;
 
@@ -175,7 +175,7 @@ public:
     }
 
     /**
-     * Returns a string represenation of the chunk for logging.
+     * Returns a string representation of the chunk for logging.
      */
     std::string toString() const {
         return _chunkInfo.toString();

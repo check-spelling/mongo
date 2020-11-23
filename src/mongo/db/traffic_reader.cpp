@@ -148,7 +148,7 @@ void getBSONObjFromPacket(TrafficReaderPacket& packet, BSONObjBuilder* builder) 
             header.append("opcode", static_cast<int32_t>(packet.message.getNetworkOp()));
         }
 
-        // Add the binary reprentation of the entire message for rawop.body
+        // Add the binary representation of the entire message for rawop.body
         // auto buf = SharedBuffer::allocate(packet.message.getLen());
         // std::memcpy(buf.get(), packet.message.view2ptr(), packet.message.getLen());
         // rawop.appendBinData("body", packet.message.getLen(), BinDataGeneral, buf.get());

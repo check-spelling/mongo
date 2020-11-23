@@ -179,7 +179,7 @@ protected:
     }
 
     /**
-     * Shortcut to create BSON represenation of a moveChunk request for the specified range with
+     * Shortcut to create BSON representation of a moveChunk request for the specified range with
      * fixed kDonorConnStr and kRecipientConnStr, respectively.
      */
     static MoveChunkRequest createMoveChunkRequest(const ChunkRange& chunkRange) {

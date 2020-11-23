@@ -194,7 +194,7 @@ public:
      *  "a.e.g" -> 1
      *  "a.h" -> "foo"
      *
-     * Has a BSON represation of (shown as JSON):
+     * Has a BSON representation of (shown as JSON):
      *  { "a" : {
      *           "b" : {
      *                  "c" : true,

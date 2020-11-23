@@ -184,7 +184,7 @@ BID_UINT128 decimal128ToLibraryType(Decimal128::Value value) {
  * of precision.
  *
  * To highlight the motivation for this function, consider doubleValue = 0.1.
- * The quantity 0.1 does not have an exact respresentation as a double.
+ * The quantity 0.1 does not have an exact representation as a double.
  * The actual value stored in the 64-bit type is 0.1000000000000000055511...
  *
  * Although imprecise, the double type does guarantee a minimum of 15 digits
