@@ -718,7 +718,7 @@ function runCollScanTests() {
 
 function runFindTestsWithHint(hint) {
     // Note that sorts are chosen so that results are deterministic. Either there are no ties, or
-    // any tied documents are filted out by a "limit" parameter.
+    // any tied documents are filtered out by a "limit" parameter.
     const testCases = [
         {desc: "All-document query", expected: documents, query: {}},
         {desc: "Point query 1", expected: [documents[1]], query: {a: 2}},
