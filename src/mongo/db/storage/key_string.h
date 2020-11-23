@@ -377,7 +377,7 @@ public:
     }
 
     /**
-     * Serializes this Value, excluing the RecordId, into a storable format with TypeBits
+     * Serializes this Value, excluding the RecordId, into a storable format with TypeBits
      * information. The serialized format takes the following form:
      *   [keystring size][keystring encoding][typebits encoding]
      */
