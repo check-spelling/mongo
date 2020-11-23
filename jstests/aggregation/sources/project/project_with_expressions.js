@@ -1,5 +1,5 @@
 /**
- * Test that a $project with a combination of expressions and field projections gets evaluted
+ * Test that a $project with a combination of expressions and field projections gets evaluated
  * correctly, and overwrites the data present in the input document when necessary.
  * @tags: [
  *   sbe_incompatible,

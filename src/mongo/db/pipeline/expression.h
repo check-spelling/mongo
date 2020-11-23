@@ -1201,7 +1201,7 @@ private:
                                    Variables* variables) const;
 
     /**
-     * This function has the same behavior as evaluteNumberWithDefault(), except that it uasserts if
+     * This function has the same behavior as evaluateNumberWithDefault(), except that it uasserts if
      * the resulting value is not in the range defined by kMaxValueForDatePart and
      * kMinValueForDatePart.
      */
