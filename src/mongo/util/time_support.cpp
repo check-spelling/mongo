@@ -371,7 +371,7 @@ Status parseTimeZoneFromToken(StringData tzStr, int* tzAdjSecs) {
             *tzAdjSecs =
                 (-1) * ((tzAdjHours < 0 ? -1 : 1) * (tzAdjMinutes * 60) + (tzAdjHours * 60 * 60));
 
-            // Disallow adjustiment of 24 hours or more in either direction (should be checked
+            // Disallow adjustment of 24 hours or more in either direction (should be checked
             // above as the separate components of minutes and hours)
             fassert(17318, *tzAdjSecs > -86400 && *tzAdjSecs < 86400);
         } else {
