@@ -961,7 +961,7 @@ TEST_F(FreeMonControllerTest, TestRegister) {
     ASSERT_GTE(controller.metricsCollector->count(), 0UL);
 }
 
-// Negatve: Test Register times out if network stack drops messages
+// Negative: Test Register times out if network stack drops messages
 TEST_F(FreeMonControllerTest, TestRegisterTimeout) {
 
     FreeMonNetworkInterfaceMock::Options opts;
@@ -981,7 +981,7 @@ TEST_F(FreeMonControllerTest, TestRegisterTimeout) {
     ASSERT_GTE(controller.registerCollector->count(), 2UL);
 }
 
-// Negatve: Test Register fails if the registration is wrong
+// Negative: Test Register fails if the registration is wrong
 TEST_F(FreeMonControllerTest, TestRegisterFail) {
 
     FreeMonNetworkInterfaceMock::Options opts;
