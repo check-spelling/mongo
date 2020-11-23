@@ -66,7 +66,7 @@ try {
     });
     msg += tojson(db.system.profile.stats());
 
-    // If these nunmbers don't match, it is possible the collection has rolled over
+    // If these numbers don't match, it is possible the collection has rolled over
     // (set to 32MB above in the hope this doesn't happen)
     assert.eq(2, profileItems.length, "E2 -- " + msg);
 
