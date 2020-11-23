@@ -121,7 +121,7 @@ public:
      * Stop registration of mongod with remote service.
      *
      * As with registerServerCommand() above, but undoes registration.
-     * On complettion of this command, no further metrics will be transmitted.
+     * On completion of this command, no further metrics will be transmitted.
      */
     boost::optional<Status> unregisterServerCommand(Milliseconds timeout);
 
