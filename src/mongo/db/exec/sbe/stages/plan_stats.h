@@ -44,7 +44,7 @@ struct CommonStats {
 
     const StringData stageType;
 
-    // An identifier for the node, or zero if the idenfier was not provided. Useful for displaying
+    // An identifier for the node, or zero if the identifier was not provided. Useful for displaying
     // debug output such as explain.
     //
     // These identifiers are not necessarily unique. For example, they can be used by code

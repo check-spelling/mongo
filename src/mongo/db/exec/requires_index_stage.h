@@ -97,7 +97,7 @@ private:
 
     std::string _indexName;
 
-    // An indentifier for the index required by this stage. Any working set member allocated to
+    // An identifier for the index required by this stage. Any working set member allocated to
     // represent an index key from this index must include this id.
     WorkingSetRegisteredIndexId _workingSetIndexId;
 };
