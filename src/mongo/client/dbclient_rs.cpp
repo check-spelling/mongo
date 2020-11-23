@@ -652,7 +652,7 @@ BSONObj DBClientReplicaSet::findOne(const string& ns,
                     "readPref"_attr = readPref->toString(),
                     "primary"_attr =
                         (_primary.get() != nullptr ? _primary->getServerAddress() : "[not cached]"),
-                    "secondaryHostNamme"_attr = (_lastSecondaryOkConn.get() != nullptr
+                    "secondaryHostName"_attr = (_lastSecondaryOkConn.get() != nullptr
                                                      ? _lastSecondaryOkConn->getServerAddress()
                                                      : "[not cached]"));
 
