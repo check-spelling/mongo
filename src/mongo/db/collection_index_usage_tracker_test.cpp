@@ -60,7 +60,7 @@ private:
     CollectionIndexUsageTracker _tracker;
 };
 
-// Test that a newly contructed tracker has an empty map.
+// Test that a newly constructed tracker has an empty map.
 TEST_F(CollectionIndexUsageTrackerTest, Empty) {
     ASSERT(getTracker()->getUsageStats()->empty());
 }

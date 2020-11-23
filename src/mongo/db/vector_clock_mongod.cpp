@@ -135,7 +135,7 @@ private:
     // false it means that this operation must do it
     bool _loopScheduled{false};
 
-    // This value is only boost::none once, just after the object is constructuted. From the moment,
+    // This value is only boost::none once, just after the object is constructed. From the moment,
     // the first operation schedules the `_queue`-draining loop, it will be set to a future, which
     // will be signaled when the previously-scheduled `_queue` draining loop completes.
     boost::optional<Future<void>> _currentWhileLoop;
