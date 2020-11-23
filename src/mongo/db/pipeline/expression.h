@@ -286,7 +286,7 @@ protected:
     /**
      * Owning container for all sub-Expressions.
      *
-     * Some derived classes contain named fields since they orginate from user syntax containing
+     * Some derived classes contain named fields since they originated from user syntax containing
      * field names. These classes contain alternate data structures or object members for accessing
      * children. These structures or object members are expected to reference this data structure.
      * In addition this structure should not be modified by named-field derived classes to avoid
