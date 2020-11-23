@@ -87,7 +87,7 @@ static MongoEmbeddedStatusImpl translateException(
 }
 
 /**
- * C interfaces that use enterCXX() must provide a tranlsateExceptionFallback() function that
+ * C interfaces that use enterCXX() must provide a translateExceptionFallback() function that
  * populates a StatusForAPI<> object to indicate a double-fault error during error reporting. The
  * translateExceptionFallback() function gets called when translateException() throws, and it should
  * not include any code that may itself throw.
