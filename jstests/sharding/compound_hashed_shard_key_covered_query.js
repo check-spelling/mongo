@@ -96,7 +96,7 @@ validateFindCmdOutputAndPlan({
 coll.drop();
 
 //
-// Tests to validate covering behaviour in the presense of various indexes.
+// Tests to validate covering behaviour in the presence of various indexes.
 //
 assert.commandWorked(st.s.getDB('config').adminCommand(
     {shardCollection: coll.getFullName(), key: {a: 1, b: "hashed", c: 1}}));
