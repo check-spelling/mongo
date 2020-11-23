@@ -836,7 +836,7 @@ std::tuple<bool, value::TypeTags, value::Value> ByteCode::builtinNewKeyString(Ar
             auto str = value::getStringView(tag, val);
             kb.appendString(StringData{str.data(), str.length()});
         } else {
-            uasserted(4822802, "unsuppored key string type");
+            uasserted(4822802, "unsupported key string type");
         }
     }
 
