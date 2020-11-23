@@ -70,7 +70,7 @@ public:
     /**
      * Set the path where TempDir() will create temporary directories. This is a workaround
      * for situations where you might want to log, but you've not yet run the MONGO_INITIALIZERs,
-     * and should be removed if ever command line parsing is seperated from MONGO_INITIALIZERs.
+     * and should be removed if ever command line parsing is separated from MONGO_INITIALIZERs.
      */
     static void setTempPath(std::string tempPath);
 

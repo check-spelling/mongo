@@ -177,7 +177,7 @@ private:
     std::string getElementPath(const BSONElement& element) const;
 
     /**
-     * Return a dot seperated path to the specified field. For instance, if the code is parsing a
+     * Return a dot separated path to the specified field. For instance, if the code is parsing a
      * grandchild field that has an error, this will return "grandparent.parent.child".
      */
     std::string getElementPath(StringData fieldName) const;

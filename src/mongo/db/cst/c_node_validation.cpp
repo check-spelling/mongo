@@ -322,7 +322,7 @@ Status validateNoConflictingPathsInProjectFields(const CNode& projects) {
 Status validateAggregationPath(const std::vector<std::string>& components) {
     if (components.size() > BSONDepth::getMaxAllowableDepth())
         return Status{ErrorCodes::FailedToParse,
-                      "aggregation field path has too many dot-seperated parts"};
+                      "aggregation field path has too many dot-separated parts"};
     if (components[0][0] == '$')
         return Status{ErrorCodes::FailedToParse,
                       "aggregation field path begins with dollar character"};
@@ -341,7 +341,7 @@ Status validateVariableNameAndPathSuffix(const std::vector<std::string>& nameAnd
     }
     if (nameAndPathComponents.size() > BSONDepth::getMaxAllowableDepth())
         return Status{ErrorCodes::FailedToParse,
-                      "aggregation variable field path has too many dot-seperated parts"};
+                      "aggregation variable field path has too many dot-separated parts"};
     // Skip the variable prefix since it's already been checked.
     for (auto n = 1ull; n < nameAndPathComponents.size(); ++n)
         if (auto status = validatePathComponent(nameAndPathComponents[n]); !status.isOK())
@@ -354,7 +354,7 @@ StatusWith<IsPositional> validateProjectionPathAsNormalOrPositional(
     const std::vector<std::string>& components) {
     if (components.size() > BSONDepth::getMaxAllowableDepth())
         return Status{ErrorCodes::FailedToParse,
-                      "projection field path has too many dot-seperated parts"};
+                      "projection field path has too many dot-separated parts"};
     auto isPositional =
         components[components.size() - 1] == "$" ? IsPositional::yes : IsPositional::no;
     if (isPositional == IsPositional::no && components[0][0] == '$')

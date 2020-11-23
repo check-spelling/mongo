@@ -1,5 +1,5 @@
 /**
- * Pins a cursor in a seperate shell and then runs the given function.
+ * Pins a cursor in a separate shell and then runs the given function.
  * 'conn': a connection to an instance of a mongod or mongos.
  * 'sessionId': The id present if the database is currently in a session.
  * 'dbName': the database to use with the cursor.

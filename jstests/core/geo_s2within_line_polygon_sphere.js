@@ -133,7 +133,7 @@ function testGeoWithinCenterSphereLinePolygon(coll) {
 
     assert.commandWorked(coll.insert(geoDoc));
 
-    // Test for a MultiPolygon (two seperate polygons) within a geowithin sphere.
+    // Test for a MultiPolygon (two separate polygons) within a geowithin sphere.
     testGeoWithinCenterSphere([[151.20821632978107, -33.865139891361636], 0.000981007241416606],
                               [{name: "MultiPolygon1"}]);
 

@@ -5266,7 +5266,7 @@ intrusive_ptr<Expression> ExpressionZip::parse(ExpressionContext* const expCtx,
 
     auto useLongestLength = false;
     std::vector<boost::intrusive_ptr<Expression>> children;
-    // We need to ensure defaults appear after inputs so we build them seperately and then
+    // We need to ensure defaults appear after inputs so we build them separately and then
     // concatenate them.
     std::vector<boost::intrusive_ptr<Expression>> tempDefaultChildren;
 
