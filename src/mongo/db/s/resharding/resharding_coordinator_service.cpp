@@ -398,19 +398,19 @@ std::vector<ShardId> extractShardIds(const std::vector<T>& participantShardEntri
 /**
  * Maps which participants are to be notified when the coordinator transitions into a given state.
  */
-enum class ParticipantsToNofityEnum { kDonors, kRecipientsTempNss, kRecipientsOrigNss, kNone };
-stdx::unordered_map<CoordinatorStateEnum, ParticipantsToNofityEnum> notifyForStateTransition{
-    {CoordinatorStateEnum::kUnused, ParticipantsToNofityEnum::kNone},
-    {CoordinatorStateEnum::kInitializing, ParticipantsToNofityEnum::kNone},
-    {CoordinatorStateEnum::kPreparingToDonate, ParticipantsToNofityEnum::kDonors},
-    {CoordinatorStateEnum::kCloning, ParticipantsToNofityEnum::kRecipientsTempNss},
-    {CoordinatorStateEnum::kApplying, ParticipantsToNofityEnum::kDonors},
-    {CoordinatorStateEnum::kMirroring, ParticipantsToNofityEnum::kDonors},
-    {CoordinatorStateEnum::kCommitted, ParticipantsToNofityEnum::kNone},
-    {CoordinatorStateEnum::kRenaming, ParticipantsToNofityEnum::kRecipientsOrigNss},
-    {CoordinatorStateEnum::kDropping, ParticipantsToNofityEnum::kDonors},
-    {CoordinatorStateEnum::kDone, ParticipantsToNofityEnum::kNone},
-    {CoordinatorStateEnum::kError, ParticipantsToNofityEnum::kNone},
+enum class ParticipantsToNotifyEnum { kDonors, kRecipientsTempNss, kRecipientsOrigNss, kNone };
+stdx::unordered_map<CoordinatorStateEnum, ParticipantsToNotifyEnum> notifyForStateTransition{
+    {CoordinatorStateEnum::kUnused, ParticipantsToNotifyEnum::kNone},
+    {CoordinatorStateEnum::kInitializing, ParticipantsToNotifyEnum::kNone},
+    {CoordinatorStateEnum::kPreparingToDonate, ParticipantsToNotifyEnum::kDonors},
+    {CoordinatorStateEnum::kCloning, ParticipantsToNotifyEnum::kRecipientsTempNss},
+    {CoordinatorStateEnum::kApplying, ParticipantsToNotifyEnum::kDonors},
+    {CoordinatorStateEnum::kMirroring, ParticipantsToNotifyEnum::kDonors},
+    {CoordinatorStateEnum::kCommitted, ParticipantsToNotifyEnum::kNone},
+    {CoordinatorStateEnum::kRenaming, ParticipantsToNotifyEnum::kRecipientsOrigNss},
+    {CoordinatorStateEnum::kDropping, ParticipantsToNotifyEnum::kDonors},
+    {CoordinatorStateEnum::kDone, ParticipantsToNotifyEnum::kNone},
+    {CoordinatorStateEnum::kError, ParticipantsToNotifyEnum::kNone},
 };
 
 /**
@@ -426,7 +426,7 @@ void executeStateTransitionAndMetadataChangesInTxn(
     unique_function<void(OperationContext*, TxnNumber)> changeMetadataFunc) {
     const auto& state = updatedCoordinatorDoc.getState();
     invariant(notifyForStateTransition.find(state) != notifyForStateTransition.end());
-    invariant(notifyForStateTransition[state] == ParticipantsToNofityEnum::kNone);
+    invariant(notifyForStateTransition[state] == ParticipantsToNotifyEnum::kNone);
 
     // Neither donors nor recipients need to be informed of the transition to
     // updatedCoordinatorDoc's state.
@@ -451,10 +451,10 @@ void bumpShardVersionsThenExecuteStateTransitionAndMetadataChangesInTxn(
     unique_function<void(OperationContext*, TxnNumber)> changeMetadataFunc) {
     const auto& state = updatedCoordinatorDoc.getState();
     invariant(notifyForStateTransition.find(state) != notifyForStateTransition.end());
-    invariant(notifyForStateTransition[state] != ParticipantsToNofityEnum::kNone);
+    invariant(notifyForStateTransition[state] != ParticipantsToNotifyEnum::kNone);
 
     auto participantsToNotify = notifyForStateTransition[state];
-    if (participantsToNotify == ParticipantsToNofityEnum::kDonors) {
+    if (participantsToNotify == ParticipantsToNotifyEnum::kDonors) {
         // Bump the donor shard versions for the original namespace along with updating the
         // metadata.
         ShardingCatalogManager::get(opCtx)->bumpCollShardVersionsAndChangeMetadataInTxn(
@@ -462,7 +462,7 @@ void bumpShardVersionsThenExecuteStateTransitionAndMetadataChangesInTxn(
             updatedCoordinatorDoc.getNss(),
             extractShardIds(updatedCoordinatorDoc.getDonorShards()),
             std::move(changeMetadataFunc));
-    } else if (participantsToNotify == ParticipantsToNofityEnum::kRecipientsTempNss) {
+    } else if (participantsToNotify == ParticipantsToNotifyEnum::kRecipientsTempNss) {
         // Bump the recipient shard versions for the temporary resharding namespace along with
         // updating the metadata.
         ShardingCatalogManager::get(opCtx)->bumpCollShardVersionsAndChangeMetadataInTxn(
@@ -470,7 +470,7 @@ void bumpShardVersionsThenExecuteStateTransitionAndMetadataChangesInTxn(
             updatedCoordinatorDoc.getTempReshardingNss(),
             extractShardIds(updatedCoordinatorDoc.getRecipientShards()),
             std::move(changeMetadataFunc));
-    } else if (participantsToNotify == ParticipantsToNofityEnum::kRecipientsOrigNss) {
+    } else if (participantsToNotify == ParticipantsToNotifyEnum::kRecipientsOrigNss) {
         // Bump the recipient shard versions for the original resharding namespace along with
         // updating the metadata.
         ShardingCatalogManager::get(opCtx)->bumpCollShardVersionsAndChangeMetadataInTxn(
@@ -570,7 +570,7 @@ void persistStateTransitionAndCatalogUpdatesThenBumpShardVersions(
     invariant(notifyForStateTransition.find(nextState) != notifyForStateTransition.end());
     // TODO SERVER-51800 Remove special casing for kError.
     invariant(nextState == CoordinatorStateEnum::kError ||
-              notifyForStateTransition[nextState] != ParticipantsToNofityEnum::kNone);
+              notifyForStateTransition[nextState] != ParticipantsToNotifyEnum::kNone);
 
     // Resharding metadata changes to be executed.
     auto changeMetadataFunc = [&](OperationContext* opCtx, TxnNumber txnNumber) {
