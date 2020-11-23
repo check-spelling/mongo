@@ -110,7 +110,7 @@ class IndentedTextWriter(object):
 
     def write_unindented_line(self, msg):
         # type: (str) -> None
-        """Write an unindented line to the stream, no template formattin applied."""
+        """Write an unindented line to the stream, no template formatting applied."""
         self._stream.write(msg)
         self._stream.write("\n")
 
@@ -127,7 +127,7 @@ class IndentedTextWriter(object):
 
     def write_line(self, msg):
         # type: (str) -> None
-        """Write a line to the stream, no template formattin applied."""
+        """Write a line to the stream, no template formatting applied."""
         self._stream.write(_indent_text(self._indent, msg))
         self._stream.write("\n")
 
