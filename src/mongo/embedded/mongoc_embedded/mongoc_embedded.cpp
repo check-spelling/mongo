@@ -221,7 +221,7 @@ extern "C" ssize_t mongoc_stream_embedded_writev(mongoc_stream_t* s,
     return already_read;
 } catch (...) {
     errno = EBADMSG;
-    return 0;  // not guarenteeing anything was written
+    return 0;  // not guaranteeing anything was written
 }
 extern "C" ssize_t mongoc_stream_embedded_readv(mongoc_stream_t* s,
                                                 mongoc_iovec_t* iov,
@@ -241,7 +241,7 @@ extern "C" ssize_t mongoc_stream_embedded_readv(mongoc_stream_t* s,
     return bytes_read;
 } catch (...) {
     errno = EBADMSG;
-    return 0;  // not guarenteeing anything was read
+    return 0;  // not guaranteeing anything was read
 }
 
 
