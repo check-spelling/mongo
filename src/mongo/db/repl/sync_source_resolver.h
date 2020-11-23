@@ -63,13 +63,13 @@ class SyncSourceSelector;
  *              an empty HostAndPort.
  *          3. All potential sync sources are too fresh. isOK() will return false and
  *              syncSourceStatus will be ErrorCodes::OplogStartMissing and earliestOpTimeSeen will
- *              contain a new MinValid boundry. getSyncSource() is not valid to call in this state.
+ *              contain a new MinValid boundary. getSyncSource() is not valid to call in this state.
  */
 struct SyncSourceResolverResponse {
     // Contains the new syncSource if syncSourceStatus is OK and the HostAndPort is not empty.
     StatusWith<HostAndPort> syncSourceStatus = {ErrorCodes::BadValue, "status not populated"};
 
-    // Contains the new MinValid boundry if syncSourceStatus is ErrorCodes::OplogStartMissing.
+    // Contains the new MinValid boundary if syncSourceStatus is ErrorCodes::OplogStartMissing.
     OpTime earliestOpTimeSeen;
 
     // Rollback ID of the selected sync source.
