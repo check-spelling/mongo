@@ -1853,7 +1853,7 @@ class LibdepsLinkGuard(SCons.Errors.UserError):
 def checkComponentType(target_comps, comp, target, lib):
     """
     For a libdep and each AIB_COMPONENT its labeled as, check if its violates
-    any of the link gaurd rules.
+    any of the link guard rules.
     """
     for target_comp in target_comps:
         for link_guard_rule in link_guard_rules:
