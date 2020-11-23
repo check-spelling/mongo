@@ -76,7 +76,7 @@ assert.commandWorked(targetColl.createIndex({a: 1}, {unique: true}));
 
 assertErrorCode(coll, pipeline, ErrorCodes.DuplicateKey);
 
-// Rerun a similar test, except populate the target collection with a document that conflics
+// Rerun a similar test, except populate the target collection with a document that conflict
 // with one out of the pipeline. In this case, there is no unique key violation since the target
 // collection will be dropped before renaming the source collection.
 coll.drop();
