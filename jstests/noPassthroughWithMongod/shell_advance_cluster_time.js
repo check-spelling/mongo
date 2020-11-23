@@ -1,5 +1,5 @@
 /**
- * Santity check getClusterTime and advanceClusterTime.
+ * Sanctity check getClusterTime and advanceClusterTime.
  */
 
 (function() {
