@@ -630,7 +630,7 @@ public:
         /**
          * The first time this method is called it marks the transaction as over in the router's
          * diagnostics and will log transaction information if its duration is over the global
-         * slowMS threshold or the transaction log componenet verbosity >= 1. Only meant to be
+         * slowMS threshold or the transaction log component verbosity >= 1. Only meant to be
          * called when the router definitively knows the transaction's outcome, e.g. it should not
          * be invoked after a network error on commit.
          */

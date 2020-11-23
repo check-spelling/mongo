@@ -6,7 +6,7 @@
 # Note: the word TO_DO is supposed to be spelled as "TODO". It is spelled awkwardly in the example
 # to avoid the TODO scanner from filing an issue on the sample code.
 #
-# component_name: Sample Example Compnent
+# component_name: Sample Example Component
 # 	homepage_url: https://www.example.com
 # 	local_directory_path: src/third_party/example
 #   open_hub_url: https://www.openhub.net/p/example
