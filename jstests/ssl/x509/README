@@ -6,7 +6,7 @@ mkcrl.sh     - Certificate Revocation List generators.
 
 mkcert.py may be invoked without any arguments, in which case it will regenerate ALL certificates.
 Alternatively, pass one or more certificate symbolic names.
-If any of these certificates represent CAs, then all dependent certificates will also be regenerted.
+If any of these certificates represent CAs, then all dependent certificates will also be regenerated.
 
 cert.yml format:
 
