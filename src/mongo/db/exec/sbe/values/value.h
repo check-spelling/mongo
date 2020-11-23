@@ -919,7 +919,7 @@ private:
 
 /**
  * Holds a view of an array-like type (e.g. TypeTags::Array or TypeTags::bsonArray), and provides an
- * iterface to iterate over the values that are the elements of the array.
+ * interface to iterate over the values that are the elements of the array.
  */
 class ArrayEnumerator {
 public:
