@@ -786,10 +786,10 @@ int mongo_main(int argc, char* argv[]) {
             mongo::shell_utils::dbConnect += ss.str();
         }
 
-        if (const auto gssapiServiveName = parsedURI.getOption("gssapiServiceName")) {
+        if (const auto gssapiSurviveName = parsedURI.getOption("gssapiServiceName")) {
             std::stringstream ss;
             ss << "DB.prototype._defaultGssapiServiceName = \""
-               << str::escape(gssapiServiveName.get()) << "\";" << std::endl;
+               << str::escape(gssapiSurviveName.get()) << "\";" << std::endl;
             mongo::shell_utils::dbConnect += ss.str();
         }
 
