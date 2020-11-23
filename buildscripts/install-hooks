@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create a git hook driver in this repo. The hook will run all
-# excutable scripts in the directory ~/.githooks/<repo name>/[HOOK_TRIGGER]/
+# executable scripts in the directory ~/.githooks/<repo name>/[HOOK_TRIGGER]/
 # where HOOK_TRIGGER can be any one of the following:
 # https://git-scm.com/docs/githooks#_hooks
 # If you add a new type of HOOK_TRIGGER, this script needs to be run again.
