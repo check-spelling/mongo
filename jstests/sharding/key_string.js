@@ -7,7 +7,7 @@ s.ensurePrimaryShard('test', s.shard1.shardName);
 s.adminCommand({shardcollection: "test.foo", key: {name: 1}});
 
 primary = s.getPrimaryShard("test").getDB("test");
-seconday = s.getOther(primary).getDB("test");
+secondary = s.getOther(primary).getDB("test");
 
 assert.eq(1, s.config.chunks.count({"ns": "test.foo"}), "sanity check A");
 
@@ -29,14 +29,14 @@ s.adminCommand({split: "test.foo", middle: {name: "eliot"}});
 s.adminCommand({
     movechunk: "test.foo",
     find: {name: "eliot"},
-    to: seconday.getMongo().name,
+    to: secondary.getMongo().name,
     _waitForDelete: true
 });
 
 s.printChunks();
 
 assert.eq(3, primary.foo.find().toArray().length, "primary count");
-assert.eq(3, seconday.foo.find().toArray().length, "secondary count");
+assert.eq(3, secondary.foo.find().toArray().length, "secondary count");
 
 assert.eq(6, db.foo.find().toArray().length, "total count");
 assert.eq(6, db.foo.find().sort({name: 1}).toArray().length, "total count sorted");

@@ -133,7 +133,7 @@ When logging the below information, do so with these specific terms:
   JSON Output:
 
       { ..., "id": 1040, "msg": "Replica set state transition on this node",
-          "attr": { "oldState": "SECONARY", "newState": "PRIMARY" } }
+          "attr": { "oldState": "SECONDARY", "newState": "PRIMARY" } }
 
 - For adding STL containers as dynamic attributes, see
     [RollbackImpl::_summarizeRollback][_summarizeRollback]

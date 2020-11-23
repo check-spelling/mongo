@@ -140,7 +140,7 @@ private:
     SecondaryThrottleOption _secondaryThrottle;
 
     // Owned BSON object with the contents of the writeConcern. If this object is set, then
-    // secodaryThrottle must be true.
+    // secondaryThrottle must be true.
     boost::optional<BSONObj> _writeConcernBSON;
 };
 

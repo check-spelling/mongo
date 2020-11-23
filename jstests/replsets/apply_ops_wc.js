@@ -5,7 +5,7 @@
  * This first tests that invalid write concerns cause writeConcern errors.
  * Next, it tests replication with writeConcerns of w:2 and w:majority.
  * When there are 3 nodes up in a replica set, applyOps commands succeed.
- * It then stops replication at one seconday and confirms that applyOps commands still succeed.
+ * It then stops replication at one secondary and confirms that applyOps commands still succeed.
  * It finally stops replication at another secondary and confirms that applyOps commands fail.
  */
 
