@@ -73,7 +73,7 @@ const shardConn = st.rs0.getPrimary();
 // Create the unsharded collection.
 assert.commandWorked(st.s.getDB(dbName).getCollection(collName).insert({x: 1}));
 
-// Run each test with SBE disbaled and enabled.
+// Run each test with SBE disabled and enabled.
 for (const useSbe of [false, true]) {
     // Test killOp against mongod.
     runTest(shardConn, shardConn, useSbe);
