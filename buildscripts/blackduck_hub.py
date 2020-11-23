@@ -53,7 +53,7 @@ BLACKDUCK_WIKI_PAGE = "https://wiki.corp.mongodb.com/display/KERNEL/Black+Duck"
 # Black Duck failed report prefix
 BLACKDUCK_FAILED_PREFIX = "A Black Duck scan was run and failed"
 
-# Black Duck default teaam
+# Black Duck default team
 BLACKDUCK_DEFAULT_TEAM = "Service Development Platform"
 
 ############################################################################
