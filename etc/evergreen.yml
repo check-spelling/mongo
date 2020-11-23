@@ -5075,7 +5075,7 @@ tasks:
   - func: "setup jstestfuzz"
   - func: "lint fuzzer sanity patch"
 
-# Check that the mutational fuzzer can parse all JS filess.
+# Check that the mutational fuzzer can parse all JS files.
 - name: lint_fuzzer_sanity_all
   commands:
   - command: manifest.load
