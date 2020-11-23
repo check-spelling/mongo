@@ -223,7 +223,7 @@ boost::optional<ReshardingDonorOplogId> ReshardingOplogFetcher::iterate(
     // Noting some possible optimizations:
     //
     // * Batch more inserts into larger storage transactions.
-    // * Parallize writing documents across multiple threads.
+    // * Parallelize writing documents across multiple threads.
     // * Doing either of the above while still using the underlying message buffer of bson objects.
     AutoGetCollection toWriteTo(opCtx, toWriteToNss, LockMode::MODE_IX);
     ReshardingDonorOplogId lastSeen = startAfter;
