@@ -148,7 +148,7 @@ function testCommitDecisionWriteConcern(writeConcern) {
     runInsertCmdInTxn(docs);
 
     // Turn on the failpoint to pause coordinateCommit right before the coordinator persists
-    // the decision so we can disable replication on the nodes that are not needed for satifying
+    // the decision so we can disable replication on the nodes that are not needed for satisfying
     // the write concern.
     let persistDecisionFailPoint = configureFailPoint(st.shard0, "hangBeforeWritingDecision");
     const nodesToStopReplication = getNodesToStopReplication(st.rs0, writeConcern);
