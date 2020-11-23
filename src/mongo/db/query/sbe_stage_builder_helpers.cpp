@@ -297,7 +297,7 @@ EvalExprStagePair generateShortCircuitingLogicalOp(sbe::EPrimBinary::Op logicOp,
                               sbe::value::SlotIdGenerator* slotIdGenerator) {
         // Create a FilterStage for each branch (except the last one). If a branch's filter
         // condition is true, it will "short-circuit" the evaluation process. For AND, short-
-        // circuiting should happen if an operand evalautes to false. For OR, short-circuiting
+        // circuiting should happen if an operand evaluates to false. For OR, short-circuiting
         // should happen if an operand evaluates to true.
         auto filterExpr = (logicOp == sbe::EPrimBinary::logicAnd) ? makeNot(expr.extractExpr())
                                                                   : expr.extractExpr();
