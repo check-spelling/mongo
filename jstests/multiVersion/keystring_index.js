@@ -249,7 +249,7 @@ function fibonacci(num, memo) {
 // NOTE: Documents returned from getDoc are inserted more than once.
 function insertDocumentsNotUnique(collection, numDocs, getDoc) {
     let fibNum = 0;
-    // fibonacci numbers are used because the fibonnaci sequence is a
+    // fibonacci numbers are used because the fibonacci sequence is a
     // exponentially growing sequence that allows us to create documents
     // that are duplicated X number of times, for many small values of X and
     // a few large values of X.
