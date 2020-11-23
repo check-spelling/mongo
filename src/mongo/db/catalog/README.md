@@ -1176,7 +1176,7 @@ apply (or not apply) T10 through T20.
 _Code spelunking starting points:_
 
 * [_The JournalFlusher class_](https://github.com/mongodb/mongo/blob/767494374cf12d76fc74911d1d0fcc2bbce0cd6b/src/mongo/db/storage/control/journal_flusher.h)
-  * Perioidically and upon request flushes the journal to disk.
+  * Periodically and upon request flushes the journal to disk.
 * [_Code that ultimately calls flush journal on WiredTiger_](https://github.com/mongodb/mongo/blob/767494374cf12d76fc74911d1d0fcc2bbce0cd6b/src/mongo/db/storage/wiredtiger/wiredtiger_session_cache.cpp#L241-L362)
   * Skips flushing if ephemeral mode engine; may do a journal flush or take a checkpoint depending
     on server settings.
