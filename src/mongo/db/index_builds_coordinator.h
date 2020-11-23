@@ -533,7 +533,7 @@ protected:
     /**
      * Runs the index build on the caller thread. Handles unregistering the index build and setting
      * the index build's Promise with the outcome of the index build.
-     * 'IndexBuildOptios::replSetAndNotPrimary' is determined at the start of the index build.
+     * 'IndexBuildOptions::replSetAndNotPrimary' is determined at the start of the index build.
      */
     void _runIndexBuild(OperationContext* opCtx,
                         const UUID& buildUUID,
@@ -542,7 +542,7 @@ protected:
 
     /**
      * Acquires locks and runs index build. Throws on error.
-     * 'IndexBuildOptios::replSetAndNotPrimary' is determined at the start of the index build.
+     * 'IndexBuildOptions::replSetAndNotPrimary' is determined at the start of the index build.
      */
     void _runIndexBuildInner(OperationContext* opCtx,
                              std::shared_ptr<ReplIndexBuildState> replState,
