@@ -201,7 +201,7 @@ var case6 = function() {
 case6();
 
 // -------------------------
-// Case 7: enough occurances of min key documents to pass the chunk limit
+// Case 7: enough occurrences of min key documents to pass the chunk limit
 // [1111111111111111,2,3)
 
 resetCollection();
@@ -223,7 +223,7 @@ var case7 = function() {
 case7();
 
 // -------------------------
-// Case 8: few occurrances of min key, and enough of some other that we cannot split it
+// Case 8: few occurrences of min key, and enough of some other that we cannot split it
 // [1, 22222222222222, 3)
 
 resetCollection();
