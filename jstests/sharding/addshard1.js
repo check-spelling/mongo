@@ -48,7 +48,7 @@ assert.eq(numObjs, sdb1.foo.count(), "wrong count for database that existed befo
 var sdb2 = s.getDB("otherDB");
 assert.eq(0, sdb2.foo.count(), "database of rejected shard appears through mongos");
 
-// make sure we can move a DB from the original mongod to a previoulsy existing shard
+// make sure we can move a DB from the original mongod to a previously existing shard
 assert.eq(s.normalize(s.config.databases.findOne({_id: "testDB"}).primary),
           newShard,
           "DB primary is wrong");
