@@ -1716,7 +1716,7 @@ OpMsgRequest makeOMR(BSONObj obj) {
 }
 
 // Positive: demonstrate a command with concatenate with db
-TEST(IDLCommand, TestConcatentateWithDb) {
+TEST(IDLCommand, TestConcatenateWithDb) {
     IDLParserErrorContext ctxt("root");
 
     auto testDoc = BSON(BasicConcatenateWithDbCommand::kCommandName << "coll1"
@@ -1769,7 +1769,7 @@ TEST(IDLCommand, TestConcatentateWithDb) {
     }
 }
 
-TEST(IDLCommand, TestConcatentateWithDbSymbol) {
+TEST(IDLCommand, TestConcatenateWithDbSymbol) {
     IDLParserErrorContext ctxt("root");
 
     // Postive - symbol???
@@ -1785,7 +1785,7 @@ TEST(IDLCommand, TestConcatentateWithDbSymbol) {
 }
 
 
-TEST(IDLCommand, TestConcatentateWithDbNegative) {
+TEST(IDLCommand, TestConcatenateWithDbNegative) {
     IDLParserErrorContext ctxt("root");
 
     // Negative - duplicate namespace field
@@ -1833,7 +1833,7 @@ TEST(IDLCommand, TestConcatentateWithDbNegative) {
 }
 
 // Positive: demonstrate a command with concatenate with db or uuid - test NSS
-TEST(IDLCommand, TestConcatentateWithDbOrUUID_TestNSS) {
+TEST(IDLCommand, TestConcatenateWithDbOrUUID_TestNSS) {
     IDLParserErrorContext ctxt("root");
 
     auto testDoc =
@@ -1889,7 +1889,7 @@ TEST(IDLCommand, TestConcatentateWithDbOrUUID_TestNSS) {
 
 
 // Positive: demonstrate a command with concatenate with db or uuid - test UUID
-TEST(IDLCommand, TestConcatentateWithDbOrUUID_TestUUID) {
+TEST(IDLCommand, TestConcatenateWithDbOrUUID_TestUUID) {
     IDLParserErrorContext ctxt("root");
 
     UUID uuid = UUID::gen();
@@ -1944,7 +1944,7 @@ TEST(IDLCommand, TestConcatentateWithDbOrUUID_TestUUID) {
 }
 
 
-TEST(IDLCommand, TestConcatentateWithDbOrUUIDNegative) {
+TEST(IDLCommand, TestConcatenateWithDbOrUUIDNegative) {
     IDLParserErrorContext ctxt("root");
 
     // Negative - duplicate namespace field

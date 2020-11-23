@@ -1603,7 +1603,7 @@ class _CppSourceFileWriter(_CppFileWriterBase):
         # type: (ast.Struct) -> None
         """Generate the C++ deserializer method definitions from OpMsgRequest."""
         # pylint: disable=invalid-name
-        # Commands that have concatentate_with_db namespaces require db name as a parameter
+        # Commands that have concatenate_with_db namespaces require db name as a parameter
         # 'Empty' structs (those with no fields) don't need to be deserialized
         if not isinstance(struct, ast.Command):
             return
