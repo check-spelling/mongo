@@ -93,7 +93,7 @@ if (v2Enabled) {
     assertLastOplog({$v: 1, $set: {a: 2, b: 2}}, {_id: 1}, msg);
 }
 
-// More tests to validate the oplog format and correct excution
+// More tests to validate the oplog format and correct execution
 
 var msg = "bad single $set";
 coll.save({_id: 1, a: 1});
