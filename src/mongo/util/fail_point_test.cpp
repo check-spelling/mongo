@@ -321,7 +321,7 @@ static void parallelFailPointTestThread(FailPoint* fp,
 /**
  * Encounters a failpoint with the given fpMode and fpVal numEncountersPerThread
  * times in each of numThreads parallel threads, and returns the number of total
- * times that the failpoint was activiated.
+ * times that the failpoint was activated.
  */
 static int64_t runParallelFailPointTest(FailPoint::Mode fpMode,
                                         FailPoint::ValType fpVal,
