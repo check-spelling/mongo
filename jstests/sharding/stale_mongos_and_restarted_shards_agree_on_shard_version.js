@@ -151,7 +151,7 @@ const staleMongoS = st.s1;
     jsTest.log('Testing: Several concurrent StaleShardVersion(s) result in a single refresh');
 
     setupCollectionForTest('TestConvoyColl');
-    // Insert one document per thread, we skip Key: -1 becase it was inserted on the set up. We pick
+    // Insert one document per thread, we skip Key: -1 because it was inserted on the set up. We pick
     // shard0 which will have all the negative numbers
     let bulk = freshMongoS.getDB(kDatabaseName).TestConvoyColl.initializeUnorderedBulkOp();
     for (let i = 2; i <= kNumThreadsForConvoyTest; ++i) {
