@@ -1,5 +1,5 @@
 // SERVER-5124
-// The puporse of this test is to test authentication when adding/removing a shard. The test sets
+// The purpose of this test is to test authentication when adding/removing a shard. The test sets
 // up a sharded system, then adds/removes a shard.
 (function() {
 'use strict';
