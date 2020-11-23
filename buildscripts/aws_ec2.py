@@ -34,7 +34,7 @@ def write_yaml_file(path, dictionary):
 
 
 class AwsEc2(object):
-    """Class to support controlling AWS EC2 istances."""
+    """Class to support controlling AWS EC2 instances."""
 
     InstanceStatus = collections.namedtuple("InstanceStatus", [
         "instance_id", "image_id", "instance_type", "state", "private_ip_address",

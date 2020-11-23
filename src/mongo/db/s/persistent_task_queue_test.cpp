@@ -170,7 +170,7 @@ TEST_F(PersistentTaskQueueTest, TestFIFOPreservedAcrossInstances) {
     }
 }
 
-// Test that ids are sequential across intances when items are in db.
+// Test that ids are sequential across instances when items are in db.
 TEST_F(PersistentTaskQueueTest, TestIdIsContinueAcrossInstances) {
     auto opCtx = operationContext();
 
