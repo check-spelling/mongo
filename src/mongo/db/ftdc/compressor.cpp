@@ -142,7 +142,7 @@ StatusWith<std::tuple<ConstDataRange, Date_t>> FTDCCompressor::getCompressedSamp
         //   - this is done in addSamples
         // 2. Run Length Encoding of zeros
         //   - We find consecutive sets of zeros and represent them as a tuple of (0, count - 1).
-        //   - Each memeber is stored as VarInt packed integer
+        //   - Each member is stored as VarInt packed integer
         // 3. Finally, for non-zero members, we store these as VarInt packed
         //
         // These byte arrays are added to a buffer which is then concatenated with other chunks and
