@@ -96,7 +96,7 @@ DocumentSource::GetNextResult DocumentSourceBucketAuto::doGetNext() {
         }
         invariant(populationResult.isEOF());
 
-        initalizeBucketIteration();
+        initializeBucketIteration();
         _populated = true;
     }
 
@@ -206,7 +206,7 @@ void DocumentSourceBucketAuto::addDocumentToBucket(const pair<Value, Document>& 
     }
 }
 
-void DocumentSourceBucketAuto::initalizeBucketIteration() {
+void DocumentSourceBucketAuto::initializeBucketIteration() {
     // Initialize the iterator on '_sorter'.
     invariant(_sorter);
     _sortedInput.reset(_sorter->done());

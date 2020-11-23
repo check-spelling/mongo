@@ -9,7 +9,7 @@ class MultiStmtTxnTestCase(jsrunnerfile.JSRunnerFileTestCase):
     REGISTERED_NAME = "multi_stmt_txn_passthrough"
 
     def __init__(self, logger, multi_stmt_txn_test_file, shell_executable=None, shell_options=None):
-        """Initilize MultiStmtTxnTestCase."""
+        """Initialize MultiStmtTxnTestCase."""
         jsrunnerfile.JSRunnerFileTestCase.__init__(
             self, logger, "Multi-statement Transaction Passthrough", multi_stmt_txn_test_file,
             test_runner_file="jstests/libs/txns/txn_passthrough_runner.js",
