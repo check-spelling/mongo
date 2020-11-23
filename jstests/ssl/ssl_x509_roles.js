@@ -1,4 +1,4 @@
-// Test that a client can authenicate against the server with roles.
+// Test that a client can authenticate against the server with roles.
 // Also validates RFC2253
 load('jstests/ssl/libs/ssl_helpers.js');
 
