@@ -116,7 +116,7 @@ public:
     }
 
     /**
-     * {usersInfo: {forrAllDBs: 1}}
+     * {usersInfo: {forAllDBs: 1}}
      */
     bool isAllForAllDBs() const {
         return stdx::holds_alternative<AllForAllDBs>(_value);
