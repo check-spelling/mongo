@@ -2,7 +2,7 @@
  * This file defines tests for all existing commands and their expected behavior when run against a
  * node that is in RECOVERING state.
  *
- * Tagged as multiversion-incompatible as the list of commands will vary depeding on version.
+ * Tagged as multiversion-incompatible as the list of commands will vary depending on version.
  * @tags: [multiversion_incompatible]
  */
 
