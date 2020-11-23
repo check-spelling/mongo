@@ -258,7 +258,7 @@ public:
     /**
      * Sets the oldest timestamp for which the storage engine must maintain snapshot history
      * through. If force is true, oldest will be set to the given input value, unmodified, even if
-     * it is backwards in time from the last oldest timestamp (accomodating initial sync).
+     * it is backwards in time from the last oldest timestamp (accommodating initial sync).
      */
     void setOldestTimestamp(Timestamp newOldestTimestamp, bool force) override;
 
