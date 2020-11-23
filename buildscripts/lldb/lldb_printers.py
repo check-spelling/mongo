@@ -47,7 +47,7 @@ def __lldb_init_module(debugger, *_args):
 
 
 #############################
-# Pretty Printer Defintions #
+# Pretty Printer Definitions #
 #############################
 
 
