@@ -59,7 +59,7 @@ function validateFindCmdOutputAndPlan({
  */
 assert.commandWorked(coll.createIndex({a: "hashed", b: 1}));
 
-// Verify that sub-queries of $or opertor can use index.
+// Verify that sub-queries of $or operator can use index.
 validateFindCmdOutputAndPlan({
     filter: {$or: [{a: null}, {a: 12, b: 12}]},
     expectedOutput: [{a: null, b: 12}, {a: null}, {a: 12, b: 12}, {b: 12}, {}],

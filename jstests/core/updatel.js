@@ -37,7 +37,7 @@ t.save({_id: 0, a: [{b: {c: 1}}]});
 
 // Now, attempt to apply an update with two nested positional operators.  There is a positional
 // query match for the first positional operator but not the second.  Note that dollar sign
-// substitution for multiple positional opertors is not implemented (SERVER-831).
+// substitution for multiple positional operators is not implemented (SERVER-831).
 res = t.update({'a.b.c': 1}, {$set: {'a.$.b.$.c': 2}});
 assert(res.hasWriteError(), "An error is reported");
 assert.eq([{_id: 0, a: [{b: {c: 1}}]}], t.find().toArray(), "No update occurred.");
