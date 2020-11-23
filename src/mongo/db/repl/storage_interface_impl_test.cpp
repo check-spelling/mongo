@@ -2489,7 +2489,7 @@ TEST_F(StorageInterfaceImplTest,
                                        {doc4, Timestamp(0), OpTime::kUninitializedTerm}}));
 
     // This filter should remove doc1 and doc2 because the values of the field "x"
-    // are equivalent to "aBc" under the case-insensive collation.
+    // are equivalent to "aBc" under the case-insensitive collation.
     auto filter = BSON("x"
                        << "aBc");
     ASSERT_OK(storage.deleteByFilter(opCtx, nss, filter));
