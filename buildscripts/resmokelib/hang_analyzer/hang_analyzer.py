@@ -214,7 +214,7 @@ class HangAnalyzerPlugin(PluginInterface):
                                                                     'exact'), default='contains',
             help="Type of match for process names (-p & -g), specify 'contains', or"
             " 'exact'. Note that the process name match performs the following"
-            " conversions: change all process names to lowecase, strip off the file"
+            " conversions: change all process names to lowercase, strip off the file"
             " extension, like '.exe' on Windows. Default is 'contains'.")
         parser.add_argument('-p', '--process-names', dest='process_names',
                             help='Comma separated list of process names to analyze')
