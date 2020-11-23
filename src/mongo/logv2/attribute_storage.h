@@ -692,7 +692,7 @@ private:
     size_t _size;
 };
 
-// Helpers for logging containers, optional to use. Allowes logging of ranges.
+// Helpers for logging containers, optional to use. Allows logging of ranges.
 template <typename T>
 auto seqLog(const T& container) {
     using std::begin;
