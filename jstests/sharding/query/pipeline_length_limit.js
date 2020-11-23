@@ -1,5 +1,5 @@
 /**
- * Confirms that the limit on number of aggregragation pipeline stages is respected.
+ * Confirms that the limit on number of aggregation pipeline stages is respected.
  * @tags: [requires_fcv_49]
  */
 (function() {
