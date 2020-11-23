@@ -191,7 +191,7 @@ void generateSinglePlanExecutionInfo(const PlanExplainer::PlanStatsDetails& deta
  *
  * If verbosity >= kExecAllPlans, it will include the "allPlansExecution" array.
  *
- * - 'execPlanStatus' is OK if the query was exected successfully, or a non-OK status if there
+ * - 'execPlanStatus' is OK if the query was executed successfully, or a non-OK status if there
  *   was a runtime error.
  */
 void generateExecutionInfo(PlanExecutor* exec,
