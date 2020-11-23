@@ -59,7 +59,7 @@ configs:
     arg_vartype: String
     cpp_varname: mongoBridgeGlobalParams.destUri
 
-  vebose:
+  verbose:
     description: "log more verbose output"
     short_name: verbose
     arg_vartype: String
