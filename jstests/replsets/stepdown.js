@@ -67,7 +67,7 @@ try {
     let res = assert.commandWorked(primary.adminCommand({replSetGetStatus: 1}));
     assert(res.electionCandidateMetrics,
            () => "Response should have an 'electionCandidateMetrics' field: " + tojson(res));
-    let intitialServerStatus = assert.commandWorked(primary.adminCommand({serverStatus: 1}));
+    let initialServerStatus = assert.commandWorked(primary.adminCommand({serverStatus: 1}));
 
     jsTestLog('Do stepdown of primary ' + primary + ' that should not work');
 
@@ -79,19 +79,19 @@ try {
     // Check that the 'total' and 'failed' fields of 'replSetStepDown' have been incremented in
     // serverStatus and that they have not been incremented for 'replSetStepDownWithForce'.
     let newServerStatus = assert.commandWorked(primary.adminCommand({serverStatus: 1}));
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "total",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "failed",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "total",
                              0);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "failed",
                              0);
@@ -109,21 +109,21 @@ try {
 
     // Check that the 'total' and 'failed' fields of 'replSetStepDown' and
     // 'replSetStepDownWithForce' have been incremented in serverStatus.
-    intitialServerStatus = newServerStatus;
+    initialServerStatus = newServerStatus;
     newServerStatus = assert.commandWorked(primary.adminCommand({serverStatus: 1}));
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "total",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "failed",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "total",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "failed",
                              1);
@@ -134,21 +134,21 @@ try {
 
     // Check that the 'total' fields of 'replSetStepDown' and 'replSetStepDownWithForce' have been
     // incremented in serverStatus and that their 'failed' fields have not been incremented.
-    intitialServerStatus = newServerStatus;
+    initialServerStatus = newServerStatus;
     newServerStatus = assert.commandWorked(primary.adminCommand({serverStatus: 1}));
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "total",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "failed",
                              0);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "total",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "failed",
                              0);
@@ -178,21 +178,21 @@ try {
 
     // Check that the 'total' and 'failed' fields of 'replSetStepDown' and
     // 'replSetStepDownWithForce' have been incremented in serverStatus.
-    intitialServerStatus = newServerStatus;
+    initialServerStatus = newServerStatus;
     newServerStatus = assert.commandWorked(primary.adminCommand({serverStatus: 1}));
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "total",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDown,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDown,
                              newServerStatus.metrics.commands.replSetStepDown,
                              "failed",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "total",
                              1);
-    verifyServerStatusChange(intitialServerStatus.metrics.commands.replSetStepDownWithForce,
+    verifyServerStatusChange(initialServerStatus.metrics.commands.replSetStepDownWithForce,
                              newServerStatus.metrics.commands.replSetStepDownWithForce,
                              "failed",
                              1);

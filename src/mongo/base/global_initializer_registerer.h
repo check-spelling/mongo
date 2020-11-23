@@ -42,7 +42,7 @@ namespace mongo {
 extern const std::string& defaultInitializerName();
 
 /**
- * Type representing the registration of a global intialization function.
+ * Type representing the registration of a global initialization function.
  *
  * Create a nonlocal static storage duration instance of this type to register a new initializer, to
  * be run by a call to a variant of mongo::runGlobalInitializers().  See "mongo/base/initializer.h",

@@ -120,7 +120,7 @@ public:
 
 protected:
     /*
-     * This is called by sub-classes to intialize their ID/name fields.
+     * This is called by sub-classes to initialize their ID/name fields.
      */
     MessageCompressorBase(MessageCompressor id)
         : _id{static_cast<MessageCompressorId>(id)},

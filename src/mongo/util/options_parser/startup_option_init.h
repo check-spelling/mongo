@@ -34,7 +34,7 @@
  *
  * Initializer functions take a parameter of type InitializerContext*, and return
  * a Status. Any status other than Status::OK() is considered a failure that will stop further
- * intializer processing. See src/mongo/base/init.h for details.
+ * initializer processing. See src/mongo/base/init.h for details.
  *
  * Note that currently storage and validation are done in the same stage, so do not try to do things
  * that depend on your initializer being between these two stages

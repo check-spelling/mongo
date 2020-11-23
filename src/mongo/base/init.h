@@ -37,7 +37,7 @@
  *
  * Initializer functions take a parameter of type ::mongo::InitializerContext*, and return
  * a Status.  Any status other than Status::OK() is considered a failure that will stop further
- * intializer processing.
+ * initializer processing.
  */
 
 #pragma once

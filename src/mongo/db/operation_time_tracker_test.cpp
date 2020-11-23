@@ -36,7 +36,7 @@
 namespace mongo {
 namespace {
 
-TEST(OperationTimeTracker, UnintializedMaxOperationTime) {
+TEST(OperationTimeTracker, UninitializedMaxOperationTime) {
     OperationTimeTracker opTimeTracker;
     ASSERT_TRUE(opTimeTracker.getMaxOperationTime() == LogicalTime::kUninitialized);
 }

@@ -18,7 +18,7 @@ admin.auth('admin', 'pwd');
 
 let lastStats =
     assert.commandWorked(admin.runCommand({serverStatus: 1})).security.authentication.mechanisms;
-jsTest.log('Inintial stats: ' + lastStats);
+jsTest.log('Initial stats: ' + lastStats);
 
 function test(uri, incrMech, isClusterAuth = false) {
     jsTest.log('Connecting to: ' + uri);

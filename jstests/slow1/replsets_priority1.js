@@ -91,7 +91,7 @@ everyoneOkSoon();
 
 jsTestLog("replsets_priority1.js initial sync");
 
-// intial sync
+// initial sync
 primary.getDB("foo").bar.insert({x: 1});
 rs.awaitReplication();
 

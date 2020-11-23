@@ -328,7 +328,7 @@ void FreeMonProcessor::writeState(Client* client) {
 void FreeMonProcessor::doServerRegister(
     Client* client, const FreeMonMessageWithPayload<FreeMonMessageType::RegisterServer>* msg) {
 
-    // Enqueue the first metrics gather first so we have something to send on intial registration
+    // Enqueue the first metrics gather first so we have something to send on initial registration
     enqueue(FreeMonMessage::createNow(FreeMonMessageType::MetricsCollect));
 
     // If we are asked to register now, then kick off a registration request

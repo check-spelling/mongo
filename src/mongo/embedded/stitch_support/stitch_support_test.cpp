@@ -632,7 +632,7 @@ TEST_F(StitchSupportTest, TestUpsertProducesProperStatus) {
 //
 // Note that we don't use the main() defined for most other unit tests so that we can avoid double
 // calling runGlobalInitializers(), which is called both from the regular unit test main() and from
-// the Stitch Support Library intializer function that gets tested here.
+// the Stitch Support Library initializer function that gets tested here.
 int main(const int argc, const char* const* const argv) {
     // See comment by the same code block in mongo_embedded_test.cpp
     auto ret = mongo::runGlobalInitializers(std::vector<std::string>{argv, argv + argc});

@@ -226,7 +226,7 @@ void IndexScanStage::open(bool reOpen) {
             }
 
             // TODO SERVER-49385: When the 'prepare()' phase takes the collection lock, it will be
-            // possible to intialize '_ordering' there instead of here.
+            // possible to initialize '_ordering' there instead of here.
             _ordering = entry->ordering();
         } else {
             _cursor.reset();
