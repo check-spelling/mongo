@@ -2940,7 +2940,7 @@ public:
         if (indexVec == _indexMap.end())
             return Value(-1);
 
-        // Search through the vector of indecies for first index in our range.
+        // Search through the vector of indices for first index in our range.
         for (auto index : indexVec->second) {
             if (index >= args.startIndex && index < args.endIndex) {
                 return Value(index);
@@ -2977,7 +2977,7 @@ intrusive_ptr<Expression> ExpressionIndexOfArray::optimize() {
 
         auto arr = valueArray.getArray();
 
-        // To handle the case of duplicate values the values need to map to a vector of indecies.
+        // To handle the case of duplicate values the values need to map to a vector of indices.
         auto indexMap =
             getExpressionContext()->getValueComparator().makeUnorderedValueMap<vector<int>>();
 

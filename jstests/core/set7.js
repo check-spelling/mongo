@@ -7,7 +7,7 @@
 //      operations_longer_than_stepdown_interval,
 // ]
 
-// test $set with array indicies
+// test $set with array indices
 
 t = db.jstests_set7;
 var res;

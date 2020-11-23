@@ -113,7 +113,7 @@ struct PlanRankingDecision {
 
     // Contains the list of original plans that failed.
     //
-    // Like 'candidateOrder', the contents of this array are indicies into the 'candidates' array.
+    // Like 'candidateOrder', the contents of this array are indices into the 'candidates' array.
     std::vector<size_t> failedCandidates;
 
     // Whether two plans tied for the win.

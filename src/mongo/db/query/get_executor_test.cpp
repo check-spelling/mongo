@@ -149,7 +149,7 @@ IndexEntry buildSimpleIndexEntry(const BSONObj& kp, const std::string& indexName
 
 /**
  * Make a minimal IndexEntry from just a key pattern and a name. Include a wildcardProjection which
- * is neccesary for wildcard indicies.
+ * is neccesary for wildcard indices.
  */
 IndexEntry buildWildcardIndexEntry(const BSONObj& kp,
                                    const WildcardProjection& wcProj,
