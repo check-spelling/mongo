@@ -4198,7 +4198,7 @@ private:
 };
 
 intrusive_ptr<Expression> ExpressionSetIsSubset::optimize() {
-    // perfore basic optimizations
+    // perform basic optimizations
     intrusive_ptr<Expression> optimized = ExpressionNary::optimize();
 
     // if ExpressionNary::optimize() created a new value, return it directly
