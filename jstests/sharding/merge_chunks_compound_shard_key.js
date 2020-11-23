@@ -85,7 +85,7 @@ checkMergeWorked({x: 2, y: 0}, {x: MaxKey, y: MaxKey});
 
 // Chunks after merge:
 // (MinKey, MaxKey)
-jsTest.log("Merge chunks whos bounds are MinKey/MaxKey, but which have a compound shard key");
+jsTest.log("Merge chunks whose bounds are MinKey/MaxKey, but which have a compound shard key");
 checkMergeWorked({x: MinKey, y: MinKey}, {x: MaxKey, y: MaxKey});
 
 st.stop();
