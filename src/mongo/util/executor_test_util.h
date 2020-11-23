@@ -44,7 +44,7 @@ public:
         // Add the task to our queue
         taskQueue.emplace_back(std::move(task));
 
-        // Make sure that we are not invocing a Task while invocing a Task. Some OutOfLineExecutors
+        // Make sure that we are not invoicing a Task while invoicing a Task. Some OutOfLineExecutors
         // do recursively dispatch Tasks, however, they also carefully monitor stack depth. For the
         // purposes of testing, let's serialize our Tasks. One Task runs at a time.
         if (std::exchange(inSchedule, true)) {
