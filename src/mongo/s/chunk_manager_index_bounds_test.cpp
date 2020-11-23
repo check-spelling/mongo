@@ -540,8 +540,8 @@ TEST_F(CMKeyBoundsTest, IntervalExpansion) {
 
 // Key { a: 1, b: 1, c: 1 }, Bounds a: [0, 1], b: { $in: [4, 5, 6] }, c: [2: 3)
 //  => { a: 0, b: 4, c: 2 } -> { a: 1, b: 6, c: 3 }
-// Since field "a" is not a point, expasion after "a" is not allowed.
-TEST_F(CMKeyBoundsTest, NonPointIntervalExpasion) {
+// Since field "a" is not a point, expansion after "a" is not allowed.
+TEST_F(CMKeyBoundsTest, NonPointIntervalExpansion) {
     IndexBounds indexBounds;
     indexBounds.fields.push_back(OrderedIntervalList());
     indexBounds.fields.push_back(OrderedIntervalList());
