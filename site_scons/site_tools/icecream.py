@@ -36,7 +36,7 @@ _icecream_version_gcc_remote_cpp = parse_version("1.2")
 # I'd prefer to use value here, but amazingly, its __str__ returns the
 # *initial* value of the Value and not the built value, if
 # available. That seems like a bug. In the meantime, make our own very
-# sinmple Substition thing.
+# simple Substition thing.
 class _BoundSubstitution:
     def __init__(self, env, expression):
         self.env = env
