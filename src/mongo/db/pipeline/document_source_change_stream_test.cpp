@@ -1286,7 +1286,7 @@ TEST_F(ChangeStreamStageTest, TransactionWithMultipleOplogEntries) {
          V{std::vector<Document>{
              D{{"op", "i"_sd}, {"ns", nss.ns()}, {"ui", testUuid()}, {"o", V{D{{"_id", 789}}}}},
          }}},
-        /* The abscence of the "partialTxn" and "prepare" fields indicates that this command commits
+        /* The absence of the "partialTxn" and "prepare" fields indicates that this command commits
            the transaction. */
     };
 

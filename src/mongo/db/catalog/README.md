@@ -1575,7 +1575,7 @@ Dropping a collection/index follows the same pattern, but in reverse.
 
 In this case, if a crash happens between these steps and the change to the \_mdb\_catalog was made
 durable (in modern versions, only possible via a checkpoint; the \_mdb\_catalog is not logged), the
-WT table is once again dangling on restart. Note that in the absense of a history, this state is
+WT table is once again dangling on restart. Note that in the absence of a history, this state is
 indistinguishable from the creation case, establishing a strong invariant.
 
 ## Cherry-picked WT log Details

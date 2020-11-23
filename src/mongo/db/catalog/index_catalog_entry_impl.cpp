@@ -354,7 +354,7 @@ void IndexCatalogEntryImpl::_catalogSetMultikey(OperationContext* opCtx,
     auto indexMetadataHasChanged = DurableCatalog::get(opCtx)->setIndexIsMultikey(
         opCtx, _catalogId, _descriptor->indexName(), multikeyPaths);
 
-    // In the absense of using the storage engine to read from the catalog, we must set multikey
+    // In the absence of using the storage engine to read from the catalog, we must set multikey
     // prior to the storage engine transaction committing.
     //
     // Moreover, there must not be an `onRollback` handler to reset this back to false. Given a long
