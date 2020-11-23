@@ -48,7 +48,7 @@ namespace mutablebson {
  *  indexed access, and counting are included.
  */
 
-/** 'findElement' searches rightward among the sibiling Elements of 'first', returning an
+/** 'findElement' searches rightward among the sibling Elements of 'first', returning an
  *  Element representing the first item matching the predicate 'predicate'. If no Element
  *  matches, then the 'ok' method on the returned Element will return false.
  */
