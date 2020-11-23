@@ -484,7 +484,7 @@ void RollbackImpl::_runPhaseFromAbortToReconstructPreparedTxns(
     if (shouldCreateDataFiles()) {
         // Write a rollback file for each namespace that has documents that would be deleted by
         // rollback. We need to do this after aborting prepared transactions. Otherwise, we risk
-        // unecessary prepare conflicts when trying to read documents that were modified by
+        // unnecessary prepare conflicts when trying to read documents that were modified by
         // those prepared transactions, which we know we will abort anyway.
         status = _writeRollbackFiles(opCtx);
         fassert(31228, status);
