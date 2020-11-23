@@ -195,7 +195,7 @@ Status FTDCFileManager::openArchiveFile(
 
     // After the system restarts or a new file has been started,
     // collect one-time information
-    // This is appened after the file is opened to ensure a user can determine which bson objects
+    // This is appended after the file is opened to ensure a user can determine which bson objects
     // where collected from which server instance.
     auto sample = _rotateCollectors->collect(client);
     if (!std::get<0>(sample).isEmpty()) {

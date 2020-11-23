@@ -336,7 +336,7 @@ private:
 
     /**
      * Local variables bound by the let expressions live on the stack and are accessed by knowing an
-     * offset from the top of the stack. As CodeFragments are appened together the offsets must be
+     * offset from the top of the stack. As CodeFragments are appended together the offsets must be
      * fixed up to account for movement of the top of the stack.
      * The FixUp structure holds a "pointer" to the bytecode where we have to adjust the stack
      * offset.
