@@ -100,7 +100,7 @@ public:
     virtual void dropIdentForImport(OperationContext* opCtx, StringData ident) {}
 
     virtual bool supportsDirectoryPerDB() const {
-        return false;  // Not persistant so no Directories
+        return false;  // Not persistent so no Directories
     }
 
     virtual bool supportsCappedCollections() const {
