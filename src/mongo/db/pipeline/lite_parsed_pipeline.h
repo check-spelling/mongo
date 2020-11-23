@@ -77,7 +77,7 @@ public:
     }
 
     /**
-     * Returns a list of the priviliges required for this pipeline.
+     * Returns a list of the privileges required for this pipeline.
      */
     PrivilegeVector requiredPrivileges(bool isMongos, bool bypassDocumentValidation) const {
         PrivilegeVector requiredPrivileges;

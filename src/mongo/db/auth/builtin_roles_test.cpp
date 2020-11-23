@@ -93,7 +93,7 @@ TEST(BuiltinRoles, getBuiltinRolesForDB) {
     ASSERT_GTE(adminRoles.size(), testRoles.size());
 }
 
-TEST(BuiltinRoles, addPrivilegsForBuiltinRole) {
+TEST(BuiltinRoles, addPrivilegesForBuiltinRole) {
     PrivilegeVector privs;
     ASSERT(auth::addPrivilegesForBuiltinRole(RoleName("read", "admin"), &privs));
     ASSERT_EQ(privs.size(), 2);

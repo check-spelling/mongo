@@ -219,7 +219,7 @@ TEST_F(AuthorizationManagerTest, testLocalX509AuthenticationNoAuthorization) {
  * An implementation of AuthzManagerExternalStateMock that overrides the getUserDescription method
  * to return the user document unmodified from how it was inserted.  When using this insert user
  * documents in the format that would be returned from a usersInfo command run with
- * showPrivilges:true, rather than the format that would normally be stored in a system.users
+ * showPrivileges:true, rather than the format that would normally be stored in a system.users
  * collection.  The main difference between using this mock and the normal
  * AuthzManagerExternalStateMock is that with this one you should specify the 'inheritedPrivileges'
  * field in any user documents added.
