@@ -40,7 +40,7 @@ template <typename T>
 class StatusWith;
 
 /**
- * Abstract class for implementing the clent-side
+ * Abstract class for implementing the client-side
  * of a SASL mechanism conversation.
  */
 class SaslClientConversation {
