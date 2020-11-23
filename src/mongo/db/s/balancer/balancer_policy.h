@@ -83,7 +83,7 @@ typedef std::map<ShardId, std::vector<ChunkType>> ShardToChunksMap;
 /**
  * This class constitutes a cache of the chunk distribution across the entire cluster along with the
  * zone boundaries imposed on it. This information is stored in format, which makes it efficient to
- * query utilization statististics and to decide what to balance.
+ * query utilization statistics and to decide what to balance.
  */
 class DistributionStatus {
     DistributionStatus(const DistributionStatus&) = delete;
