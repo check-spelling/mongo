@@ -56,7 +56,7 @@ class Spec(object):
         self.gitspec = gitspec
         self.rel = rel
 
-    # Commit-triggerd version numbers can be in the form: 3.0.7-pre-, or 3.0.7-5-g3b67ac
+    # Commit-triggered version numbers can be in the form: 3.0.7-pre-, or 3.0.7-5-g3b67ac
     # Patch builds version numbers are in the form: 3.5.5-64-g03945fa-patch-58debcdb3ff1223c9d00005b
     #
     def is_nightly(self):
