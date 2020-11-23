@@ -216,7 +216,7 @@ TEST_F(ReplSetDistLockManagerFixture, MustUnlockOnLockError) {
                                                  Date_t time,
                                                  StringData why) {
             ASSERT_EQUALS(lockName, lockID);
-            // Every attempt should have a unique sesssion ID.
+            // Every attempt should have a unique session ID.
             ASSERT_TRUE(lockSessionID.isSet());
             ASSERT_EQUALS(getProcessID(), processId);
             ASSERT_EQUALS(whyMsg, why);

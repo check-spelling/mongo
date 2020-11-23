@@ -552,7 +552,7 @@ TEST_F(SessionCatalogTestWithDefaultOpCtx, KillSessionsThroughScanSessions) {
     }
 }
 
-// Test that session kill will block normal sesion checkout and will be signaled correctly.
+// Test that session kill will block normal session checkout and will be signaled correctly.
 // Even if the implementation has a bug, the test may not always fail depending on thread
 // scheduling, however, this test case still gives us a good coverage.
 TEST_F(SessionCatalogTestWithDefaultOpCtx, ConcurrentCheckOutAndKill) {

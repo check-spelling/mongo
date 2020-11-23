@@ -222,7 +222,7 @@ void ServiceEntryPointImpl::startSession(transport::SessionHandle session) {
 }
 
 void ServiceEntryPointImpl::endAllSessions(transport::Session::TagMask tags) {
-    // While holding the _sesionsMutex, loop over all the current connections, and if their tags
+    // While holding the _sessionsMutex, loop over all the current connections, and if their tags
     // do not match the requested tags to skip, terminate the session.
     {
         stdx::unique_lock<decltype(_sessionsMutex)> lk(_sessionsMutex);
@@ -243,7 +243,7 @@ bool ServiceEntryPointImpl::shutdown(Milliseconds timeout) {
     auto start = _svcCtx->getPreciseClockSource()->now();
     stdx::unique_lock<decltype(_sessionsMutex)> lk(_sessionsMutex);
 
-    // Request that all sessions end, while holding the _sesionsMutex, loop over all the current
+    // Request that all sessions end, while holding the _sessionsMutex, loop over all the current
     // connections and terminate them
     for (auto& ssm : _sessions) {
         ssm->terminate();
