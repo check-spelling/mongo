@@ -17,7 +17,7 @@ t.save({
 });
 
 // default weight is 1
-// specify weights if you want a field to be more meaningull
+// specify weights if you want a field to be more meaningful
 t.createIndex({dummy: "text"}, {weights: "$**"});
 
 res = t.find({"$text": {"$search": "blog"}});

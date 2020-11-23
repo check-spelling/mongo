@@ -6,7 +6,7 @@ t.save({_id: 2, title: "my 2nd post", text: "this is a new blog i am writing. ya
 t.save({_id: 3, title: "knives are Fun", text: "this is a new blog i am writing. yay"});
 
 // default weight is 1
-// specify weights if you want a field to be more meaningull
+// specify weights if you want a field to be more meaningful
 // @tags: [
 //   sbe_incompatible,
 // ]
