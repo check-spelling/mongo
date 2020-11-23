@@ -127,7 +127,7 @@ TEST(LockManager, GrantMultipleNoConflict) {
     // Free one in the middle
     lockMgr.unlock(&request[3]);
 
-    // Free the remaining so the LockMgr does not compain about leaked locks
+    // Free the remaining so the LockMgr does not complain about leaked locks
     lockMgr.unlock(&request[1]);
     lockMgr.unlock(&request[2]);
     lockMgr.unlock(&request[4]);
@@ -410,7 +410,7 @@ TEST(LockManager, ConflictCancelMultipleWaiting) {
     // Free one in the middle
     lockMgr.unlock(&request[3]);
 
-    // Free the remaining so the LockMgr does not compain about leaked locks
+    // Free the remaining so the LockMgr does not complain about leaked locks
     lockMgr.unlock(&request[2]);
     lockMgr.unlock(&request[4]);
     lockMgr.unlock(&request[0]);
