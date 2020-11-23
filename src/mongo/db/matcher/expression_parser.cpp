@@ -383,7 +383,7 @@ StatusWithMatchExpression parseSampleRate(StringData name,
     const double x = elem.numberDouble();
     if (!(x >= kRandomMinValue && x <= kRandomMaxValue)) {
         // This conditional is negated intentionally to handle NaN correctly.  If you apply
-        // DeMorgan's law here you will be suprised that $sampleRate will accept NaN as a valid
+        // DeMorgan's law here you will be surprised that $sampleRate will accept NaN as a valid
         // argument.
         return {Status(ErrorCodes::BadValue, "numeric argument to $sampleRate must be in [0, 1]")};
     } else if (x == kRandomMinValue) {
