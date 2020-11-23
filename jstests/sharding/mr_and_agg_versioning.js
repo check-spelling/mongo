@@ -2,7 +2,7 @@
 (function() {
 "use strict";
 
-// Test delibarately inserts orphaned data outside of migrations.
+// Test deliberately inserts orphaned data outside of migrations.
 TestData.skipCheckOrphans = true;
 
 const st = new ShardingTest({shards: 2, mongos: 3});
