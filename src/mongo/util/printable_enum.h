@@ -29,7 +29,7 @@
 
 #pragma once
 
-// Declares a helper macro to print an enmumerator in an enum.
+// Declares a helper macro to print an enumerator in an enum.
 #define PRINTABLE_ENUMERATOR(value) value,
 // Declares a helper macro to print an entry in a string array for an enum.
 #define PRINTABLE_ENUM_STRING(value) #value,
