@@ -30,7 +30,7 @@ printjson(locked.getDB("admin").runCommand({fsync: 1, lock: 1}));
 print("\ndo a write");
 primary.getDB("test").foo.insert({x: 3});
 
-// step down the primary asyncronously
+// step down the primary asynchronously
 print("stepdown");
 var command =
     "sleep(4000); assert.commandWorked(db.adminCommand( { replSetStepDown : 60, force : 1 } ));";

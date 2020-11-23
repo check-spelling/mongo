@@ -223,7 +223,7 @@ class Archival(object):  # pylint: disable=too-many-instance-attributes
         Gather 'input_files' into a single tar/gzip and archive to 's3_path'.
 
         The caller waits until the list of files has been tar/gzipped to a temporary file.
-        The S3 upload and subsequent update to 'archival_json_file' will be done asynchronosly.
+        The S3 upload and subsequent update to 'archival_json_file' will be done asynchronously.
 
         Returns status, message and size_mb of archive.
         """
