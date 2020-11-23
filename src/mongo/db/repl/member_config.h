@@ -131,7 +131,7 @@ public:
     }
 
     /**
-     * Gets the amount of time behind the primary that this member will atempt to
+     * Gets the amount of time behind the primary that this member will attempt to
      * remain.  Zero seconds means stay as caught up as possible.
      */
     Seconds getSlaveDelay() const {
