@@ -14,7 +14,7 @@ var $config = extendWorkload($config, function($config, $super) {
     $config.data.commentStr = "agg_unionWith_interrupt_cleanup";
 
     $config.states.aggregate = function aggregate(db, collName) {
-        // Here we consistenly union with the same namespace to benefit from the sharded collection
+        // Here we consistently union with the same namespace to benefit from the sharded collection
         // setup that may have been done in sharded passthroughs.
         // TODO SERVER-46251 use multiple namespaces.
         let response = db[collName].runCommand({
