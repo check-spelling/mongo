@@ -2179,7 +2179,7 @@ if env.TargetOSIs('posix'):
     # test macros, so this is safe to do. Other platforms like macOS
     # and BSD have crazy rules, so don't try this there.
     #
-    # Furthermore, as both C++ compilers appears to unconditioanlly
+    # Furthermore, as both C++ compilers appears to unconditionally
     # define _GNU_SOURCE (because libstdc++ requires it), it seems
     # prudent to explicitly add that too, so that C language checks
     # see a consistent set of definitions.

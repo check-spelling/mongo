@@ -1416,7 +1416,7 @@ def rsync(src_dir, dest_dir, exclude_files=None):
 
 
 def kill_mongod():
-    """Kill all mongod processes uncondtionally."""
+    """Kill all mongod processes unconditionally."""
     if _IS_WINDOWS:
         cmds = "taskkill /f /im mongod.exe"
     else:
