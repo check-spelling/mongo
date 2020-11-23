@@ -388,7 +388,7 @@ std::string InitialSyncer::getDiagnosticString() const {
         << " opsBuffered: " << _oplogBuffer->getSize() << " active: " << _isActive_inlock()
         << " shutting down: " << _isShuttingDown_inlock();
     if (_initialSyncState) {
-        out << " opsAppied: " << _initialSyncState->appliedOps;
+        out << " opsApplied: " << _initialSyncState->appliedOps;
     }
 
     return out;
