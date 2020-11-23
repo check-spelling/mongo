@@ -278,7 +278,7 @@ TEST_F(HashKeyGeneratorTest, SparseIndexWithAFieldPresent) {
                                        Ordering::make(BSONObj()),
                                        false);
 
-    // Verify that we inserted null entries for the misssing fields.
+    // Verify that we inserted null entries for the missing fields.
     KeyStringSet expectedKeys;
     KeyString::HeapBuilder keyString(KeyString::Version::kLatestVersion, Ordering::make(BSONObj()));
     auto nullBSON = BSON("" << BSONNULL);

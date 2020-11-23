@@ -78,7 +78,7 @@ StatusWith<ShardType> ShardType::fromBSON(const BSONObj& source) {
         if (status.isOK()) {
             shard._draining = isShardDraining;
         } else if (status == ErrorCodes::NoSuchKey) {
-            // draining field can be mssing in which case it is presumed false
+            // draining field can be missing in which case it is presumed false
         } else {
             return status;
         }
@@ -132,7 +132,7 @@ StatusWith<ShardType> ShardType::fromBSON(const BSONObj& source) {
                 shard._state = static_cast<ShardState>(shardState);
             }
         } else if (status == ErrorCodes::NoSuchKey) {
-            // state field can be mssing in which case it is presumed kNotShardAware
+            // state field can be missing in which case it is presumed kNotShardAware
         } else {
             return status;
         }
@@ -144,7 +144,7 @@ StatusWith<ShardType> ShardType::fromBSON(const BSONObj& source) {
         if (status.isOK()) {
             shard._topologyTime = shardTopologyTime;
         } else if (status == ErrorCodes::NoSuchKey) {
-            // topologyTime field can be mssing in which case it is presumed to be an uninitialized
+            // topologyTime field can be missing in which case it is presumed to be an uninitialized
             // timestamp
         } else {
             return status;

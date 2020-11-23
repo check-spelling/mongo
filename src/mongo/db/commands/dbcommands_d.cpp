@@ -359,7 +359,7 @@ public:
                     BSONObj owned = obj.getOwned();
                     uassert(50848,
                             str::stream() << "The element that calls binDataClean() must be type "
-                                             "of BinData, but type of misisng found. Field name is "
+                                             "of BinData, but type of missing found. Field name is "
                                              "required",
                             owned["data"]);
                     uassert(50849,
