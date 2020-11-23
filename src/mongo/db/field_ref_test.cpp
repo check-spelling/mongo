@@ -102,7 +102,7 @@ TEST(Normal, ParseTwice) {
     }
 }
 
-TEST(Normal, MulitplePartsVariable) {
+TEST(Normal, MultiplePartsVariable) {
     const char* parts[] = {"a", "b", "c", "d", "e"};
     size_t size = sizeof(parts) / sizeof(char*);
     std::string field(parts[0]);

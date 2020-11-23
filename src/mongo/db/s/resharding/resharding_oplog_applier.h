@@ -209,7 +209,7 @@ private:
     int _remainingWritersToWait{0};
 
     // (M) Keeps track of the status from writer vectors. Will only keep one error if there are
-    // mulitple occurrances.
+    // multiple occurrances.
     Status _currentBatchConsolidatedStatus{Status::OK()};
 
     // (R) The source of the oplog entries to be applied.

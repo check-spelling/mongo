@@ -170,7 +170,7 @@ TEST_F(PersistentTaskStoreTest, TestRemoveMultiple) {
 
     ASSERT_EQ(store.count(opCtx), 3);
 
-    // Remove multipe overlapping ranges.
+    // Remove multiple overlapping ranges.
     store.remove(opCtx, QUERY("min" << GTE << 10));
 
     ASSERT_EQ(store.count(opCtx), 1);
@@ -316,7 +316,7 @@ TEST_F(PersistentTaskStoreTest, TestCountWithQuery) {
                                 << "two")),
               2);
 
-    // Remove multipe overlapping ranges.
+    // Remove multiple overlapping ranges.
     store.remove(opCtx, QUERY("min" << 10));
 
     ASSERT_EQ(store.count(opCtx,

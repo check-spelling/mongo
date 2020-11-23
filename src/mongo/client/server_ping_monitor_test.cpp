@@ -411,7 +411,7 @@ TEST_F(ServerPingMonitorTest, twoNodeServerPingMonitorOneClosed) {
  * is safe to call multiple times - once explicitly and a second time implicitly through its
  * destructor.
  */
-TEST_F(ServerPingMonitorTest, twoNodeServerPingMonitorMutlipleShutdown) {
+TEST_F(ServerPingMonitorTest, twoNodeServerPingMonitorMultipleShutdown) {
     auto pingFrequency = Seconds(10);
     auto replSet = std::make_unique<MockReplicaSet>(
         "test", 2, /* hasPrimary = */ false, /* dollarPrefixHosts = */ false);

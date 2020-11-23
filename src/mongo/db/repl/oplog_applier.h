@@ -116,7 +116,7 @@ public:
 
     /**
      * Starts the shutdown process for this OplogApplier.
-     * It is safe to call shutdown() multiplie times.
+     * It is safe to call shutdown() multiple times.
      */
     void shutdown();
 
