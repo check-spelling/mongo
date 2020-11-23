@@ -291,7 +291,7 @@ TEST_F(StorageRepairObserverTest, RepairCompleteAfterRestart) {
 
     repairObserver = reset();
     ASSERT(!repairObserver->isIncomplete());
-    // Done is reservered for completed operations.
+    // Done is reserved for completed operations.
     ASSERT(!repairObserver->isDone());
     assertReplConfigValid(opCtx.get(), false);
 }
