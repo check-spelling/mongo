@@ -86,7 +86,7 @@ TEST_F(ShardKeyPatternTest, CompositeShardKeyPatternsValidityCheck) {
     ASSERT_THROWS(ShardKeyPattern(BSON("a" << 1 << "" << 1.0)), DBException);
 }
 
-TEST_F(ShardKeyPatternTest, NestedShardKeyPatternsValidtyCheck) {
+TEST_F(ShardKeyPatternTest, NestedShardKeyPatternsValidityCheck) {
     ShardKeyPattern s1(BSON("a.b" << 1));
     ShardKeyPattern s2(BSON("a.b.c.d" << 1.0));
     ShardKeyPattern s3(BSON("a" << 1 << "c.d" << 1.0 << "e.f.g" << 1.0f));
