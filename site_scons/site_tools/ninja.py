@@ -1038,7 +1038,7 @@ def get_generic_shell_command(env, node, action, targets, sources, executor=None
         # However this function is to generic to be able to reliably extract such deps
         # from the command, so we return a placeholder empty list. It should be noted that
         # generally this function will not be used soley and is more like a template to generate
-        # the basics for a custom provider which may have more specific options for a provier
+        # the basics for a custom provider which may have more specific options for a provider
         # function for a custom NinjaRuleMapping.
         []
     )
