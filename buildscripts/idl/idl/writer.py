@@ -25,7 +25,7 @@
 # exception statement from all source files in the program, then also delete
 # it in the license file.
 #
-"""Text Writing Utilites."""
+"""Text Writing Utilities."""
 
 import io
 import string

@@ -180,7 +180,7 @@ bool isFTDCType(BSONType type);
 
 
 /**
- * Miscellaneous utilties for FTDC.
+ * Miscellaneous utilities for FTDC.
  */
 namespace FTDCUtil {
 /**
