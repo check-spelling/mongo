@@ -345,7 +345,7 @@ Status AuthzManagerExternalStateLocal::getUserDescription(OperationContext* opCt
 
         directRoles = filterAndMapRole(&resultBuilder, userDoc, ResolveRoleOption::kAll, false);
     } else {
-        // We are able to artifically construct the external user from the request
+        // We are able to artificially construct the external user from the request
         resultBuilder.append("_id", str::stream() << userName.getDB() << '.' << userName.getUser());
         resultBuilder.append("user", userName.getUser());
         resultBuilder.append("db", userName.getDB());

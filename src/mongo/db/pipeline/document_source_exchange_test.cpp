@@ -514,11 +514,11 @@ TEST_F(DocumentSourceExchangeTest, RandomExchangeNConsumerResourceYielding) {
     // Tiny buffer so if there are deadlocks possible they reproduce more often.
     spec.setBufferSize(64);
 
-    // An "artifical" mutex that's not actually necessary for thread safety. We enforce that each
+    // An "artificial" mutex that's not actually necessary for thread safety. We enforce that each
     // thread holds this while it calls getNext(). This is to simulate the case where a thread may
     // hold some "real" resources which need to be yielded while waiting, such as the Session, or
     // the locks held in a transaction.
-    auto artificalGlobalMutex = MONGO_MAKE_LATCH();
+    auto artificialGlobalMutex = MONGO_MAKE_LATCH();
 
     boost::intrusive_ptr<Exchange> ex =
         new Exchange(std::move(spec), Pipeline::create({source}, getExpCtx()));
@@ -529,7 +529,7 @@ TEST_F(DocumentSourceExchangeTest, RandomExchangeNConsumerResourceYielding) {
         ServiceContext::UniqueOperationContext opCtxOwned =
             getServiceContext()->makeOperationContext(client.get());
         OperationContext* opCtx = opCtxOwned.get();
-        auto yielder = std::make_unique<MutexYielder>(&artificalGlobalMutex);
+        auto yielder = std::make_unique<MutexYielder>(&artificialGlobalMutex);
         auto yielderRaw = yielder.get();
 
         threads.push_back(ThreadInfo{
@@ -550,7 +550,7 @@ TEST_F(DocumentSourceExchangeTest, RandomExchangeNConsumerResourceYielding) {
                                                   const executor::TaskExecutor::CallbackArgs& cb) {
             DocumentSourceExchange* docSourceExchange = threadInfo->documentSourceExchange.get();
             const auto getNext = [docSourceExchange, threadInfo]() {
-                // Will acquire 'artificalGlobalMutex'. Within getNext() it will be released and
+                // Will acquire 'artificialGlobalMutex'. Within getNext() it will be released and
                 // reacquired by the MutexYielder if the Exchange has to block.
                 threadInfo->yielder->getLock().lock();
                 auto res = docSourceExchange->getNext();

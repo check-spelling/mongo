@@ -34,7 +34,7 @@
 namespace mongo {
 
 /**
- * This stage is used internally for change stream notifications to artifically generate an
+ * This stage is used internally for change stream notifications to artificially generate an
  * "invalidate" entry for commands that should invalidate the change stream (e.g. collection drop
  * for a single-collection change stream). It is not intended to be created by the user.
  */
