@@ -2606,7 +2606,7 @@ TEST(TypeSupport, EncodingEquivalenceDecimal) {
     ASSERT_TRUE(a.hasValue());
     ASSERT_TRUE(value1.isEqual(mmb::ConstElement(a).getValueDecimal()));
 
-    // Construct via call passong BSON element
+    // Construct via call passing BSON element
     ASSERT_OK(doc.root().appendElement(thing));
     mmb::Element b = doc.root().rightChild();
     ASSERT_TRUE(b.ok());
