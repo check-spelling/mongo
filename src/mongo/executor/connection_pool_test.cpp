@@ -590,7 +590,7 @@ TEST_F(ConnectionPoolTest, requestsServedByUrgency) {
 
     ConnectionImpl::pushSetup(Status::OK());
 
-    // Note thate we hit the 1 second request, but not the 2 second
+    // Note that we hit the 1 second request, but not the 2 second
     ASSERT(reachedB);
     ASSERT(!reachedA);
 
