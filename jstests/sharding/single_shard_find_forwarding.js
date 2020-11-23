@@ -1,7 +1,7 @@
 /**
  * Tests that Collection.find().skip(n).limit(m), on an single shard collection applies limit and
  * skip on mongod, rather than fetching all documents satisfying the predicate passed to find and
- * applying limit and skip on mongos. This is intended to test the optimzation in SERVER-36290.
+ * applying limit and skip on mongos. This is intended to test the optimization in SERVER-36290.
  *
  * The test works by creating an single shard collection, and then inserting documents directly into
  * the primary shard. It then runs a find().skip(n).limit(m) and ensures that the document count

@@ -61,7 +61,7 @@ try {
     const secondaryEmptyColl = secondary.getCollection(emptyColl.getFullName());
     IndexBuildTest.assertIndexes(secondaryEmptyColl, 2, ['_id_', 'b_1']);
 
-    // Index build optimatization for empty collection is replicated via old-style createIndexes
+    // Index build optimization for empty collection is replicated via old-style createIndexes
     // oplog entry.
     const cmdNs = testDB.getCollection('$cmd').getFullName();
     const ops = rst.dumpOplog(
