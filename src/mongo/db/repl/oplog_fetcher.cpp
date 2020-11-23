@@ -87,7 +87,7 @@ BSONObj OplogBatchStats::getReport() const {
 
 // The number and time spent reading batches off the network
 OplogBatchStats oplogBatchStats;
-ServerStatusMetricField<OplogBatchStats> displayBatchesRecieved("repl.network.getmores",
+ServerStatusMetricField<OplogBatchStats> displayBatchesReceived("repl.network.getmores",
                                                                 &oplogBatchStats);
 // The oplog entries read via the oplog reader
 Counter64 opsReadStats;

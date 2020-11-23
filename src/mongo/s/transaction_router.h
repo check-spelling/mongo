@@ -423,7 +423,7 @@ public:
 
         /**
          * Returns true if the current transaction can retry on a snapshot error. This is only true
-         * on the first command recevied for a transaction.
+         * on the first command received for a transaction.
          */
         bool canContinueOnSnapshotError() const;
 

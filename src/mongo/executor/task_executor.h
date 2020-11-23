@@ -340,7 +340,7 @@ public:
 
 
     /**
-     * Schedules "cb" to be run by the executor on each reply recevied from executing the exhaust
+     * Schedules "cb" to be run by the executor on each reply received from executing the exhaust
      * remote command described by "request".
      *
      * Returns a handle for waiting on or canceling the callback, or
