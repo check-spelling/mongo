@@ -111,8 +111,8 @@ void clean_up_str_array(char** output, int lines){
  * Generic function for running a command and getting the output
  * as an array of strings.
  * @param char* command - input arg, the string which is the command to run
- * @param int* num_lines - ouput arg, after the command is run, the size of the return  array
- * @param int* status - ouput arg, after the command is run, the exit status of the command
+ * @param int* num_lines - output arg, after the command is run, the size of the return  array
+ * @param int* status - output arg, after the command is run, the exit status of the command
  * @return char** - a pointer to an array of strings that is each line of the output
  */
 char** get_command_output(char* command, int* num_lines, int* status){

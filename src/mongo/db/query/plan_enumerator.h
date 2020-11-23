@@ -59,7 +59,7 @@ struct PlanEnumeratorParams {
     // Not owned here.
     const std::vector<IndexEntry>* indices;
 
-    // How many plans are we willing to ouput from an OR? We currently consider
+    // How many plans are we willing to output from an OR? We currently consider
     // all possibly OR plans, which means the product of the number of possibilities
     // for each clause of the OR. This could grow disastrously large.
     size_t maxSolutionsPerOr;

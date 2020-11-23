@@ -139,13 +139,13 @@ class AwsEc2(object):
 
             if console_output_file:
                 try:
-                    console_ouput = instance.console_output()
-                    if console_ouput and "Output" in console_ouput:
-                        write_utf8_file(console_output_file, console_ouput["Output"])
+                    console_output = instance.console_output()
+                    if console_output and "Output" in console_output:
+                        write_utf8_file(console_output_file, console_output["Output"])
                     else:
-                        print("Unable to generate console_ouptut file, data not available")
+                        print("Unable to generate console_output file, data not available")
                 except botocore.exceptions.ClientError as err:
-                    print("Unable to generate console_ouptut file: {}".format(err))
+                    print("Unable to generate console_output file: {}".format(err))
 
             if console_screenshot_file:
                 client = boto3.client("ec2")

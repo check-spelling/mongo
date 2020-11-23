@@ -43,10 +43,10 @@ function validateFindCmdOutputAndPlan(
     };
     if (expectedOutput) {
         const res = assert.commandWorked(coll.runCommand(cmdObj));
-        const ouputArray = new DBCommandCursor(coll.getDB(), res).toArray();
+        const outputArray = new DBCommandCursor(coll.getDB(), res).toArray();
 
         // Make sure that the documents returned are in the same order as 'expectedOutput'.
-        assert.eq(expectedOutput, ouputArray, ouputArray);
+        assert.eq(expectedOutput, outputArray, outputArray);
     }
     assertStagesForExplainOfCommand({
         coll: coll,

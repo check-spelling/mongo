@@ -59,7 +59,7 @@ public:
 
     /**
      * The path of the field that we are grouping on: i.e., the field in the input document that we
-     * will use to create the _id field of the ouptut document.
+     * will use to create the _id field of the output document.
      */
     const std::string& groupId() const {
         return _groupId;

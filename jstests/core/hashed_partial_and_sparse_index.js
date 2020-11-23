@@ -30,10 +30,10 @@ function validateFindCmdOutputAndPlan({filter, expectedStages, expectedOutput}) 
     const cmdObj = {find: coll.getName(), filter: filter, projection: {_id: 0}};
     if (expectedOutput) {
         const res = assert.commandWorked(coll.runCommand(cmdObj));
-        const ouputArray = new DBCommandCursor(coll.getDB(), res).toArray();
+        const outputArray = new DBCommandCursor(coll.getDB(), res).toArray();
 
         // We ignore the order since hashed index order is not predictable.
-        assert(arrayEq(expectedOutput, ouputArray), ouputArray);
+        assert(arrayEq(expectedOutput, outputArray), outputArray);
     }
     assertStagesForExplainOfCommand({coll: coll, cmdObj: cmdObj, expectedStages: expectedStages});
 }

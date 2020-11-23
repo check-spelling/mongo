@@ -628,7 +628,7 @@ def print_uptime():
 
 
 def call_remote_operation(local_ops, remote_python, script_name, client_args, operation):
-    """Call the remote operation and return tuple (ret, ouput)."""
+    """Call the remote operation and return tuple (ret, output)."""
     client_call = "{} {} {} {}".format(remote_python, script_name, client_args, operation)
     ret, output = local_ops.shell(client_call)
     return ret, output
@@ -1068,7 +1068,7 @@ class MongodControl(object):  # pylint: disable=too-many-instance-attributes
         return opt_string
 
     def install(self, root_dir, tarball_url):
-        """Return tuple (ret, ouput)."""
+        """Return tuple (ret, output)."""
         # Install mongod, if 'root_dir' does not exist.
         if os.path.isdir(root_dir):
             LOGGER.warning("Root dir %s already exists", root_dir)
@@ -1088,25 +1088,25 @@ class MongodControl(object):  # pylint: disable=too-many-instance-attributes
         return ret, output
 
     def uninstall(self):
-        """Return tuple (ret, ouput)."""
+        """Return tuple (ret, output)."""
         return self.service.delete()
 
     @staticmethod
     def cleanup(root_dir):
-        """Return tuple (ret, ouput)."""
+        """Return tuple (ret, output)."""
         shutil.rmtree(root_dir, ignore_errors=True)
         return 0, None
 
     def start(self):
-        """Return tuple (ret, ouput)."""
+        """Return tuple (ret, output)."""
         return self.service.start()
 
     def update(self):
-        """Return tuple (ret, ouput)."""
+        """Return tuple (ret, output)."""
         return self.service.update()
 
     def stop(self, timeout=0):
-        """Return tuple (ret, ouput)."""
+        """Return tuple (ret, output)."""
         return self.service.stop(timeout)
 
     def status(self):
