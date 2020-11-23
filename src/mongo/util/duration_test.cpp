@@ -227,7 +227,7 @@ TEST(DurationArithmetic, SubtractOverflowThrows) {
         Milliseconds{1} - Seconds::min(), AssertionException, ErrorCodes::DurationOverflow);
 }
 
-TEST(DurationArithmetic, MultiplyNoOverflowSucceds) {
+TEST(DurationArithmetic, MultiplyNoOverflowSucceeds) {
     ASSERT_EQ(Milliseconds{150}, 15 * Milliseconds{10});
     ASSERT_EQ(Milliseconds{150}, Milliseconds{15} * 10);
 }

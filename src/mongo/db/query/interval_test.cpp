@@ -157,7 +157,7 @@ TEST(Comparison, PrecedesCouldUnion) {
     ASSERT_EQUALS(c.compare(a), Interval::INTERVAL_PRECEDES_COULD_UNION);
 }
 
-TEST(Comparison, Succeds) {
+TEST(Comparison, Succeeds) {
     Interval a(BSON("" << 10 << "" << 20), true, true);
     ASSERT_NOT_EQUALS(a.compare(a), Interval::INTERVAL_SUCCEEDS);
 
@@ -227,7 +227,7 @@ TEST(Intersection, Procedes) {
     ASSERT_TRUE(a.isEmpty());
 }
 
-TEST(Intersection, Succeds) {
+TEST(Intersection, Succeeds) {
     Interval a(BSON("" << 10 << "" << 20), true, true);
     Interval b(BSON("" << 25 << "" << 30), true, true);
     a.intersect(b);
@@ -285,7 +285,7 @@ TEST(Union, Precedes) {
     ASSERT_EQUALS(a.compare(Interval(itv, true, true)), Interval::INTERVAL_EQUALS);
 }
 
-TEST(Union, Succeds) {
+TEST(Union, Succeeds) {
     Interval a(BSON("" << 10 << "" << 20), true, true);
     Interval b(BSON("" << 0 << "" << 5), true, true);
     a.combine(b);

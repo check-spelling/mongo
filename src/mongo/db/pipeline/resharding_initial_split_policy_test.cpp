@@ -156,7 +156,7 @@ TEST_F(ReshardingSplitPolicyTest, CompoundShardKeyWithDottedHashedFieldSucceeds)
     ASSERT(!pipeline->getNext());
 }
 
-TEST_F(ReshardingSplitPolicyTest, SamplingSuceeds) {
+TEST_F(ReshardingSplitPolicyTest, SamplingSucceeds) {
     auto shards = setupNShards(2);
     loadRoutingTableWithTwoChunksAndTwoShards(kTestAggregateNss);
     // We add a $sortKey field since AsyncResultsMerger expects it in order to merge the batches
