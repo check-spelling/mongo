@@ -23,7 +23,7 @@ st.rs0.getPrimary().delayMessagesFrom(st.rs0.getSecondary(), 13000);
 assert.commandFailed(st.s0.getCollection('testDB.cll').insert({test: 5}, wc));
 st.rs0.getPrimary().delayMessagesFrom(st.rs0.getSecondary(), 0);
 
-// discardMessages w/ a loss probabilty of 1 should also cause a write error
+// discardMessages w/ a loss probability of 1 should also cause a write error
 st.rs0.getPrimary().discardMessagesFrom(st.rs0.getSecondary(), 1.0);
 assert.commandFailed(st.s0.getCollection('testDB.cll').insert({test: 5}, wc));
 st.rs0.getPrimary().discardMessagesFrom(st.rs0.getSecondary(), 0.0);

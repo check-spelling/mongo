@@ -78,7 +78,7 @@ BSONObj generateDoc(PseudoRandom* rng, MutableDocument* doc, int depthLevel) {
     auto largeFieldObj = createObjWithLargePrefix("{}");
     doc->addField("prefixLargeField", Value(largeFieldObj.firstElement()));
 
-    // Reduce the probabilty of generated nested objects as we go deeper. After depth level 6, we
+    // Reduce the probability of generated nested objects as we go deeper. After depth level 6, we
     // should not be generating anymore nested objects.
     const double subObjProbability = 0.3 - (depthLevel * 0.05);
     const double subArrayProbability = 0.2 - (depthLevel * 0.05);
@@ -95,7 +95,7 @@ BSONObj generateDoc(PseudoRandom* rng, MutableDocument* doc, int depthLevel) {
             std::vector<Value> values;
             auto numSubObjs = 0;
             for (auto i = 0; i < arrayLength; i++) {
-                // The probablilty of generating a sub-object goes down as we generate more
+                // The probability of generating a sub-object goes down as we generate more
                 // sub-objects and as the array position increases.
                 if (!rng->nextInt32(2 + numSubObjs + i)) {
                     MutableDocument subDoc;
