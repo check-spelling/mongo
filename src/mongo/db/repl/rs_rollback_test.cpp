@@ -2875,7 +2875,7 @@ DEATH_TEST_REGEX_F(
 }
 
 // The testcases used here are trying to detect off-by-one errors in
-// FixUpInfo::removeAllDocsToRefectchFor.
+// FixUpInfo::removeAllDocsToRefetchFor.
 TEST(FixUpInfoTest, RemoveAllDocsToRefetchForWorks) {
     const auto normalHolder = BSON("" << OID::gen());
     const auto normalKey = normalHolder.firstElement();
