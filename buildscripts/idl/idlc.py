@@ -61,7 +61,7 @@ def main():
                         help='print out a list of dependent imports during file generation')
 
     parser.add_argument('--target_arch', type=str,
-                        help="IDL target archiecture (amd64, s390x). defaults to current machine")
+                        help="IDL target architecture (amd64, s390x). defaults to current machine")
 
     args = parser.parse_args()
 

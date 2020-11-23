@@ -791,7 +791,7 @@ env_vars.Add('ICECC_VERSION',
     help='Tell ICECC where the compiler package is')
 
 env_vars.Add('ICECC_VERSION_ARCH',
-    help='Tell ICECC the target archicture for the compiler package, if non-native')
+    help='Tell ICECC the target architecture for the compiler package, if non-native')
 
 env_vars.Add('LIBPATH',
     help='Adds paths to the linker search path',
