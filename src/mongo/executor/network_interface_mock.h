@@ -367,7 +367,7 @@ private:
     void _runReadyNetworkOperations_inlock(stdx::unique_lock<stdx::mutex>* lk);
 
     // Mutex that synchronizes access to mutable data in this class and its subclasses.
-    // Fields guarded by the mutex are labled (M), below, and those that are read-only
+    // Fields guarded by the mutex are labeled (M), below, and those that are read-only
     // in multi-threaded execution, and so unsynchronized, are labeled (R).
     stdx::mutex _mutex;  // NOLINT
 
