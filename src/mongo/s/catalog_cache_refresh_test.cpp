@@ -386,7 +386,7 @@ TEST_F(CatalogCacheRefreshTest, FullLoadMissingChunkWithHighestVersion) {
         ChunkVersion version(1, 0, epoch);
 
         // Chunk from (MinKey, -100) is missing (as if someone is dropping the collection
-        // concurrently) and has the higest version.
+        // concurrently) and has the highest version.
         version.incMinor();
 
         ChunkType chunk2(kNss, {BSON("_id" << -100), BSON("_id" << 0)}, version, {"1"});
@@ -500,7 +500,7 @@ TEST_F(CatalogCacheRefreshTest, IncrementalLoadMissingChunkWithHighestVersion) {
         ChunkVersion version(1, 0, epoch);
 
         // Chunk from (MinKey, -100) is missing (as if someone is dropping the collection
-        // concurrently) and has the higest version.
+        // concurrently) and has the highest version.
 
         ChunkType chunk2(kNss, {BSON("_id" << -100), BSON("_id" << 0)}, version, {"1"});
         chunk2.setName(OID::gen());
