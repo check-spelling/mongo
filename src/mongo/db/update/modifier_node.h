@@ -160,7 +160,7 @@ protected:
      * if an update to a non-existent path is a no-op or an error. When allowNonViablePath() is
      * false, an update to a path that could be created (i.e. a "viable" path) is a no-op, and an
      * update to a path that could not be created results in a PathNotViable user error. When
-     * allowNonViablePath() is true, there is no viabilty check, and any update to a nonexistent
+     * allowNonViablePath() is true, there is no viability check, and any update to a nonexistent
      * path is a no-op.
      */
     virtual bool allowNonViablePath() const {
