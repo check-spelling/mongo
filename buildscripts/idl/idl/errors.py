@@ -712,7 +712,7 @@ class ParserContext(object):
             ("Struct '%s' cannot have two fields with the same comparison_order value '%d'.") %
             (struct_name, comparison_order))
 
-    def add_extranous_command_type(self, location, command_name):
+    def add_extraneous_command_type(self, location, command_name):
         # type: (common.SourceLocation, str) -> None
         """Add an error about commands having type when not needed."""
         # pylint: disable=invalid-name

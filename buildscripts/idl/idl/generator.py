@@ -1456,7 +1456,7 @@ class _CppSourceFileWriter(_CppFileWriterBase):
                     first_field = False
 
             # End of for fields
-            # Generate strict check for extranous fields
+            # Generate strict check for extraneous fields
             if struct.strict:
                 with self._block('else {', '}'):
                     # For commands, check if this a well known command field that the IDL parser
@@ -1649,7 +1649,7 @@ class _CppSourceFileWriter(_CppFileWriterBase):
                             first_field = False
 
                     # End of for fields
-                    # Generate strict check for extranous fields
+                    # Generate strict check for extraneous fields
                     if struct.strict:
                         with self._block('else {', '}'):
                             self._writer.write_line('ctxt.throwUnknownField(sequence.name);')

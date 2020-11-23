@@ -656,7 +656,7 @@ def _parse_command(ctxt, spec, name, node):
             ctxt.add_missing_required_field_error(node, "command", "type")
 
         if command.namespace != common.COMMAND_NAMESPACE_TYPE and command.type:
-            ctxt.add_extranous_command_type(command, command.name)
+            ctxt.add_extraneous_command_type(command, command.name)
 
     if command.api_version and command.reply_type is None:
         ctxt.add_missing_reply_type(command, command.name)
