@@ -21,7 +21,7 @@ const st = new ShardingTest({
     mongos: 1,
 });
 
-// Set up one sharded collection with 2 chunks distributd across 2 shards
+// Set up one sharded collection with 2 chunks distributed across 2 shards
 assert.commandWorked(st.enableSharding(dbName, st.shard0.shardName));
 assert.commandWorked(st.s.getDB(dbName).runCommand({
     createIndexes: collName,
