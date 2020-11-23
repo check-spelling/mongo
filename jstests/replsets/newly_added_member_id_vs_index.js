@@ -90,7 +90,7 @@ rst.waitForState(newNodeTwo, ReplSetTest.State.SECONDARY);
 jsTestName("Waiting for its 'newlyAdded' to be removed");
 waitForNewlyAddedRemovalForNodeToBeCommitted(primary, 2 /* memberIndex */);
 
-jsTestName("Vefirying the results of the 'newlyAdded' removal");
+jsTestName("Verifying the results of the 'newlyAdded' removal");
 configOnDisk = primary.getDB("local").system.replset.findOne();
 assert.eq(1, configOnDisk.members[2]._id, configOnDisk);
 assert.eq(false, configOnDisk.members[2].hasOwnProperty("newlyAdded"), configOnDisk);
