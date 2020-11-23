@@ -229,7 +229,7 @@ private:
     static constexpr size_t kFewDottedFieldParts = 4;
 
     // In order to make FieldRef copyable, we use a StringData-like type that stores an offset and
-    // length into the backing string. StringData, in constrast, holds const char* pointers that
+    // length into the backing string. StringData, in contrast, holds const char* pointers that
     // would have to be updated to point into the new string on copy.
     struct StringView {
         // Constructs an empty StringView.
