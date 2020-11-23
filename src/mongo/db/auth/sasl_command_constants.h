@@ -51,7 +51,7 @@ constexpr auto saslCommandConversationIdFieldName = "conversationId"_sd;
 /// completed successfully.
 constexpr auto saslCommandDoneFieldName = "done"_sd;
 
-/// Name of parameter to saslStart command indiciating the client's desired sasl mechanism.
+/// Name of parameter to saslStart command indicating the client's desired sasl mechanism.
 constexpr auto saslCommandMechanismFieldName = "mechanism"_sd;
 
 /// In the event that saslStart supplies an unsupported mechanism, the server responds with a
