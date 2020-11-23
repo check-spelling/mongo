@@ -281,7 +281,7 @@ public:
     }
 
     /**
-     * Returns a const_iterafor pointing past the least recently used element in the cache.
+     * Returns a const_iterator pointing past the least recently used element in the cache.
      */
     const_iterator end() const {
         return _list.end();
