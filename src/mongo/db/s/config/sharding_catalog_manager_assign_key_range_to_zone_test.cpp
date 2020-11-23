@@ -628,7 +628,7 @@ TEST_F(AssignKeyRangeWithOneRangeFixture, NewRangeIsSuperSetOfExistingShouldFail
  * existing         ZZZ
  *           0123456789
  */
-TEST_F(AssignKeyRangeWithOneRangeFixture, AssignWithExistingOveralpShouldFail) {
+TEST_F(AssignKeyRangeWithOneRangeFixture, AssignWithExistingOverlapShouldFail) {
     TagsType tagDoc;
     tagDoc.setNS(shardedNS());
     tagDoc.setMinKey(BSON("x" << 0));
