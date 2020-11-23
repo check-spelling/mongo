@@ -108,7 +108,7 @@ TEST(Base64Test, parseFail) {
         {__LINE__, "Has Whitespace==", 40537},
         {__LINE__, "Hasbadchar$=", 40537},
         {__LINE__, "Hasbadchar\xFF=", 40537},
-        {__LINE__, "Hasbadcahr\t=", 40537},
+        {__LINE__, "Hasbadchar\t=", 40537},
         {__LINE__, "too=soon", {}},  // fail, don't care how
     };
 
