@@ -45,8 +45,8 @@ testOp('$dateToString', {date: new Date("1900-12-31T23:59:59Z"), format: "%V-%G"
 // This was failing, but it shouldn't as it is the same as above, only rotated.
 testOp('$dateToString', {date: new Date("1900-12-31T23:59:59Z"), format: "%G-%V"}, "1901-01");
 
-// 1900 is special because it's devisible by 4 and by 100 but not 400 so it's not a leap year.
-// 2000 is special, because it's devisible by 4, 100, 400 and so it is a leap year.
+// 1900 is special because it's divisible by 4 and by 100 but not 400 so it's not a leap year.
+// 2000 is special, because it's divisible by 4, 100, 400 and so it is a leap year.
 const years = {
     common: [
         1900,  // Starting and ending on Monday (special).
