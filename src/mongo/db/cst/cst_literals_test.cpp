@@ -66,7 +66,7 @@ auto makePipelineContainingProjectStageWithLiteral(CNode&& literal) {
 
 TEST(CstLiteralsTest, TranslatesDouble) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserDouble{5e-324}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << 5e-324)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -78,7 +78,7 @@ TEST(CstLiteralsTest, TranslatesDouble) {
 
 TEST(CstLiteralsTest, TranslatesString) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserString{"soup can"}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("$const"
@@ -93,7 +93,7 @@ TEST(CstLiteralsTest, TranslatesString) {
 TEST(CstLiteralsTest, TranslatesBinary) {
     auto cst =
         makePipelineContainingProjectStageWithLiteral(CNode{UserBinary{"a\0b", 3, BinDataGeneral}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONBinData("a\0b", 3, BinDataGeneral))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -105,7 +105,7 @@ TEST(CstLiteralsTest, TranslatesBinary) {
 
 TEST(CstLiteralsTest, TranslatesUndefined) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserUndefined{}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONUndefined)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -118,7 +118,7 @@ TEST(CstLiteralsTest, TranslatesUndefined) {
 TEST(CstLiteralsTest, TranslatesObjectId) {
     auto cst = makePipelineContainingProjectStageWithLiteral(
         CNode{UserObjectId{"01234567890123456789aaaa"}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << OID("01234567890123456789aaaa"))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -130,7 +130,7 @@ TEST(CstLiteralsTest, TranslatesObjectId) {
 
 TEST(CstLiteralsTest, TranslatesBoolean) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserBoolean{false}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << false)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -143,7 +143,7 @@ TEST(CstLiteralsTest, TranslatesBoolean) {
 TEST(CstLiteralsTest, TranslatesDate) {
     auto cst = makePipelineContainingProjectStageWithLiteral(
         CNode{UserDate{Date_t::fromMillisSinceEpoch(424242)}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << Date_t::fromMillisSinceEpoch(424242))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -155,7 +155,7 @@ TEST(CstLiteralsTest, TranslatesDate) {
 
 TEST(CstLiteralsTest, TranslatesNull) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserNull{}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONNULL)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -167,7 +167,7 @@ TEST(CstLiteralsTest, TranslatesNull) {
 
 TEST(CstLiteralsTest, TranslatesRegex) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserRegex{".*", "i"}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONRegEx(".*", "i"))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -180,7 +180,7 @@ TEST(CstLiteralsTest, TranslatesRegex) {
 TEST(CstLiteralsTest, TranslatesDBPointer) {
     auto cst = makePipelineContainingProjectStageWithLiteral(
         CNode{UserDBPointer{"db.c", OID("010203040506070809101112")}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("$const" << BSONDBRef("db.c", OID("010203040506070809101112")))) ==
@@ -193,7 +193,7 @@ TEST(CstLiteralsTest, TranslatesDBPointer) {
 
 TEST(CstLiteralsTest, TranslatesJavascript) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserJavascript{"5 === 5"}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONCode("5 === 5"))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -205,7 +205,7 @@ TEST(CstLiteralsTest, TranslatesJavascript) {
 
 TEST(CstLiteralsTest, TranslatesSymbol) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserSymbol{"foo"}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONSymbol("foo"))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -218,7 +218,7 @@ TEST(CstLiteralsTest, TranslatesSymbol) {
 TEST(CstLiteralsTest, TranslatesJavascriptWithScope) {
     auto cst = makePipelineContainingProjectStageWithLiteral(
         CNode{UserJavascriptWithScope{"6 === 6", BSONObj{}}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONCodeWScope("6 === 6", BSONObj()))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -230,7 +230,7 @@ TEST(CstLiteralsTest, TranslatesJavascriptWithScope) {
 
 TEST(CstLiteralsTest, TranslatesInt) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserInt{777}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << 777)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -242,7 +242,7 @@ TEST(CstLiteralsTest, TranslatesInt) {
 
 TEST(CstLiteralsTest, TranslatesTimestamp) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserTimestamp{4102444800, 1}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << Timestamp(4102444800, 1))) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -254,7 +254,7 @@ TEST(CstLiteralsTest, TranslatesTimestamp) {
 
 TEST(CstLiteralsTest, TranslatesLong) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserLong{777777777777777777ll}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << 777777777777777777ll)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -267,7 +267,7 @@ TEST(CstLiteralsTest, TranslatesLong) {
 TEST(CstLiteralsTest, TranslatesDecimal) {
     auto cst = makePipelineContainingProjectStageWithLiteral(
         CNode{UserDecimal{Decimal128::kLargestNegative}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << Decimal128::kLargestNegative)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -279,7 +279,7 @@ TEST(CstLiteralsTest, TranslatesDecimal) {
 
 TEST(CstLiteralsTest, TranslatesMinKey) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserMinKey{}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << MINKEY)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -291,7 +291,7 @@ TEST(CstLiteralsTest, TranslatesMinKey) {
 
 TEST(CstLiteralsTest, TranslatesMaxKey) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{UserMaxKey{}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << MAXKEY)) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -303,7 +303,7 @@ TEST(CstLiteralsTest, TranslatesMaxKey) {
 
 TEST(CstLiteralsTest, TranslatesArray) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONArray())) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -315,7 +315,7 @@ TEST(CstLiteralsTest, TranslatesArray) {
 
 TEST(CstLiteralsTest, TranslatesObject) {
     auto cst = makePipelineContainingProjectStageWithLiteral(CNode{CNode::ObjectChildren{}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("$const" << BSONObj())) ==
         dynamic_cast<DocumentSourceSingleDocumentTransformation&>(
@@ -333,7 +333,7 @@ TEST(CstLiteralsTest, TranslatesNestedLiteral) {
                                      {UserFieldname{"2"}, CNode{UserLong{2ll}}}}}},
         {UserFieldname{"c"},
          CNode{CNode::ArrayChildren{CNode{UserString{"foo"}}, CNode{UserSymbol{"bar"}}}}}}});
-    // DocumenSourceSingleDoucmentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("$const" << BSON("a" << MAXKEY << "b"

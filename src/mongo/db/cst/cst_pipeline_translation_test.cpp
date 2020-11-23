@@ -106,7 +106,7 @@ TEST(CstPipelineTranslationTest, TranslatesOneFieldInclusionProjectionStage) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << true) ==
         singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
@@ -125,7 +125,7 @@ TEST(CstPipelineTranslationTest, TranslatesMultifieldInclusionProjection) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << true << "b" << true) ==
         singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
@@ -158,7 +158,7 @@ TEST(CstPipelineTranslationTest, TranslatesCompoundObjectInclusionProjection) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("b" << BSON("c" << true << "d" << true << "e" << BSON("f" << true)))) ==
@@ -175,7 +175,7 @@ TEST(CstPipelineTranslationTest, TranslatesMultiComponentPathInclusionProjection
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a" << BSON("b" << BSON("c" << BSON("d" << true)))) ==
         singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
@@ -191,7 +191,7 @@ TEST(CstPipelineTranslationTest, TranslatesOneFieldExclusionProjectionStage) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("a" << false) ==
         singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
@@ -209,7 +209,7 @@ TEST(CstPipelineTranslationTest, TranslatesMultifieldExclusionProjection) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << false << "a" << false << "b" << false) ==
         singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
@@ -242,7 +242,7 @@ TEST(CstPipelineTranslationTest, TranslatesCompoundObjectExclusionProjection) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("a" << BSON("b" << BSON("c" << false << "d" << false << "e" << BSON("f" << false)))) ==
         singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
@@ -261,7 +261,7 @@ TEST(CstPipelineTranslationTest, TranslatesMultiComponentPathExclusionProjection
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("a" << BSON("b" << BSON("c" << BSON("d" << false)))) ==
         singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
@@ -287,7 +287,7 @@ TEST(CstPipelineTranslationTest, TranslatesComputedProjection) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("$atan2" << BSON_ARRAY(BSON("$const" << 1) << BSON("$const" << 0)))
@@ -313,7 +313,7 @@ TEST(CstPipelineTranslationTest, TranslatesComputedInclusionMixedProjectionStage
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("$add" << BSON_ARRAY(BSON("$const" << 0ll) << BSON("$const" << 1)))
@@ -342,7 +342,7 @@ TEST(CstPipelineTranslationTest, TranslatesMultiComponentPathMixedProjectionStag
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
     using namespace std;
 
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("b" << BSON("c" << BSON("d" << true) << "e"
@@ -390,21 +390,21 @@ TEST(CstPipelineTranslationTest, TranslatesMultipleProjectionStages) {
     auto iter = sources.begin();
     {
         auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter++);
-        // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+        // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
         ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
             BSON("_id" << true << "a" << true) ==
             singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
     }
     {
         auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter++);
-        // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+        // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
         ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
             BSON("b" << false) ==
             singleDoc.getTransformer().serializeTransformation(boost::none).toBson()));
     }
     {
         auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-        // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+        // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
         ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
             BSON("_id" << true << "c"
                        << BSON("$add"
@@ -453,7 +453,7 @@ TEST(CstPipelineTranslationTest, TranslatesMultipleProjectionStagesWithAndOrNot)
     auto iter = sources.begin();
     {
         auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter++);
-        // DocumenSourceSingleDocumentTransformation reorders fields so we need to be
+        // DocumentSourceSingleDocumentTransformation reorders fields so we need to be
         // insensitive.
         ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
             BSON("_id" << true << "a" << BSON("$not" << BSON_ARRAY(BSON("$const" << 0)))) ==
@@ -461,7 +461,7 @@ TEST(CstPipelineTranslationTest, TranslatesMultipleProjectionStagesWithAndOrNot)
     }
     {
         auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-        // DocumenSourceSingleDocumentTransformation reorders fields so we need to be
+        // DocumentSourceSingleDocumentTransformation reorders fields so we need to be
         // insensitive.
         ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
             BSON("_id" << true << "c"
@@ -499,7 +499,7 @@ TEST(CstPipelineTranslationTest, TranslatesComputedProjectionWithAndOr) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("$and" << BSON_ARRAY(BSON("$const" << 1) << BSON(
@@ -530,7 +530,7 @@ TEST(CstPipelineTranslationTest, TranslatesComputedProjectionWithExpressionOnId)
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << BSON(
                  "$add" << BSON_ARRAY(
@@ -779,7 +779,7 @@ TEST(CstPipelineTranslationTest, TranslatesProjectionWithConvert) {
     ASSERT_EQ(1u, sources.size());
     auto iter = sources.begin();
     auto& singleDoc = dynamic_cast<DocumentSourceSingleDocumentTransformation&>(**iter);
-    // DocumenSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
+    // DocumentSourceSingleDocumentTransformation reorders fields so we need to be insensitive.
     ASSERT(UnorderedFieldsBSONObjComparator{}.evaluate(
         BSON("_id" << true << "a"
                    << BSON("$convert" << BSON("input" << BSON("$const" << true) << "to"
