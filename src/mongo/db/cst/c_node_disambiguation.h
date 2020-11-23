@@ -38,7 +38,7 @@
 
 /**
  * Functions which perform additional disambiguation beyond what a context free grammar can handle.
- * These take the form of CNode -> CNode tranformations with the output providing the correct form.
+ * These take the form of CNode -> CNode transformations with the output providing the correct form.
  */
 namespace mongo::c_node_disambiguation {
 
