@@ -1854,7 +1854,7 @@ TEST_F(RadixStoreTest, CompressNodeBeforeResolvingConflict) {
     thisStore.erase("ada");
 
     // 'adb' will need to be compressed after 'ac' is erased in the merge. Make sure conflict
-    // resulution can handle this.
+    // resolution can handle this.
     thisStore.merge3(baseStore, otherStore);
 
     // The store is in a valid state that is traversable and we should find no nodes
