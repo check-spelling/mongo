@@ -502,7 +502,7 @@ TEST_F(ReplCoordTest, NodeReturnsConfigurationInProgressWhenReceivingAReconfigWh
     // initiate
     Status status(ErrorCodes::InternalError, "Not Set");
     const auto opCtx = makeOperationContext();
-    stdx::thread initateThread([&] { doReplSetInitiate(getReplCoord(), &status, opCtx.get()); });
+    stdx::thread initiateThread([&] { doReplSetInitiate(getReplCoord(), &status, opCtx.get()); });
     getNet()->enterNetwork();
     getNet()->blackHole(getNet()->getNextReadyRequest());
     getNet()->exitNetwork();
@@ -523,7 +523,7 @@ TEST_F(ReplCoordTest, NodeReturnsConfigurationInProgressWhenReceivingAReconfigWh
     ASSERT_TRUE(result.obj().isEmpty());
 
     shutdown(opCtx.get());
-    initateThread.join();
+    initiateThread.join();
 }
 
 TEST_F(ReplCoordTest, PrimaryNodeAcceptsNewConfigWhenReceivingAReconfigWithACompatibleConfig) {
