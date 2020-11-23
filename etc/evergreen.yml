@@ -1855,7 +1855,7 @@ functions:
         # static link environments, the memory consumption of each
         # link job is so high that without constraining the number of
         # links we are likely to OOM or thrash the machine. Dynamic
-        # builds, where htis is not a concern, override this value.
+        # builds, where this is not a concern, override this value.
         echo "Changing SCons to run with --jlink=${num_scons_link_jobs_available|0.25}"
         extra_args="$extra_args --jlink=${num_scons_link_jobs_available|0.25}"
 

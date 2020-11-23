@@ -219,7 +219,7 @@ public:
     void setLogicalSessionId(LogicalSessionId lsid);
 
     /**
-     * Returns the transaction number associated with thes operation. The combination of logical
+     * Returns the transaction number associated with this operation. The combination of logical
      * session id + transaction number is what constitutes the operation transaction id.
      */
     boost::optional<TxnNumber> getTxnNumber() const {
