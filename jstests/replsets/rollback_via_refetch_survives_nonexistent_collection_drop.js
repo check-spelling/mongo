@@ -63,7 +63,7 @@ assert.commandWorked(rollbackDB.adminCommand(
 // After a successful rollback attempt, we should have seen the following log message to ensure
 // that we tried to drop a non-existent collection and continued without acquiring a database
 // lock. This check has to be before transitionToSteadyStateOperations() to make sure ram logs
-// are not overwritten due to oplog fether retry error.
+// are not overwritten due to oplog feather retry error.
 checkLog.containsJson(rollbackDB.getMongo(), 21696);  // This collection does not exist
 
 rollbackTest.transitionToSteadyStateOperations();
