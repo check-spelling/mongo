@@ -197,7 +197,7 @@ public:
                     continue;
 
                 if (authorizedDatabases && !as->isAuthorizedForAnyActionOnAnyResourceInDB(name)) {
-                    // We don't have listDatabases on the cluser or find on this database.
+                    // We don't have listDatabases on the cluster or find on this database.
                     continue;
                 }
 

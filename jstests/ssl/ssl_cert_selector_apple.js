@@ -48,8 +48,8 @@ requireSSLProvider('apple', function() {
             }
             // Valid search criteria should show our Subject Names.
             const certOK = log.search('\"name\":\"' + cert.name) >= 0;
-            const clusOK = log.search('\"name\":\"' + cluster.name) >= 0;
-            return certOK && clusOK;
+            const clusterOK = log.search('\"name\":\"' + cluster.name) >= 0;
+            return certOK && clusterOK;
         }, "Starting Mongod with " + tojson(opts), 60000);
 
         try {

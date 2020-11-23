@@ -1,6 +1,6 @@
 /**
  * This test checks if different mixtures of ssl modes
- * in a sharded clutster can or cannot function
+ * in a sharded cluster can or cannot function
  */
 
 load("jstests/ssl/libs/ssl_helpers.js");

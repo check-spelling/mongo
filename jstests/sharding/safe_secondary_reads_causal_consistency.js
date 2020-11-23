@@ -135,7 +135,7 @@ assert.commandWorked(mongos0AlphaDB.runCommand(
 
 // Bump the clusterTime of mongos1 to at least equal to the operationTime T for the
 // above write by writing to shard1. This is required for the afterClusterTime read
-// below to work since the 'afterCluterTime' of a command cannot be larger than the
+// below to work since the 'afterClusterTime' of a command cannot be larger than the
 // current clusterTime of the mongod (i.e. shard0's secondary) that executes the
 // command. By bumping the clusterTime of mongos1, the clusterTime of shard0's
 // secondary will also get bumped to >= T due to clusterTime gossiping when we do
