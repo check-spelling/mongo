@@ -261,7 +261,7 @@ boost::optional<CommitQuorumOptions> parseAndGetCommitQuorum(OperationContext* o
     }
 
     if (IndexBuildProtocol::kTwoPhase == protocol) {
-        // Setting CommitQuorum to 0 will make the index build to opt out of voting proces.
+        // Setting CommitQuorum to 0 will make the index build to opt out of voting process.
         return (replCoord->isReplEnabled() && commitQuorumEnabled)
             ? CommitQuorumOptions(CommitQuorumOptions::kVotingMembers)
             : CommitQuorumOptions(CommitQuorumOptions::kDisabled);

@@ -32,7 +32,7 @@ class HangAnalyzer(Subcommand):
 
     def __init__(self, options, logger=None, **kwargs):  # pylint: disable=unused-argument
         """
-        Configure processe lists based on options.
+        Configure process lists based on options.
 
         :param options: Options as parsed by parser.py
         :param logger: Logger to be used. If not specified, one will be created.

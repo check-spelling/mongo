@@ -586,7 +586,7 @@ TEST_F(MigrationManagerTest, FailMigrationRecovery) {
         operationContext(), MigrationType::ConfigNS, builder.obj(), kMajorityWriteConcern));
 
     // Take the distributed lock for the collection, which should be released during recovery when
-    // it fails. Any dist lock held by the config server will be released via proccessId, so the
+    // it fails. Any dist lock held by the config server will be released via processId, so the
     // session ID used here doesn't matter.
     ASSERT_OK(catalogClient()->getDistLockManager()->lockWithSessionID(
         operationContext(),
