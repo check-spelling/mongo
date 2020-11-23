@@ -196,7 +196,7 @@ X.509 certificates contain a _public key,_ an _identity,_ and a _signature,_ usu
 
 ### Certificate Authorities
 
-A **Certificate Authority (CA)** is a trusted third party used to definitevely bind names to public keys. When a service 
+A **Certificate Authority (CA)** is a trusted third party used to definitely bind names to public keys. When a service 
 wants to be verified by a Certificate Authority, it will submit a **Certificate Signing Request (CSR)**, containing the 
 service's identity and public key, to the Certificate Authority of its choosing. The CA will then cryptographically 
 "sign" the certificate using its private key. When a MongoDB client receives a certificate, it will validate it using a CA 

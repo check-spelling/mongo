@@ -107,7 +107,7 @@ struct SecureAllocatorDomain {
                                 "SecureAllocator can only be used with trivially copyable types");
 
         // NOTE: The standard doesn't seem to require these, but libstdc++
-        // definitly wants them.
+        // definitely wants them.
         using reference = T&;
         using const_reference = const T&;
 
