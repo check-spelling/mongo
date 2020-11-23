@@ -85,7 +85,7 @@ QueryToken::Type FTSQueryParser::getType(char c) const {
     switch (c) {
         // Unicode TR29 defines these as Word Boundaries
         case '\n':  // U+000A - LF
-        case '\v':  // U+000B - Veritical Tab
+        case '\v':  // U+000B - Vertical Tab
         case '\f':  // U+000C - Form Feed
         case '\r':  // U+000D - CR
         // Unicode TR29 remarks this could be used MidNum for Word Boundaries
