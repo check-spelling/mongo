@@ -408,7 +408,7 @@ public:
      */
     Element makeElementWithNewFieldName(StringData fieldName, const BSONElement& elt);
 
-    /** Create a new element of the appopriate type to hold the given value, with the given
+    /** Create a new element of the appropriate type to hold the given value, with the given
      *  field name.
      */
     Element makeElementSafeNum(StringData fieldName, SafeNum value);

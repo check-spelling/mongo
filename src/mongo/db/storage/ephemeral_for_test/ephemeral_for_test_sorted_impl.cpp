@@ -254,7 +254,7 @@ boost::optional<std::string> UniqueIndexData::remove(RecordId loc) {
     if (it == end() || it->loc() != loc)
         return boost::none;
 
-    // Allocate string with approrpriate amount of space
+    // Allocate string with appropriate amount of space
     std::string output(_memoryUsage() - it->size(), '\0');
     auto pos = output.data();
 

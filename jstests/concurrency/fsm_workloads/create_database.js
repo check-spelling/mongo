@@ -7,7 +7,7 @@
  * Create using all different methods, implicitly by inserting, creating views/indexes etc.
  *
  * Each thread uses its own database, though sometimes threads may try to create databases with
- * names that only differ in case, expecting the appriopriate error code.
+ * names that only differ in case, expecting the appropriate error code.
  *
  * @tags: [creates_background_indexes]
  */

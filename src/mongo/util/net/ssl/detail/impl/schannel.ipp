@@ -315,7 +315,7 @@ ssl_want SSLHandshakeManager::doServerHandshake(asio::error_code& ec,
 
     if (ss < SEC_E_OK) {
         if (ss == SEC_E_INCOMPLETE_MESSAGE) {
-            // TODO: consider using SECBUFFER_MISSING and approriate optimizations
+            // TODO: consider using SECBUFFER_MISSING and appropriate optimizations
             return ssl_want::want_input_and_retry;
         }
 
