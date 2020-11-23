@@ -329,7 +329,7 @@ class VersionInfo:
             if self.ver_str.endswith('-'):
                 self.ver_str = self.ver_str[0:-1]
 
-            # Boost keeps varying the version strings so filter for anything with 2 or more ascii charaters
+            # Boost keeps varying the version strings so filter for anything with 2 or more ascii characters
             if RE_LETTERS.search(self.ver_str):
                 self.production_version = False
                 return
