@@ -61,11 +61,11 @@ AccumulationExpression AccumulatorInternalJsReduce::parseInternalJsReduce(
     }
     uassert(31245,
             str::stream() << kAccumulatorName
-                          << " requires 'eval' argument, recieved input: " << obj.toString(false),
+                          << " requires 'eval' argument, received input: " << obj.toString(false),
             !funcSource.empty());
     uassert(31349,
             str::stream() << kAccumulatorName
-                          << " requires 'data' argument, recieved input: " << obj.toString(false),
+                          << " requires 'data' argument, received input: " << obj.toString(false),
             argument);
 
     auto factory = [expCtx, funcSource = funcSource]() {

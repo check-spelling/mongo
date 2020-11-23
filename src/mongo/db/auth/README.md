@@ -74,7 +74,7 @@ on the chosen mechanism (more on the mechanisms in the [SASL](#sasl) section). T
 a reply to the client with information regarding the status of authentication. If both
 authentication and authorization are complete, the client can begin executing commands against the
 server. If authentication requires more information to complete, the server requests this
-information. If authentication fails, then the client recieves that information and potentially
+information. If authentication fails, then the client receives that information and potentially
 closes the session.
 
 If, after the first SASL step, there is more work to be done, the client sends a
@@ -152,7 +152,7 @@ the storage mechanism is listed as a sub-bullet below.
       on the database. See [authorization](#authorization) for more information.
   - **With Native LDAP**
     - When the PLAIN mechanism uses `Native LDAP`, the credential information is sent to and
-      recieved from LDAP when creating and authorizing a user. The mongo server sends user
+      received from LDAP when creating and authorizing a user. The mongo server sends user
       credentials over the wire to the LDAP server and the LDAP server requests a password. The
       mongo server sends the password in plain text and LDAP responds with whether the password is
       correct. Here the communication with the driver and the mongod is the same, but the storage
