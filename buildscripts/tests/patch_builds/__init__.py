@@ -1,1 +1,1 @@
-"""Unit tests for buildscripts.patch_builds patckage."""
+"""Unit tests for buildscripts.patch_builds package."""
