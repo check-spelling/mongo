@@ -53,7 +53,7 @@ using std::stringstream;
 
    useful before performing a long series of operations where we want to
    see if any of the operations triggered an error, but don't want to check
-   after each op as that woudl be a client/server turnaround.
+   after each op as that would be a client/server turnaround.
 */
 class CmdResetError : public BasicCommand {
 public:

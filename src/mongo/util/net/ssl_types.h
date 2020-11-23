@@ -43,7 +43,7 @@ constexpr StringData kOID_CommonName = "2.5.4.3"_sd;
  * Represents a structed X509 certificate subject name.
  * For example: C=US,O=MongoDB,OU=KernelTeam,CN=server
  * would be held as a four element vector of Entries.
- * The first entry of which yould be broken down something like:
+ * The first entry of which would be broken down something like:
  * {{"2.5.4.6", 19, "US"}}.
  * Note that _entries is a vector of vectors to accomodate
  * multi-value RDNs.
