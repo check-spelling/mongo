@@ -329,6 +329,6 @@ public:
     }
 };
 
-OldStyleSuiteInitializer<All> aueryStageIxscanAll;
+OldStyleSuiteInitializer<All> queryStageIxscanAll;
 
 }  // namespace QueryStageIxscan
