@@ -502,7 +502,7 @@ class _CppTypeOptional(_CppTypeDelegating):
         convert = self._base.get_transform_to_getter_type(base_expression)
         if convert:
             # We need to convert between two different types of optional<T> and yet provide
-            # the ability for the user specifiy an uninitialized optional. This occurs
+            # the ability for the user specify an uninitialized optional. This occurs
             # for vector<mongo::StringData> and vector<std::string> paired together.
             return common.template_args(
                 textwrap.dedent("""\

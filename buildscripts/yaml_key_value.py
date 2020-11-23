@@ -23,9 +23,9 @@ def main():
 
     (options, _) = parser.parse_args()
     if not options.yaml_file:
-        parser.error("Must specifiy '--yamlFile'")
+        parser.error("Must specify '--yamlFile'")
     if not options.yaml_key:
-        parser.error("Must specifiy '--yamlKey'")
+        parser.error("Must specify '--yamlKey'")
 
     print(get_yaml_value(options.yaml_file, options.yaml_key))
 

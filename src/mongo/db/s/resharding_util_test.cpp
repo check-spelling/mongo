@@ -53,7 +53,7 @@ namespace mongo {
 namespace {
 
 /**
- * Mock interface to allow specifiying mock results for the lookup pipeline.
+ * Mock interface to allow specifying mock results for the lookup pipeline.
  */
 class MockMongoInterface final : public StubMongoProcessInterface {
 public:

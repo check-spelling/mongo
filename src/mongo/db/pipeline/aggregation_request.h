@@ -361,7 +361,7 @@ private:
     // This is an internal option; we do not expect it to be set on requests from users or drivers.
     boost::optional<ExchangeSpec> _exchangeSpec;
 
-    // The explicit writeConcern for the operation or boost::none if the user did not specifiy one.
+    // The explicit writeConcern for the operation or boost::none if the user did not specify one.
     boost::optional<WriteConcernOptions> _writeConcern;
 
     // A document containing runtime constants; i.e. values that do not change once computed (e.g.

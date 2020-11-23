@@ -1193,7 +1193,7 @@ protected:
     }
 
     /**
-     * Overloaded so that it is not necessary to specificy sort and project.
+     * Overloaded so that it is not necessary to specify sort and project.
      */
     void assertPlanCacheRecoversSolution(const BSONObj& query, const string& solnJson) {
         assertPlanCacheRecoversSolution(query, BSONObj(), BSONObj(), BSONObj(), solnJson);
