@@ -89,7 +89,7 @@ assert.writeErrorWithCode(
     t.update({_id: 100}, {$push: {x: {$each: [{a: 2}], $slice: -2, $sort: {a: -2}}}}),
     ErrorCodes.BadValue);
 
-// Support sorting array alements that are not documents.
+// Support sorting array elements that are not documents.
 assert.commandWorked(t.update({_id: 100}, {$push: {x: {$each: [{a: 2}], $slice: -2, $sort: 1}}}));
 
 // The key pattern 'a.' is an invalid value for $sort.

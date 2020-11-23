@@ -110,7 +110,7 @@ def _read_vcxproj(file_name):
 
 
 def _replace_vcxproj(file_name, restore_elements):
-    """Parse a vcxproj file, and replace elememts text nodes with values saved before."""
+    """Parse a vcxproj file, and replace elements text nodes with values saved before."""
     # Skip if this the first run
     if not restore_elements:
         return
