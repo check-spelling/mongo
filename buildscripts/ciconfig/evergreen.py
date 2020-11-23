@@ -407,7 +407,7 @@ class ResmokeArgs(object):
     def get_arg(resmoke_args, name):
         """Return the value from the first --'name' in the 'resmoke_args' string or None.
 
-        Raise an excpetion in the case there is more than one occurrence of '--name'.
+        Raise an exception in the case there is more than one occurrence of '--name'.
         """
         return ResmokeArgs._get_first_match(resmoke_args, name, "value")
 

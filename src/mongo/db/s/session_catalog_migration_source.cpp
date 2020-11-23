@@ -416,8 +416,8 @@ boost::optional<repl::OplogEntry> SessionCatalogMigrationSource::SessionOplogIte
         // guaranteed that they are majority committed. If we can't fetch the oplog, it can either
         // mean that the oplog has been rolled over or was rolled back.
         return _writeHistoryIterator->next(opCtx);
-    } catch (const AssertionException& excep) {
-        if (excep.code() == ErrorCodes::IncompleteTransactionHistory) {
+    } catch (const AssertionException& exception) {
+        if (exception.code() == ErrorCodes::IncompleteTransactionHistory) {
             // Note: no need to check if in replicaSet mode because having an iterator implies
             // oplog exists.
             auto rollbackId = repl::ReplicationProcess::get(opCtx)->getRollbackID();

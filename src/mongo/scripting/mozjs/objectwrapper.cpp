@@ -564,7 +564,7 @@ BSONObj ObjectWrapper::toBSON() {
         // we always destroy them before we destroy 'b'. It is
         // important to do so: if 'b' is destroyed before the frames,
         // and we don't pop all of the frames (say, due to an
-        // exeption), then the frame dtors would write to freed
+        // exception), then the frame dtors would write to freed
         // memory.
         WriteFieldRecursionFrames frames;
         frames.emplace(_context, _object, nullptr, StringData{});

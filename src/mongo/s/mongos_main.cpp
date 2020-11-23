@@ -307,11 +307,11 @@ void cleanupTask(const ShutdownTaskArgs& shutdownArgs) {
         try {
             // Abort transactions while we can still send remote commands.
             implicitlyAbortAllTransactions(opCtx);
-        } catch (const DBException& excep) {
+        } catch (const DBException& exception) {
             LOGV2_WARNING(22854,
                           "Encountered {error} while trying to abort all active transactions",
                           "Error aborting all active transactions",
-                          "error"_attr = excep);
+                          "error"_attr = exception);
         }
 
         if (auto lsc = LogicalSessionCache::get(serviceContext)) {
