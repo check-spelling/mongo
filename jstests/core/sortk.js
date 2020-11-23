@@ -52,7 +52,7 @@ assert.eq(6, simpleQueryWithLimit(0).itcount());
 assert.eq(6, simpleQueryWithLimit(0).explain(true).executionStats.totalKeysExamined);
 assert.eq(5, simpleQueryWithLimit(0).skip(1).itcount());
 
-// The query has additional constriants, preventing limit optimization.
+// The query has additional constraints, preventing limit optimization.
 assert.eq(2, simpleQuery({$where: 'this.b>=2'}).limit(-1)[0].b);
 
 // The sort order is the reverse of the index order.

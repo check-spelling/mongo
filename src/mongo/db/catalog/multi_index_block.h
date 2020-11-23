@@ -213,7 +213,7 @@ public:
     Status retrySkippedRecords(OperationContext* opCtx, const CollectionPtr& collection);
 
     /**
-     * Check any constraits that may have been temporarily violated during the index build for
+     * Check any constraints that may have been temporarily violated during the index build for
      * background indexes using an IndexBuildInterceptor to capture writes. The caller is
      * responsible for ensuring that all writes on the collection are visible.
      *

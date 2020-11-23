@@ -223,7 +223,7 @@ public:
     int _positionalStart;  // The starting position if this is a positional option. -1 otherwise.
     int _positionalEnd;    // The ending position if this is a positional option.  -1 if unlimited.
 
-    // TODO(sverch): We have to use pointers to keep track of the Constrants because we rely on
+    // TODO(sverch): We have to use pointers to keep track of the Constraints because we rely on
     // inheritance to make Constraints work.  We have to use shared_ptrs because the
     // OptionDescription is sometimes copied and because it is stored in a std::list in the
     // OptionSection.  We should think about a better solution for the ownership semantics of
