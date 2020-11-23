@@ -44,7 +44,7 @@ namespace {
 
 TEST(RegistryList, MixedOperationsSingleThread) {
     /**
-     * Show that iterleaved add() and iter() calls function as expected
+     * Show that interleaved add() and iter() calls function as expected
      */
 
     RegistryList<boost::optional<int>> list;
