@@ -36,7 +36,7 @@ namespace mongo {
 
 /**
  * This is a nano-second precision clock. We're skipping the
- * harware TSC in favor of clock_gettime() which in some systems
+ * hardware TSC in favor of clock_gettime() which in some systems
  * does not involve a trip to the OS (VDSO).
  *
  * We're exporting a type WallTime that is and should remain
