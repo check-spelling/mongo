@@ -539,18 +539,18 @@ std::string MongoURI::canonicalizeURIAsString() const {
 
     const auto& servers = _connectString.getServers();
     if (!servers.empty()) {
-        auto delimeter = "";
+        auto delimiter = "";
         for (auto& hostAndPort : servers) {
             if (boost::count(hostAndPort.host(), ':') > 1) {
-                uri << delimeter << "[" << uriEncode(hostAndPort.host()) << "]"
+                uri << delimiter << "[" << uriEncode(hostAndPort.host()) << "]"
                     << ":" << uriEncode(std::to_string(hostAndPort.port()));
             } else if (StringData(hostAndPort.host()).endsWith(".sock")) {
-                uri << delimeter << uriEncode(hostAndPort.host());
+                uri << delimiter << uriEncode(hostAndPort.host());
             } else {
-                uri << delimeter << uriEncode(hostAndPort.host()) << ":"
+                uri << delimiter << uriEncode(hostAndPort.host()) << ":"
                     << uriEncode(std::to_string(hostAndPort.port()));
             }
-            delimeter = ",";
+            delimiter = ",";
         }
     } else {
         uri << kDefaultMongoHost;
@@ -562,11 +562,11 @@ std::string MongoURI::canonicalizeURIAsString() const {
     }
 
     if (!_options.empty()) {
-        auto delimeter = "";
+        auto delimiter = "";
         uri << "?";
         for (const auto& pair : _options) {
-            uri << delimeter << uriEncode(pair.first.original()) << "=" << uriEncode(pair.second);
-            delimeter = "&";
+            uri << delimiter << uriEncode(pair.first.original()) << "=" << uriEncode(pair.second);
+            delimiter = "&";
         }
     }
     return uri.str();
