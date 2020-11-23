@@ -124,7 +124,7 @@ public:
     virtual StringData jsEngine() const noexcept = 0;
 
     /**
-     * Returns a string describing the minimum requred OS. Note that this method is currently only
+     * Returns a string describing the minimum required OS. Note that this method is currently only
      * valid to call when running on Windows.
      */
     virtual StringData targetMinOS() const noexcept = 0;
