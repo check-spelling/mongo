@@ -288,7 +288,7 @@ private:
 };
 
 /**
- * Uses a format similar to, but incompatable with ISO 8601
+ * Uses a format similar to, but incompatible with ISO 8601
  * to produce UTC based datetimes suitable for use in filenames.
  */
 std::string terseCurrentTimeForFilename(bool appendZed = false);

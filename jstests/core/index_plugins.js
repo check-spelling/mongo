@@ -44,9 +44,9 @@ assert.commandFailedWithCode(coll.createIndex({a: "hashed", b: "hashed"}), 31303
 assert.commandFailedWithCode(coll.createIndex({c: 1, a: "hashed", b: "hashed"}), 31303);
 
 // Test compounding different special index types with each other.
-const incompatableIndexTypes = ["2d", "2dsphere", "hashed", "text"];
-for (let indexType1 of incompatableIndexTypes) {
-    for (let indexType2 of incompatableIndexTypes) {
+const incompatibleIndexTypes = ["2d", "2dsphere", "hashed", "text"];
+for (let indexType1 of incompatibleIndexTypes) {
+    for (let indexType2 of incompatibleIndexTypes) {
         if (indexType1 == indexType2) {
             continue;
         }

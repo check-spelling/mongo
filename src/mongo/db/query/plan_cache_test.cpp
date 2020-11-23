@@ -2079,7 +2079,7 @@ TEST(PlanCacheTest, ComputeKeyWildcardDiscriminatesCorrectlyBasedOnPartialFilter
     }
 
     // Test that the discriminators are correct for an $eq:null predicate on 'x'. This predicate is
-    // imcompatible for two reasons: null equality predicates cannot be answered by wildcard
+    // incompatible for two reasons: null equality predicates cannot be answered by wildcard
     // indexes, and the predicate is not compatible with the partial filter expression. This should
     // result in two "0" bits inside the discriminator string.
     {
