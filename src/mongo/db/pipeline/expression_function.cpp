@@ -49,7 +49,7 @@ Value ExpressionFunction::serialize(bool explain) const {
     d["body"] = Value(_funcSource);
     d["args"] = Value(_passedArgs->serialize(explain));
     d["lang"] = Value(_lang);
-    // This field will only be seralized when desugaring $where in $expr + $_internalJs
+    // This field will only be serialized when desugaring $where in $expr + $_internalJs
     if (_assignFirstArgToThis) {
         d["_internalSetObjToThis"] = Value(_assignFirstArgToThis);
     }
