@@ -302,7 +302,7 @@ TEST_F(TransactionRouterTestWithDefaultSession, BasicStartTxnWithAtClusterTime) 
     }
 }
 
-TEST_F(TransactionRouterTestWithDefaultSession, CannotContiueTxnWithoutStarting) {
+TEST_F(TransactionRouterTestWithDefaultSession, CannotContinueTxnWithoutStarting) {
     TxnNumber txnNum{3};
 
     auto txnRouter = TransactionRouter::get(operationContext());
