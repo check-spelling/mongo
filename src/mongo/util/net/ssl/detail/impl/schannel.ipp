@@ -128,7 +128,7 @@ ssl_want SSLHandshakeManager::beginShutdown(asio::error_code& ec) {
 }
 
 /*
- * Injest data from ASIO that has been received.
+ * Ingest data from ASIO that has been received.
  */
 void SSLHandshakeManager::writeEncryptedData(const void* data, std::size_t length) {
     // We have more data, it may not be enough to decode. We will decide if we have enough on
