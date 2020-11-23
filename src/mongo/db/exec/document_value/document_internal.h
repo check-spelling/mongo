@@ -320,7 +320,7 @@ public:
     enum class LookupPolicy {
         // When looking up a field check the cache only.
         kCacheOnly,
-        // Look up in a cache and when not found search the unrelying BSON.
+        // Look up in a cache and when not found search the underlying BSON.
         kCacheAndBSON
     };
 
