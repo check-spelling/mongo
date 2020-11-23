@@ -229,7 +229,7 @@ private:
     /*
      * Operator method to support #CONCAT : { key : { #CONCAT: ["hello", " ", "world", 2012] } }
      * The array argument to CONCAT are the strings to be concatenated. If the argument is not
-     * a std::string it will be stringified and concatendated.
+     * a std::string it will be stringified and concatenated.
      * This will evaluate to { key : "hello world2012" }
      */
     static Status evalConcat(BsonTemplateEvaluator* btl,
