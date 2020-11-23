@@ -286,7 +286,7 @@ Mongo.prototype.getReadPref = function() {
         obj.tags = tagSet;
     }
 
-    // Hedged Reads Spec: - if readPref mode is "primary" then the hegde.enabled MUST
+    // Hedged Reads Spec: - if readPref mode is "primary" then the hedge.enabled MUST
     // be false. Ensured by setReadPref.
     const hedgeOptions = this.getReadPrefHedgeOptions();
     if (typeof (hedgeOptions) === "object") {
