@@ -398,7 +398,7 @@ boost::intrusive_ptr<ExpressionContext> makeExpressionContext(
 }
 
 /**
- * Upconverts the read concern for a change stream aggregation, if necesssary.
+ * Upconverts the read concern for a change stream aggregation, if necessary.
  *
  * If there is no given read concern level on the given object, upgrades the level to 'majority' and
  * waits for read concern. If a read concern level is already specified on the given read concern

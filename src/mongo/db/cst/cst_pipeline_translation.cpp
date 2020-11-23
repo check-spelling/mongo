@@ -82,7 +82,7 @@ auto translateLiteralArrayToValue(const CNode::ArrayChildren& array) {
 }
 
 /**
- * Walk a literal object payload and produce a Value. This function is neccesary because Aggregation
+ * Walk a literal object payload and produce a Value. This function is necessary because Aggregation
  * Expression literals are required to be collapsed into Values inside ExpressionConst but
  * uncollapsed otherwise.
  */
@@ -97,7 +97,7 @@ auto translateLiteralObjectToValue(const CNode::ObjectChildren& object) {
 }
 
 /**
- * Walk a purely literal CNode and produce a Value. This function is neccesary because Aggregation
+ * Walk a purely literal CNode and produce a Value. This function is necessary because Aggregation
  * Expression literals are required to be collapsed into Values inside ExpressionConst but
  * uncollapsed otherwise.
  */

@@ -72,7 +72,7 @@ testExplainAndExpectStage({
     hintIndex: {x: 1}
 });
 
-// Add an index which includes the shard key. This means the FETCH should no longer be necesary
+// Add an index which includes the shard key. This means the FETCH should no longer be necessary
 // since the SHARDING_FILTER can get the shard key straight from the index.
 const kNewIndexSpec = {
     x: 1,
