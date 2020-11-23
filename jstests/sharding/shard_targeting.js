@@ -30,7 +30,7 @@ s.printShardingStatus();
 
 // Count documents on both shards
 
-// "count" commnad with "query" option { }.
+// "count" command with "query" option { }.
 assert.eq(db.foo.count(), 100);
 // Optional "query" option is not given.
 res = db.foo.runCommand("count");

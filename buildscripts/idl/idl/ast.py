@@ -204,7 +204,7 @@ class Field(common.SourceLocation):
 
 class Command(Struct):
     """
-    IDL commmand information.
+    IDL command information.
 
     All fields are either required or have a non-None default.
     """

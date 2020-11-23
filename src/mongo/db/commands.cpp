@@ -346,7 +346,7 @@ bool CommandHelpers::appendCommandStatusNoThrow(BSONObjBuilder& result, const St
         } catch (const DBException&) {
             invariant(false,
                       "invalid error-response to a command constructed in "
-                      "CommandHelpers::appendComandStatusNoThrow. All erroring command responses "
+                      "CommandHelpers::appendCommandStatusNoThrow. All erroring command responses "
                       "must comply with the format specified by the IDL-defined struct ErrorReply, "
                       "defined in idl/basic_types.idl");
         }

@@ -773,7 +773,7 @@ DispatchShardPipelineResults dispatchShardPipeline(
     // pipeline; if not, we retain the existing pipeline.
     // - Call establishShardCursors to dispatch the aggregation to the targeted shards.
     // - Stale shard version errors are thrown up to the top-level handler, causing a retry on the
-    // entire aggregation commmand.
+    // entire aggregation command.
     auto cursors = std::vector<RemoteCursor>();
     auto shardResults = std::vector<AsyncRequestsSender::Response>();
     auto opCtx = expCtx->opCtx;
