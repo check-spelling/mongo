@@ -148,7 +148,7 @@ const ASN1OID mongodbRolesOID("1.3.6.1.4.1.34601.2.1.1",
                               "Sequence of MongoDB Database Roles");
 
 /**
- * Counts of negogtiated version used by TLS connections.
+ * Counts of negotiated version used by TLS connections.
  */
 struct TLSVersionCounts {
     AtomicWord<long long> tlsUnknown;
