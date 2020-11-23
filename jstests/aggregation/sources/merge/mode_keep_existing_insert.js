@@ -319,7 +319,7 @@ const pipeline = [mergeStage];
 })();
 
 // Test $merge preserves indexes and options of the existing target collection.
-(function testMergePresrvesIndexesAndOptions() {
+(function testMergePreservesIndexesAndOptions() {
     const validator = {a: {$gt: 0}};
     dropWithoutImplicitRecreate(target.getName());
     assert.commandWorked(db.createCollection(target.getName(), {validator: validator}));
