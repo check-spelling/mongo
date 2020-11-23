@@ -291,7 +291,7 @@ private:
     // TargetedWrite*s are owned by the TargetedWriteBatch
     OwnedPointerVector<TargetedWrite> _writes;
 
-    // Conservatvely estimated size of the batch, for ensuring it doesn't grow past the maximum BSON
+    // Conservatively estimated size of the batch, for ensuring it doesn't grow past the maximum BSON
     // size
     int _estimatedSizeBytes{0};
 };
