@@ -2293,7 +2293,7 @@ if get_option('wiredtiger') == 'on':
 if env['TARGET_ARCH'] == 'i386':
     # If we are using GCC or clang to target 32 bit, set the ISA minimum to 'nocona',
     # and the tuning to 'generic'. The choice of 'nocona' is selected because it
-    #  -- includes MMX extenions which we need for tcmalloc on 32-bit
+    #  -- includes MMX extensions which we need for tcmalloc on 32-bit
     #  -- can target 32 bit
     #  -- is at the time of this writing a widely-deployed 10 year old microarchitecture
     #  -- is available as a target architecture from GCC 4.0+
