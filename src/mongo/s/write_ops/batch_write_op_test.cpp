@@ -400,7 +400,7 @@ TEST_F(BatchWriteOpTest, MultiOpSameShardUnordered) {
     ASSERT_EQUALS(clientResponse.getN(), 2);
 }
 
-// Multi-op, multi-endpoing targeting test (ordered). There should be two sets of single batches
+// Multi-op, multi-endpoint targeting test (ordered). There should be two sets of single batches
 // (one to each shard, one-by-one)
 TEST_F(BatchWriteOpTest, MultiOpTwoShardsOrdered) {
     NamespaceString nss("foo.bar");
