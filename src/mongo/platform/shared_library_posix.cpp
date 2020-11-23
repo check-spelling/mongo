@@ -72,7 +72,7 @@ StatusWith<void*> SharedLibrary::getSymbol(StringData name) {
     // Ignore return
     dlerror();
 
-    // StringData is not assued to be null-terminated
+    // StringData is not assured to be null-terminated
     std::string symbolName = name.toString();
 
     void* symbol = dlsym(_handle, symbolName.c_str());

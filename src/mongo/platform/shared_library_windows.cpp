@@ -72,7 +72,7 @@ StatusWith<std::unique_ptr<SharedLibrary>> SharedLibrary::create(
 }
 
 StatusWith<void*> SharedLibrary::getSymbol(StringData name) {
-    // StringData is not assued to be null-terminated
+    // StringData is not assured to be null-terminated
     std::string symbolName = name.toString();
 
     void* function = GetProcAddress(static_cast<HMODULE>(_handle), symbolName.c_str());
