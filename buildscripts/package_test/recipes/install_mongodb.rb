@@ -11,7 +11,7 @@ ruby_block 'allow sudo over tty' do
   end
 end
 
-# This file limits processes to 1024. It therefore interfereres with `ulimit -u` when present.
+# This file limits processes to 1024. It therefore interferers with `ulimit -u` when present.
 if platform_family? 'rhel'
   file '/etc/security/limits.d/90-nproc.conf' do
     action :delete
