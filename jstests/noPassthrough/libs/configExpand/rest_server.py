@@ -64,7 +64,7 @@ class ConfigExpandRestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(response)
 
         except BrokenPipeError as err:
-            # Broken pipe is reasonale if we're deliberately going slow.
+            # Broken pipe is reasonable if we're deliberately going slow.
             if sleep == 0:
                 raise err
 
