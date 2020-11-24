@@ -6,7 +6,7 @@
 load("jstests/libs/parallel_shell_helpers.js");
 load("jstests/libs/fail_point_util.js");
 
-// Test hello paramaters on a single node replica set.
+// Test hello parameters on a single node replica set.
 const replSetName = "awaitable_hello_stepup";
 const replTest = new ReplSetTest({name: replSetName, nodes: 1});
 replTest.startSet();

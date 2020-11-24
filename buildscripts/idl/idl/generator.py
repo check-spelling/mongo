@@ -2084,7 +2084,7 @@ class _CppSourceFileWriter(_CppFileWriterBase):
 
     def _gen_server_parameter_deprecated_aliases(self, param_no, param):
         # type: (int, ast.ServerParameter) -> None
-        """Generate IDLServerParamterDeprecatedAlias instance."""
+        """Generate IDLServerParameterDeprecatedAlias instance."""
 
         for alias_no, alias in enumerate(param.deprecated_name):
             self._writer.write_line(

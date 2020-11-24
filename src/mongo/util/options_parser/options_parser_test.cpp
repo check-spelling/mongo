@@ -2217,17 +2217,17 @@ TEST(JSONConfigFile, ComposingStringVector) {
     ASSERT_OK(parser.run(testOpts, argv, &environment));
     ASSERT_OK(environment.get(moe::Key("setParameter"), &value));
     std::vector<std::string> setParameter;
-    std::vector<std::string>::iterator setParameterit;
+    std::vector<std::string>::iterator setParameter;
     ASSERT_OK(value.get(&setParameter));
     ASSERT_EQUALS(setParameter.size(), static_cast<size_t>(4));
-    setParameterit = setParameter.begin();
-    ASSERT_EQUALS(*setParameterit, "val3");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val4");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val1");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val2");
+    setParameter = setParameter.begin();
+    ASSERT_EQUALS(*setParameter, "val3");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val4");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val1");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val2");
 }
 
 TEST(JSONConfigFile, ComposingStringMap) {
@@ -2309,17 +2309,17 @@ TEST(INIConfigFile, ComposingStringVector) {
     ASSERT_OK(parser.run(testOpts, argv, &environment));
     ASSERT_OK(environment.get(moe::Key("setParameter"), &value));
     std::vector<std::string> setParameter;
-    std::vector<std::string>::iterator setParameterit;
+    std::vector<std::string>::iterator setParameter;
     ASSERT_OK(value.get(&setParameter));
     ASSERT_EQUALS(setParameter.size(), static_cast<size_t>(4));
-    setParameterit = setParameter.begin();
-    ASSERT_EQUALS(*setParameterit, "val3");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val4");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val1");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val2");
+    setParameter = setParameter.begin();
+    ASSERT_EQUALS(*setParameter, "val3");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val4");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val1");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val2");
 }
 
 TEST(INIConfigFile, ComposingStringMap) {
@@ -2400,17 +2400,17 @@ TEST(YAMLConfigFile, ComposingStringVector) {
     ASSERT_OK(parser.run(testOpts, argv, &environment));
     ASSERT_OK(environment.get(moe::Key("setParameter"), &value));
     std::vector<std::string> setParameter;
-    std::vector<std::string>::iterator setParameterit;
+    std::vector<std::string>::iterator setParameter;
     ASSERT_OK(value.get(&setParameter));
     ASSERT_EQUALS(setParameter.size(), static_cast<size_t>(4));
-    setParameterit = setParameter.begin();
-    ASSERT_EQUALS(*setParameterit, "val3");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val4");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val1");
-    setParameterit++;
-    ASSERT_EQUALS(*setParameterit, "val2");
+    setParameter = setParameter.begin();
+    ASSERT_EQUALS(*setParameter, "val3");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val4");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val1");
+    setParameter++;
+    ASSERT_EQUALS(*setParameter, "val2");
 }
 
 TEST(YAMLConfigFile, ComposingStringMap) {

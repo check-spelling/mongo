@@ -256,7 +256,7 @@ log statement.
 
 `LOGV2` is the logging macro for the default informational (0) severity. To log
 to different severities there are separate logging macros to be used, they all
-take paramaters like `LOGV2`:
+take parameters like `LOGV2`:
 
 * `LOGV2_WARNING`
 * `LOGV2_ERROR`

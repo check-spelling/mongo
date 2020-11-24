@@ -74,7 +74,7 @@ TEST(MatchExpressionParserTest, MinDistanceWithoutNearFailsToParse) {
 
 StatusWith<int> fib(int n) {
     if (n < 0)
-        return StatusWith<int>(ErrorCodes::BadValue, "paramter to fib has to be >= 0");
+        return StatusWith<int>(ErrorCodes::BadValue, "parameter to fib has to be >= 0");
     if (n <= 1)
         return StatusWith<int>(1);
     StatusWith<int> a = fib(n - 1);

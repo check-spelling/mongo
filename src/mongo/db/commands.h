@@ -923,7 +923,7 @@ class ErrmsgCommandDeprecated : public BasicCommand {
  *
  *     class MyCommand : public TypedCommand<MyCommand> {...};
  *
- * The 'Derived' type paramter must have:
+ * The 'Derived' type parameter must have:
  *
  *   - 'Request' naming a usable request type.
  *     A usable Request type must have:

@@ -14,7 +14,7 @@ const collName = "test";
 const dbpath = MongoRunner.dataPath + baseName + "/";
 
 /**
- * Run the test by supplying additional paramters to MongoRunner.runMongod with 'mongodOptions'.
+ * Run the test by supplying additional parameters to MongoRunner.runMongod with 'mongodOptions'.
  */
 let runTest = function(mongodOptions) {
     resetDbpath(dbpath);

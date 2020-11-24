@@ -490,7 +490,7 @@ public:
     /**
      * Replace the current base Document with bson.
      *
-     * The paramater 'stripMetadata' controls whether we strip the metadata fields from the
+     * The parameter 'stripMetadata' controls whether we strip the metadata fields from the
      * underlying bson when converting the document object back to bson.
      */
     void reset(const BSONObj& bson, bool stripMetadata) {
@@ -652,7 +652,7 @@ public:
 
     /** Create a new document storage with the BSON object.
      *
-     *  The optional paramater 'stripMetadata' controls whether we strip the metadata fields (the
+     *  The optional parameter 'stripMetadata' controls whether we strip the metadata fields (the
      *  complete list is in Document::allMetadataFieldNames).
      */
     DocumentStorage& newStorageWithBson(const BSONObj& bson, bool stripMetadata) {

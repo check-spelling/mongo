@@ -17,7 +17,7 @@ function runAwaitableCmd(cmd, topologyVersionField) {
 }
 
 function runTest(cmd) {
-    // Test hello/isMaster paramaters on a single node replica set.
+    // Test hello/isMaster parameters on a single node replica set.
     const replTest = new ReplSetTest({name: "awaitable_cmd_metrics", nodes: 1});
     replTest.startSet();
     replTest.initiate();
