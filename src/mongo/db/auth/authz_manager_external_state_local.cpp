@@ -135,7 +135,7 @@ void serializeResolvedRoles(BSONObjBuilder* user,
 }
 
 /**
- * Make sure the roleDoc as retreived from storage matches expectations for options.
+ * Make sure the roleDoc as retrieved from storage matches expectations for options.
  */
 constexpr auto kRolesFieldName = "roles"_sd;
 constexpr auto kPrivilegesFieldName = "privileges"_sd;

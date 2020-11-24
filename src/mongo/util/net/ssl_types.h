@@ -65,7 +65,7 @@ public:
     explicit SSLX509Name(std::vector<std::vector<Entry>> entries) : _entries(std::move(entries)) {}
 
     /**
-     * Retreive the first instance of the value for a given OID in this name.
+     * Retrieve the first instance of the value for a given OID in this name.
      * Returns ErrorCodes::KeyNotFound if the OID does not exist.
      */
     StatusWith<std::string> getOID(StringData oid) const;

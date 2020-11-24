@@ -55,7 +55,7 @@ StatusWith<size_t> getProperty(StringData propname) {
     size_t value;
     if (!MallocExtension::instance()->GetNumericProperty(propname.toString().c_str(), &value)) {
         return {ErrorCodes::InternalError,
-                str::stream() << "Failed to retreive tcmalloc prop: " << propname};
+                str::stream() << "Failed to retrieve tcmalloc prop: " << propname};
     }
     return value;
 }

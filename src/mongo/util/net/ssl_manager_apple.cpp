@@ -993,7 +993,7 @@ StatusWith<CFUniquePtr<::CFArrayRef>> copyMatchingCertificate(
         CFUniquePtr<::SecCertificateRef> cfcert(cert);
         if (status != ::errSecSuccess) {
             return {ErrorCodes::InvalidSSLConfiguration,
-                    "Unable to retreive certificate from identity"};
+                    "Unable to retrieve certificate from identity"};
         }
 
         if (!selector.subject.empty()) {
@@ -1002,7 +1002,7 @@ StatusWith<CFUniquePtr<::CFArrayRef>> copyMatchingCertificate(
                 ::SecCertificateCopySubjectSummary(cfcert.get()));
             if (!certSubject) {
                 return {ErrorCodes::InvalidSSLConfiguration,
-                        "Unable to retreive subject summary from identity"};
+                        "Unable to retrieve subject summary from identity"};
             }
             auto swSubjectSummary = toString(certSubject.get());
             if (!swSubjectSummary.isOK()) {
@@ -1081,7 +1081,7 @@ std::string explainTrustFailure(::SecTrustRef trust, ::SecTrustResultType result
 
     CFUniquePtr<::CFArrayRef> cfprops(::SecTrustCopyProperties(trust));
     if (!cfprops) {
-        return ret("Unable to retreive cause for trust failure");
+        return ret("Unable to retrieve cause for trust failure");
     }
 
     const auto count = ::CFArrayGetCount(cfprops.get());
@@ -1553,7 +1553,7 @@ Future<SSLPeerInfo> SSLManagerApple::parseAndValidatePeerCertificate(
                                              << stringFromOSStatus(status),
                                _weakValidation);
             } else {
-                return badCert(str::stream() << "Unable to retreive SSL trust from peer: "
+                return badCert(str::stream() << "Unable to retrieve SSL trust from peer: "
                                              << stringFromOSStatus(status),
                                _weakValidation);
             }
@@ -1675,7 +1675,7 @@ Future<SSLPeerInfo> SSLManagerApple::parseAndValidatePeerCertificate(
     certErr << "The server certificate does not match the host name. "
             << "Hostname: " << remoteHost << " does not match ";
 
-    // Attempt to retreive "Subject Alternative Name"
+    // Attempt to retrieve "Subject Alternative Name"
     std::vector<std::string> sans;
     auto swSANs = extractSubjectAlternateNames(cfdict.get());
     if (swSANs.isOK()) {

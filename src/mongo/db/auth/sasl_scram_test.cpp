@@ -611,7 +611,7 @@ void testSetAndGetWithDifferentParameters() {
     ASSERT_TRUE(cache.getCachedSecrets(host, presecrets));
 
     // Alter each of: host, password, salt, iterationCount.
-    // Any one of which should fail to retreive from cache.
+    // Any one of which should fail to retrieve from cache.
     ASSERT_FALSE(cache.getCachedSecrets(HostAndPort("localhost:27018"), presecrets));
     ASSERT_FALSE(cache.getCachedSecrets(host, scram::Presecrets<HashBlock>("aab", salt, 10000)));
     const auto badSalt = scram::Presecrets<HashBlock>::generateSecureRandomSalt();
