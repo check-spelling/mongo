@@ -513,7 +513,7 @@ bool PlanEnumerator::prepMemo(MatchExpression* node, PrepMemoContext context) {
         // deeply through $and and $elemMatch children.
         std::vector<MatchExpression*> indexedPreds;
 
-        // Partition the childen into the children that aren't predicates which may or may not be
+        // Partition the children into the children that aren't predicates which may or may not be
         // indexed ('subnodes'), children that aren't predicates which must use the index
         // ('mandatorySubnodes'). and children that are predicates ('indexedPreds').
         //

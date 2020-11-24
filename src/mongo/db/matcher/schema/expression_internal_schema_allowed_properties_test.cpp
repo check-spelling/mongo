@@ -123,7 +123,7 @@ TEST(InternalSchemaAllowedPropertiesMatchExpression, EquivalentToClone) {
     ASSERT_TRUE(expr.getValue()->equivalent(clone.get()));
 }
 
-TEST(InternalSchemaAllowedPropertiesMatchExpression, HasCorrectNumberOfChilden) {
+TEST(InternalSchemaAllowedPropertiesMatchExpression, HasCorrectNumberOfChildren) {
     auto query = fromjson(
         "{$_internalSchemaAllowedProperties: {properties: ['a'], namePlaceholder: 'i',"
         "patternProperties: [{regex: /a/, expression: {i: 1}}], otherwise: {i: 7}}}");
