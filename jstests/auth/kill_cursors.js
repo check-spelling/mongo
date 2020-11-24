@@ -11,7 +11,7 @@ function runTest(mongod) {
      * Open a cursor on `db` while authenticated as `authUsers`.
      * Then logout, and log back in as `killUsers` and try to kill that cursor.
      *
-     * @param db - The db to create a cursor on and ultimately kill agains.
+     * @param db - The db to create a cursor on and ultimately kill again.
      * @param authUsers - Array of ['username', db] pairs to create the cursor under.
      * @param killUsers - Array of ['username', dn] pairs to use when killing.
      * @param shouldWork - Whether we expect success
