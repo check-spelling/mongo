@@ -39,7 +39,7 @@ namespace mongo {
 
 /**
  * this is a thread safe string
- * you will never get a bad pointer, though data may be mungedd
+ * you will never get a bad pointer, though data may be munged
  */
 class ThreadSafeString {
     ThreadSafeString(const ThreadSafeString&) = delete;
