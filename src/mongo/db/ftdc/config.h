@@ -90,7 +90,7 @@ struct FTDCConfig {
     static const std::uint64_t kMaxDirectorySizeBytesDefault = 200 * 1024 * 1024;
     static const std::uint64_t kMaxFileSizeBytesDefault = 10 * 1024 * 1024;
 
-    static const std::uint64_t kMaxFileUniqifier = 65000;
+    static const std::uint64_t kMaxFileUniquifier = 65000;
 
     static const std::uint32_t kMaxSamplesPerArchiveMetricChunkDefault = 300;
     static const std::uint32_t kMaxSamplesPerInterimMetricChunkDefault = 10;

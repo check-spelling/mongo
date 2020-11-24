@@ -144,7 +144,7 @@ StatusWith<boost::filesystem::path> FTDCFileManager::generateArchiveFileName(
     }
 
     if (boost::filesystem::exists(path)) {
-        for (; _fileNameUniquifier < FTDCConfig::kMaxFileUniqifier; ++_fileNameUniquifier) {
+        for (; _fileNameUniquifier < FTDCConfig::kMaxFileUniquifier; ++_fileNameUniquifier) {
             char buf[20];
 
             // Use leading zeros so the numbers sort lexigraphically
@@ -160,7 +160,7 @@ StatusWith<boost::filesystem::path> FTDCFileManager::generateArchiveFileName(
         }
 
         return {ErrorCodes::InvalidPath,
-                "Maximum limit reached for FTDC files in a second. The maximum file uniqifier has "
+                "Maximum limit reached for FTDC files in a second. The maximum file uniquifier has "
                 "been reached."};
     }
 
