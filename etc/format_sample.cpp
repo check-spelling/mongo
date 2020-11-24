@@ -23,7 +23,7 @@ int anony;
  * A Class comment
  */
 class Example {
-    // AccessModiferOffset: -4
+    // AccessModifierOffset: -4
 public:
     // BreakConstructorInitializersBeforeComma: false
     // ConstructorInitializerAllOnOneLineOrOnePerLine: true

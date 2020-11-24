@@ -642,7 +642,7 @@ DBQuery.prototype.tailable = function(awaitData) {
  *
  * @method
  * @see http://docs.mongodb.org/manual/reference/operator/query-modifier/
- * @param {object} document A document containing modifers to apply to the cursor.
+ * @param {object} document A document containing modifiers to apply to the cursor.
  * @return {DBQuery}
  */
 DBQuery.prototype.modifiers = function(document) {

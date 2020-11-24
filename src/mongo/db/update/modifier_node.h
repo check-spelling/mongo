@@ -92,7 +92,7 @@ protected:
      * assigning a value to the new element, which will initially be null.
      *
      * This method only gets called when the child class implementation of allowCreation() returns
-     * true. ModiferNode child classes should override setValueForNewElement() iff allowCreation()
+     * true. ModifierNode child classes should override setValueForNewElement() iff allowCreation()
      * returns true.
      */
     virtual void setValueForNewElement(mutablebson::Element* element) const {
@@ -156,7 +156,7 @@ protected:
     }
 
     /**
-     * When allowCreation() returns false, ModiferNode::apply() calls this method when determining
+     * When allowCreation() returns false, ModifierNode::apply() calls this method when determining
      * if an update to a non-existent path is a no-op or an error. When allowNonViablePath() is
      * false, an update to a path that could be created (i.e. a "viable" path) is a no-op, and an
      * update to a path that could not be created results in a PathNotViable user error. When

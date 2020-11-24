@@ -49,7 +49,7 @@ const StringData PushNode::kPositionClauseName = "$position";
 namespace {
 
 /**
- * When the $sort clause in a $push modifer is an object, that object should pass the checks in
+ * When the $sort clause in a $push modifier is an object, that object should pass the checks in
  * this function.
  */
 Status checkSortClause(const BSONObj& sortObject) {
