@@ -70,7 +70,7 @@ var sharedVertexPoly = {
 result = t.find({geo: {$geoIntersects: {$geometry: sharedVertexPoly}}});
 assert.eq(result.itcount(), 0);
 
-// Case (c): Polygons that intesersect at one point that is very close to a
+// Case (c): Polygons that intersect at one point that is very close to a
 // vertex should have the same behaviour as Case (b).
 
 var almostSharedVertexPoly = {
@@ -81,7 +81,7 @@ var almostSharedVertexPoly = {
 result = t.find({geo: {$geoIntersects: {$geometry: almostSharedVertexPoly}}});
 assert.eq(result.itcount(), 0);
 
-// Case (d): Polygons that intesersect at one point that is not quite as close
+// Case (d): Polygons that intersect at one point that is not quite as close
 // to a vertex should behave as though it were not a vertex, and should
 // geoIntersect
 
