@@ -169,7 +169,7 @@ void startWatchdog(ServiceContext* service) {
     }
 
     // If the user specified a log path, also monitor that directory.
-    // This may be redudant with the dbpath check but there is not easy way to confirm they are
+    // This may be redundant with the dbpath check but there is not easy way to confirm they are
     // duplicate.
     if (!serverGlobalParams.logpath.empty()) {
         boost::filesystem::path logFile(serverGlobalParams.logpath);
@@ -180,7 +180,7 @@ void startWatchdog(ServiceContext* service) {
     }
 
     // If the user specified an audit path, also monitor that directory.
-    // This may be redudant with the dbpath check but there is not easy way to confirm they are
+    // This may be redundant with the dbpath check but there is not easy way to confirm they are
     // duplicate.
     for (auto&& path : getWatchdogPaths()) {
         auto auditCheck = std::make_unique<DirectoryCheck>(path);
