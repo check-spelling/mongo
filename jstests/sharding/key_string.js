@@ -54,7 +54,7 @@ assert.eq("sara,mark,joe,eliot,bob,allan",
           }),
           "sort 2");
 
-// make sure we can't foce a split on an extreme key
+// make sure we can't force a split on an extreme key
 // [allan->joe)
 assert.throws(function() {
     s.adminCommand({split: "test.foo", middle: {name: "allan"}});
