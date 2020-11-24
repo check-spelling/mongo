@@ -355,7 +355,7 @@ TEST(DiffSerializationTest, ValidateComputeApproxSize) {
     ASSERT_EQ(computedSize, out.objsize() + padding);
 }
 
-TEST(DiffSerializationTest, ExecptionsWhileDiffBuildingDoesNotLeakMemory) {
+TEST(DiffSerializationTest, ExceptionsWhileDiffBuildingDoesNotLeakMemory) {
     try {
         diff_tree::DocumentSubDiffNode diffNode;
         auto subDiffNode = std::make_unique<diff_tree::ArrayNode>();

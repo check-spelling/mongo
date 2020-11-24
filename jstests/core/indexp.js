@@ -18,6 +18,6 @@ assert.commandFailed(coll.createIndex({'$a': 1}));
 assert.commandFailed(coll.createIndex({'a.$b': 1}));
 assert.commandFailed(coll.createIndex({'$db': 1}));
 assert.commandWorked(coll.createIndex({'a$ap': 1}));   // $ in middle is ok
-assert.commandWorked(coll.createIndex({'a.$id': 1}));  // $id/$db/$ref are execptions
+assert.commandWorked(coll.createIndex({'a.$id': 1}));  // $id/$db/$ref are exceptions
 
 coll.dropIndexes();
