@@ -151,7 +151,7 @@ namespace mongo {
 
 /**
  * Looks in the children stored in the 'nodes' field of 'testSoln'
- * to see if thet match the 'children' field of 'trueSoln'.
+ * to see if they match the 'children' field of 'trueSoln'.
  *
  * This does an unordered comparison, i.e. childrenMatch returns
  * true as long as the set of subtrees in testSoln's 'nodes' matches
