@@ -361,7 +361,7 @@ TEST_F(ScatterGatherTest, DoNotProcessMoreThanSufficientResponses) {
     ASSERT_TRUE(ranCompletion);
 
     net->runReadyNetworkOperations();
-    // the third resposne should not be processed, so the count should not increment
+    // the third response should not be processed, so the count should not increment
     ASSERT_EQUALS(2, sga->getResponseCount());
 
     net->exitNetwork();

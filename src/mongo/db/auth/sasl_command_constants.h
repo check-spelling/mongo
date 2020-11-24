@@ -43,7 +43,7 @@ constexpr auto saslContinueCommandName = "saslContinue"_sd;
 /// connection all privileges associated with the user after successful authentication.
 constexpr auto saslCommandAutoAuthorizeFieldName = "autoAuthorize"_sd;
 
-/// Name of the field containing the conversation identifier in server respones and saslContinue
+/// Name of the field containing the conversation identifier in server responses and saslContinue
 /// commands.
 constexpr auto saslCommandConversationIdFieldName = "conversationId"_sd;
 

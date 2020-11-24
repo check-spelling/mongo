@@ -1753,7 +1753,7 @@ int ocspClientCallback(SSL* ssl, void* arg) {
 
     // The swStapleOK object has three states. If the status returned by the function is
     // ErrorCodes::OCSPCertificateStatusRevoked, that means that the peer certificate has
-    // been revoked. If the status is OK but the value is false, that means that the respose
+    // been revoked. If the status is OK but the value is false, that means that the response
     // doesn't verify the status of the peer certificate and we need to verify that using
     // CRLs or check with the OCSP responder ourselves. If it is true, then we are done.
     if (!swStapleOK.isOK()) {

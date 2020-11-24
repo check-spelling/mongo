@@ -45,7 +45,7 @@ failCmdFailpoint.off();
 awaitRSClientHosts(mongos, {host: rsPrimary.name}, {ok: true, ismaster: true});
 
 // Force the primary node to end the isMaster stream by not setting the 'moreToCome' bit on the
-// resposne. The RSM should not mark the server as down or unknown and should continue monitoring
+// response. The RSM should not mark the server as down or unknown and should continue monitoring
 // the node.
 jsTestLog(
     "Turning on doNotSetMoreToCome failpoint. Node should return successful isMaster responses.");

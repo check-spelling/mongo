@@ -891,7 +891,7 @@ const retryOnNetworkErrorTests = [
                 }
             });
 
-            // "Acceptable" errors are not overridden inside raw reponses.
+            // "Acceptable" errors are not overridden inside raw responses.
             assert.commandWorked(testDB.createCollection(collName1));
             const res = assert.commandFailed(coll1.createIndex({x: 1}));
             assert(!res.raw.shardOne.ok, tojson(res));

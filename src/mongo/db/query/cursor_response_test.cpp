@@ -237,7 +237,7 @@ TEST(CursorResponseTest, roundTripThroughCursorResponseBuilderWithPartialResults
     auto swCursorResponse = CursorResponse::parseFromBSON(opMsg.body.addField(okStatus["ok"]));
     ASSERT_OK(swCursorResponse.getStatus());
 
-    // Confirm the CursorReponse parsed from CursorResponseBuilder output has the correct content.
+    // Confirm the CursorResponse parsed from CursorResponseBuilder output has the correct content.
     CursorResponse response = std::move(swCursorResponse.getValue());
     ASSERT_EQ(response.getCursorId(), CursorId(123));
     ASSERT_EQ(response.getNSS().ns(), "db.coll");

@@ -4764,7 +4764,7 @@ TEST_F(HeartbeatResponseReconfigTestV1,
 }
 
 // TODO(dannenberg) figure out what this is trying to test..
-TEST_F(HeartbeatResponseTestV1, ReconfigNodeRemovedBetweenHeartbeatRequestAndRepsonse) {
+TEST_F(HeartbeatResponseTestV1, ReconfigNodeRemovedBetweenHeartbeatRequestAndResponse) {
     OpTime election = OpTime(Timestamp(14, 0), 0);
     OpTime lastOpTimeApplied = OpTime(Timestamp(13, 0), 0);
 
@@ -4809,7 +4809,7 @@ TEST_F(HeartbeatResponseTestV1, ReconfigNodeRemovedBetweenHeartbeatRequestAndRep
 }
 
 // TODO(dannenberg) figure out what this is trying to test..
-TEST_F(HeartbeatResponseTestV1, ReconfigBetweenHeartbeatRequestAndRepsonse) {
+TEST_F(HeartbeatResponseTestV1, ReconfigBetweenHeartbeatRequestAndResponse) {
     OpTime election = OpTime(Timestamp(14, 0), 0);
     OpTime lastOpTimeApplied = OpTime(Timestamp(13, 0), 0);
 

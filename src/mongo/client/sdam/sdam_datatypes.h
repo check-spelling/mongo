@@ -119,7 +119,7 @@ private:
     // The round trip time to execute the command (or boost::none if it failed or is not the outcome
     // from an initial handshake exchange).
     boost::optional<HelloRTT> _rtt;
-    // Indicates how fresh the topology information in this reponse is (or boost::none if it failed
+    // Indicates how fresh the topology information in this response is (or boost::none if it failed
     // or the response did not include this).
     boost::optional<TopologyVersion> _topologyVersion;
 };

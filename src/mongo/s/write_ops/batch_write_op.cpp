@@ -615,7 +615,7 @@ void BatchWriteOp::noteBatchResponse(const TargetedWriteBatch& targetedBatch,
     }
 
     //
-    // Go through all pending responses of the op and sorted remote reponses, populate errors
+    // Go through all pending responses of the op and sorted remote responses, populate errors
     // This will either set all errors to the batch error or apply per-item errors as-needed
     //
     // If the batch is ordered, cancel all writes after the first error for retargeting.

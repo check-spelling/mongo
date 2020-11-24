@@ -4197,7 +4197,7 @@ if get_option('ninja') != 'disabled':
         # variable in the rule.
         #
         # This workaround will move most of the object or lib links into the
-        # inputs and then make the respone file consist of the inputs plus
+        # inputs and then make the response file consist of the inputs plus
         # whatever options are left in the original response content
         # more info can be found here:
         # https://github.com/ninja-build/ninja/pull/1223/files/e71bcceefb942f8355aab83ab447d702354ba272#r179526824

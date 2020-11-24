@@ -506,7 +506,7 @@ DbResponse replyToQuery(int queryResultFlags,
 
 
 /**
- * Helper to build a DbRespose for OP_QUERY with a single reply object.
+ * Helper to build a DbResponse for OP_QUERY with a single reply object.
  */
 inline DbResponse replyToQuery(const BSONObj& obj, int queryResultFlags = 0) {
     return replyToQuery(queryResultFlags, obj.objdata(), obj.objsize(), /*nReturned*/ 1);

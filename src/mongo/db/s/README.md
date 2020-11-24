@@ -999,7 +999,7 @@ Below are the steps in the two-phase commit protocol.
 * Prepare Phase
   1. The coordinator writes the participant list to the `config.transaction_coordinators` document for the
 transaction, and waits for it to be majority committed.
-  1. The coordinator sends [`prepareTransaction`](https://github.com/mongodb/mongo/blob/r4.4.0-rc7/src/mongo/db/repl/README.md#lifetime-of-a-prepared-transaction) to the participants, and waits for vote reponses. Each participant
+  1. The coordinator sends [`prepareTransaction`](https://github.com/mongodb/mongo/blob/r4.4.0-rc7/src/mongo/db/repl/README.md#lifetime-of-a-prepared-transaction) to the participants, and waits for vote responses. Each participant
 shard responds with a vote, marks the transaction as prepared, and updates the `config.transactions`
 document for the transaction.
   1. The coordinator writes the decision to the `config.transaction_coordinators` document and waits for it to
