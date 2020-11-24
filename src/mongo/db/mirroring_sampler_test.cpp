@@ -122,12 +122,12 @@ public:
             [](int value, const std::pair<std::string, size_t>& p) { return value + p.second; });
     }
 
-    double getHitCounsMean() {
+    double getHitCountsMean() {
         return static_cast<double>(getHitCountsSum()) / _hitCounts.size();
     }
 
     double getHitCountsSTD() {
-        const auto mean = getHitCounsMean();
+        const auto mean = getHitCountsMean();
         double standardDeviation = 0.0;
         for (auto pair : _hitCounts) {
             standardDeviation += std::pow(pair.second - mean, 2);
@@ -180,7 +180,7 @@ TEST_F(MirroringSamplerFixture, SamplerFunction) {
              * Relative standard deviation (a metric for distribution of mirrored
              * commands among secondaries) must be less than 7%.
              */
-            const auto relativeSTD = getHitCountsSTD() / getHitCounsMean();
+            const auto relativeSTD = getHitCountsSTD() / getHitCountsMean();
             ASSERT_LT(relativeSTD, 0.07);
         }
     }
