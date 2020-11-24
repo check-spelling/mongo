@@ -155,7 +155,7 @@ assert.throws(function() {
 });
 
 // Verify that the session cursors are really gone by running a killCursors command, and checking
-// that the cursorors are reported as "not found". Credit to kill_pinned_cursor_js_test for this
+// that the cursors are reported as "not found". Credit to kill_pinned_cursor_js_test for this
 // idea.
 let killRes = mongosDB.runCommand({
     killCursors: routerColl.getName(),

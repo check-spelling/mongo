@@ -220,7 +220,7 @@ protected:
         net->exitNetwork();
     }
 
-    void assertKillCusorsCmdHasCursorId(const BSONObj& killCmd, CursorId cursorId) {
+    void assertKillCursorsCmdHasCursorId(const BSONObj& killCmd, CursorId cursorId) {
         ASSERT_TRUE(killCmd.hasElement("killCursors"));
         ASSERT_EQ(killCmd["cursors"].type(), BSONType::Array);
 

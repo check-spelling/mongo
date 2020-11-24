@@ -817,7 +817,7 @@ TEST_F(AsyncResultsMergerTest, KillNoBatchesRequested) {
 
     ASSERT_FALSE(arm->ready());
     auto killFuture = arm->kill(operationContext());
-    assertKillCusorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 1);
+    assertKillCursorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 1);
 
     // Killed cursors are considered ready, but return an error when you try to receive the next
     // doc.
@@ -887,7 +887,7 @@ TEST_F(AsyncResultsMergerTest, KillNonExhaustedCursorWithoutPendingRequest) {
     auto killFuture = arm->kill(operationContext());
 
     // ARM should schedule killCursors on cursor 123
-    assertKillCusorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 123);
+    assertKillCursorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 123);
 
     ASSERT_TRUE(arm->ready());
     ASSERT_NOT_OK(arm->nextReady().getStatus());
@@ -917,8 +917,8 @@ TEST_F(AsyncResultsMergerTest, KillTwoOutstandingBatches) {
     auto killFuture = arm->kill(operationContext());
 
     // Check that the ARM kills both batches.
-    assertKillCusorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 2);
-    assertKillCusorsCmdHasCursorId(getNthPendingRequest(1u).cmdObj, 3);
+    assertKillCursorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 2);
+    assertKillCursorsCmdHasCursorId(getNthPendingRequest(1u).cmdObj, 3);
 
     // Run the callbacks which were canceled.
     runReadyCallbacks();
@@ -1851,7 +1851,7 @@ TEST_F(AsyncResultsMergerTest, KillShouldNotWaitForRemoteCommandsBeforeSchedulin
     auto killFuture = arm->kill(operationContext());
 
     // Check that the ARM will run killCursors.
-    assertKillCusorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 1);
+    assertKillCursorsCmdHasCursorId(getNthPendingRequest(0u).cmdObj, 1);
 
     // Let the callback run now that it's been canceled.
     runReadyCallbacks();
