@@ -282,7 +282,7 @@ TEST(CollatorFactoryICUTest, LocaleWithHyphenSeparatingCountryAndVariantDisallow
     ASSERT_EQ(collator.getStatus(), ErrorCodes::BadValue);
 }
 
-TEST(CollatorFactoryICUTest, LocaleWithLowercaseCountryCodeDisallwed) {
+TEST(CollatorFactoryICUTest, LocaleWithLowercaseCountryCodeDisallowed) {
     CollatorFactoryICU factory;
     auto collator = factory.makeFromBSON(BSON("locale"
                                               << "en_us"));
