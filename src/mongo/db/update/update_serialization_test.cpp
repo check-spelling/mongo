@@ -191,10 +191,10 @@ TEST(UpdateSerialization, PushSerializesWithAddedVerbosity) {
         updateRoundTrip(
             R"({ "$push" : { "up.num" : { "$each" : [ 12, 13, 14 ] , "$position" : 3 } } })"));
 
-    // This coveres cases where $each contains non-object elements.
+    // This covers cases where $each contains non-object elements.
     ASSERT_IDENTITY(R"({ "$push" : { "up.num" : { "$each" : [ 12, 13, 14 ], "$sort" : 1 } } })",
                     updateRoundTrip);
-    // This coveres cases where $each contains object elements.
+    // This covers cases where $each contains object elements.
     ASSERT_IDENTITY(R"({ "$push" : { "up.num" : { )"
                     R"("$each" : [ { "field" : 12 }, { "field" : 13 } ], )"
                     R"("$sort" : { "field" : 1 } } } })",
