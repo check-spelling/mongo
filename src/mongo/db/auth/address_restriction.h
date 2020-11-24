@@ -67,7 +67,7 @@ class AddressRestriction : public NamedRestriction {
 public:
     /**
      * Construct an empty AddressRestriction.
-     * Note that an empty AddressRestriciton will not validate
+     * Note that an empty AddressRestriction will not validate
      * against any addresses, since nothing has been whitelisted.
      */
     AddressRestriction() = default;

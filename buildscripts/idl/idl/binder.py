@@ -85,7 +85,7 @@ def _validate_bson_types_list(ctxt, idl_type, syntax_type):
             ctxt.add_bad_bson_type_error(idl_type, syntax_type, idl_type.name, bson_type)
             return False
 
-        # V1 restiction: cannot mix bindata into list of types
+        # V1 restriction: cannot mix bindata into list of types
         if bson_type == "bindata":
             ctxt.add_bad_bson_type_error(idl_type, syntax_type, idl_type.name, bson_type)
             return False

@@ -111,7 +111,7 @@ TEST_F(V2UserDocumentParsing, V2DocumentValidation) {
                                                        << "test"
                                                        << "credentials" << credentials)));
 
-    // authenticationRestricitons must be an array if it exists
+    // authenticationRestrictions must be an array if it exists
     ASSERT_NOT_OK(v2parser.checkValidUserDocument(BSON("user"
                                                        << "spencer"
                                                        << "db"
