@@ -1,5 +1,5 @@
 {
     "replication" : {
-        "replSetName" : "myconfigame"
+        "replSetName" : "myconfigname"
     }
 }
