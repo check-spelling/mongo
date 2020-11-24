@@ -195,7 +195,7 @@ def open_zip_archive_for_write(filename):
 def get_preferred_filename(input_filename, transformations):
     """Return preferred filename.
 
-    Perform a prefix subsitution on 'input_filename' for the
+    Perform a prefix substitution on 'input_filename' for the
     first matching transformation in 'transformations' and
     returns the substituted string.
     """

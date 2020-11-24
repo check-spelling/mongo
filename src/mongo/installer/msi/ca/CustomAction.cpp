@@ -54,7 +54,7 @@ constexpr wchar_t kBIN[] = L"BIN";
 constexpr wchar_t kMongoDataPath[] = L"MONGO_DATA_PATH";
 constexpr wchar_t kMongoLogPath[] = L"MONGO_LOG_PATH";
 
-// YAML Subsitution Constants
+// YAML Substitution Constants
 constexpr char kMongoDataPathYaml[] = "%MONGO_DATA_PATH%";
 constexpr char kMongoLogPathYaml[] = "%MONGO_LOG_PATH%";
 
@@ -320,7 +320,7 @@ extern "C" UINT __stdcall UpdateMongoYAML(MSIHANDLE hInstall) {
 
         std::string str(buf.get());
 
-        // Do the string subsitutions
+        // Do the string substitutions
         str = do_replace(hInstall, str, kMongoDataPathYaml, toUtf8String(hInstall, dataDir));
         str = do_replace(hInstall, str, kMongoLogPathYaml, toUtf8String(hInstall, logDir));
 
