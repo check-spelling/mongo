@@ -200,7 +200,7 @@ private:
     void addToCache(const Document& result, const ValueUnorderedSet& queried);
 
     /**
-     * Assert that '_visited' and '_frontier' have not exceeded the maximum meory usage, and then
+     * Assert that '_visited' and '_frontier' have not exceeded the maximum memory usage, and then
      * evict from '_cache' until this source is using less than '_maxMemoryUsageBytes'.
      */
     void checkMemoryUsage();
