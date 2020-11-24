@@ -83,7 +83,7 @@ const update = assert.commandWorked(db.adminCommand({getLog: "global"}));
 assert(update.log, "no log field");
 assert.gt(update.log.length, 0, "no log lines");
 
-// Ensure that slow update is logged in deail.
+// Ensure that slow update is logged in detail.
 assert(contains(update.log, function(v) {
     return stringContains(v, " update ") != -1 && stringContains(v, "command") &&
         stringContains(v, "keysExamined:") && stringContains(v, "docsExamined:") &&
