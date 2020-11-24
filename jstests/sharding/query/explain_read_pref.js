@@ -42,8 +42,8 @@ var testAllModes = function(conn, isMongos) {
 
         ['secondary', undefined, true],
         ['secondary', [{tag: 'two'}], true],
-        ['secondary', [{tag: 'doesntexist'}, {}], true],
-        ['secondary', [{tag: 'doesntexist'}, {tag: 'two'}], true],
+        ['secondary', [{tag: 'nonexistent'}, {}], true],
+        ['secondary', [{tag: 'nonexistent'}, {tag: 'two'}], true],
 
         ['secondaryPreferred', undefined, true],
         ['secondaryPreferred', [{tag: 'one'}], false],

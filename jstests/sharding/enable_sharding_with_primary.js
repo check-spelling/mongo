@@ -9,7 +9,7 @@ var st = new ShardingTest({mongos: 1, shards: 2});
 
 // Can't enable sharding on a database using a wrong shard name
 assert.commandFailed(st.s0.adminCommand(
-    {enableSharding: 'db2', primaryShard: st.shard1.shardName + '_unenxisting_name_postfix'}));
+    {enableSharding: 'db2', primaryShard: st.shard1.shardName + '_nonexistent_name_postfix'}));
 
 // Enabling sharding on a database with a valid shard name must work
 assert.commandWorked(

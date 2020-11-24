@@ -192,7 +192,7 @@ TEST(DocumentGetFieldNonCaching, UncachedTopLevelFields) {
     }
 
     // Try to get a top level field which doesn't exist.
-    auto nonExistentFieldVariant = document.getNestedFieldNonCaching("doesnotexist");
+    auto nonExistentFieldVariant = document.getNestedFieldNonCaching("nonexistent");
     ASSERT_TRUE(stdx::holds_alternative<stdx::monostate>(nonExistentFieldVariant));
 
     assertRoundTrips(document);
@@ -252,7 +252,7 @@ TEST(DocumentGetFieldNonCaching, NonArrayDottedPaths) {
         ASSERT_TRUE(stdx::holds_alternative<BSONElement>(addressVariant));
 
         // Get a dotted field which does not exist.
-        auto nonExistentVariant = document.getNestedFieldNonCaching("address.doesnotexist");
+        auto nonExistentVariant = document.getNestedFieldNonCaching("address.nonexistent");
         ASSERT_TRUE(stdx::holds_alternative<stdx::monostate>(nonExistentVariant));
 
         // Check that the top level field isn't cached after a failed attempt to access one of its
@@ -261,7 +261,7 @@ TEST(DocumentGetFieldNonCaching, NonArrayDottedPaths) {
         ASSERT_TRUE(stdx::holds_alternative<BSONElement>(addressVariant));
 
         // Get a dotted field which extends past a scalar.
-        auto pathPastScalarVariant = document.getNestedFieldNonCaching("address.zip.doesnotexist");
+        auto pathPastScalarVariant = document.getNestedFieldNonCaching("address.zip.nonexistent");
         ASSERT_TRUE(stdx::holds_alternative<stdx::monostate>(pathPastScalarVariant));
     }
 
@@ -287,7 +287,7 @@ TEST(DocumentGetFieldNonCaching, NonArrayDottedPaths) {
 
     // Check that attempting to get a subfield of 'address.street' returns monostate.
     {
-        auto variant = document.getNestedFieldNonCaching("address.street.doesnotexist");
+        auto variant = document.getNestedFieldNonCaching("address.street.nonexistent");
         ASSERT_TRUE(stdx::holds_alternative<stdx::monostate>(variant));
     }
 }

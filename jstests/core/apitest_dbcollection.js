@@ -155,12 +155,12 @@ var t = db.apttest_dbcollection;
 t.drop();
 var noCollStats =
     assert.commandWorked(t.stats(), 'db.collection.stats() should work on non-existent collection');
-assert.eq(0, noCollStats.size, "All properties should be 0 on nonexistant collections");
-assert.eq(0, noCollStats.count, "All properties should be 0 on nonexistant collections");
-assert.eq(0, noCollStats.storageSize, "All properties should be 0 on nonexistant collections");
-assert.eq(0, noCollStats.nindexes, "All properties should be 0 on nonexistant collections");
-assert.eq(0, noCollStats.totalIndexSize, "All properties should be 0 on nonexistant collections");
-assert.eq(0, noCollStats.totalSize, "All properties should be 0 on nonexistant collections");
+assert.eq(0, noCollStats.size, "All properties should be 0 on nonexistent collections");
+assert.eq(0, noCollStats.count, "All properties should be 0 on nonexistent collections");
+assert.eq(0, noCollStats.storageSize, "All properties should be 0 on nonexistent collections");
+assert.eq(0, noCollStats.nindexes, "All properties should be 0 on nonexistent collections");
+assert.eq(0, noCollStats.totalIndexSize, "All properties should be 0 on nonexistent collections");
+assert.eq(0, noCollStats.totalSize, "All properties should be 0 on nonexistent collections");
 
 // scale - passed to stats() as sole numerical argument or part of an options object.
 t.drop();

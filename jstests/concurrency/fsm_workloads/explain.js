@@ -10,7 +10,7 @@ load('jstests/concurrency/fsm_workload_helpers/server_types.js');  // for isMong
 
 var $config = (function() {
     var data = {
-        collNotExist: 'donotexist__',
+        collNotExist: 'nonexistent__',
         nInserted: 0,
         shardKey: {j: 1},
         assignEqualProbsToTransitions: function assignEqualProbsToTransitions(statesMap) {

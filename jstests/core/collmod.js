@@ -138,4 +138,4 @@ assert.commandFailed(
 
 // Fails with an unknown key pattern.
 assert.commandFailed(db.runCommand(
-    {collmod: coll, index: {keyPattern: {doesnotexist: 1}, expireAfterSeconds: 100}}));
+    {collmod: coll, index: {keyPattern: {nonexistent: 1}, expireAfterSeconds: 100}}));

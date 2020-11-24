@@ -31,7 +31,7 @@
         "rack": "one"
       },
       {
-        "other_tag": "doesntexist"
+        "other_tag": "nonexistent"
       }
     ]
   },

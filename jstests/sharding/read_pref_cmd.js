@@ -458,11 +458,11 @@ var testAllModes = function(conn, rsNodes, isMongos) {
         {readPref: {mode: "secondary"}, expectedNode: "secondary"},
         {readPref: {mode: "secondary", tagSets: [{tag: "two"}]}, expectedNode: "secondary"},
         {
-            readPref: {mode: "secondary", tagSets: [{tag: "doesntexist"}, {}]},
+            readPref: {mode: "secondary", tagSets: [{tag: "nonexistent"}, {}]},
             expectedNode: "secondary"
         },
         {
-            readPref: {mode: "secondary", tagSets: [{tag: "doesntexist"}, {tag: "two"}]},
+            readPref: {mode: "secondary", tagSets: [{tag: "nonexistent"}, {tag: "two"}]},
             expectedNode: "secondary"
         },
         {readPref: {mode: "secondary", hedge: {enabled: false}}, expectedNode: "secondary"},
@@ -494,7 +494,7 @@ var testAllModes = function(conn, rsNodes, isMongos) {
 
     [
         // Tags are not allowed in mode "primary".
-        {readPref: {mode: "primary", tagSets: [{dc: "doesntexist"}]}},
+        {readPref: {mode: "primary", tagSets: [{dc: "nonexistent"}]}},
         {readPref: {mode: "primary", tagSets: [{dc: "ny"}]}},
         {readPref: {mode: "primary", tagSets: [{dc: "one"}]}},
 
@@ -503,12 +503,12 @@ var testAllModes = function(conn, rsNodes, isMongos) {
 
         // No matching node.
         {readPref: {mode: "secondary", tagSets: [{tag: "one"}]}},
-        {readPref: {mode: "nearest", tagSets: [{tag: "doesntexist"}]}},
+        {readPref: {mode: "nearest", tagSets: [{tag: "nonexistent"}]}},
 
         // Invalid mode, tags, hedgeOptions.
         {readPref: {mode: "invalid-mode"}},
         {readPref: {mode: "secondary", tagSets: ["misformatted-tags"]}},
-        {readPref: {mode: "nearest", hedge: {doesnotexist: true}}},
+        {readPref: {mode: "nearest", hedge: {nonexistent: true}}},
 
     ].forEach(function(testCase) {
         setUp();

@@ -18,8 +18,8 @@ const session = testDB.getMongo().startSession(sessionOptions);
 const sessionDb = session.getDatabase(dbName);
 const sessionColl = sessionDb.getCollection(collName);
 
-jsTestLog("Test that we cannot abort or commit a nonexistant transaction.");
-// Cannot abort or commit a nonexistant transaction.
+jsTestLog("Test that we cannot abort or commit a nonexistent transaction.");
+// Cannot abort or commit a nonexistent transaction.
 try {
     assert.commandWorked(session.commitTransaction_forTesting());
 } catch (e) {
