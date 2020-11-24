@@ -1202,10 +1202,10 @@ ShardServerCatalogCacheLoader::_getCompletePersistedMetadataForSecondarySinceVer
         LOGV2_FOR_CATALOG_REFRESH(
             24114,
             1,
-            "Cache loader read meatadata while updates were being applied: this metadata may be "
+            "Cache loader read metadata while updates were being applied: this metadata may be "
             "incomplete. Retrying. Refresh state before read: {beginRefreshState}. Current refresh "
             "state: {endRefreshState}",
-            "Cache loader read meatadata while updates were being applied: this metadata may be "
+            "Cache loader read metadata while updates were being applied: this metadata may be "
             "incomplete. Retrying",
             "beginRefreshState"_attr = beginRefreshState,
             "endRefreshState"_attr = endRefreshState);

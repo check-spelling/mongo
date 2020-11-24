@@ -143,7 +143,7 @@ const auto kIndexVersion = IndexDescriptor::IndexVersion::kV2;
 void assertIndexMetaDataMissing(const BSONCollectionCatalogEntry::MetaData& collMetaData,
                                 StringData indexName) {
     const auto idxOffset = collMetaData.findIndexOffset(indexName);
-    ASSERT_EQUALS(-1, idxOffset) << indexName << ". Collection Metdata: " << collMetaData.toBSON();
+    ASSERT_EQUALS(-1, idxOffset) << indexName << ". Collection Metadata: " << collMetaData.toBSON();
 }
 
 BSONCollectionCatalogEntry::IndexMetaData getIndexMetaData(

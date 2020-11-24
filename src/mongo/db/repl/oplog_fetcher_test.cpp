@@ -2319,7 +2319,7 @@ TEST_F(OplogFetcherTest, DisconnectsOnErrorsDuringExhaustStream) {
     auto beforeRecreatingCursor = globalFailPointRegistry().find("hangBeforeOplogFetcherRetries");
     auto timesEntered = beforeRecreatingCursor->setMode(FailPoint::alwaysOn);
 
-    // Temporarily override the metatdata reader to introduce failure after successfully receiving a
+    // Temporarily override the metadata reader to introduce failure after successfully receiving a
     // batch from the first getMore. And the exhaust stream is now established.
     conn->setReplyMetadataReader(
         [&](OperationContext* opCtx, const BSONObj& metadataObj, StringData target) {
@@ -2334,7 +2334,7 @@ TEST_F(OplogFetcherTest, DisconnectsOnErrorsDuringExhaustStream) {
     // recreate cursor as more data is on the way from the server for the exhaust stream.
     ASSERT_TRUE(conn->isFailed());
 
-    // Unset the metatdata reader.
+    // Unset the metadata reader.
     conn->setReplyMetadataReader(rpc::ReplyMetadataReader());
 
     // Allow retry and autoreconnect.

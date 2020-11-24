@@ -76,7 +76,7 @@ constexpr auto kUnknown = "unkown"_sd;
     } while (0)
 
 
-TEST(ClientMetadatTest, TestLoopbackTest) {
+TEST(ClientMetadataTest, TestLoopbackTest) {
     // serializePrivate with appName
     {
         BSONObjBuilder builder;
@@ -143,7 +143,7 @@ TEST(ClientMetadatTest, TestLoopbackTest) {
 }
 
 // Mixed: no client metadata document
-TEST(ClientMetadatTest, TestEmptyDoc) {
+TEST(ClientMetadataTest, TestEmptyDoc) {
     {
         auto parseStatus = ClientMetadata::parse(BSONElement());
 
@@ -159,7 +159,7 @@ TEST(ClientMetadatTest, TestEmptyDoc) {
 }
 
 // Positive: test with only required fields
-TEST(ClientMetadatTest, TestRequiredOnlyFields) {
+TEST(ClientMetadataTest, TestRequiredOnlyFields) {
     // Without app name
     ASSERT_DOC_OK(kDriver << BSON(kName << "n1" << kVersion << "v1") << kOperatingSystem
                           << BSON(kType << kUnknown));
@@ -172,7 +172,7 @@ TEST(ClientMetadatTest, TestRequiredOnlyFields) {
 
 
 // Positive: test with app_name spelled wrong fields
-TEST(ClientMetadatTest, TestWithAppNameSpelledWrong) {
+TEST(ClientMetadataTest, TestWithAppNameSpelledWrong) {
     ASSERT_DOC_OK(kApplication << BSON("extra"
                                        << "1")
                                << kDriver << BSON(kName << "n1" << kVersion << "v1")
@@ -180,19 +180,19 @@ TEST(ClientMetadatTest, TestWithAppNameSpelledWrong) {
 }
 
 // Positive: test with empty application document
-TEST(ClientMetadatTest, TestWithEmptyApplication) {
+TEST(ClientMetadataTest, TestWithEmptyApplication) {
     ASSERT_DOC_OK(kApplication << BSONObj() << kDriver << BSON(kName << "n1" << kVersion << "v1")
                                << kOperatingSystem << BSON(kType << kUnknown));
 }
 
 // Negative: test with application wrong type
-TEST(ClientMetadatTest, TestNegativeWithAppNameWrongType) {
+TEST(ClientMetadataTest, TestNegativeWithAppNameWrongType) {
     ASSERT_DOC_NOT_OK(kApplication << "1" << kDriver << BSON(kName << "n1" << kVersion << "v1")
                                    << kOperatingSystem << BSON(kType << kUnknown));
 }
 
 // Positive: test with extra fields
-TEST(ClientMetadatTest, TestExtraFields) {
+TEST(ClientMetadataTest, TestExtraFields) {
     ASSERT_DOC_OK(kApplication << BSON(kName << "1"
                                              << "extra"
                                              << "v1")
@@ -222,14 +222,14 @@ TEST(ClientMetadatTest, TestExtraFields) {
 }
 
 // Negative: only application specified
-TEST(ClientMetadatTest, TestNegativeOnlyApplication) {
+TEST(ClientMetadataTest, TestNegativeOnlyApplication) {
     ASSERT_DOC_NOT_OK(kApplication << BSON(kName << "1"
                                                  << "extra"
                                                  << "v1"));
 }
 
 // Negative: all combinations of only missing 1 required field
-TEST(ClientMetadatTest, TestNegativeMissingRequiredOneField) {
+TEST(ClientMetadataTest, TestNegativeMissingRequiredOneField) {
     ASSERT_DOC_NOT_OK(kDriver << BSON(kVersion << "v1") << kOperatingSystem
                               << BSON(kType << kUnknown));
     ASSERT_DOC_NOT_OK(kDriver << BSON(kName << "n1") << kOperatingSystem
@@ -238,7 +238,7 @@ TEST(ClientMetadatTest, TestNegativeMissingRequiredOneField) {
 }
 
 // Negative: document with wrong types for required fields
-TEST(ClientMetadatTest, TestNegativeWrongTypes) {
+TEST(ClientMetadataTest, TestNegativeWrongTypes) {
     ASSERT_DOC_NOT_OK(kApplication << BSON(kName << 1) << kDriver
                                    << BSON(kName << "n1" << kVersion << "v1") << kOperatingSystem
                                    << BSON(kType << kUnknown));
@@ -254,7 +254,7 @@ TEST(ClientMetadatTest, TestNegativeWrongTypes) {
 }
 
 // Negative: document larger than 512 bytes
-TEST(ClientMetadatTest, TestNegativeLargeDocument) {
+TEST(ClientMetadataTest, TestNegativeLargeDocument) {
     bool savedMongos = isMongos();
     auto unsetMongoS = makeGuard([&] { setMongos(savedMongos); });
 
@@ -274,7 +274,7 @@ TEST(ClientMetadatTest, TestNegativeLargeDocument) {
 }
 
 // Negative: document with app_name larger than 128 bytes
-TEST(ClientMetadatTest, TestNegativeLargeAppName) {
+TEST(ClientMetadataTest, TestNegativeLargeAppName) {
     {
         std::string str(128, 'x');
         ASSERT_DOC_OK(kApplication << BSON(kName << str) << kDriver
@@ -296,7 +296,7 @@ TEST(ClientMetadatTest, TestNegativeLargeAppName) {
 }
 
 // Serialize and attach mongos information
-TEST(ClientMetadatTest, TestMongoSAppend) {
+TEST(ClientMetadataTest, TestMongoSAppend) {
     BSONObjBuilder builder;
     ASSERT_OK(ClientMetadata::serializePrivate("a", "b", "c", "d", "e", "f", "g", &builder));
 

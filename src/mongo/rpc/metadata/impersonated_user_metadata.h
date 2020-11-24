@@ -61,7 +61,7 @@ using MaybeImpersonatedUserMetadata = boost::optional<ImpersonatedUserMetadata>;
 MaybeImpersonatedUserMetadata getImpersonatedUserMetadata(OperationContext* opCtx);
 
 /*
- * Parses any impersonation data out of a metdata bson obj and into the opCtx
+ * Parses any impersonation data out of a metadata bson obj and into the opCtx
  */
 void readImpersonatedUserMetadata(const BSONElement& elem, OperationContext* opCtx);
 

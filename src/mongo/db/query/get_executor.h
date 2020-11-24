@@ -80,7 +80,7 @@ void fillOutPlannerParams(OperationContext* opCtx,
 
 /**
  * Return whether or not any component of the path 'path' is multikey given an index key pattern
- * and multikeypaths. If no multikey metdata is available for the index, and the index is marked
+ * and multikeypaths. If no multikey metadata is available for the index, and the index is marked
  * multikey, conservatively assumes that a component of 'path' _is_ multikey. The 'isMultikey'
  * property of an index is false for indexes that definitely have no multikey paths.
  */

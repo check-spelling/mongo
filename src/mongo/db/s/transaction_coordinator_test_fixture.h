@@ -68,7 +68,7 @@ protected:
 
 
     /**
-     * Associates metatadata with the provided client. Metadata fields have appName prepended to
+     * Associates metadata with the provided client. Metadata fields have appName prepended to
      * thier value.
      */
     static void associateClientMetadata(Client* client, std::string appName);

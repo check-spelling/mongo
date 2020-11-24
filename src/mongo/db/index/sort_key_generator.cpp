@@ -127,12 +127,12 @@ BSONObj SortKeyGenerator::computeSortKeyFromDocument(const BSONObj& obj,
         // Create a Document that represents the input object and its metadata together, so we can
         // use it to evaluate the ExpressionMeta for this part of the sort pattern. This operation
         // copies the data in 'metadata' but not any of the data in the 'obj' BSON.
-        MutableDocument documentWithMetdata(Document{obj});
-        documentWithMetdata.setMetadata(DocumentMetadataFields(metadata));
+        MutableDocument documentWithMetadata(Document{obj});
+        documentWithMetadata.setMetadata(DocumentMetadataFields(metadata));
 
         invariant(part.expression);
         auto value =
-            part.expression->evaluate(documentWithMetdata.freeze(), nullptr /* variables */);
+            part.expression->evaluate(documentWithMetadata.freeze(), nullptr /* variables */);
         if (!value.missing()) {
             value.addToBsonObj(&mergedKeyBob, ""_sd);
         } else {
