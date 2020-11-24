@@ -1103,7 +1103,7 @@ class Analyzer:
 
         # Black Duck detects ourself everytime we release a new version
         # Rather then constantly have to supress this in Black Duck itself which will generate false positives
-        # We filter ourself our of the list of components.
+        # We filter ourself out of the list of components.
         self.black_duck_components = [
             comp for comp in self.black_duck_components if not comp.name == "MongoDB"
         ]
