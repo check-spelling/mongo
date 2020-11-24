@@ -39,7 +39,7 @@ function killSession(db, collName) {
         } catch (e) {
             if (e.code == ErrorCodes.Interrupted || e.code == ErrorCodes.CursorKilled ||
                 e.code == ErrorCodes.CursorNotFound) {
-                // This session was killed when running either listSessions or killSesssions.
+                // This session was killed when running either listSessions or killSessions.
                 // We should retry.
                 ourSessionWasKilled = true;
                 continue;
