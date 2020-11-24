@@ -96,7 +96,7 @@ public:
     /**
      * Returns true if this TopologyVersionObserver background thread has stopped.
      *
-     * Note that this funtion only returns true after _thread has started and ended, thus implies
+     * Note that this function only returns true after _thread has started and ended, thus implies
      * that getCached() will never return a valid HelloResponse again.
      */
     bool isShutdown() const noexcept {

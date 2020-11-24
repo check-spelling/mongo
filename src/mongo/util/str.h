@@ -79,7 +79,7 @@ public:
     /**
      * Fail to compile if passed an unevaluated function, rather than allow it to decay and invoke
      * the bool overload. This catches both passing std::hex (which isn't supported by this type)
-     * and forgetting to add () when doing `stream << someFuntion`.
+     * and forgetting to add () when doing `stream << someFunction`.
      */
     template <typename R, typename... Args>
     stream& operator<<(R (*val)(Args...)) = delete;

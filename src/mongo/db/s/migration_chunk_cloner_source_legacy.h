@@ -277,7 +277,7 @@ private:
      * There should always be a one to one match from the number of calls to this function to the
      * number of calls to the corresponding decrement* function.
      *
-     * NOTE: This funtion invariants that we are currently accepting new operation track requests.
+     * NOTE: This function invariants that we are currently accepting new operation track requests.
      * It is up to callers of this function to make sure that will always be the case.
      */
     void _incrementOutstandingOperationTrackRequests(WithLock);

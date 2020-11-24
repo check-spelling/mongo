@@ -144,13 +144,13 @@ public:
 
     /**
      * Sets the return value for subsequent calls to storeLocalConfigDocument().
-     * If "status" is Status::OK(), the subsequent calls will call the underlying funtion.
+     * If "status" is Status::OK(), the subsequent calls will call the underlying function.
      */
     void setStoreLocalConfigDocumentStatus(Status status);
 
     /**
      * Sets the return value for subsequent calls to storeLocalLastVoteDocument().
-     * If "status" is Status::OK(), the subsequent calls will call the underlying funtion.
+     * If "status" is Status::OK(), the subsequent calls will call the underlying function.
      */
     void setStoreLocalLastVoteDocumentStatus(Status status);
 
