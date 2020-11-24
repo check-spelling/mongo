@@ -293,7 +293,7 @@ bool CanonicalQuery::isSimpleIdQuery(const BSONObj& query) {
                     return false;
                 }
             } else if (!Indexability::isExactBoundsGenerating(elt)) {
-                // The _id fild cannot be something like { _id : { $gt : ...
+                // The _id field cannot be something like { _id : { $gt : ...
                 // But it can be BinData.
                 return false;
             }
