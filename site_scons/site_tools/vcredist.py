@@ -91,7 +91,7 @@ def generate(env):
 
     env.AddMethod(_get_merge_module_name_for_feature, "GetMergeModuleNameForFeature")
 
-    # Obtain the major and minor versions of the curently configured MSVC
+    # Obtain the major and minor versions of the currently configured MSVC
     # and ensure that we are using a VC 14 based toolchain.
     #
     # Please see

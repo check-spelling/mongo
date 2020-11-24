@@ -274,7 +274,7 @@ public:
     void report(BSONObjBuilder* builder) const;
 
     /**
-     * Checks if the current operation was ever marked as needing refresh. If the curent operation
+     * Checks if the current operation was ever marked as needing refresh. If the current operation
      * was marked as needing refresh, updates the relevant counters inside the Stats struct.
      */
     void checkAndRecordOperationBlockedByRefresh(OperationContext* opCtx, mongo::LogicalOp opType);

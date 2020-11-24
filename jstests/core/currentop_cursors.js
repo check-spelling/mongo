@@ -33,7 +33,7 @@ for (let i = 0; i < 30; ++i) {
  * assertFunc: A function that runs assertions against the results of the $currentOp.
  * Takes the following arguments
  *  'findOut': The cursorID returned from findFunc.
- *  'result': The results from running $currenpOp as an array of JSON objects.
+ *  'result': The results from running $currentOp as an array of JSON objects.
  * Arbitrary code can be run in assertFunc, and there is no return value needed.
  */
 function runTest({findFunc, assertFunc}) {
