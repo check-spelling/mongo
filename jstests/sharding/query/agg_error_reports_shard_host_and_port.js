@@ -23,7 +23,7 @@ assert.commandWorked(coll.insert({_id: 0}));
 // Run an aggregation which will fail on shard 1, and verify that the error message contains
 // the host and port of the shard that failed.
 // We need to be careful here to involve some data in the computation that is actually
-// sent to the shard before failing (i.e. "$_id") so that mongos doesn't short-curcuit and
+// sent to the shard before failing (i.e. "$_id") so that mongos doesn't short-circuit and
 // fail during optimization.
 const pipe = [{$project: {a: {$divide: ["$_id", 0]}}}];
 const divideByZeroErrorCode = 16608;
