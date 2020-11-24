@@ -71,7 +71,7 @@ public:
     ~RuntimeEnvironment();
 
     /**
-     * Registers and returns a SlotId for the given slot 'type'. The 'slotIdGenerartor' is used to
+     * Registers and returns a SlotId for the given slot 'type'. The 'slotIdGenerator' is used to
      * generated a new SlotId for the given slot 'type', which is then registered with this
      * environment by creating a new SlotAccessor. The value 'val' is then stored within the
      * SlotAccessor and the newly generated SlotId is returned.

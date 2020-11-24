@@ -484,7 +484,7 @@ std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots> SlotBasedStageBuilder
 }
 
 std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots>
-SlotBasedStageBuilder::buildSortKeyGeneraror(const QuerySolutionNode* root,
+SlotBasedStageBuilder::buildSortKeyGenerator(const QuerySolutionNode* root,
                                              const PlanStageReqs& reqs) {
     uasserted(4822883, "Sort key generator in not supported in SBE yet");
 }
@@ -1016,7 +1016,7 @@ std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots> SlotBasedStageBuilder
             {STAGE_SKIP, &SlotBasedStageBuilder::buildSkip},
             {STAGE_SORT_SIMPLE, &SlotBasedStageBuilder::buildSort},
             {STAGE_SORT_DEFAULT, &SlotBasedStageBuilder::buildSort},
-            {STAGE_SORT_KEY_GENERATOR, &SlotBasedStageBuilder::buildSortKeyGeneraror},
+            {STAGE_SORT_KEY_GENERATOR, &SlotBasedStageBuilder::buildSortKeyGenerator},
             {STAGE_PROJECTION_SIMPLE, &SlotBasedStageBuilder::buildProjectionSimple},
             {STAGE_PROJECTION_DEFAULT, &SlotBasedStageBuilder::buildProjectionDefault},
             {STAGE_PROJECTION_COVERED, &SlotBasedStageBuilder::buildProjectionCovered},

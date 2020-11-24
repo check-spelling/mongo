@@ -288,7 +288,7 @@ private:
     std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots> buildSort(
         const QuerySolutionNode* root, const PlanStageReqs& reqs);
 
-    std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots> buildSortKeyGeneraror(
+    std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots> buildSortKeyGenerator(
         const QuerySolutionNode* root, const PlanStageReqs& reqs);
 
     std::pair<std::unique_ptr<sbe::PlanStage>, PlanStageSlots> buildSortMerge(
