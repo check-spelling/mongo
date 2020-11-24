@@ -618,12 +618,12 @@ DB.prototype.dbEval = DB.prototype.eval;
  keyf (not both).
  * </p>
  */
-DB.prototype.groupeval = function(parmsObj) {
+DB.prototype.groupeval = function(paramsObj) {
     var groupFunction = function() {
-        var parms = args[0];
-        var c = db[parms.ns].find(parms.cond || {});
+        var params = args[0];
+        var c = db[params.ns].find(params.cond || {});
         var map = new Map();
-        var pks = parms.key ? Object.keySet(parms.key) : null;
+        var pks = params.key ? Object.keySet(params.key) : null;
         var pkl = pks ? pks.length : 0;
         var key = {};
 
@@ -635,38 +635,38 @@ DB.prototype.groupeval = function(parmsObj) {
                     key[k] = obj[k];
                 }
             } else {
-                key = parms.$keyf(obj);
+                key = params.$keyf(obj);
             }
 
             var aggObj = map.get(key);
             if (aggObj == null) {
                 var newObj = Object.extend({}, key);  // clone
-                aggObj = Object.extend(newObj, parms.initial);
+                aggObj = Object.extend(newObj, params.initial);
                 map.put(key, aggObj);
             }
-            parms.$reduce(obj, aggObj);
+            params.$reduce(obj, aggObj);
         }
 
         return map.values();
     };
 
-    return this.eval(groupFunction, this._groupFixParms(parmsObj));
+    return this.eval(groupFunction, this._groupFixParams(paramsObj));
 };
 
-DB.prototype._groupFixParms = function(parmsObj) {
-    var parms = Object.extend({}, parmsObj);
+DB.prototype._groupFixParams = function(paramsObj) {
+    var params = Object.extend({}, paramsObj);
 
-    if (parms.reduce) {
-        parms.$reduce = parms.reduce;  // must have $ to pass to db
-        delete parms.reduce;
+    if (params.reduce) {
+        params.$reduce = params.reduce;  // must have $ to pass to db
+        delete params.reduce;
     }
 
-    if (parms.keyf) {
-        parms.$keyf = parms.keyf;
-        delete parms.keyf;
+    if (params.keyf) {
+        params.$keyf = params.keyf;
+        delete params.keyf;
     }
 
-    return parms;
+    return params;
 };
 
 DB.prototype.resetError = function() {

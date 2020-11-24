@@ -78,7 +78,7 @@ BSONObj getInternalAuthParams(size_t idx, const std::string& mechanism) {
         return BSONObj();
     }
 
-    // If we've set a specific BSONObj as the internal auth pararms, return it if the index
+    // If we've set a specific BSONObj as the internal auth params, return it if the index
     // is zero (there are no alternate credentials if we've set a BSONObj explicitly).
     if (!internalAuthParams.isEmpty()) {
         return idx == 0 ? internalAuthParams : BSONObj();
