@@ -98,7 +98,7 @@ public:
 
     void onFoundSet(const Key&) noexcept final {}
 
-    // Update the shard identy config string
+    // Update the shard identity config string
     void onConfirmedSet(const State& state) noexcept final {
         auto connStr = state.connStr;
         try {
