@@ -45,7 +45,7 @@ namespace mongo {
 /**
  * Representation of a name of a role in a MongoDB system.
  *
- * Consists of a "role name"  part and a "datbase name" part.
+ * Consists of a "role name"  part and a "database name" part.
  */
 class RoleName {
 public:

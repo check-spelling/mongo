@@ -59,7 +59,7 @@ assert.eq(s.normalize(s.config.databases.findOne({_id: "testDB"}).primary),
           origShard,
           "DB primary didn't move");
 assert.eq(
-    numObjs, sdb1.foo.count(), "wrong count after moving datbase that existed before addshard");
+    numObjs, sdb1.foo.count(), "wrong count after moving database that existed before addshard");
 
 // make sure we can shard the original collections
 sdb1.foo.createIndex({a: 1}, {unique: true});  // can't shard populated collection without an index

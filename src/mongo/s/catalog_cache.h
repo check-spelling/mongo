@@ -194,7 +194,7 @@ public:
                                                       bool allowLocks = false);
 
     /**
-     * Same as getDatbase above, but in addition forces the database entry to be refreshed.
+     * Same as getDatabase above, but in addition forces the database entry to be refreshed.
      */
     StatusWith<CachedDatabaseInfo> getDatabaseWithRefresh(OperationContext* opCtx,
                                                           StringData dbName);
