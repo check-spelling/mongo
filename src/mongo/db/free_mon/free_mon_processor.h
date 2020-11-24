@@ -325,7 +325,7 @@ public:
     void turnCrankForTest(size_t countMessagesToIgnore);
 
     /**
-     * Deprioritized the first message to force interleavings of messages.
+     * Deprioritized the first message to force interleaving of messages.
      */
     void deprioritizeFirstMessageForTest(FreeMonMessageType type);
 

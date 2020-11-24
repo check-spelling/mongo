@@ -25,7 +25,7 @@ class RollbackIndexBuildsTest {
 
     // Given two ordered arrays, returns all permutations of the two using all elements of each.
     static makeSchedules(rollbackOps, indexBuildOps) {
-        // Appends to the 'result' array all permutations of the interleavings between two ordered
+        // Appends to the 'result' array all permutations of the interleaving between two ordered
         // arrays.
         function makeCombinations(listA, listB, result, accum = []) {
             if (listA.length == 0 && listB.length == 0) {

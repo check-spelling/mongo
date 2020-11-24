@@ -205,7 +205,7 @@ TEST(Future_EdgeCases, interrupted_wait_then_get_with_bgthread) {
 
     // Note, this is intentionally somewhat racy. async() is defined to sleep 100ms before running
     // the function so it will generally test blocking in the final get(). Under TSAN the sleep is
-    // removed to allow it to find more interesting interleavings, and give it a better chance at
+    // removed to allow it to find more interesting interleaving, and give it a better chance at
     // detecting data races.
     auto future = async([] {});
 
@@ -238,7 +238,7 @@ TEST(Future_EdgeCases, interrupted_wait_then_then_with_bgthread) {
 
     // Note, this is intentionally somewhat racy. async() is defined to sleep 100ms before running
     // the function so it will generally test blocking in the final get(). Under TSAN the sleep is
-    // removed to allow it to find more interesting interleavings, and give it a better chance at
+    // removed to allow it to find more interesting interleaving, and give it a better chance at
     // detecting data races.
     auto future = async([] {});
 
@@ -264,7 +264,7 @@ TEST(Future_EdgeCases, Racing_SharedPromise_getFuture_and_emplaceValue) {
     // the function so the first batch of futures will generally block before getting the value is
     // emplaced, and the second batch will happen around the same time. In all cases the final batch
     // happen after the emplaceValue(), but roughly at the same time. Under TSAN the sleep is
-    // removed to allow it to find more interesting interleavings, and give it a better chance at
+    // removed to allow it to find more interesting interleaving, and give it a better chance at
     // detecting data races.
 
     for (int i = 0; i < 10; i++) {
@@ -299,7 +299,7 @@ TEST(Future_EdgeCases, Racing_SharedPromise_getFuture_and_setError) {
     // the function so the first batch of futures will generally block before getting the value is
     // emplaced, and the second batch will happen around the same time. In all cases the final batch
     // happen after the emplaceValue(), but roughly at the same time. Under TSAN the sleep is
-    // removed to allow it to find more interesting interleavings, and give it a better chance at
+    // removed to allow it to find more interesting interleaving, and give it a better chance at
     // detecting data races.
 
     for (int i = 0; i < 10; i++) {
