@@ -56,14 +56,14 @@ TEST(LegacyRequest, RoundTrip) {
     request.sequences.push_back({"sequence", {BSON("a" << 1), BSON("b" << 2)}});
     auto msg = rpc::legacyRequestFromOpMsgRequest(request);
 
-    auto metadataAndSequece = BSONObjBuilder(metadata)
+    auto metadataAndSequence = BSONObjBuilder(metadata)
                                   .append("sequence", BSON_ARRAY(BSON("a" << 1) << BSON("b" << 2)))
                                   .obj();
 
     auto parsed = rpc::opMsgRequestFromLegacyRequest(msg);
     ASSERT_BSONOBJ_EQ(
         parsed.body,
-        OpMsgRequest::fromDBAndBody(databaseName, commandArgs, metadataAndSequece).body);
+        OpMsgRequest::fromDBAndBody(databaseName, commandArgs, metadataAndSequence).body);
 }
 
 TEST(LegacyRequestBuilder, DownconvertSecondaryReadPreference) {

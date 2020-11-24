@@ -150,7 +150,7 @@ TEST(Metadata, UpconvertInvalidMetadata) {
 }
 
 
-TEST(Metadata, UpconvertUsesDocumentSequecesCorrectly) {
+TEST(Metadata, UpconvertUsesDocumentSequencesCorrectly) {
     // These are cases where it is valid to use document sequences.
     const auto valid = {
         fromjson("{insert: 'coll', documents:[]}"),

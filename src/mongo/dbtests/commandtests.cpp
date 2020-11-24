@@ -46,7 +46,7 @@ using namespace mongo;
 
 namespace CommandTests {
 
-TEST(CommandTests, InputDocumentSequeceWorksEndToEnd) {
+TEST(CommandTests, InputDocumentSequenceWorksEndToEnd) {
     const auto opCtxHolder = cc().makeOperationContext();
     auto opCtx = opCtxHolder.get();
 

@@ -326,9 +326,9 @@ TEST_F(SessionCatalogMigrationSourceTest, OneSessionWithFindAndModifyPreImageAnd
     SessionCatalogMigrationSource migrationSource(opCtx(), kNs, kChunkRange, kShardKey);
     ASSERT_TRUE(migrationSource.fetchNextOplog(opCtx()));
 
-    auto expectedSequece = {entry3, entry4, entry1, entry2};
+    auto expectedSequence = {entry3, entry4, entry1, entry2};
 
-    for (auto oplog : expectedSequece) {
+    for (auto oplog : expectedSequence) {
         ASSERT_TRUE(migrationSource.hasMoreOplog());
         auto nextOplogResult = migrationSource.getLastFetchedOplog();
         ASSERT_FALSE(nextOplogResult.shouldWaitForMajority);
@@ -928,9 +928,9 @@ TEST_F(SessionCatalogMigrationSourceTest,
     SessionCatalogMigrationSource migrationSource(opCtx(), kNs, kChunkRange, kShardKey);
     ASSERT_TRUE(migrationSource.fetchNextOplog(opCtx()));
 
-    auto expectedSequece = {entry1, entry2};
+    auto expectedSequence = {entry1, entry2};
 
-    for (auto oplog : expectedSequece) {
+    for (auto oplog : expectedSequence) {
         ASSERT_TRUE(migrationSource.hasMoreOplog());
         auto nextOplogResult = migrationSource.getLastFetchedOplog();
         ASSERT_FALSE(nextOplogResult.shouldWaitForMajority);
@@ -1086,9 +1086,9 @@ TEST_F(SessionCatalogMigrationSourceTest, TwoSessionWithTwoWritesContainingWrite
     SessionCatalogMigrationSource migrationSource(opCtx(), kNs, kChunkRange, kShardKey);
     ASSERT_TRUE(migrationSource.fetchNextOplog(opCtx()));
 
-    auto expectedSequece = {entry1a, entry2b, entry2a};
+    auto expectedSequence = {entry1a, entry2b, entry2a};
 
-    for (auto oplog : expectedSequece) {
+    for (auto oplog : expectedSequence) {
         ASSERT_TRUE(migrationSource.hasMoreOplog());
         auto nextOplogResult = migrationSource.getLastFetchedOplog();
         ASSERT_FALSE(nextOplogResult.shouldWaitForMajority);
