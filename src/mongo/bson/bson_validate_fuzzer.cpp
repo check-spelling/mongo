@@ -53,7 +53,7 @@ extern "C" int LLVMFuzzerTestOneInput(const char* Data, size_t Size) {
             LOGV2(4496701, "Object used to be valid", "obj"_attr = BSONObj(Data));
     }
 
-    // This will effectively cause the fuzer to find differences between both implementations
+    // This will effectively cause the fuzzer to find differences between both implementations
     // (as they'd lead to crashes), while using edge cases leading to interesting control flow
     // paths in both implementations.
     invariant(oldRet.isOK() == ret.isOK());
