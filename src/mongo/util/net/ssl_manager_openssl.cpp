@@ -863,7 +863,7 @@ StatusWith<std::pair<OCSPCertIDSet, boost::optional<Date_t>>> parseAndValidateOC
         case OCSP_RESPONSE_STATUS_TRYLATER:
         case OCSP_RESPONSE_STATUS_INTERNALERROR:
             return getSSLFailure(str::stream()
-                                 << "Error querying the OCSP responder, an error occured in the "
+                                 << "Error querying the OCSP responder, an error occurred in the "
                                  << "responder itself. Response Status: " << responseStatus);
         default:
             return getSSLFailure(str::stream() << "Error querying the OCSP responder. "

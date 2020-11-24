@@ -256,7 +256,7 @@ public:
     }
 
     /**
-     * Wait until the N events specified in reset have occured.
+     * Wait until the N events specified in reset have occurred.
      */
     void wait() {
         stdx::unique_lock<Latch> lock(_mutex);

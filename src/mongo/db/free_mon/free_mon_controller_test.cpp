@@ -188,7 +188,7 @@ public:
     }
 
     /**
-     * Waits for duration until N events have occured.
+     * Waits for duration until N events have occurred.
      *
      * Returns boost::none on timeout.
      */

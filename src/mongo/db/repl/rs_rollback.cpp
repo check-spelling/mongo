@@ -1361,7 +1361,7 @@ void rollback_internal::syncFixUp(OperationContext* opCtx,
             // of the collection is different on the sync source than on the node rolling back,
             // forcing an initial sync. This is detected if the returned namespace for a refetch of
             // a transaction table document is not "config.transactions," which implies a rename or
-            // drop of the collection occured on either node.
+            // drop of the collection occurred on either node.
             if (uuid == fixUpInfo.transactionTableUUID &&
                 resNss != NamespaceString::kSessionTransactionsTableNamespace) {
                 throw RSFatalException(

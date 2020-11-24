@@ -8,7 +8,7 @@
  *   { _id: 2, x: 3 }
  *   { _id: 1, x: 2 }
  * There is no uniqueness violation here because x: 3 happens before x: 2. If the updates had
- * occured in the opposite order, a DuplicateKey error would be returned to the user.
+ * occurred in the opposite order, a DuplicateKey error would be returned to the user.
  *
  * When these operations are applied on a secondary, they split up across one of 16 writer threads,
  * hashed on the _id of the document. This guarantees that updates to the same document will occur

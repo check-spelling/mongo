@@ -188,7 +188,7 @@ TEST_F(FTDCControllerTest, TestFull) {
 
     c.start();
 
-    // Wait for 100 samples to have occured
+    // Wait for 100 samples to have occurred
     c1Ptr->wait();
 
     c.stop();
@@ -264,7 +264,7 @@ TEST_F(FTDCControllerTest, TestStartAsDisabled) {
 
     c1Ptr->setSignalOnCount(50);
 
-    // Wait for 50 samples to have occured
+    // Wait for 50 samples to have occurred
     c1Ptr->wait();
 
     c.stop();

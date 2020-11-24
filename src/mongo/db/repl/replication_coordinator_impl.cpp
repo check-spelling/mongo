@@ -2309,7 +2309,7 @@ std::shared_ptr<const HelloResponse> ReplicationCoordinatorImpl::awaitHelloRespo
         // a topology change.
         stdx::lock_guard lk(_mutex);
         HelloMetrics::get(opCtx)->decrementNumAwaitingTopologyChanges();
-        // A topology change has not occured within the deadline so horizonString is still a good
+        // A topology change has not occurred within the deadline so horizonString is still a good
         // indicator of whether we have a valid config.
         const bool hasValidConfig = horizonString != boost::none;
         return _makeHelloResponse(horizonString, lk, hasValidConfig);

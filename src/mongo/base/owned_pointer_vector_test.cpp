@@ -110,7 +110,7 @@ TEST(OwnedPointerVectorTest, ClearDestroyedInOrder) {
         ASSERT_EQUALS(0U, owned.size());
         // owned destroyed
     }
-    // no additional deletion should have occured when owned was destroyed
+    // no additional deletion should have occurred when owned was destroyed
     ASSERT_EQUALS(2U, DestructionLogger::destroyedNames().size());
 }
 

@@ -112,7 +112,7 @@ In the first case, a message is created with a deadline of now. In the second ca
 sent with a deadline that is tracked by the
 [`MetricsRetryCounter`](https://github.com/mongodb/mongo/blob/r4.4.0/src/mongo/db/free_mon/free_mon_processor.h#L153-L183)
 object. The retry object is used to track any failures the processor encountered when sending
-metrics; if enough failures have occured in a row, then the processor stops sending the metrics. In
+metrics; if enough failures have occurred in a row, then the processor stops sending the metrics. In
 the third case, the `MetricsRetryCounter` object is incremented to indicate failure. If it has not
 exceeded the retry limit, then the message is again sent with a deadline tracked by the retry
 object.

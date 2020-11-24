@@ -64,7 +64,7 @@
     } catch (const AssertionException& e) {                                        \
         ::mongo::str::stream err;                                                  \
         err << "Threw an exception incorrectly: " << e.toString()                  \
-            << " Exception occured in: " << #EXPRESSION;                           \
+            << " Exception occurred in: " << #EXPRESSION;                           \
         ::mongo::unittest::TestAssertionFailure(__FILE__, __LINE__, err).stream(); \
     }
 
