@@ -48,7 +48,7 @@ namespace optionenvironment {
 extern OptionSection startupOptions;
 
 /*
- * This structure stores the parsed command line options.  After the "defult" group of the
+ * This structure stores the parsed command line options.  After the "default" group of the
  * MONGO_INITIALIZERS, this structure should be fully validated from an option perspective.  See
  * the Environment, Constraint, and Value classes for more details.
  *

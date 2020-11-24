@@ -297,7 +297,7 @@ TEST_F(TopologyDescriptionTestFixture, ShouldUpdateTopologyVersionOnSuccess) {
     const auto config = SdamConfiguration(kThreeServers);
     const auto topologyDescription = std::make_shared<TopologyDescription>(config);
 
-    // Deafult topologyVersion is null
+    // Default topologyVersion is null
     ASSERT_EQUALS(topologyDescription->getServers().size(), 3);
     auto serverDescription = topologyDescription->getServers()[1];
     ASSERT(serverDescription->getTopologyVersion() == boost::none);
@@ -322,7 +322,7 @@ TEST_F(TopologyDescriptionTestFixture, ShouldNotUpdateTopologyVersionOnError) {
     const auto config = SdamConfiguration(kThreeServers);
     const auto topologyDescription = std::make_shared<TopologyDescription>(config);
 
-    // Deafult topologyVersion is null
+    // Default topologyVersion is null
     ASSERT_EQUALS(topologyDescription->getServers().size(), 3);
     auto serverDescription = topologyDescription->getServers()[1];
     ASSERT(serverDescription->getTopologyVersion() == boost::none);
