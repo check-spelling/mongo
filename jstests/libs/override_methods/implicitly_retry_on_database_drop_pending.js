@@ -54,7 +54,7 @@ function runCommandWithRetries(conn, dbName, commandObj, func, makeFuncArgs) {
                 let opsExecuted;
                 const opsToRetry = [];
 
-                // We merge ths statistics returned by the server about the number of documents
+                // We merge the statistics returned by the server about the number of documents
                 // inserted and updated.
                 if (commandName === "insert") {
                     // We make 'commandObj.documents' refer to 'opsToRetry' to consolidate the

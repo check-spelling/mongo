@@ -9,7 +9,7 @@
  * ]
  *
  * - Create a sharded collection and insert a document.
- * - Start a snapshot read with no atClusterTime, tne read selects some atClusterTime T.
+ * - Start a snapshot read with no atClusterTime, the read selects some atClusterTime T.
  * - Block the read with a failpoint.
  * - Update the document at timestamp updateTS > T.
  * - Sleep until updateTS is older than historyWindowSecs.

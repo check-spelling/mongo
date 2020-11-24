@@ -206,7 +206,7 @@ void processLoadSegment(const dl_phdr_info& info, const ElfW(Phdr) & phdr, BSONO
  * Used by dl_iterate_phdr in ExtractSOMap, below, to build up the list of linked
  * objects.
  *
- * Each entry built by an invocation of ths function may have the following fields:
+ * Each entry built by an invocation of the function may have the following fields:
  * * "b", the base address at which an object is loaded.
  * * "path", the path on the file system to the object.
  * * "buildId", the GNU Build ID of the object.

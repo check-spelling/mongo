@@ -453,7 +453,7 @@ public:
     void setNextConsiderationDate(Date_t nextConsiderationDate);
 
     /**
-     * Sets the response and thet virtual time at which it will be delivered.
+     * Sets the response and the virtual time at which it will be delivered.
      */
     void setResponse(Date_t responseDate, const TaskExecutor::ResponseStatus& response);
 
