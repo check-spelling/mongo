@@ -1230,19 +1230,19 @@ DB.prototype._modifyCommandToDigestPasswordIfNecessary = function(cmdObj, userna
     }
     if (cmdObj.hasOwnProperty("digestPassword")) {
         throw Error("Cannot specify 'digestPassword' through the user management shell helpers, " +
-                    "use 'passwordDigestor' instead");
+                    "use 'passwordDigester' instead");
     }
-    var passwordDigestor = cmdObj["passwordDigestor"] ? cmdObj["passwordDigestor"] : "server";
-    if (passwordDigestor == "server") {
+    var passwordDigester = cmdObj["passwordDigester"] ? cmdObj["passwordDigester"] : "server";
+    if (passwordDigester == "server") {
         cmdObj["digestPassword"] = true;
-    } else if (passwordDigestor == "client") {
+    } else if (passwordDigester == "client") {
         cmdObj["pwd"] = _hashPassword(username, cmdObj["pwd"]);
         cmdObj["digestPassword"] = false;
     } else {
-        throw Error("'passwordDigestor' must be either 'server' or 'client', got: '" +
-                    passwordDigestor + "'");
+        throw Error("'passwordDigester' must be either 'server' or 'client', got: '" +
+                    passwordDigester + "'");
     }
-    delete cmdObj["passwordDigestor"];
+    delete cmdObj["passwordDigester"];
 };
 
 DB.prototype.createUser = function(userObj, writeConcern) {

@@ -105,7 +105,7 @@ assert.throws(function() {
 
 assert.throws(function() {
     test.createUser(
-        {user: 'user2', pwd: 'pass', roles: jsTest.basicUserRoles, passwordDisgestor: 'client'});
+        {user: 'user2', pwd: 'pass', roles: jsTest.basicUserRoles, passwordDigester: 'client'});
 });
 
 test.createUser({
@@ -113,7 +113,7 @@ test.createUser({
     pwd: 'pass',
     roles: jsTest.basicUserRoles,
     mechanisms: ['SCRAM-SHA-1'],
-    passwordDigestor: 'client'
+    passwordDigester: 'client'
 });
 checkUser('sha1user2', 'pass', true, false);
 
@@ -123,7 +123,7 @@ assert.throws(function() {
         pwd: 'pass',
         roles: jsTest.basicUserRoles,
         mechanisms: ['SCRAM-SHA-256'],
-        passwordDigestor: 'client'
+        passwordDigester: 'client'
     });
 });
 

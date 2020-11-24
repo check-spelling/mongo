@@ -90,9 +90,9 @@ function runTest(db) {
         db.createUser({user: 'user1', pwd: 'x', roles: [], digestPassword: false});
     });
     assert.throws(function() {
-        db.createUser({user: 'user1', pwd: 'x', roles: [], passwordDigestor: 'foo'});
+        db.createUser({user: 'user1', pwd: 'x', roles: [], passwordDigester: 'foo'});
     });
-    db.createUser({user: 'user1', pwd: 'x', roles: [], passwordDigestor: "server"});
+    db.createUser({user: 'user1', pwd: 'x', roles: [], passwordDigester: "server"});
 
     // Note that as of SERVER-32974, client-side digestion is only permitted under the SCRAM-SHA-1
     // mechanism.
@@ -101,7 +101,7 @@ function runTest(db) {
         pwd: 'x',
         roles: [],
         mechanisms: ['SCRAM-SHA-1'],
-        passwordDigestor: "client"
+        passwordDigester: "client"
     });
     assert(db.auth('user1', 'x'));
     assert(db.auth('user2', 'x'));
@@ -113,10 +113,10 @@ function runTest(db) {
         db.updateUser('user1', {pwd: 'y', digestPassword: false});
     });
     assert.throws(function() {
-        db.updateUser('user1', {pwd: 'y', passwordDigestor: 'foo'});
+        db.updateUser('user1', {pwd: 'y', passwordDigester: 'foo'});
     });
-    db.updateUser('user1', {pwd: 'y', passwordDigestor: 'server'});
-    db.updateUser('user2', {pwd: 'y', mechanisms: ['SCRAM-SHA-1'], passwordDigestor: 'client'});
+    db.updateUser('user1', {pwd: 'y', passwordDigester: 'server'});
+    db.updateUser('user2', {pwd: 'y', mechanisms: ['SCRAM-SHA-1'], passwordDigester: 'client'});
     assert(db.auth('user1', 'y'));
     assert(db.auth('user2', 'y'));
 
