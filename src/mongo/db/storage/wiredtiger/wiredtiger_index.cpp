@@ -466,7 +466,7 @@ long long WiredTigerIndex::getSpaceUsedBytes(OperationContext* opCtx) const {
 
         // Rough approximation of index size as average entry size times number of entries.
         // May be off if key sizes change significantly over the life time of the collection,
-        // but is the best we can do currrently with the statistics available.
+        // but is the best we can do currently with the statistics available.
         auto bytesPerEntry = (insertBytes + inserts - 1) / inserts;  // round up
         auto numEntries = inserts - removes;
         return numEntries * bytesPerEntry;
