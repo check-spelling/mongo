@@ -35,7 +35,7 @@ function runTest(conn) {
     admin.system.users.remove({});
     admin.system.roles.remove({});
 
-    jsTestLog("Creating users and roles that should be overriden by _mergeAuthzCollections");
+    jsTestLog("Creating users and roles that should be overridden by _mergeAuthzCollections");
     db.createUser({user: 'spencer', pwd: 'pwd', roles: ['readWrite']});
     db.createUser({user: 'andy', pwd: 'pwd', roles: ['readWrite']});
     admin.createUser({user: 'andreas', pwd: 'pwd', roles: ['readWrite']});

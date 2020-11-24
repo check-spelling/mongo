@@ -82,7 +82,7 @@ namespace mozjs {
  * JSRuntime). If you need a scope that can be accessed by different threads
  * over the course of it's lifetime, see MozJSProxyScope
  *
- * For more information about overriden fields, see mongo::Scope
+ * For more information about overridden fields, see mongo::Scope
  */
 class MozJSImplScope final : public Scope {
     MozJSImplScope(const MozJSImplScope&) = delete;

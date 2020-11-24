@@ -96,7 +96,7 @@ private:
     virtual std::string describeForFuzzer(BaseClonerStage*) const = 0;
 
     /**
-     * Overriden to allow the BaseCloner to use the initial sync log component.
+     * Overridden to allow the BaseCloner to use the initial sync log component.
      */
     virtual logv2::LogComponent getLogComponent() final;
 

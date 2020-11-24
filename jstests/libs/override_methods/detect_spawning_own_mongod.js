@@ -35,14 +35,14 @@ const RSTOverrideConstructor = function(opts) {
     } else {
         // If we are creating a ReplSetTest using a pre-existing replica set, simply reassign
         // the old constructor and invoke it.
-        Object.assign(this, ReplSetTest.overridenConstructor);
-        return this.overridenConstructor(opts);
+        Object.assign(this, ReplSetTest.overriddenConstructor);
+        return this.overriddenConstructor(opts);
     }
 };
 
 // Capture the old constructor for ReplSetTest in the event that the call to ReplSetTest() is
 // attempting to reconstruct a replica set and not creating a new one.
-ReplSetTest.overridenConstructor = ReplSetTest;
+ReplSetTest.overriddenConstructor = ReplSetTest;
 
 // Same as the above Object.assign() call. In particular, we want to preserve the
 // ReplSetTest.kDefaultTimeoutMS property, which should be accessible to tests in the

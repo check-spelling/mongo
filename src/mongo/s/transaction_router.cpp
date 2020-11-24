@@ -1613,7 +1613,7 @@ Microseconds TransactionRouter::TimingStats::getTimeInactiveMicros(
 
 TransactionRouter::MetricsTracker::~MetricsTracker() {
     // If there was an in-progress transaction, clean up its stats. This may happen if a transaction
-    // is overriden by a higher txnNumber or its session is reaped.
+    // is overridden by a higher txnNumber or its session is reaped.
 
     if (hasStarted() && !isTrackingOver()) {
         // A transaction was started but not ended, so clean up the appropriate stats for it.

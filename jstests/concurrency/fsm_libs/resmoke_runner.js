@@ -110,7 +110,7 @@ function runWorkloads(workloads,
             !TestData.hasOwnProperty("defaultTransactionReadConcernLevel") ||
             TestData.defaultTransactionReadConcernLevel === "snapshot";
 
-        // Synchronize the cluster times across all routers if the tests will be overriden to
+        // Synchronize the cluster times across all routers if the tests will be overridden to
         // use transactions, so the earliest global snapshots chosen by each router will include
         // the effects of each setup function. This is only required for snapshot read concern.
         if (cluster.isSharded() && TestData.runInsideTransaction &&

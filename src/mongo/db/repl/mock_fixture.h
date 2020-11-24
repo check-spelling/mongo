@@ -132,7 +132,7 @@ public:
     class UserExpectation : public Expectation {
     public:
         UserExpectation(Matcher matcher, Action action) : Expectation(matcher, action) {
-            // Default value, may be overriden by calling times().
+            // Default value, may be overridden by calling times().
             _allowedTimes = 1;
         }
 

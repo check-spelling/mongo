@@ -53,7 +53,7 @@ protected:
 
 private:
     /**
-     * Overriden to allow the BaseCloner to use the tenant migration log component.
+     * Overridden to allow the BaseCloner to use the tenant migration log component.
      */
     virtual logv2::LogComponent getLogComponent() final;
 };

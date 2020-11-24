@@ -151,7 +151,7 @@ public:
                                            RetryPolicy retryPolicy);
 
     /**
-     * Same as the other variant of runCommand, but allows the operation timeout to be overriden.
+     * Same as the other variant of runCommand, but allows the operation timeout to be overridden.
      * Runs for the lesser of the remaining time on the operation context or the specified maxTimeMS
      * override.
      */

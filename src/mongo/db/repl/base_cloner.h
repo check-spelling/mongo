@@ -216,7 +216,7 @@ protected:
      * because the operation has at least partially succeeded.  If the stage does not call this,
      * the retrying state is cleared upon successful completion of the entire stage.
      *
-     * Left blank here but may be overriden.
+     * Left blank here but may be overridden.
      */
     virtual void clearRetryingState() {}
 
@@ -225,14 +225,14 @@ protected:
      * execute any cloner-specific logic such as evaluating retry eligibility, running
      * checks on the sync source, etc.
      *
-     * Left blank here but may be overriden.
+     * Left blank here but may be overridden.
      */
     virtual void handleStageAttemptFailed(BaseClonerStage* stage, Status lastError) {}
 
     /**
      * Supports pausing at certain stages for a fuzzer test framework.
      *
-     * Left blank but may be overriden.
+     * Left blank but may be overridden.
      */
     virtual void pauseForFuzzer(BaseClonerStage* stage) {}
 
@@ -242,7 +242,7 @@ protected:
      * string ' db: { ', followed by the stage name, followed by ': ' and the collection UUID
      * if known.
      *
-     * Left blank but may be overriden.
+     * Left blank but may be overridden.
      */
     virtual std::string describeForFuzzer(BaseClonerStage*) const {
         return "";

@@ -71,15 +71,15 @@ runShellScript(mongoUri, ["--retryWrites"], true, function flagWorks() {
 
 // The uri param should override --retryWrites.
 runShellScript(
-    mongoUri + "?retryWrites=false", ["--retryWrites"], false, function flagOverridenByUri() {
+    mongoUri + "?retryWrites=false", ["--retryWrites"], false, function flagOverriddenByUri() {
         assert(!db.getSession().getOptions().shouldRetryWrites(), "retryWrites should be false");
         assert.commandWorked(db.coll.insert({}), "cannot insert");
     });
 
 // Even if initial connection has retryWrites=false in uri, new connections should not be
-// overriden.
+// overridden.
 runShellScript(
-    mongoUri + "?retryWrites=false", ["--retryWrites"], true, function flagNotOverridenByNewConn() {
+    mongoUri + "?retryWrites=false", ["--retryWrites"], true, function flagNotOverriddenByNewConn() {
         let connUri = db.getMongo().host;  // does not have ?retryWrites=false.
         let sess = new Mongo(connUri).startSession();
         assert(sess.getOptions().shouldRetryWrites(), "retryWrites should be true");
@@ -88,7 +88,7 @@ runShellScript(
 
 // Unless that uri also specifies retryWrites.
 runShellScript(
-    mongoUri + "?retryWrites=false", ["--retryWrites"], false, function flagOverridenInNewConn() {
+    mongoUri + "?retryWrites=false", ["--retryWrites"], false, function flagOverriddenInNewConn() {
         let connUri = "mongodb://" + db.getMongo().host + "/test?retryWrites=false";
         let sess = new Mongo(connUri).startSession();
         assert(!sess.getOptions().shouldRetryWrites(), "retryWrites should be false");
@@ -96,7 +96,7 @@ runShellScript(
     });
 
 // Session options should override --retryWrites as well.
-runShellScript(mongoUri, ["--retryWrites"], false, function flagOverridenByOpts() {
+runShellScript(mongoUri, ["--retryWrites"], false, function flagOverriddenByOpts() {
     let connUri = "mongodb://" + db.getMongo().host + "/test";
     let sess = new Mongo(connUri).startSession({retryWrites: false});
     assert(!sess.getOptions().shouldRetryWrites(), "retryWrites should be false");

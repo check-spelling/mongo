@@ -168,7 +168,7 @@ ContinuousStepdown.configure = function(stepdownOptions,
     verbositySetting = tojson(verbositySetting);
 
     // Preserve the original ReplSetTest and ShardingTest constructors, because they are being
-    // overriden.
+    // overridden.
     const originalReplSetTest = ReplSetTest;
     const originalShardingTest = ShardingTest;
 
@@ -182,7 +182,7 @@ ContinuousStepdown.configure = function(stepdownOptions,
         // Construct the original object
         originalReplSetTest.apply(this, arguments);
 
-        // Preserve the original versions of functions that are overrided below.
+        // Preserve the original versions of functions that are overridden below.
         const _originalStartSetFn = this.startSet;
         const _originalStopSetFn = this.stopSet;
         const _originalAwaitLastOpCommitted = this.awaitLastOpCommitted;

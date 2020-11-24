@@ -21,7 +21,7 @@ class JSHook(interface.Hook):
     def _should_run_after_test(self):  # pylint: disable=no-self-use
         """Provide base callback.
 
-        Callback that can be overrided by subclasses to indicate if the JavaScript file should be
+        Callback that can be overridden by subclasses to indicate if the JavaScript file should be
         executed after the current test.
         """
         return True
