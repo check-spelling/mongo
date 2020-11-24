@@ -91,7 +91,7 @@ public:
         return &_fields;
     }
 
-    // don't love this, but needed downstrem
+    // don't love this, but needed downstream
     const BSONObj* fieldsPtr() const {
         return &_fields;
     }
