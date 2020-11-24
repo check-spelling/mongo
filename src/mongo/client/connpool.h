@@ -370,7 +370,7 @@ public:
     // Removes and deletes all connections from the pool for the host (regardless of timeout)
     void removeHost(const std::string& host);
 
-    /** compares server namees, but is smart about replica set names */
+    /** compares server names, but is smart about replica set names */
     struct serverNameCompare {
         bool operator()(const std::string& a, const std::string& b) const;
     };
