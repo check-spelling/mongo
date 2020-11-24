@@ -1,5 +1,5 @@
 // If polygons have holes, the holes cannot be equal to the entire geometry.
-var t = db.geo_s2holessameasshell;
+var t = db.geo_s2holesameasshell;
 t.drop();
 t.createIndex({geo: "2dsphere"});
 
