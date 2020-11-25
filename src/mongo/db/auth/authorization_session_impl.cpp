@@ -620,7 +620,7 @@ static const int resourceSearchListCapacity = 5;
  *
  * Stores the resulting list into resourceSearchList, and returns the length.
  *
- * The seach lists are as follows, depending on the type of "target":
+ * The search lists are as follows, depending on the type of "target":
  *
  * target is ResourcePattern::forAnyResource():
  *   searchList = { ResourcePattern::forAnyResource(), ResourcePattern::forAnyResource() }
