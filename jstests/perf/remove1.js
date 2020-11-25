@@ -1,5 +1,5 @@
 /**
- *  Performance tests for removing ojects
+ *  Performance tests for removing objects
  */
 
 var removals = 100;
