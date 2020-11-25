@@ -2,7 +2,7 @@
 // so it won't be able to transition to primary.
 // @tags: [requires_persistence]
 
-// Validate the shardsrvr does not crash when enabling SSL with encrypted PEM for a cluster
+// Validate the shardsvr does not crash when enabling SSL with encrypted PEM for a cluster
 // Checking UUID consistency involves talking to a shard node, which in this test is shutdown
 TestData.skipCheckingUUIDsConsistentAcrossCluster = true;
 
