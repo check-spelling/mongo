@@ -284,7 +284,7 @@ void logMongodStartupWarnings(const StorageGlobalParams& storageParams,
 #endif  // __linux__
 
 #ifndef _WIN32
-    // Check that # of files rlmit >= 64000
+    // Check that # of files rlimit >= 64000
     const unsigned int minNumFiles = 64000;
     struct rlimit rlnofile;
 
