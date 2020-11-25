@@ -153,7 +153,7 @@ boost::optional<RecoveryUnit::ReadSource> getNewReadSource(OperationContext* opC
                         logAttrs(nss),
                         "reason"_attr = reason);
             // This shift to kNoTimestamp assumes that callers will not make future attempts to
-            // manipulate their ReadSources after performing reads at an un-timetamped snapshot. The
+            // manipulate their ReadSources after performing reads at an un-timestamped snapshot. The
             // only exception is callers of this function that may need to change from kNoTimestamp
             // to kLastApplied in the event of a catalog conflict or query yield.
             return RecoveryUnit::ReadSource::kNoTimestamp;
