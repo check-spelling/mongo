@@ -397,7 +397,7 @@ def get_user_host(user_host):
 def parse_options(options):
     """Parse options and returns a dict.
 
-    Since there are options which can be specifed with a short('-') or long
+    Since there are options which can be specified with a short('-') or long
     ('--') form, we preserve that in key map as {option_name: (value, form)}.
     """
     options_map = collections.defaultdict(list)
@@ -740,7 +740,7 @@ class ProcessControl(object):
     def __init__(self, name=None, pids=None):
         """Provide either 'name' or 'pids' to control the process."""
         if not name and not pids:
-            raise Exception("Either 'process_name' or 'pids' must be specifed")
+            raise Exception("Either 'process_name' or 'pids' must be specified")
         self.name = name
         self.pids = []
         if pids:
@@ -1926,7 +1926,7 @@ Examples:
     # MongoDB options
     mongodb_options.add_option(
         "--downloadUrl", dest="tarball_url",
-        help="URL of tarball to test, if unspecifed latest tarball will be"
+        help="URL of tarball to test, if unspecified latest tarball will be"
         " used", default="latest")
 
     mongodb_options.add_option(
@@ -1985,7 +1985,7 @@ Examples:
                                                  os.getcwd() + os.pathsep + os.environ["PATH"])
     client_options.add_option(
         "--mongoPath", dest="mongo_path",
-        help="Path to mongo (shell) executable, if unspecifed, mongo client"
+        help="Path to mongo (shell) executable, if unspecified, mongo client"
         " is launched from the current directory.", default=mongo_path)
 
     client_options.add_option(
@@ -2085,7 +2085,7 @@ Examples:
                                action="store_true", default=False)
 
     # Remote options, include commands and options sent from client to server under test.
-    # These are 'internal' options, not meant to be directly specifed.
+    # These are 'internal' options, not meant to be directly specified.
     # More than one remote operation can be provided and they are specified in the program args.
     program_options.add_option("--remoteOperation", dest="remote_operation",
                                help=optparse.SUPPRESS_HELP, action="store_true", default=False)

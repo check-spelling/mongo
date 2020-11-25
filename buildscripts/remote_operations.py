@@ -271,9 +271,9 @@ def main():  # pylint: disable=too-many-branches,too-many-statements
         "--commands", dest="remote_commands", default=None, action="append",
         help=("Commands to execute on the remote host. The"
               " commands must be separated by a ';' and can either"
-              " be specifed in a quoted string or by specifying"
+              " be specified in a quoted string or by specifying"
               " this option more than once. A ';' will be added"
-              " between commands when this option is specifed"
+              " between commands when this option is specified"
               " more than once."))
 
     shell_options.add_option(

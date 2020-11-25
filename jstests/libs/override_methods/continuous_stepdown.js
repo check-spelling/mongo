@@ -331,7 +331,7 @@ ContinuousStepdown.configure = function(stepdownOptions,
 
         /**
          * Calls startContinuousFailover on the config server and/or each shard replica set as
-         * specifed by the stepdownOptions object.
+         * specified by the stepdownOptions object.
          */
         this.startContinuousFailover = function() {
             if (stepdownOptions.configStepdown) {

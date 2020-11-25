@@ -250,7 +250,7 @@ public:
 
     /**
      * Return type for resolveRoles().
-     * Each member will be populated ONLY IF their corresponding Option flag was specifed.
+     * Each member will be populated ONLY IF their corresponding Option flag was specified.
      * Otherwise, they will be equal to boost::none.
      */
     struct ResolvedRoleData {
