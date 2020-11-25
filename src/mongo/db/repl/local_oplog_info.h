@@ -82,7 +82,7 @@ private:
 
     // Synchronizes the section where a new Timestamp is generated and when it is registered in the
     // storage engine.
-    mutable Mutex _newOpMutex = MONGO_MAKE_LATCH("LocaloplogInfo::_newOpMutex");
+    mutable Mutex _newOpMutex = MONGO_MAKE_LATCH("LocalOplogInfo::_newOpMutex");
 };
 
 }  // namespace repl
