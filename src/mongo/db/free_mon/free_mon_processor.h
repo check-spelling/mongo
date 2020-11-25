@@ -67,7 +67,7 @@ public:
     virtual ~RetryCounter() = default;
 
     /**
-     * Set Minimum rety interval
+     * Set Minimum retry interval
      */
     void setMin(Seconds s) {
         _min = s;
