@@ -9,7 +9,7 @@
   https://github.com/KindDragon/CPPDebuggerVisualizers
 
   To load in Visual Studio, the natvis file must be in the Visual Studio project.
-  To load in WinDBG, run ".nvload mongdb.natvis"
+  To load in WinDBG, run ".nvload mongodb.natvis"
   -->
   <Type Name="mongo::Status">
     <DisplayString Condition="_error == 0x0">OK</DisplayString>
