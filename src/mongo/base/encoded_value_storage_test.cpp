@@ -121,18 +121,18 @@ public:
 
 TEST(EncodedValueStorage, EncodedValueStorage) {
     EncodedValueStorageTest::Value raw;
-    EncodedValueStorageTest::Value zerod(kZeroInitTag);
+    EncodedValueStorageTest::Value zeroed(kZeroInitTag);
     char buf[sizeof(EncodedValueStorageTest::Layout)] = {0};
 
     ASSERT_EQUALS(raw.view().view2ptr(), raw.constView().view2ptr());
 
     // ensure zeroing with the init tag works
-    ASSERT_EQUALS(std::memcmp(zerod.view().view2ptr(), buf, sizeof(buf)), 0);
+    ASSERT_EQUALS(std::memcmp(zeroed.view().view2ptr(), buf, sizeof(buf)), 0);
 
     // see if value assignment and view() works
-    zerod.view().setNative(1234);
+    zeroed.view().setNative(1234);
     EncodedValueStorageTest::View(buf).setNative(1234);
-    raw = zerod;
+    raw = zeroed;
     ASSERT_EQUALS(std::memcmp(raw.view().view2ptr(), buf, sizeof(buf)), 0);
 
     // see if view() and constView() work appropriately
