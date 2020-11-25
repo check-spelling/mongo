@@ -4138,7 +4138,7 @@ if env.GetOption('num_jobs') == altered_num_jobs:
         if get_option("ninja") != "disabled":
             env.FatalError("Cannot auto-determine the appropriate size for the Ninja local_job pool. Please regenerate with an explicit -j argument to SCons")
         else:
-            env.FatalError("Cannot auto-determine the appropriate build paralleism on this platform. Please build with an explicit -j argument to SCons")
+            env.FatalError("Cannot auto-determine the appropriate build parallelism on this platform. Please build with an explicit -j argument to SCons")
 
     if 'ICECC' in env and env['ICECC'] and get_option("ninja") == "disabled":
         # If SCons is driving and we are using icecream, scale up the
