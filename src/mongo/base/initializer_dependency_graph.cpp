@@ -184,7 +184,7 @@ Status InitializerDependencyGraph::topSort(std::vector<std::string>* sortedNames
     //          unsortedBegin => [          )  <= unsortedEnd
     // Each element of the stack region is a prerequisite of its neighbor to the right. Through
     // 'swapPositions' calls and boundary increments, elements will transition from unsorted to
-    // stack to sorted. The unsorted region shinks to ultimately become an empty region on the
+    // stack to sorted. The unsorted region shrinks to ultimately become an empty region on the
     // right. No other moves are permitted.
     auto unsortedBegin = elements.begin();
     auto unsortedEnd = elements.end();
