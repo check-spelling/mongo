@@ -637,7 +637,7 @@ Status validateIndexSpecTTL(const BSONObj& indexSpec) {
         << indexSpec;
 
     // There are two cases where we can encounter an issue here.
-    // The first case is when we try to cast to millseconds from seconds, which could cause an
+    // The first case is when we try to cast to milliseconds from seconds, which could cause an
     // overflow. The second case is where 'expireAfterSeconds' is larger than the current epoch
     // time.
     try {

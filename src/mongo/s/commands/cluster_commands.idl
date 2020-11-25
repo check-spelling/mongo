@@ -43,7 +43,7 @@ server_parameters:
 
     KillSessionsPerHostTimeoutMS:
         description: >-
-            The maximum number of miliseconds for killSessionsRemote to wait for host to respond.
+            The maximum number of milliseconds for killSessionsRemote to wait for host to respond.
         set_at: startup
         cpp_vartype: int
         cpp_varname: gKillSessionsPerHostTimeoutMS
