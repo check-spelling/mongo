@@ -513,7 +513,7 @@ private:
 
     /**
      * Kill the cursors satisfying the given predicate. Assumes that 'lk' is held upon entry. The
-     * 'now' parameter is only used for the internal logging mechansim.
+     * 'now' parameter is only used for the internal logging mechanism.
      *
      * Returns the number of cursors killed.
      */
