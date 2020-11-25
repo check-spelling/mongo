@@ -483,7 +483,7 @@ TEST_F(ReshardingAggTest, OplogPipelineBasicCRUDOnly) {
     mockResults.emplace_back(Document(updateOplog.toBSON()));
     mockResults.emplace_back(Document(deleteOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);
@@ -519,7 +519,7 @@ TEST_F(ReshardingAggTest, OplogPipelineWithResumeToken) {
     mockResults.emplace_back(Document(updateOplog.toBSON()));
     mockResults.emplace_back(Document(deleteOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);
@@ -561,7 +561,7 @@ TEST_F(ReshardingAggTest, OplogPipelineWithResumeTokenClusterTimeNotEqualTs) {
     mockResults.emplace_back(Document(updateOplog.toBSON()));
     mockResults.emplace_back(Document(deleteOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);
@@ -592,7 +592,7 @@ TEST_F(ReshardingAggTest, OplogPipelineWithPostImage) {
     mockResults.emplace_back(Document(postImageOplog.toBSON()));
     mockResults.emplace_back(Document(updateWithPostOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);
@@ -633,7 +633,7 @@ TEST_F(ReshardingAggTest, OplogPipelineWithLargeBSONPostImage) {
     mockResults.emplace_back(Document(postImageOplog.toBSON()));
     mockResults.emplace_back(Document(updateWithPostOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);
@@ -674,7 +674,7 @@ TEST_F(ReshardingAggTest, OplogPipelineResumeAfterPostImage) {
     mockResults.emplace_back(Document(postImageOplog.toBSON()));
     mockResults.emplace_back(Document(updateWithPostOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);
@@ -706,7 +706,7 @@ TEST_F(ReshardingAggTest, OplogPipelineWithPreImage) {
     mockResults.emplace_back(Document(preImageOplog.toBSON()));
     mockResults.emplace_back(Document(deleteWithPreOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);
@@ -747,7 +747,7 @@ TEST_F(ReshardingAggTest, OplogPipelineWithPreAndPostImage) {
     mockResults.emplace_back(Document(preImageOplog.toBSON()));
     mockResults.emplace_back(Document(deleteWithPreOplog.toBSON()));
 
-    // Mock lookup collection document souce.
+    // Mock lookup collection document source.
     auto expCtx = createExpressionContext();
     expCtx->ns = localOplogBufferNss();
     expCtx->mongoProcessInterface = std::make_shared<MockMongoInterface>(mockResults);

@@ -553,9 +553,9 @@ boost::optional<HostAndPort> TopologyCoordinator::_chooseSyncSourceInitialChecks
         const auto hostAndPortElem = data["hostAndPort"];
         if (!hostAndPortElem) {
             LOGV2_FATAL(50835,
-                        "'forceSyncSoureCandidate' parameter set with invalid host and port: "
+                        "'forceSyncSourceCandidate' parameter set with invalid host and port: "
                         "{failpointData}",
-                        "'forceSyncSoureCandidate' parameter set with invalid host and port",
+                        "'forceSyncSourceCandidate' parameter set with invalid host and port",
                         "failpointData"_attr = data);
         }
 
