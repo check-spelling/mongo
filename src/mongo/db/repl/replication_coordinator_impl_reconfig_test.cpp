@@ -1757,7 +1757,7 @@ TEST_F(ReplCoordReconfigTest, ParseFailedIfUserProvidesNewlyAddedFieldDuringSafe
                   countTextFormatLogLinesContaining(
                       "Initializing 'newlyAdded' field to member has failed with bad status."));
 
-    // Verify that a log message was not created for rewritting the new config, since we did not add
+    // Verify that a log message was not created for rewriting the new config, since we did not add
     // a 'newlyAdded' field.
     ASSERT_EQUALS(0,
                   countTextFormatLogLinesContaining(
