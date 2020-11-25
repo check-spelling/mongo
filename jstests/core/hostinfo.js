@@ -14,7 +14,7 @@ if (hostinfo.os.type == "Windows") {
 
 } else if (hostinfo.os.type == "Linux") {
     assert.neq(hostinfo.os.name, "" || null, "Missing Linux os/distro name");
-    assert.neq(hostinfo.os.version, "" || null, "Missing Lindows version");
+    assert.neq(hostinfo.os.version, "" || null, "Missing Linux version");
 
 } else if (hostinfo.os.type == "Darwin") {
     assert.neq(hostinfo.os.name, "" || null, "Missing Darwin os name");
