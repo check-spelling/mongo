@@ -240,7 +240,7 @@ private:
     // Points to the current session record being cloned.
     std::unique_ptr<SessionOplogIterator> _currentOplogIterator;
 
-    // Used for temporarily storng oplog entries for operations that has more than one entry.
+    // Used for temporarily storing oplog entries for operations that has more than one entry.
     // For example, findAndModify generates one for the actual operation and another for the
     // pre/post image.
     std::vector<repl::OplogEntry> _lastFetchedOplogBuffer;
