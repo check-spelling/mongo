@@ -72,7 +72,7 @@ constexpr auto saslCommandUserFieldName = "user"_sd;
 /// or "$external" if the credential information is stored outside of the mongo cluster.
 constexpr auto saslCommandUserDBFieldName = "db"_sd;
 
-/// Field overriding the FQDN of the hostname hosting the mongodb srevice in
+/// Field overriding the FQDN of the hostname hosting the mongodb service in
 /// saslClientAuthenticate().
 constexpr auto saslCommandServiceHostnameFieldName = "serviceHostname"_sd;
 
