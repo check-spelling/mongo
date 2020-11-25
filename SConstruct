@@ -1770,7 +1770,7 @@ if link_model.startswith("dynamic"):
 if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
     # The following platforms probably aren't using the binutils
     # toolchain, or may be using it for the archiver but not the
-    # linker, and binutils currently is the olny thing that supports
+    # linker, and binutils currently is the only thing that supports
     # thin archives. Don't even try on those platforms.
     if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
         env.Tool('thin_archive')
