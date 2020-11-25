@@ -845,7 +845,7 @@ TEST_F(InitialSyncerTest,
     // Advance clock until the next sync source selection attempt.
     advanceClock(getNet(), _options.syncSourceRetryWait);
 
-    // DataReplictor drops user databases after obtaining a valid sync source.
+    // DataReplicator drops user databases after obtaining a valid sync source.
     ASSERT_TRUE(_storageInterfaceWorkDone.droppedUserDBs);
 }
 
