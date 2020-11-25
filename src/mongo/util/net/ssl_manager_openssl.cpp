@@ -1410,7 +1410,7 @@ private:
     static int password_cb(char* buf, int num, int rwflag, void* userdata);
 
     /**
-     * Special flawor of password callback, which always fails.
+     * Special flavor of password callback, which always fails.
      * @return -1.
      */
     static int always_error_password_cb(char* buf, int num, int rwflag, void* userdata);
