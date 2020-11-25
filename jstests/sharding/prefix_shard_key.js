@@ -2,7 +2,7 @@
 //
 // Part 1: Shard new collection on {num : 1} with an index on {num : 1, x : 1}.
 //         Test that you can split and move chunks around.
-// Part 2: Test that adding an array value for x doesn't make it unusuable.
+// Part 2: Test that adding an array value for x doesn't make it unusable.
 // Part 3: Shard new collection on {skey : 1} but with a longer index.
 //         Insert docs with same val for 'skey' but different vals for 'extra'.
 //         Move chunks around and check that [min,max) chunk boundaries are properly obeyed.
