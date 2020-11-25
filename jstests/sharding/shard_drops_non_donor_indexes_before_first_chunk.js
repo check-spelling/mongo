@@ -39,7 +39,7 @@ assert.commandWorked(st.s.adminCommand(
     {moveChunk: coll.getFullName(), find: {_id: 0}, to: st.shard0.shardName, waitForDelete: true}));
 
 // Manually create an index on shard1.
-const indexName = "shardSpecficIndex";
+const indexName = "shardSpecificIndex";
 assert.commandWorked(shard1Coll.createIndex({a: 1, b: -1}, {name: indexName}));
 
 // Verify index is on shard1 but not shard0.
