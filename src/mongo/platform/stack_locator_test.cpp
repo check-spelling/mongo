@@ -36,7 +36,7 @@
 namespace mongo {
 namespace {
 
-TEST(StackLocator, StacLocatorFindsStackOfTestExecutorThread) {
+TEST(StackLocator, StackLocatorFindsStackOfTestExecutorThread) {
     const StackLocator locator;
 
     const auto begin = locator.begin();
