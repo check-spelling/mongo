@@ -117,7 +117,7 @@ TEST_F(PeriodicThreadTest, Basic) {
     // Check the counter after it is shutdown and make sure it does not change.
     std::uint32_t lastCounter = testThread.getCounter();
 
-    // This is racey but it should only produce false negatives
+    // This is racy but it should only produce false negatives
     sleepmillis(100);
 
     ASSERT_EQ(lastCounter, testThread.getCounter());
@@ -139,7 +139,7 @@ TEST_F(PeriodicThreadTest, PauseAndStop) {
     // Check the counter after it is shutdown and make sure it does not change.
     std::uint32_t pauseCounter = testThread.getCounter();
 
-    // This is racey but it should only produce false negatives
+    // This is racy but it should only produce false negatives
     sleepmillis(100);
 
     // We could have had one more run of the loop as we paused - allow for that case
@@ -151,7 +151,7 @@ TEST_F(PeriodicThreadTest, PauseAndStop) {
     // Check the counter after it is shutdown and make sure it does not change.
     std::uint32_t stopCounter = testThread.getCounter();
 
-    // This is racey but it should only produce false negatives
+    // This is racy but it should only produce false negatives
     sleepmillis(100);
 
     ASSERT_EQ(stopCounter, testThread.getCounter());
@@ -173,7 +173,7 @@ TEST_F(PeriodicThreadTest, PauseAndResume) {
     // Check the counter after it is shutdown and make sure it does not change.
     std::uint32_t pauseCounter = testThread.getCounter();
 
-    // This is racey but it should only produce false negatives
+    // This is racy but it should only produce false negatives
     sleepmillis(100);
 
     // We could have had one more run of the loop as we paused - allow for that case
@@ -262,7 +262,7 @@ TEST_F(WatchdogCheckThreadTest, Basic) {
     // Check the counter after it is shutdown and make sure it does not change.
     std::uint32_t lastCounter = counterCheckPtr->getCounter();
 
-    // This is racey but it should only produce false negatives
+    // This is racy but it should only produce false negatives
     sleepmillis(100);
 
     ASSERT_EQ(lastCounter, counterCheckPtr->getCounter());
@@ -437,7 +437,7 @@ TEST_F(WatchdogMonitorTest, PauseAndResume) {
     // Check the counter after it is shutdown and make sure it does not change.
     std::uint32_t pauseCounter = counterCheckPtr->getCounter();
 
-    // This is racey but it should only produce false negatives
+    // This is racy but it should only produce false negatives
     sleepmillis(100);
 
     // We could have had one more run of the loop as we paused - allow for that case
@@ -458,7 +458,7 @@ TEST_F(WatchdogMonitorTest, PauseAndResume) {
     // Check the counter after it is shutdown and make sure it does not change.
     std::uint32_t lastCounter = counterCheckPtr->getCounter();
 
-    // This is racey but it should only produce false negatives
+    // This is racy but it should only produce false negatives
     sleepmillis(100);
 
     ASSERT_EQ(lastCounter, counterCheckPtr->getCounter());
