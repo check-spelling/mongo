@@ -69,7 +69,7 @@ public:
             // killOp always reports success once past the auth check.
             return true;
         } else if (element.type() == BSONType::String) {
-            // It's a string. Should be of the form shardid:opid.
+            // It's a string. Should be of the form shardId:opid.
             return _killShardOperation(opCtx, element.str(), result);
         }
 
@@ -81,12 +81,12 @@ private:
     static bool _killShardOperation(OperationContext* opCtx,
                                     const std::string& opToKill,
                                     BSONObjBuilder& result) {
-        // The format of op is shardid:opid
+        // The format of op is shardId:opid
         // This is different than the format passed to the mongod killOp command.
         const auto opSepPos = opToKill.find(':');
 
         uassert(28625,
-                str::stream() << "The op argument to killOp must be of the format shardid:opid"
+                str::stream() << "The op argument to killOp must be of the format shardId:opid"
                               << " but found \"" << opToKill << '"',
                 (opToKill.size() >= 3) &&                  // must have at least N:N
                     (opSepPos != std::string::npos) &&     // must have ':' as separator
@@ -107,9 +107,9 @@ private:
         int opId;
         uassertStatusOK(NumberParser().base(10)(opToKill.substr(opSepPos + 1), &opId));
 
-        // shardid is actually the opid - keeping for backwards compatibility.
+        // shardId is actually the opid - keeping for backwards compatibility.
         result.append("shard", shardIdent);
-        result.append("shardid", opId);
+        result.append("shardId", opId);
 
         ScopedDbConnection conn(shard->getConnString());
         BSONObjBuilder bob(BSON("killOp" << 1 << "op" << opId));

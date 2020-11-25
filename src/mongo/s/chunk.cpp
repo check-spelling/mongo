@@ -56,7 +56,7 @@ const ShardId& ChunkInfo::getShardIdAt(const boost::optional<Timestamp>& ts) con
         return _shardId;
     }
 
-    // If the timestamp is not provided than we return the latest shardid
+    // If the timestamp is not provided than we return the latest shardId
     if (!ts) {
         invariant(_shardId == _history.front().getShard());
         return _history.front().getShard();
