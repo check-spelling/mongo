@@ -4573,7 +4573,7 @@ if env['PLATFORM'] == 'posix':
         ]
     )
 elif env['PLATFORM'] == 'darwin':
-    # The darwin case uses a adhoc implementation of RPATH for SCons
+    # The darwin case uses a ad-hoc implementation of RPATH for SCons
     # since SCons does not support RPATH directly for macOS:
     #   https://github.com/SCons/scons/issues/2127
     # so we setup RPATH and LINKFLAGS ourselves.
