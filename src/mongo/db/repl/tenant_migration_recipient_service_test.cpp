@@ -846,7 +846,7 @@ TEST_F(TenantMigrationRecipientServiceTest, TenantMigrationRecipientStartsCloner
         fp->waitForTimesEntered(fp.initialTimesEntered() + 1);
 
         // since the listDatabase would return empty, cloner will not make any new writes. So,
-        // it's safe to assume the  donor opime at clone completion point will be the
+        // it's safe to assume the  donor optime at clone completion point will be the
         // optime at which migration start optimes got persisted.
         cloneCompletionRecipientOpTime =
             ReplicationCoordinator::get(getServiceContext())->getMyLastAppliedOpTime();
