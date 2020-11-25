@@ -326,7 +326,7 @@ class MaterializedRowAccessor final : public SlotAccessor {
 public:
     /**
      * Constructs an accessor for the row with index 'it' inside the given 'container'. Within that
-     * row, the resulting accessor provides a vew of the value at the given 'slot'.
+     * row, the resulting accessor provides a view of the value at the given 'slot'.
      */
     MaterializedRowAccessor(T& container, const size_t& it, size_t slot)
         : _container(container), _it(it), _slot(slot) {}
