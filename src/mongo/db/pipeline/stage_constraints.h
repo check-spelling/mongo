@@ -328,7 +328,7 @@ struct StageConstraints {
     //   documents because our implementation of $sample shuffles the order
     bool canSwapWithSkippingOrLimitingStage = false;
 
-    // Indicates that a stage is allowed within a pipeline-stlye update.
+    // Indicates that a stage is allowed within a pipeline-style update.
     bool isAllowedWithinUpdatePipeline = false;
 
     bool operator==(const StageConstraints& other) const {
