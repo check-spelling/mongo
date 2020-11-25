@@ -40,7 +40,7 @@ assert.eq(60, db.limit_push.find(q).count(), "Did not find 60 documents");
 // rs = db.limit_push.find( q ).sort( { x:-1} ).limit(1)
 // assert.eq( rs , { _id : "1" , x : 59 } , "Did not find document with value 59" );
 
-// Now make sure that the explain shos that each shard is returning a single document as
+// Now make sure that the explain shows that each shard is returning a single document as
 // indicated
 // by the "n" element for each shard
 exp = db.limit_push.find(q).sort({x: -1}).limit(1).explain("executionStats");
