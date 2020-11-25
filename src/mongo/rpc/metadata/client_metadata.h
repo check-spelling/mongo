@@ -243,7 +243,7 @@ public:
      * Modify the existing client metadata document to include a mongos section.
      *
      * hostAndPort is "host:port" of the running MongoS.
-     * monogsClient is "host:port" of the connected driver.
+     * mongosClient is "host:port" of the connected driver.
      * version is the version string of MongoS.
      *
      * "mongos" : {
