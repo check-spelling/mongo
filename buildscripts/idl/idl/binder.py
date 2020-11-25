@@ -52,7 +52,7 @@ def _validate_single_bson_type(ctxt, idl_type, syntax_type):
         ctxt.add_bad_bson_type_error(idl_type, syntax_type, idl_type.name, bson_type)
         return False
 
-    # Validate bindata_subytpe
+    # Validate bindata_subtype
     if bson_type == "bindata":
         subtype = idl_type.bindata_subtype
 
