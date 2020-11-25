@@ -752,7 +752,7 @@ void DocumentSourceLookUp::serializeToArray(
         }
 
         // Only add _matchSrc for explain when $lookup was constructed with localField/foreignField
-        // syntax. For pipeline sytax, _matchSrc will be included as part of the pipeline
+        // syntax. For pipeline syntax, _matchSrc will be included as part of the pipeline
         // definition.
         if (!wasConstructedWithPipelineSyntax() && _additionalFilter) {
             // Our output does not have to be parseable, so include a "matching" field with the
