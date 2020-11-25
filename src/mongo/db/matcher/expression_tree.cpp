@@ -184,7 +184,7 @@ bool ListOfMatchExpression::equivalent(const MatchExpression* other) const {
     if (_expressions.size() != realOther->_expressions.size())
         return false;
 
-    // TOOD: order doesn't matter
+    // TODO: order doesn't matter
     for (unsigned i = 0; i < _expressions.size(); i++)
         if (!_expressions[i]->equivalent(realOther->_expressions[i]))
             return false;

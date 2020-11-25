@@ -176,7 +176,7 @@ def generate(env):
 
     # Check the registry key that has the runtime lib version
     try:
-        # TOOO: This x64 needs to be abstracted away. Is it the host
+        # TODO: This x64 needs to be abstracted away. Is it the host
         # arch, or the target arch? My guess is host.
         vsruntime_key_name = "SOFTWARE\\Microsoft\\VisualStudio\\{msvc_major}.0\\VC\\Runtimes\\x64".format(
             msvc_major=msvc_major
