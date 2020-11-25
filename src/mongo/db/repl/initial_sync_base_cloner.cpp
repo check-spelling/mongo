@@ -177,7 +177,7 @@ Status InitialSyncBaseCloner::checkRollBackIdIsUnchanged() {
 
 void InitialSyncBaseCloner::pauseForFuzzer(BaseClonerStage* stage) {
     // These are the stages that the initial sync fuzzer expects to be able to pause on using the
-    // syncronization fail points.
+    // synchronization fail points.
     static const auto initialSyncPauseStages =
         std::vector<std::string>{"listCollections", "listIndexes", "listDatabases"};
 
