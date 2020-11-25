@@ -41,7 +41,7 @@ server_parameters:
         description: Determines the width of the latency window used in server selection.
         set_at: startup
         cpp_vartype: int
-        cpp_varname: sdamLocalThreshholdMs
+        cpp_varname: sdamLocalThresholdMs
         validator:
             gte: 0
         default: 15

@@ -60,7 +60,7 @@ public:
         TopologyType initialType = TopologyType::kUnknown,
         Milliseconds heartBeatFrequencyMs = Milliseconds(sdamHeartBeatFrequencyMs),
         Milliseconds connectTimeoutMs = Milliseconds(sdamConnectTimeoutMs),
-        Milliseconds localThreshholdMs = Milliseconds(sdamLocalThreshholdMs),
+        Milliseconds localThresholdMs = Milliseconds(sdamLocalThresholdMs),
         boost::optional<std::string> setName = boost::none);
 
     /**

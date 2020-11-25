@@ -383,7 +383,7 @@ private:
                                         initType,
                                         Milliseconds{sdamHeartBeatFrequencyMs},
                                         Milliseconds{sdamConnectTimeoutMs},
-                                        Milliseconds{sdamLocalThreshholdMs},
+                                        Milliseconds{sdamLocalThresholdMs},
                                         setName);
         _topologyDescription = std::make_shared<TopologyDescription>(config);
 

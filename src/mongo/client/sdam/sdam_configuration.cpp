@@ -33,13 +33,13 @@ SdamConfiguration::SdamConfiguration(boost::optional<std::vector<HostAndPort>> s
                                      TopologyType initialType,
                                      Milliseconds heartBeatFrequencyMs,
                                      Milliseconds connectTimeoutMs,
-                                     Milliseconds localThreshholdMs,
+                                     Milliseconds localThresholdMs,
                                      boost::optional<std::string> setName)
     : _seedList(seedList),
       _initialType(initialType),
       _heartbeatFrequency(heartBeatFrequencyMs),
       _connectionTimeout(connectTimeoutMs),
-      _localThreshold(localThreshholdMs),
+      _localThreshold(localThresholdMs),
       _setName(setName),
       _bsonDoc(_toBson()) {
     uassert(ErrorCodes::InvalidSeedList,
@@ -111,7 +111,7 @@ BSONObj SdamConfiguration::_toBson() const {
 
     builder.append("heartbeatFrequency", _heartbeatFrequency.toBSON());
     builder.append("connectionTimeout", _connectionTimeout.toBSON());
-    builder.append("localThreshhold", _localThreshold.toBSON());
+    builder.append("localThreshold", _localThreshold.toBSON());
 
     return builder.obj();
 }
