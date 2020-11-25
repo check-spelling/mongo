@@ -50,7 +50,7 @@ if (rc != 0) {
 
     jsTestLog(`cat /etc/os-release\n${osRelease}`);
 
-    var suzeMatch = osRelease.match(/ID="?sles"?/);
+    var suseMatch = osRelease.match(/ID="?sles"?/);
 
     // Fail this test if we are on GLIBC >= 2.2 and HOSTALIASES still doesn't work
     if (glibc_version < 2.2) {
@@ -58,7 +58,7 @@ if (rc != 0) {
             `HOSTALIASES does not seem to work as expected on this system. GLIBC
                 version is ${glibc_version}, skipping this test.`);
         return;
-    } else if (suzeMatch) {
+    } else if (suseMatch) {
         jsTestLog(
             `HOSTALIASES does not seem to work as expected but we detected SLES. GLIBC
                 version is ${glibc_version}, skipping this test.`);
