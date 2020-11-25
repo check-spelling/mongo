@@ -91,7 +91,7 @@ struct clonable_traits_impl<T, true> {
  * The 'clonable_traits' class is a specializable traits class for clonable-like types.  By
  * specializing this traits class for a type it is possible to change the global default
  * `CloneFactory` type for a specific type.  Types which conform to `mongo::concept::Clonable`
- * will get a default `CloneFactory` type whch invokes their specific `Clonable::clone` function.  A
+ * will get a default `CloneFactory` type which invokes their specific `Clonable::clone` function.  A
  * specialization can be used to make a type use a different clone factory function.  A type `T` may
  * specify `T::clone_factory_type` instead of specializing this traits type.
  */
