@@ -296,7 +296,7 @@ void LogicalSessionCacheImpl::_refresh(Client* client) {
         }
     };
     auto activeSessionsBackSwapper = makeGuard([&] { backSwap(_activeSessions, activeSessions); });
-    auto explicitlyEndingBackSwaper =
+    auto explicitlyEndingBackSwapper =
         makeGuard([&] { backSwap(_endingSessions, explicitlyEndingSessions); });
 
     // remove all explicitlyEndingSessions from activeSessions
@@ -330,7 +330,7 @@ void LogicalSessionCacheImpl::_refresh(Client* client) {
 
     // Remove the ending sessions from the sessions collection.
     _sessionsColl->removeRecords(opCtx, explicitlyEndingSessions);
-    explicitlyEndingBackSwaper.dismiss();
+    explicitlyEndingBackSwapper.dismiss();
     {
         stdx::lock_guard<Latch> lk(_mutex);
         _stats.setLastSessionsCollectionJobEntriesEnded(explicitlyEndingSessions.size());
