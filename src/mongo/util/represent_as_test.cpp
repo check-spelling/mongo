@@ -179,7 +179,7 @@ TEST(RepresentAs, DoubleToFloat) {
     ASSERT(*(representAs<float>(kDoubleZero)) == 0);
     ASSERT(*(representAs<float>(-12345)) == -12345);
 
-    // Float edge casees
+    // Float edge cases
     ASSERT(*(representAs<float>(kFloatMax)) == (representAs<float>(kFloatMaxAsDouble + 1)));
     ASSERT(*(representAs<float>(kFloatMin)) == (representAs<float>(kFloatMinAsDouble - 1)));
 

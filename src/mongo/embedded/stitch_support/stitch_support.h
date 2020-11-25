@@ -84,7 +84,7 @@ extern "C" {
  *
  * The `status` parameter is optional for all `stitch_support_v1_` functions that can take a status
  * pointer. The caller may pass NULL instead of a valid `status` object, in which case the function
- * will execute normally but will not provide any detailed error information in the caes of a
+ * will execute normally but will not provide any detailed error information in the cases of a
  * failure.
  *
  * All `stitch_support_v1_status` functions can be used before the Stitch Support library is
