@@ -75,7 +75,7 @@ private:
 };
 
 /**
- * This elaborate bit of artiface helps us to adapt the shape of a cursor manager that we know from
+ * This elaborate bit of artifice helps us to adapt the shape of a cursor manager that we know from
  * logical sessions with the different ways to cancel cursors in mongos versus mongod.  I.e. the
  * two types share no code, but do share enough shape to re-use some boilerplate.
  */
