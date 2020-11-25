@@ -2,7 +2,7 @@
 "use strict";
 
 /**
- * Test that a targetted findAndModify will be properly routed after executing a write that
+ * Test that a targeted findAndModify will be properly routed after executing a write that
  * does not perform any shard version checks.
  */
 var runTest = function(writeFunc) {
@@ -25,7 +25,7 @@ var runTest = function(writeFunc) {
     assert.commandWorked(testDB.adminCommand(
         {moveChunk: 'test.user', find: {x: 0}, to: st.shard0.shardName, _waitForDelete: true}));
 
-    // Issue a targetted findAndModify and check that it was upserted to the right shard.
+    // Issue a targeted findAndModify and check that it was upserted to the right shard.
     assert.commandWorked(testDB2.runCommand(
         {findAndModify: 'user', query: {x: 100}, update: {$set: {y: 1}}, upsert: true}));
 

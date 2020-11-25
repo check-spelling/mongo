@@ -31,10 +31,10 @@ function runTest(coll) {
 assert.commandWorked(coll.insert({a: -4}));
 assert.commandWorked(coll.insert({a: 4}));
 
-// Run test when a single shard is targetted.
+// Run test when a single shard is targeted.
 runTest(coll);
 
-// Run test when more than one shard is targetted.
+// Run test when more than one shard is targeted.
 st.shardColl("coll", {a: 1}, {a: 0});
 runTest(coll);
 

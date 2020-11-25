@@ -1,7 +1,7 @@
 /**
  * This file defines a class, CSRSUpgradeCoordinator, which contains logic for spinning up a
  * sharded cluster using SCCC config servers and for upgrading that cluster to CSRS.
- * Include this file and use the CSRSUpgradeCoordinator class in any targetted jstests of csrs
+ * Include this file and use the CSRSUpgradeCoordinator class in any targeted jstests of csrs
  * upgrade behavior.
  */
 

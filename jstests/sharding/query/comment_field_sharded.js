@@ -189,11 +189,11 @@ function runCommentParamTest({
     }
 }
 
-// For find command on a sharded collection, when all the shards are targetted.
+// For find command on a sharded collection, when all the shards are targeted.
 runCommentParamTest(
     {coll: shardedColl, command: {find: shardedColl.getName(), filter: {}}, expectedRunningOps: 2});
 
-// For find command on a sharded collection, when a single shard is targetted.
+// For find command on a sharded collection, when a single shard is targeted.
 runCommentParamTest({
     coll: shardedColl,
     command: {find: shardedColl.getName(), filter: {x: 3}},
@@ -207,28 +207,28 @@ runCommentParamTest({
     expectedRunningOps: 1
 });
 
-// For insert command on a sharded collection, where all the shards are targetted.
+// For insert command on a sharded collection, where all the shards are targeted.
 runCommentParamTest({
     coll: shardedColl,
     command: {insert: shardedColl.getName(), documents: [{x: 0.5}, {x: -0.5}], ordered: false},
     expectedRunningOps: 2
 });
 
-// For insert command on a sharded collection, where a single shard is targetted.
+// For insert command on a sharded collection, where a single shard is targeted.
 runCommentParamTest({
     coll: shardedColl,
     command: {insert: shardedColl.getName(), documents: [{x: 4}]},
     expectedRunningOps: 1
 });
 
-// For insert command on an unsharded collection, where only primary shard is targetted.
+// For insert command on an unsharded collection, where only primary shard is targeted.
 runCommentParamTest({
     coll: unshardedColl,
     command: {insert: unshardedColl.getName(), documents: [{x: 3}]},
     expectedRunningOps: 1
 });
 
-// For update command on a sharded collection, when all the shards are targetted. For update command
+// For update command on a sharded collection, when all the shards are targeted. For update command
 // profiler entries are only added for each sub-operation.
 runCommentParamTest({
     coll: shardedColl,
@@ -245,7 +245,7 @@ runCommentParamTest({
     expectedProfilerEntries: 3
 });
 
-// For update command on a sharded collection, where a single shard is targetted.
+// For update command on a sharded collection, where a single shard is targeted.
 runCommentParamTest({
     coll: shardedColl,
     command: {update: shardedColl.getName(), updates: [{q: {x: 3}, u: {x: 3, a: 1}}]},
@@ -253,7 +253,7 @@ runCommentParamTest({
     expectedProfilerEntries: 1
 });
 
-// For update command on an unsharded collection, where only primary shard is targetted.
+// For update command on an unsharded collection, where only primary shard is targeted.
 runCommentParamTest({
     coll: unshardedColl,
     command: {
@@ -264,7 +264,7 @@ runCommentParamTest({
     expectedProfilerEntries: 2
 });
 
-// For delete command on a sharded collection, where all the shards are targetted. For delete
+// For delete command on a sharded collection, where all the shards are targeted. For delete
 // command profiler entries are only added for each sub-operation.
 runCommentParamTest({
     coll: shardedColl,
@@ -277,7 +277,7 @@ runCommentParamTest({
     expectedProfilerEntries: 3
 });
 
-// For delete command on a sharded collection, where a single shard is targetted.
+// For delete command on a sharded collection, where a single shard is targeted.
 runCommentParamTest({
     coll: shardedColl,
     command:
@@ -286,7 +286,7 @@ runCommentParamTest({
     expectedProfilerEntries: 2
 });
 
-// For delete command on an unsharded collection, where only primary shard is targetted.
+// For delete command on an unsharded collection, where only primary shard is targeted.
 runCommentParamTest({
     coll: unshardedColl,
     command: {
@@ -297,7 +297,7 @@ runCommentParamTest({
     expectedProfilerEntries: 2
 });
 
-// For createIndexes command on a sharded collection,  where all the shards are targetted.
+// For createIndexes command on a sharded collection,  where all the shards are targeted.
 runCommentParamTest({
     coll: shardedColl,
     command:
@@ -305,7 +305,7 @@ runCommentParamTest({
     expectedRunningOps: 2
 });
 
-// For createIndexes command on an unsharded collection, where only primary shard is targetted.
+// For createIndexes command on an unsharded collection, where only primary shard is targeted.
 runCommentParamTest({
     coll: unshardedColl,
     command: {

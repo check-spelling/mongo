@@ -217,7 +217,7 @@ assert.commandFailedWithCode(
     assertUpdateWorked({x: 4, z: 3, y: 3}, {"$set": {opStyle: 2}}, isUpsert, 0);
 
     // Case when upsert needs to insert a new document and the new document should belong in the
-    // same shard as the targetted shard. For non-upserts, it will be a no op.
+    // same shard as the targeted shard. For non-upserts, it will be a no op.
     assertUpdateWorkedWithNoMatchingDoc(
         {x: 4, y: 0, z: 0}, {"$set": {x: 1, z: 3, y: 111, a: 90}}, isUpsert);
 });

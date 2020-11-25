@@ -203,7 +203,7 @@ public:
     }
 
     /**
-     * Mark the given shard as stale, indicating that requests targetted to this shard (for this
+     * Mark the given shard as stale, indicating that requests targeted to this shard (for this
      * namespace) need to block on a catalog cache refresh.
      */
     void setShardStale(const ShardId& shardId);
