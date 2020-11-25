@@ -206,7 +206,7 @@ public:
     /**
      * Atomically compute and store 'load() | bits'
      *
-     * Returns the value of this before bitor-ing.
+     * Returns the value of this before bit or-ing.
      */
     WordType fetchAndBitOr(WordType bits) {
         return _value.fetch_or(bits);
@@ -215,7 +215,7 @@ public:
     /**
      * Atomically compute and store 'load() ^ bits'
      *
-     * Returns the value of this before bitxor-ing.
+     * Returns the value of this before bit xor-ing.
      */
     WordType fetchAndBitXor(WordType bits) {
         return _value.fetch_xor(bits);
