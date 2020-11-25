@@ -116,7 +116,7 @@ void endProcessWithSignal(int signalNum) {
 
 #endif
 
-// This should only be used with MallocFreeOSteam
+// This should only be used with MallocFreeOStream
 class MallocFreeStreambuf : public std::streambuf {
     MallocFreeStreambuf(const MallocFreeStreambuf&) = delete;
     MallocFreeStreambuf& operator=(const MallocFreeStreambuf&) = delete;
