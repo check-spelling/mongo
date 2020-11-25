@@ -61,7 +61,7 @@ def camel_case(name):
 
 def qualify_cpp_name(cpp_namespace, cpp_type_name):
     # type: (str, str) -> str
-    """Preprend a type name with a C++ namespace if cpp_namespace is not None."""
+    """Prepend a type name with a C++ namespace if cpp_namespace is not None."""
     if cpp_namespace:
         return cpp_namespace + "::" + cpp_type_name
 
