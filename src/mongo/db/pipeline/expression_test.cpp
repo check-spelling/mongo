@@ -2782,7 +2782,7 @@ TEST(ExpressionRegexTest, MultipleMatches) {
          Value(fromjson("{match: 'c3', idx:4, captures:['c3']}"))});
 }
 
-TEST(ExpressionRegexTest, OptimizPatternWhenInputIsVariable) {
+TEST(ExpressionRegexTest, OptimizePatternWhenInputIsVariable) {
     ExpressionRegexTest::testAllExpressions(
         fromjson("{$regexFindAll : {input: '$input', regex: '([a-c][1-3])' }}"), true, {});
 }

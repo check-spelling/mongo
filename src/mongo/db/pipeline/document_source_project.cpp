@@ -76,7 +76,7 @@ intrusive_ptr<DocumentSource> DocumentSourceProject::create(
                 // We won't optimize the executor on creation, and will do it as part of the
                 // pipeline optimization process when requested via the 'optimize()' method on
                 // 'DocumentSourceSingleDocumentTransformation', so we won't pass the
-                // 'kOptimzeExecutor' flag to the projection executor builder.
+                // 'kOptimizeExecutor' flag to the projection executor builder.
                 //
                 // Note that this is also important for $lookup inner pipelines to not being
                 // optimized too early, as it may lead to incorrect positioning of the caching
