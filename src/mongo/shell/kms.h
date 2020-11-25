@@ -49,7 +49,7 @@ namespace mongo {
  * Represents a Key Management Service. May be a local file KMS or remote.
  *
  * Responsible for securely encrypting and decrypting data. The encrypted data is treated as a
- * blockbox by callers.
+ * blackbox by callers.
  */
 class KMSService {
 public:
