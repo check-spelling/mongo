@@ -172,7 +172,7 @@ st.configRS.awaitLastOpCommitted();
 checkShardMajorVersion(st.rs0.getPrimary(), 0);
 checkShardMajorVersion(st.rs1.getPrimary(), 0);
 
-// 1st mongos thinks that collection is unshareded and will attempt to query primary shard.
+// 1st mongos thinks that collection is unsharded and will attempt to query primary shard.
 assert.neq(null, testDB_s0.user.findOne({x: 1}));
 
 checkShardMajorVersion(st.rs0.getPrimary(), 2);
