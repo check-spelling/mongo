@@ -49,7 +49,7 @@ namespace {
 
 /**
  * Convenience wrapper for a UChar[] string.
- * Instantiate with UString::fromUTF8() and reseriealize with ustr.toUTF8()
+ * Instantiate with UString::fromUTF8() and reserialize with ustr.toUTF8()
  */
 class UString {
 public:
