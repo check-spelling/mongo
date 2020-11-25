@@ -332,7 +332,7 @@ Future<std::vector<HostAndPort>> ScanningReplicaSetMonitor::_getHostsOrRefresh(
 
     // Fail early without doing any more work if the timeout has already expired.
     if (maxWait <= Milliseconds(0))
-        return _state->makeUnsatisfedReadPrefError(criteria);
+        return _state->makeUnsatisfiedReadPrefError(criteria);
 
     // TODO look into putting all PrimaryOnly waiters on a single SharedPromise. The tricky part is
     // dealing with maxWait.
@@ -1404,11 +1404,11 @@ void SetState::notify() {
                         "Unable to satisfy read preference by deadline",
                         "criteria"_attr = it->criteria,
                         "deadline"_attr = it->deadline);
-            it->promise.setError(makeUnsatisfedReadPrefError(it->criteria));
+            it->promise.setError(makeUnsatisfiedReadPrefError(it->criteria));
             waiters.erase(it++);
         } else if (shouldQuickFail) {
             LOGV2_DEBUG(24087, 1, "Unable to satisfy read preference because tests fail quickly");
-            it->promise.setError(makeUnsatisfedReadPrefError(it->criteria));
+            it->promise.setError(makeUnsatisfiedReadPrefError(it->criteria));
             waiters.erase(it++);
         } else {
             it++;
@@ -1422,7 +1422,7 @@ void SetState::notify() {
     }
 }
 
-Status SetState::makeUnsatisfedReadPrefError(const ReadPreferenceSetting& criteria) const {
+Status SetState::makeUnsatisfiedReadPrefError(const ReadPreferenceSetting& criteria) const {
     return Status(ErrorCodes::FailedToSatisfyReadPreference,
                   str::stream() << "Could not find host matching read preference "
                                 << criteria.toString() << " for set " << name);

@@ -204,7 +204,7 @@ public:
         return executor ? executor->now() : Date_t::now();
     }
 
-    Status makeUnsatisfedReadPrefError(const ReadPreferenceSetting& criteria) const;
+    Status makeUnsatisfiedReadPrefError(const ReadPreferenceSetting& criteria) const;
 
     // Tiny enum to convey semantics for rescheduleRefresh()
     enum class SchedulingStrategy {
