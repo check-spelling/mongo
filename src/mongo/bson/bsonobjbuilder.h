@@ -650,7 +650,7 @@ public:
             _doneCalled = false;
 
             _b.setlen(_b.len() - 1);  // next append should overwrite the EOO
-            _b.reserveBytes(1);       // Rereserve room for the real EOO
+            _b.reserveBytes(1);       // Reserve room for the real EOO
         });
 
         return BSONObj(buffer, BSONObj::LargeSizeTrait());
