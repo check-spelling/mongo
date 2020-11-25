@@ -61,18 +61,18 @@ t.createIndex({geo: "2dsphere"});
  * closer, but across the meridian, and confirm they both come back, and
  * that the order is correct.
  */
-pointOnNegativeSideOfMerid = {
+pointOnNegativeSideOfMeridian = {
     name: "closer",
     geo: {type: "Point", coordinates: [-179.0, 0.0]}
 };
 
-pointOnPositiveSideOfMerid = {
+pointOnPositiveSideOfMeridian = {
     name: "farther",
     geo: {type: "Point", coordinates: [176.0, 0.0]}
 };
 
-t.insert(pointOnNegativeSideOfMerid);
-t.insert(pointOnPositiveSideOfMerid);
+t.insert(pointOnNegativeSideOfMeridian);
+t.insert(pointOnPositiveSideOfMeridian);
 
 pointOnPositiveSideOfMeridian = {
     type: "Point",
