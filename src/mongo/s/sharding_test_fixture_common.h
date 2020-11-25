@@ -127,7 +127,7 @@ protected:
      * Base class returns nullptr.
      *
      * Note: ShardingCatalogClient takes ownership of DistLockManager, so if DistLockManager is not
-     * nulllptr, a real or mock ShardingCatalogClient must be supplied.
+     * nullptr, a real or mock ShardingCatalogClient must be supplied.
      */
     virtual std::unique_ptr<ShardingCatalogClient> makeShardingCatalogClient(
         std::unique_ptr<DistLockManager> distLockManager);
