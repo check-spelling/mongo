@@ -209,7 +209,7 @@ public:
  * An OplogBuffer interface which also supports random access by timestamp.
  * The entries in a RandomAccessOplogBuffer must be pushed in strict timestamp order.
  *
- * The user of a RandomAccesOplogBuffer may seek to or find timestamps which have already been read
+ * The user of a RandomAccessOplogBuffer may seek to or find timestamps which have already been read
  * from the buffer.  It is up to the implementing subclass to ensure that such timestamps are
  * available to be read.
  */
