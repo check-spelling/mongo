@@ -122,7 +122,7 @@ function mount_drive {
 
   elif [ $(uname | awk '{print tolower($0)}') = "linux" ]; then
     if [ $num_devices -eq 0 ]; then
-      echo "Must specify atleast one device"
+      echo "Must specify at least one device"
       _usage_
       exit 1
     elif [ $num_devices -gt 1 ]; then
