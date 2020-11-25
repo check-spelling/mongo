@@ -46,7 +46,7 @@ TEST(SecurityProperty, emptyHasEmptyProperties) {
     ASSERT_FALSE(set.hasAllProperties(SecurityPropertySet{SecurityProperty::kNoPlainText}));
 }
 
-TEST(SecurityProperty, mutualHasMutalAndEmptyProperties) {
+TEST(SecurityProperty, mutualHasMutualAndEmptyProperties) {
     SecurityPropertySet set(SecurityPropertySet{SecurityProperty::kMutualAuth});
     ASSERT_TRUE(set.hasAllProperties(SecurityPropertySet{}));
     ASSERT_TRUE(set.hasAllProperties(SecurityPropertySet{SecurityProperty::kMutualAuth}));
