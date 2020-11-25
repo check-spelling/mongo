@@ -302,7 +302,7 @@ public:
      * The expectation is that a plan stage acquires resources (e.g. memory buffers) during the open
      * call and avoids resource acquisition in getNext().
      *
-     * When reOpen flag is true then the plan stage should reinitizalize already acquired resources
+     * When reOpen flag is true then the plan stage should reinitialize already acquired resources
      * (e.g. re-hash, re-sort, re-seek, etc).
      */
     virtual void open(bool reOpen) = 0;
