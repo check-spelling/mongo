@@ -581,7 +581,7 @@ public:
     /** Append the provided DBRef data as a new field with the provided name. */
     Status appendDBRef(StringData fieldName, StringData ns, mongo::OID oid);
 
-    /** Append the provided code data as a new field with the iven name. */
+    /** Append the provided code data as a new field with the given name. */
     Status appendCode(StringData fieldName, StringData value);
 
     /** Append the provided symbol data as a new field with the provided name. */
