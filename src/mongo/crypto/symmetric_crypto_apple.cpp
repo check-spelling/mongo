@@ -65,7 +65,7 @@ public:
         // but is still functionally a 128bit block algorithm.
         // Therefore we expect a 128 bit block length.
         uassert(ErrorCodes::BadValue,
-                str::stream() << "Invalid ivlen for selected algorithm, expected "
+                str::stream() << "Invalid ivLen for selected algorithm, expected "
                               << kCCBlockSizeAES128 << ", got " << ivLen,
                 ivLen == kCCBlockSizeAES128);
 
