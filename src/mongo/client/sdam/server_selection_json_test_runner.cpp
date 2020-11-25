@@ -54,17 +54,17 @@
 
 /**
  * This program runs the Server Discover and Monitoring JSON test files located in
- * the src/monogo/client/sdam/json_tests/server_selection_tests sub-directory.
+ * the src/mongo/client/sdam/json_tests/server_selection_tests sub-directory.
  *
  * The process return code conforms to the UNIX idiom of 0 to indicate success and non-zero to
  * indicate failure. In the case of test failure, the process will return the number of test cases
  * that failed.
  *
  * Example invocation to run all tests:
- *  sdam_json_test --source-dir src/monogo/client/sdam/json_tests/server_selection_tests
+ *  sdam_json_test --source-dir src/mongo/client/sdam/json_tests/server_selection_tests
  *
  * Example invocation to run a single test:
- *  sdam_json_test --source-dir src/monogo/client/sdam/json_tests/server_selection_tests --filter
+ *  sdam_json_test --source-dir src/mongo/client/sdam/json_tests/server_selection_tests --filter
  * Nearest_multiple
  */
 
