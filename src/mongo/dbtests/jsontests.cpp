@@ -156,7 +156,7 @@ TEST(JsonStringTest, PrettyFormatTest) {
 
 TEST(JsonStringTest, UnicodeTest) {
     // Extended Canonical/Relaxed replaces invalid UTF-8 with Unicode Replacement Character while
-    // LegacyStricts treats it as Extended Ascii
+    // LegacyStrict treats it as Extended Ascii
     ASSERT_JSON_EQUALS(B().append("a", "\x80").obj().jsonString(ExtendedCanonicalV2_0_0),
                        R"({ "a" : "\ufffd" })");
     ASSERT_JSON_EQUALS(B().append("a", "\x80").obj().jsonString(ExtendedRelaxedV2_0_0),
