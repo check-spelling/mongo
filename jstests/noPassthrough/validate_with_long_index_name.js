@@ -10,7 +10,7 @@
 load("jstests/disk/libs/wt_file_helper.js");
 
 // 64 * 1024 * 1024 = 64MB worth of index names ensures that we test against the maximum BSONObj
-// size lmit.
+// size limit.
 const kNumDocs = 64;
 const kIndexNameLength = 1024 * 1024;
 
