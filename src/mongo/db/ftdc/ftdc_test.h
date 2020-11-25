@@ -50,7 +50,7 @@ enum class FTDCValidationMode {
     kStrict,
 
     /**
-     * Compare BSONObjs by only comparing types FTDC compares about. FTDC ignores somes changes in
+     * Compare BSONObjs by only comparing types FTDC compares about. FTDC ignores some changes in
      * the shapes of documents and therefore no longer reconstructs the shapes of documents exactly.
      */
     kWeak,
