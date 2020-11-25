@@ -1716,7 +1716,7 @@ void InputBuffer::clearScreen(PromptBase& pi) {
 /**
  * Incremental history search -- take over the prompt and keyboard as the user types a search
  * string, deletes characters from it, changes direction, and either accepts the found line (for
- * execution orediting) or cancels.
+ * execution or editing) or cancels.
  * @param pi        PromptBase struct holding information about the (old, static) prompt and our
  *                  screen position
  * @param startChar the character that began the search, used to set the initial direction
