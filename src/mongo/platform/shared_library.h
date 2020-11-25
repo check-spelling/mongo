@@ -37,7 +37,7 @@ namespace mongo {
 
 /**
  * Loads shared library or DLL at runtime
- * Provides functionality to resolve symols and functions at runtime.
+ * Provides functionality to resolve symbols and functions at runtime.
  * Note: shared library is released by destructor
  */
 class SharedLibrary {
