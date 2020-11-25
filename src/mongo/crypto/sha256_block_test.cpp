@@ -113,7 +113,7 @@ TEST(SHA256Block, CanOnlyConstructFromBinGeneral) {
     ASSERT_EQ(ErrorCodes::UnsupportedFormat, newHashStatus.getStatus());
 }
 
-TEST(SHA256Block, FromBinDataShouldRegectWrongSize) {
+TEST(SHA256Block, FromBinDataShouldRejectWrongSize) {
     std::string dummy(SHA256Block::kHashLength - 1, 'x');
 
     auto newHashStatus =

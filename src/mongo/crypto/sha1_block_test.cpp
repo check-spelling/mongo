@@ -171,7 +171,7 @@ TEST(SHA1Block, CanOnlyConstructFromBinGeneral) {
     ASSERT_EQ(ErrorCodes::UnsupportedFormat, newHashStatus.getStatus());
 }
 
-TEST(SHA1Block, FromBinDataShouldRegectWrongSize) {
+TEST(SHA1Block, FromBinDataShouldRejectWrongSize) {
     std::string dummy(SHA1Block::kHashLength - 1, 'x');
 
     auto newHashStatus =
