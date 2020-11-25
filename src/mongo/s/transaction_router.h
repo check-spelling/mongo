@@ -705,7 +705,7 @@ private:
         // The id of participant chosen as the two-phase commit coordinator. If, at commit time,
         // two-phase commit is required, the participant list is handled off to this shard. Is unset
         // until the transaction has targeted a participant, and is set to the first participant
-        // targeted. Is reset if the first participant targeted returns a "needs retargeting" error.
+        // targeted. Is reset if the first participant targeted returns a "needs retargetting" error.
         boost::optional<ShardId> coordinatorId;
 
         // The API parameters the current transaction was started with.
@@ -747,7 +747,7 @@ private:
         // responses to the client. Is unset until the transaction has done a write, and is set to
         // the first participant that reports having done a write. Is reset if that participant is
         // removed from the participant list because another participant targeted in the same
-        // statement returned a "needs retargeting" error.
+        // statement returned a "needs retargetting" error.
         boost::optional<ShardId> recoveryShardId;
 
         // The statement id of the latest received command for this transaction. For batch writes,
