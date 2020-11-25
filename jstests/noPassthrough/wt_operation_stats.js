@@ -12,9 +12,9 @@
 load("jstests/libs/profiler.js");  // For getLatestProfilerEntry.
 load("jstests/libs/logv2_helpers.js");
 
-let readStatRegx = /storage:{ data: { bytesRead: ([0-9]+)/;
+let readStatRegex = /storage:{ data: { bytesRead: ([0-9]+)/;
 if (isJsonLogNoConn()) {
-    readStatRegx = /"storage":{"data":{"bytesRead":([0-9]+)/;
+    readStatRegex = /"storage":{"data":{"bytesRead":([0-9]+)/;
 }
 
 let checkLogStats = function() {
@@ -24,7 +24,7 @@ let checkLogStats = function() {
     let match;
     let logLineCount = 0;
     for (let line of lines) {
-        if ((match = readStatRegx.exec(line)) !== null) {
+        if ((match = readStatRegex.exec(line)) !== null) {
             jsTestLog(line);
             logLineCount++;
         }
