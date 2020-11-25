@@ -17,7 +17,7 @@ load('jstests/libs/parallel_shell_helpers.js');
 load('jstests/libs/fail_point_util.js');
 
 // Disable checking for index consistency to ensure that the config server doesn't trigger a
-// StaleShardVersion exception on the shards and cause them to refresh theirsharding metadata.
+// StaleShardVersion exception on the shards and cause them to refresh their sharding metadata.
 const nodeOptions = {
     setParameter: {enableShardedIndexConsistencyCheck: false}
 };
