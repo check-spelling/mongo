@@ -2419,7 +2419,7 @@ Examples:
             backup_path_before = new_path_dir
 
         # Optionally, rsync the pre-recovery database.
-        # Start monogd on the secret port.
+        # Start mongod on the secret port.
         # Optionally validate collections, validate the canary and seed the collection.
         remote_operation = ("--remoteOperation"
                             " {rsync_opt}"
@@ -2487,7 +2487,7 @@ Examples:
             backup_path_after = new_path_dir
 
         # Optionally, rsync the post-recovery database.
-        # Start monogd on the standard port.
+        # Start mongod on the standard port.
         remote_op = ("--remoteOperation"
                      " {}"
                      " --mongodHost {}"
