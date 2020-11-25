@@ -143,7 +143,7 @@ private:
  * the efficiency and overall health of the process. As a general rule, avoid logging, disk io, and
  * networking in any DiagnosticListener functions. System functions not related to those activities
  * should be avoided as much as possible. For example, the overhead of taking an elementary stack
- * trace voa backtrace_symbols_fd(3) proved too heavyweight to be used in a DiagnosticListener.
+ * trace via backtrace_symbols_fd(3) proved too heavyweight to be used in a DiagnosticListener.
  * Additionally, in parts of our system, Mutexes can outlive the invocation of main() and, indeed,
  * certain process global variables. DiagnosticListeners usually need to be dynamically allocated
  * and leaked.
