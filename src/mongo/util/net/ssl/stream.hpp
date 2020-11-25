@@ -86,7 +86,7 @@ public:
 #if defined(ASIO_HAS_MOVE) || defined(GENERATING_DOCUMENTATION)
     /// Construct a stream.
     /**
-     * This constructor creates a stream and initialises the underlying stream
+     * This constructor creates a stream and initializes the underlying stream
      * object.
      *
      * @param arg The argument to be passed to initialise the underlying stream.
