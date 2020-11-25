@@ -1932,7 +1932,7 @@ TEST_F(KeyStringBuilderTest, DecimalFromUniformDoublePerf) {
     if (version == KeyString::Version::V0)
         return;
 
-    // In addition to serve as a data ponit for performance, this test also generates many decimal
+    // In addition to serve as a data point for performance, this test also generates many decimal
     // values close to binary floating point numbers, so edge cases around 15-digit approximations
     // get extra randomized coverage over time.
     for (uint64_t x = 0; x < kMinPerfSamples; x++) {
