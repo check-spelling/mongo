@@ -1249,7 +1249,7 @@ void RollbackImpl::_transitionFromRollbackToSecondary(OperationContext* opCtx) {
 
 void RollbackImpl::_resetDropPendingState(OperationContext* opCtx) {
     // TODO(SERVER-38671): Remove this line when drop-pending idents are always supported with this
-    // rolback method. Until then, we should assume that pending drops can be handled by either the
+    // rollback method. Until then, we should assume that pending drops can be handled by either the
     // replication subsystem or the storage engine.
     DropPendingCollectionReaper::get(opCtx)->clearDropPendingState();
 
