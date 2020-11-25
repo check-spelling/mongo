@@ -106,7 +106,7 @@ MongoDB will consider a username, and performs the cryptographic handshake. If t
 will note that the client proved ownership of the presented certificate. The authentication logic happens in the 
 [`authX509`](https://github.com/mongodb/mongo/blob/master/src/mongo/client/authenticate.cpp#L127) function, although
 there are many callers of this function that use it in different ways. Later, when that client tries to authenticate, 
-the server will know that the previous TLS handshake has proved their authenticity, and will grant themm the appropriate
+the server will know that the previous TLS handshake has proved their authenticity, and will grant them the appropriate
 access rights.
 
 ### The Transport Layer
