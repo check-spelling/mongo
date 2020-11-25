@@ -14,7 +14,7 @@ for (var i = 0; i < 63; i++) {
 // the remaining ~1MB with room for field names and other overhead
 t.insert({a: new Array(1024 * 1024 - 1105).join('a')});
 
-// do not use cursor form, since it has a different workaroud for this issue.
+// do not use cursor form, since it has a different workaround for this issue.
 assert.commandFailed(db.runCommand({
     aggregate: t.getName(),
     pipeline: [{$match: {}}, {$group: {_id: null, arr: {$push: {a: '$a'}}}}]

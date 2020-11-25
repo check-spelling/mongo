@@ -1510,7 +1510,7 @@ namespace {
  * Implicit options in boost 1.59 no longer support
  * --option value
  * instead they only support "--option=value", this function
- * attempts to workound this by translating the former into the later.
+ * attempts to workaround this by translating the former into the later.
  */
 StatusWith<std::vector<std::string>> transformImplicitOptions(
     const OptionSection& options, const std::vector<std::string>& argvOriginal) {
