@@ -40,7 +40,7 @@ assert.eq(0, coll.find({a: 1, b: 1, c: 1}).itcount());
 assert.eq(0, coll.find({a: 1, b: 1, d: 1}).itcount());
 assert.eq(3, coll.aggregate([{$planCacheStats: {}}]).itcount());
 
-// We should be able to find particular cache entries by maching on the query from which the
+// We should be able to find particular cache entries by matching on the query from which the
 // entry was created.
 assert.eq(
     1,
