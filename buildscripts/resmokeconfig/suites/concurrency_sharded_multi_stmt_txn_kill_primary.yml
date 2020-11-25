@@ -180,7 +180,7 @@ selector:
   ##
 
   # Uses getMore. If a kill node happens between the time of creation of cursor (usually by calling
-  # find or aggregate) and calling getMore(), server will throw CursortNotFound exception.
+  # find or aggregate) and calling getMore(), server will throw CursorNotFound exception.
   # We currently do not retry the transaction on this exception.
   - jstests/concurrency/fsm_workloads/agg_unionWith_interrupt_cleanup.js
   - jstests/concurrency/fsm_workloads/agg_union_with_chunk_migrations.js

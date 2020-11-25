@@ -134,7 +134,7 @@ const operations = [
             assert.eq(profileDoc.docUnitsRead, 0);
             assert.eq(profileDoc.idxEntryBytesRead, 0);
             assert.eq(profileDoc.idxEntryUnitsRead, 0);
-            // This tests to make sure we only increment the cusorSeeks counter if the cursor seek
+            // This tests to make sure we only increment the cursorSeeks counter if the cursor seek
             // is successful. In this case, the seek is not successful because the index is empty.
             assert.eq(profileDoc.cursorSeeks, 0);
             assert.eq(profileDoc.docBytesWritten, 0);

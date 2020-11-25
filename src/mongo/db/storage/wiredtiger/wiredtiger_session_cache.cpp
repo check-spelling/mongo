@@ -141,7 +141,7 @@ void WiredTigerSession::releaseCursor(uint64_t id, WT_CURSOR* cursor) {
     // Cursors are pushed to the front of the list and removed from the back
     _cursors.push_front(WiredTigerCachedCursor(id, _cursorGen++, cursor));
 
-    // A negative value for wiredTigercursorCacheSize means to use hybrid caching.
+    // A negative value for wiredTigerCursorCacheSize means to use hybrid caching.
     std::uint32_t cacheSize = abs(gWiredTigerCursorCacheSize.load());
 
     while (!_cursors.empty() && _cursorGen - _cursors.back()._gen > cacheSize) {
