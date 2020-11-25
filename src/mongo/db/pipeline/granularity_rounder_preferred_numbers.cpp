@@ -201,7 +201,7 @@ Value GranularityRounderPreferredNumbers::roundUp(Value value) {
                   number.isLess(decimalSeries.back().multiply(multiplier)));
 
         // Get an iterator pointing to the first element in '_baseSeries' that is greater
-        // than'number'.
+        // than 'number'.
         auto iterator =
             std::upper_bound(decimalSeries.begin(),
                              decimalSeries.end(),
