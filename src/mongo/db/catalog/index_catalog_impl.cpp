@@ -1490,9 +1490,9 @@ void IndexCatalogImpl::_unindexKeys(OperationContext* opCtx,
 
     // On WiredTiger, we do blind unindexing of records for efficiency.  However, when duplicates
     // are allowed in unique indexes, WiredTiger does not do blind unindexing, and instead confirms
-    // that the recordid matches the element we are removing.
+    // that the recordId matches the element we are removing.
     //
-    // We need to disable blind-deletes for in-progress indexes, in order to force recordid-matching
+    // We need to disable blind-deletes for in-progress indexes, in order to force recordId-matching
     // for unindex operations, since initial sync can build an index over a collection with
     // duplicates. See SERVER-17487 for more details.
     options.dupsAllowed = options.dupsAllowed || !index->isReady(opCtx);
