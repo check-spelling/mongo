@@ -1661,7 +1661,7 @@ TEST_F(FreeMonControllerRSTest, SecondaryRollbackStopMetrics) {
     ASSERT_EQ(controller.metricsCollector->count(), 4UL);
 }
 
-// TODO: tricky - OnUpser - disable - OnDelete - make sure registration halts
+// TODO: tricky - OnUpsert - disable - OnDelete - make sure registration halts
 // TODO: tricky - OnDelete - make sure registration halts
 
 // TODO: Integration: Tricky - secondary as marked via command line - enableCloudFreeMOnitoring =
