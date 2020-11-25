@@ -526,7 +526,7 @@ TEST_F(SessionCatalogTestWithDefaultOpCtx, KillSessionsThroughScanSessions) {
             });
         ASSERT_EQ(2U, firstAndThirdTokens.size());
         for (auto& killToken : firstAndThirdTokens) {
-            auto unusedSheckedOutSessionForKill(
+            auto unusedCheckedOutSessionForKill(
                 catalog()->checkOutSessionForKill(_opCtx, std::move(killToken)));
         }
         futures[0].get();
@@ -545,7 +545,7 @@ TEST_F(SessionCatalogTestWithDefaultOpCtx, KillSessionsThroughScanSessions) {
             });
         ASSERT_EQ(1U, secondToken.size());
         for (auto& killToken : secondToken) {
-            auto unusedSheckedOutSessionForKill(
+            auto unusedCheckedOutSessionForKill(
                 catalog()->checkOutSessionForKill(_opCtx, std::move(killToken)));
         }
         futures[1].get();
