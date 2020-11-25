@@ -163,7 +163,7 @@ def _update_config_vars(values):  # pylint: disable=too-many-statements,too-many
     _config.INSTALL_DIR = config.pop("install_dir")
     if _config.INSTALL_DIR is not None:
         # Normalize the path so that on Windows dist-test/bin
-        # translates to .\dist-test\bin then absolutify it since the
+        # translates to .\dist-test\bin then absoluteify it since the
         # Windows PATH variable requires absolute paths.
         _config.INSTALL_DIR = os.path.abspath(_expand_user(os.path.normpath(_config.INSTALL_DIR)))
 
