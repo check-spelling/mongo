@@ -446,7 +446,7 @@ TEST_F(SessionCatalogTest, MarkSessionsAsKilledWhenSessionDoesNotExist) {
         catalog()->killSession(nonExistentLsid), AssertionException, ErrorCodes::NoSuchSession);
 }
 
-TEST_F(SessionCatalogTestWithDefaultOpCtx, SessionDiscarOperationContextAfterCheckIn) {
+TEST_F(SessionCatalogTestWithDefaultOpCtx, SessionDiscardOperationContextAfterCheckIn) {
     _opCtx->setLogicalSessionId(makeLogicalSessionIdForTest());
 
     {
@@ -460,7 +460,7 @@ TEST_F(SessionCatalogTestWithDefaultOpCtx, SessionDiscarOperationContextAfterChe
     ASSERT(!OperationContextSession::get(_opCtx));
 }
 
-TEST_F(SessionCatalogTestWithDefaultOpCtx, SessionDiscarOperationContextAfterCheckInCheckOut) {
+TEST_F(SessionCatalogTestWithDefaultOpCtx, SessionDiscardOperationContextAfterCheckInCheckOut) {
     _opCtx->setLogicalSessionId(makeLogicalSessionIdForTest());
 
     {
