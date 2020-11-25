@@ -147,7 +147,7 @@ MongoRunner.stopMongod(conn);
 
 var st = new ShardingTest({shards: 1, keyFile: 'jstests/libs/key1'});
 // Use a different failpoint in the sharded version, since the mongos does not have a
-// setYieldAlllocksHang failpoint.
+// setYieldAllLocksHang failpoint.
 runTest(st.s, "waitInFindBeforeMakingBatch");
 st.stop();
 })();
