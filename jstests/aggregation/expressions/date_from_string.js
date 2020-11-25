@@ -708,7 +708,7 @@ assertErrorCode(coll, pipeline, ErrorCodes.ConversionFailure);
 /* --------------------------------------------------------------------------------------- */
 /* Error cases for $dateFromString with format specifier string. */
 
-// Test umatched format specifier string.
+// Test unmatched format specifier string.
 pipeline = [{$project: {date: {$dateFromString: {dateString: "2018-01", format: "%Y-%m-%d"}}}}];
 assertErrCodeAndErrMsgContains(coll, pipeline, ErrorCodes.ConversionFailure, "Data missing");
 
