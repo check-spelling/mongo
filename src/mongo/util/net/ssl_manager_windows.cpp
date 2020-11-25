@@ -118,7 +118,7 @@ using UniqueCertChain = std::unique_ptr<const CERT_CHAIN_CONTEXT, CryptCertChain
 
 
 /**
- * A simple generic class to manage Windows handle like things. Behaves similiar to std::unique_ptr.
+ * A simple generic class to manage Windows handle like things. Behaves similar to std::unique_ptr.
  *
  * Only supports move.
  */
