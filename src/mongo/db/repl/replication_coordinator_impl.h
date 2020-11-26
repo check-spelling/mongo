@@ -1537,7 +1537,7 @@ private:
         _horizonToTopologyChangePromiseMap;  // (M)
 
     // Maps a requested SNI to the promise waited on by awaitable hello requests when the node
-    // has an unitialized replica set config or is removed. An empty SNI will map to a promise on
+    // has an uninitialized replica set config or is removed. An empty SNI will map to a promise on
     // the default horizon.
     StringMap<std::shared_ptr<SharedPromiseOfHelloResponse>> _sniToValidConfigPromiseMap;  // (M)
 

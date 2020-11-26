@@ -12,7 +12,7 @@ load("jstests/multiVersion/libs/multi_cluster.js");  // For restartMongoses.
 function assertContainsValidLogicalTime(res, check) {
     assert.hasFields(res, ["$clusterTime"]);
     assert.hasFields(res.$clusterTime, ["signature", "clusterTime"]);
-    // clusterTime must be greater than the uninitialzed value.
+    // clusterTime must be greater than the uninitialized value.
     // TODO: SERVER-31986 this check can be done only for authenticated connections that do not
     // have advance_cluster_time privilege.
     if (check) {

@@ -48,7 +48,7 @@ protected:
 
     // This explicit constructor is provided to allow for easy zeroing
     // during creation of a value.  You might prefer this over an
-    // uninitialised value if the zeroed version provides a useful base
+    // uninitialized value if the zeroed version provides a useful base
     // state.  Such cases might include a set of counters that begin at
     // zero, flags that start off false or a larger structure where some
     // significant portion of storage falls into those kind of use cases.

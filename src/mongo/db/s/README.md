@@ -707,7 +707,7 @@ The ConfigTime tracks the sharding state stored on the config servers.  As such,
 
 The ConfigTime value is then used when querying the config servers to ensure that the returned state
 is causally consistent.  This is done by using the ConfigTime as the parameter to `$afterOpTime`
-field of the Read Concern (with an Uninitialised term, so that it's not used in comparisons), and as
+field of the Read Concern (with an Uninitialized term, so that it's not used in comparisons), and as
 the `minClusterTime` parameter to the read preference (to ensure that a current config server is
 targeted, if possible).
 

@@ -155,7 +155,7 @@ void TaskExecutorCursor::_getNextBatch(OperationContext* opCtx) {
     auto cr = uassertStatusOK(CursorResponse::parseFromBSON(out.getValue()));
 
     // If this was our first batch
-    if (_cursorId == kUnitializedCursorId) {
+    if (_cursorId == kUninitializedCursorId) {
         _ns = cr.getNSS();
         _rcr.dbname = _ns.db().toString();
     }

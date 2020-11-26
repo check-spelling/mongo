@@ -31,7 +31,7 @@ function assertContainsValidLogicalTime(adminConn) {
         const res = adminConn.runCommand({hello: 1});
         assert.hasFields(res, ["$clusterTime"]);
         assert.hasFields(res.$clusterTime, ["signature", "clusterTime"]);
-        // clusterTime must be greater than the uninitialzed value.
+        // clusterTime must be greater than the uninitialized value.
         assert.hasFields(res.$clusterTime.signature, ["hash", "keyId"]);
         // The signature must have been signed by a key with a valid generation.
         assert(res.$clusterTime.signature.keyId > NumberLong(0));
